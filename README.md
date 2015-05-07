@@ -13,7 +13,7 @@ The ten projects where proposed by different local and national media:
 
 - TODO
 
-  [1]: http://www.hyblab.fr/wp-content/uploads/2013/12/cropped-HybLab_2014_logo_940.png
+  [1]: http://www.hyblab.fr/wp-content/uploads/2015/01/datasport-hyblab-background1.jpg
   [2]: http://www.hyblab.fr/
   [3]: http://www.ouestmedialab.fr/
   [4]: http://www.staps.univ-nantes.fr/
