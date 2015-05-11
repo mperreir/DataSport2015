@@ -1,17 +1,14 @@
 # Descriptif du projet
+Média : Ouest France
 
-Média : notre de votre média
+Sujet : Permettre de visualiser les données d'une courses
 
-Sujet : description du sujet
+Equipe : Forest
 
-Equipe : nom de votre équipe
-
-Patricipants : 
-- EDNA : 
-- Polytech :
-- STAPS :
+Patricipants :
+- EDNA : Johanna Rolland, Valentin Amossé
+- Polytech : Mathieu Barré, Julien Barret
+- STAPS : Guillaume Tricot, Simon Arnout, Alexandre Gaviniaux
 
 # Installation
-
 # Informations complémentaires
-  

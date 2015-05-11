@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    FICHIER APP.LESS
+\*------------------------------------*/
+/**
+ * Fichier de style principal de l'application.
+ * On importe au début les styles de "base" de l'application, puis on ajoute les styles globaux,
+ * pour terminer avec les styles spécifiques (de haut en bas, pour respecter la priorité)
+ */
+@import 'bootstrap/less/bootstrap.less';
+@import 'font-awesome/less/font-awesome.less';
+@icon-font-path: '/bower_components/bootstrap/fonts/';
+@fa-font-path: '/bower_components/font-awesome/fonts';
+/**
+ * Styles globaux de l'application
+ */
+/*------------------------------------*\
+     Balises
+\*------------------------------------*/
+@navbar-height: 50px;
+body {
+  background-color: #ddd;
+}
+/*------------------------------------*\
+   Classes utilitaires
+\*------------------------------------*/
+// A ajouter au premier élément de la page pour pouvoir voir la navbar
+@navbar-height: 50px;
+.first {
+  margin-top: 50px;
+}
+// A ajouter au dernier élément de la page pour pouvoir voir le footer
+.last {
+  margin-bottom: 80px;
+}
+/**
+ * /!\ Ne rien écrire dans le bloc du dessous, grunt injecte automatiquement tous les nouveaux fichiers Less trouvés
+ */
+// injector
+@import 'main/main.less';
+@import 'main/section1/section1.less';
+@import 'main/section2/section2.less';
+@import 'main/section3/section3.less';
+@import 'footer/footer.less';
+@import 'navbar/navbar.less';
+// endinjector
