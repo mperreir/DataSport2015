@@ -1,7 +1,7 @@
 # Descriptif du projet
 Média : Ouest France
 
-Sujet : Permettre de visualiser les données d'une courses
+Sujet : Raconter une course
 
 Equipe : Forest
 
