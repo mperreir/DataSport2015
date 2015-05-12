@@ -1,12 +1,94 @@
 @import (less) '../core/less/_palette.less';
 
 #introduction {
-  background-color: @dark;
+  //background: url(https://unsplash.imgix.net/photo-1417716226287-2f8cd2e80274?fit=crop&fm=jpg);
+  background-size: cover;
+  background-position: bottom center;
   color: @textWhite;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #232835;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 18%;
+    z-index: 50;
+
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(37,42,55,1) 99%, rgba(35,40,53,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(99%,rgba(37,42,55,1)), color-stop(100%,rgba(35,40,53,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(37,42,55,1) 99%,rgba(35,40,53,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(37,42,55,1) 99%,rgba(35,40,53,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(37,42,55,1) 99%,rgba(35,40,53,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(37,42,55,1) 99%,rgba(35,40,53,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#232835',GradientType=0 ); /* IE6-9 */
+
+  }
+
+  .intro--content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
 
   .title {
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4em;
+    font-size: 2.5em;
+    line-height: 2em;
+  }
+
+  .title--text {
+    font-family: 'Cassannet', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .title--sep {
+    font-family: 'Rawengulk';
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .title--sep {
+    margin: auto;
+    overflow: hidden;
+    width: 70%;
+  }
+
+  .title--sep:before {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-left: -100%;
+    margin-right: 10px;
+    border-top: 1px solid @textWhite;
+  }
+
+  .title--sep:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid @textWhite;
   }
 }

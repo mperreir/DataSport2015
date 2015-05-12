@@ -1,3 +1,9 @@
 <div>
-  test credits
+  <h1 class="section--title">Crédits</h1>
+  <div class="row">
+    <div class="col-xs-offset-2 col-xs-10 col-sm-3" ng-repeat="person in credits.people">
+      <img ng-src="{{person.img}}" class="credit--avatar">
+      {{person.name}}
+    </div>
+  </div>
 </div>

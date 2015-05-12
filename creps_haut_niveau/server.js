@@ -4,11 +4,13 @@ var app = express();
 var donnees = require('./data/liste.json');
 
 
-
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 var dir = (env === 'dev') ? 'src' : 'build';
+var credits = require('./data/credits');
+
 // serve static content from the html directory
 app.use(express.static(path.join(__dirname, dir)));
+
 
 app.get('/api/all',function(req,res,next){
 	res.json(donnees);
@@ -30,5 +32,10 @@ app.get('/api/males',function(req,res,next){
 
 });
 
+
+
+app.get('/api/credits/', function(req, res, next){
+  res.json(credits);
+});
 
 module.exports = app;

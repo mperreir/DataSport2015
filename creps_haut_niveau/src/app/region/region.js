@@ -4,8 +4,9 @@
 
 
   angular.module('hyblab.creps')
-  .controller('RegionCtrl', ['Data',function(Data){
+  .controller('RegionCtrl', ['$q', 'Data',function($q, Data){
   	var vm = this;
+
 
   	Data.getAll()
   		.then(function(response){
@@ -13,17 +14,25 @@
   			console.log(response);
   		});
 
-  	Data.getFemales()
+  	var pFemale = Data.getFemales()
   		.then(function(response){
   			vm.femaleCount = response.data.length;
   			console.log(vm.femaleCount);
   		});
 
-  	Data.getMales()
+  	var pMale = Data.getMales()
   		.then(function(response){
   			vm.maleCount = response.data.length;
   			console.log(response);
   		});
+
+      $q.all([pFemale,pMale])
+        .then(function(){
+          var total = vm.maleCount + vm.femaleCount;
+          var ratio = (vm.maleCount/total)*10;
+          vm.ratioMale = Math.round(ratio);
+          vm.ratioFemale = 10 - vm.ratioMale;
+        });
 
   }])
   .directive('crepsRegion', [function(){
