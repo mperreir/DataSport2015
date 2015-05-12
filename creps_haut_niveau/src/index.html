@@ -9,6 +9,7 @@
   <!-- build:css app.css -->
   <link rel="stylesheet" type="text/css" href="bower_components/fullpage/jquery.fullPage.css">
   <link rel="stylesheet" type="text/css" href="bower_components/flexboxgrid/dist/flexboxgrid.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/chartist/dist/chartist.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
   <!-- endbuild -->
 </head>
@@ -16,18 +17,22 @@
   <div id="fullpage" fullpage>
     <div class="section" creps-introduction id="introduction"></div>
     <div class="section" creps-region id="region"></div>
+    <div class="section" creps-hommefemme id="hommefemme"></div>
     <div class="section" creps-credits id="credits"></div>
   </div>
 
   <!-- build:js app.js -->
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/chartist/dist/chartist.min.js"></script>
   <script type="text/javascript" src="bower_components/fullpage/jquery.fullPage.min.js"></script>
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-chartist.js/dist/angular-chartist.min.js"></script>
   <script type="text/javascript" src="app/app.js"></script>
   <script type="text/javascript" src="app/core/fullpage.directive.js"></script>
   <script type="text/javascript" src="app/core/credits.service.js"></script>
   <script type="text/javascript" src="app/introduction/introduction.js"></script>
   <script type="text/javascript" src="app/region/region.js"></script>
+  <script type="text/javascript" src="app/hommefemme/hommefemme.js"></script>
   <script type="text/javascript" src="app/credits/credits.js"></script>
   <!-- endbuild -->
 </body>

@@ -13,4 +13,12 @@ app.get('/api/credits/', function(req, res, next){
   res.json(credits);
 });
 
+app.get('/api/females/', function(req, res, next){
+  var category = req.query.category || false;
+
+  var females = donnees.filter(function(person){
+
+  });
+});
+
 module.exports = app;

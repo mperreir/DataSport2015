@@ -10,7 +10,6 @@
   background: url(https://unsplash.imgix.net/photo-1417716226287-2f8cd2e80274?fit=crop&fm=jpg);
   background-size: cover;
   background-position: bottom center;
-  color: #efefed;
   position: relative;
 }
 #introduction .overlay {
@@ -106,15 +105,14 @@ body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 62.5%;
+  background-color: #232835;
+  color: #efefed;
 }
-.section:first-child {
+.section > div {
   height: 100%;
   max-width: 960px;
   min-width: 80%;
   margin: 0 auto;
-}
-.section--title {
-  font-family: 'Montserrat', sans-serif;
 }
 .height-100 {
   height: 100%;
