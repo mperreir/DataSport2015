@@ -7,7 +7,6 @@
   src: url(assets/fonts/CassannetBold.otf);
 }
 #introduction {
-  background: url(https://unsplash.imgix.net/photo-1417716226287-2f8cd2e80274?fit=crop&fm=jpg);
   background-size: cover;
   background-position: bottom center;
   position: relative;
