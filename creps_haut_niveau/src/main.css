@@ -1,1 +1,20 @@
-
+#introduction {
+  background-color: #343642;
+  color: #f1ebc4;
+}
+#introduction .title {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4em;
+}
+#credits {
+  background-color: #962d3e;
+  color: #f1ebc4;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.section > div {
+  height: 100%;
+}
