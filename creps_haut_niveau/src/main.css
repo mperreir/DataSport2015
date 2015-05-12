@@ -107,7 +107,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 62.5%;
 }
-.section > div {
+.section:first-child {
   height: 100%;
   max-width: 960px;
   min-width: 80%;
