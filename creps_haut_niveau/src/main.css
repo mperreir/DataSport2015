@@ -117,11 +117,15 @@
   width: 100%;
   height: auto;
 }
-#region .cmale {
-  opacity: 0.8;
+#region .icon--male {
+  color: #5ac2df;
+  font-size: 3em;
+  margin: -0.3em;
 }
-#region .cfemale {
-  opacity: 0.2;
+#region .icon--female {
+  color: #ec6347;
+  font-size: 3em;
+  margin: -0.3em;
 }
 body {
   padding: 0;
