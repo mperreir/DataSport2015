@@ -7,10 +7,11 @@
 
   .bar {
     margin: 4px;
-    height: 10px;
-    background-color: @bleu;
+    height: 7px;
     border-radius: 10px;
     transition: width 1s;
+    clear: both;
+    display: block;
   }
 
   .bar--male {
@@ -19,5 +20,32 @@
 
   .bar--female {
     background-color: @rouge;
+  }
+
+  .bar--right {
+    float: right;
+    margin-right: 0;
+  }
+
+  .bar--left {
+    float: left;
+    margin-left: 0;
+  }
+
+  .bar--icon {
+    width: 16%;
+    height: auto;
+    margin: auto;
+  }
+
+  .bar--container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  hr {
+    width: 50%;
+    background-color: @white;
+    margin: 20px auto;
   }
 }

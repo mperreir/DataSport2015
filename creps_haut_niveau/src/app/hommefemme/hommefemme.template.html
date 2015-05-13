@@ -5,19 +5,39 @@
     <h2 class="col-xs-offset-2 col-xs-5 bar--title">Haut Niveau</h2>
   </div>
   <div class="row middle-xs">
-    {{hommefemme.total}}
     <div class="col-xs-5">
-      <div class="bar" type="male" ng-style="{{hommefemme.getRatio(hommefemme.total.espoirs.males, hommefemme.maxEspoirs)}}"></div>
-      <div class="bar" type="female"></div>
+      <div>
+        <div class="bar--right tooltip" 
+          title="{{hommefemme.total.espoirs.males}} hommes sur {{hommefemme.totalEspoirs}} listés en Espoir" 
+          creps-bar 
+          type="male" 
+          value="{{hommefemme.total.espoirs.males}}" 
+          max="{{hommefemme.maxEspoirs}}"></div>
+        <div class="bar--right" creps-bar type="female" value="{{hommefemme.total.espoirs.females}}" max="{{hommefemme.maxEspoirs}}"></div>
+      </div>
     </div>
     <div class="col-xs-2 bar--label">Total</div>
-    <div class="col-xs-5"></div>
+    <div class="col-xs-5">
+      <div>
+        <div class="bar--left" creps-bar type="male" value="{{hommefemme.total.hautNiveau.males}}" max="{{hommefemme.maxHautNiveau}}"></div>
+        <div class="bar--left" creps-bar type="female" value="{{hommefemme.total.hautNiveau.females}}" max="{{hommefemme.maxHautNiveau}}"></div>
+      </div>
+    </div>
   </div>
   <hr>
-  <div class="row middle-xd" ng-repeat="sport in hommefemme.sports">
-    {{sport}}
-    <div class="col-xs-5"></div>
-    <div class="col-xs-2"></div>
-    <div class="col-xs-5"></div>
+  <div class="row middle-xs bar--container" ng-repeat="sport in hommefemme.sports">
+    <div class="col-xs-5">
+      <div>
+        <div class="bar--right" creps-bar type="male" value="{{sport.espoirs.males}}" max="{{hommefemme.maxSportEspoirs}}"></div>
+        <div class="bar--right" creps-bar type="female" value="{{sport.espoirs.females}}" max="{{hommefemme.maxSportEspoirs}}"></div>
+      </div>
+    </div>
+    <div class="col-xs-2 bar--label"><img ng-src="{{sport.icon}}" class="bar--icon"></div>
+    <div class="col-xs-5">
+      <div>
+        <div class="bar--left" creps-bar type="male" value="{{sport.hautNiveau.males}}" max="{{hommefemme.maxSportHautNiveau}}"></div>
+        <div class="bar--left" creps-bar type="female" value="{{sport.hautNiveau.females}}" max="{{hommefemme.maxSportHautNiveau}}"></div>
+      </div>
+    </div>
   </div>
 </div>

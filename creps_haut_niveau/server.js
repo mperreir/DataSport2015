@@ -66,9 +66,11 @@ app.get('/api/status/', function(req, res, next){
     var category = person['Catégorie'];
     var federation = person['Fédération'];
     var gender = (person['Sexe'] === 'M') ? 'males' : 'females';
+    var icon = federation.replace(/\s+/g, '-').toLowerCase();
 
     sportsObj[federation] = sportsObj[federation] || {
       name: federation,
+      icon: 'assets/img/sports/' + icon + '.svg',
       espoirs: {
         males: 0,
         females: 0
