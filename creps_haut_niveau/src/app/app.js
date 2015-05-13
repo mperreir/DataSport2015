@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('hyblab.creps', ['ui.router', 'angular-chartist'])
+  angular.module('hyblab.creps', ['ui.router', '720kb.tooltips', 'angular-chartist'])
 
   .config(['$stateProvider', function($stateProvider){
     $stateProvider.state('loading', {

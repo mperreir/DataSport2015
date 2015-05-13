@@ -98,16 +98,39 @@
 }
 #hommefemme .bar {
   margin: 4px;
-  height: 10px;
-  background-color: #5ac2df;
+  height: 7px;
   border-radius: 10px;
   transition: width 1s;
+  clear: both;
+  display: block;
 }
 #hommefemme .bar--male {
   background-color: #5ac2df;
 }
 #hommefemme .bar--female {
   background-color: #ec6347;
+}
+#hommefemme .bar--right {
+  float: right;
+  margin-right: 0;
+}
+#hommefemme .bar--left {
+  float: left;
+  margin-left: 0;
+}
+#hommefemme .bar--icon {
+  width: 16%;
+  height: auto;
+  margin: auto;
+}
+#hommefemme .bar--container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#hommefemme hr {
+  width: 50%;
+  background-color: #efefed;
+  margin: 20px auto;
 }
 #credits {
   text-align: center;
@@ -139,4 +162,20 @@ body {
 }
 .center-block {
   margin: auto;
+}
+.tooltip {
+  display: inline;
+  position: relative;
+}
+.tooltip:hover:after {
+  background-color: #e79634;
+  color: #232835;
+  content: attr(title);
+  border-radius: 5px;
+  right: 20%;
+  top: -50px;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  font-size: 2em;
 }
