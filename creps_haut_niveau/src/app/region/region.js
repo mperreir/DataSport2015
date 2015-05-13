@@ -46,9 +46,13 @@
           vm.rangeMale = rangeMale;
           vm.rangeFemale = rangeFemale;
 
-         //    vm.ratioFemale =  arrFemale;
         });
 
+        $(document).ready(function() {
+          setTimeout(function() {
+        $('#circle').addClass('open');
+        }, 2000);
+});
   }])
   .directive('crepsRegion', [function(){
     return {
