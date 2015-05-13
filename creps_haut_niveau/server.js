@@ -45,6 +45,50 @@ app.get('/api/males',function(req,res,next){
   res.json(males);
 });
 
+/**
+* A renvoyer :
+* - count total
+* - count majeur / mineur
+* - count homme / femme
+*/
+app.get('/api/region/', function(req, res, next){
+  var toSend = {
+    total: 0,
+    gender: {
+      males: 0,
+      females: 0
+    },
+    age: {
+      underage: 0,
+      adult: 0
+    }
+  };
+
+  var today = Date.now();
+
+  donnees.forEach(function(person){
+    var category = person['Catégorie'];
+    var gender = person['Sexe'] === 'M' ? 'males' : 'females';
+    if(!isHautNiveau(category)) return;
+
+    toSend.total++;
+    toSend.gender[gender]++;
+    var birthDateStr = person['Date de naissance'];
+    var day = birthDateStr.substr(0, 2);
+    var month = birthDateStr.substr(3, 2);
+    var year = birthDateStr.substr(6);
+
+    var fullDate = month + '/' + day + '/' + year;
+    var birthDate = new Date(fullDate);
+    var datediff = today - birthDate;
+    var age = datediff / (24 * 60 * 60 * 1000 * 365);
+    if(age > 18) toSend.age.adult++;
+    else toSend.age.underage++;
+  });
+
+  res.json(toSend);
+});
+
 app.get('/api/status/', function(req, res, next){
   var count = req.query.count || 10;
   var toSend = {
