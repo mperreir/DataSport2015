@@ -1,41 +1,42 @@
-<div class="row middle-xs center-xs">
-	<div class="row ">
-		<div class="col-xs-6">
-			<div>
-				<span ng-repeat='n in region.rangeMale'>
-					<i class="male icon icon--male"> </i>
-				</span>
-				<span ng-repeat='n in region.rangeFemale'>
-					<i class="female icon icon--female"> </i>
-				</span>
+<div>
+		<div class="row center-xs">
+			<div class="col-xs-6">
+				<div  class="region--block">
+					<div class="row">
+						<img src='assets/img/podium.svg' class="svg svg--podium">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="region--block">
+					<div id="circle" class="circle">
+						 <span count-to='{{region.total}}' value="0" duration="2"></span>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="col-xs-6">
-			<div id="circle" class="circle">
-				Salut je suis un cerlce
+		<div class="row center-xs">
+			<div class="col-xs-6 ">
+				<div class="region--block">
+					<div class="row">
+						<canvas id="pie" class="chart chart-doughnut" data="region.doughdata"
+ 							 labels="region.doughlabels"></canvas> 
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="region--block">
+
+					<div class="row">
+						<span ng-repeat='n in region.rangeMale'>
+							<i class="male icon icon--male"> </i>
+						</span>
+						<span ng-repeat='n in region.rangeFemale'>
+							<i class="female icon icon--female"> </i>
+						</span>
+					</div>
+			
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row ">
-		<div class="col-xs-6">
-			<div>
-				<span ng-repeat='n in region.rangeMale'>
-					<i class="male icon icon--male"> </i>
-				</span>
-				<span ng-repeat='n in region.rangeFemale'>
-					<i class="female icon icon--female"> </i>
-				</span>
-			</div>
-		</div>
-		<div class="col-xs-6">
-			<div>
-				<span ng-repeat='n in region.rangeMale'>
-					<i class="male icon icon--male"> </i>
-				</span>
-				<span ng-repeat='n in region.rangeFemale'>
-					<i class="female icon icon--female"> </i>
-				</span>
-			</div>
-		</div>
-	</div>
 </div>

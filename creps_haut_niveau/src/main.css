@@ -140,6 +140,10 @@
   width: 100%;
   height: auto;
 }
+#region .region--block {
+  width: 50vw;
+  height: 50vh;
+}
 #region .icon--male {
   color: #5ac2df;
   font-size: 3em;
@@ -150,33 +154,31 @@
   font-size: 3em;
   margin: -0.3em;
 }
+#region .svg--podium path {
+  fill: red;
+}
 #region .circle {
   position: relative;
-  width: 0px;
-  height: 0px;
-  top: 50px;
-  left: 50px;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  padding: 5% 5%;
+  border-radius: 50%;
   -webkit-transition-duration: 2s;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in-out;
-  background: red;
-  color: white;
-  border-radius: 100%;
-  padding: 20px;
-  overflow: hidden;
-  font-size: 50px;
-  color: #fff;
-  line-height: 500px;
+  background: none;
+  color: #ec6347;
+  font-family: Helvetica, Arial Black, sans;
+  font-size: 3em;
   text-align: center;
-  background: #ec6347;
-  font-family: sans-serif;
-  /* Just 'cos */
+  border: 5px solid #ec6347;
 }
 #region .open {
   top: 0px;
   left: 0px;
-  width: 100px;
-  height: 100px;
+  width: 6em;
+  height: 6em;
 }
 body {
   padding: 0;
