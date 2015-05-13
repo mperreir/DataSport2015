@@ -1,5 +1,6 @@
 @import (less) 'core/less/_fonts.less';
 @import (less) 'introduction/introduction.less';
+@import (less) 'hommefemme/hommefemme.less';
 @import (less) 'credits/credits.less';
 @import (less) 'region/region.less';
 
@@ -8,6 +9,8 @@ body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 62.5%;
+  background-color: @dark;
+  color: @white;
 }
 
 .section > div {
@@ -17,10 +20,14 @@ body {
   margin: 0 auto;
 }
 
-.section--title {
-  font-family: 'Montserrat', sans-serif;
-}
-
 .height-100 {
   height: 100%;
+}
+
+.height-100vh {
+  height: 100vh;
+}
+
+.center-block {
+  margin: auto;
 }

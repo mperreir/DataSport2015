@@ -11,19 +11,16 @@
   	Data.getAll()
   		.then(function(response){
   			vm.data = response.data;
-  			console.log(response);
   		});
 
   	var pFemale = Data.getFemales()
   		.then(function(response){
   			vm.femaleCount = response.data.length;
-  			console.log(vm.femaleCount);
   		});
 
   	var pMale = Data.getMales()
   		.then(function(response){
   			vm.maleCount = response.data.length;
-  			console.log(response);
   		});
 
       $q.all([pFemale,pMale])

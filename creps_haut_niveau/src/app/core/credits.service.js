@@ -6,7 +6,10 @@
     var service = this;
 
     service.get = function(){
-      return $http.get('api/credits');
+      return $http.get('api/credits')
+      .then(function(response){
+        service.credits = response.data;
+      });
     };
   }]);
 })();

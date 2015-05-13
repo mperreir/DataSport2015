@@ -1,0 +1,23 @@
+<div>
+  <h1>Hommes et femmes: quels espoirs ?</h1>
+  <div class="row">
+    <h2 class="col-xs-5 bar--title">Espoirs</h2>
+    <h2 class="col-xs-offset-2 col-xs-5 bar--title">Haut Niveau</h2>
+  </div>
+  <div class="row middle-xs">
+    {{hommefemme.total}}
+    <div class="col-xs-5">
+      <div class="bar" type="male" ng-style="{{hommefemme.getRatio(hommefemme.total.espoirs.males, hommefemme.maxEspoirs)}}"></div>
+      <div class="bar" type="female"></div>
+    </div>
+    <div class="col-xs-2 bar--label">Total</div>
+    <div class="col-xs-5"></div>
+  </div>
+  <hr>
+  <div class="row middle-xd" ng-repeat="sport in hommefemme.sports">
+    {{sport}}
+    <div class="col-xs-5"></div>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-5"></div>
+  </div>
+</div>

@@ -6,10 +6,7 @@
   .controller('CreditsCtrl', ['Credits', function(Credits){
     var vm = this;
 
-    Credits.get()
-    .then(function(response){
-      vm.people = response.data;
-    });
+    vm.people = Credits.credits;
   }])
 
   .directive('crepsCredits', [function(){
