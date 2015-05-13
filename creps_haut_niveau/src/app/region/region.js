@@ -27,8 +27,26 @@
         .then(function(){
           var total = vm.maleCount + vm.femaleCount;
           var ratio = (vm.maleCount/total)*10;
-          vm.ratioMale = Math.round(ratio);
-          vm.ratioFemale = 10 - vm.ratioMale;
+
+          var ratioMale = Math.round(ratio);
+          var ratioFemale = 10 - ratioMale;
+
+          var rangeMale = [];
+          for(var i=0;i<ratioMale;i++)
+            {
+              rangeMale.push(i);
+            }
+
+          var rangeFemale = [];
+          for(var i=0;i<ratioFemale;i++)
+            {
+              rangeFemale.push(i);
+            }
+
+          vm.rangeMale = rangeMale;
+          vm.rangeFemale = rangeFemale;
+
+         //    vm.ratioFemale =  arrFemale;
         });
 
   }])
