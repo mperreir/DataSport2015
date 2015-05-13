@@ -12,6 +12,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'client/bower_components/jquery/dist/jquery.js',
+      'client/bower_components/bootstrap/dist/js/bootstrap.js',
       'client/bower_components/angular/angular.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       'client/bower_components/angular-resource/angular-resource.js',
@@ -20,10 +21,6 @@ module.exports = function(config) {
       'client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
-      'client/bower_components/angular-parallax/scripts/angular-parallax.js',
-      'client/bower_components/angular-scroll/angular-scroll.js',
-      'client/bower_components/bootstrap/dist/js/bootstrap.js',
-      'client/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.js',
       'client/app/app.js',
       'client/app/**/*.js',
       'client/components/**/*.js',

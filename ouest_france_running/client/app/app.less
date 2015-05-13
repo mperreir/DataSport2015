@@ -16,9 +16,9 @@
 /*------------------------------------*\
      Balises
 \*------------------------------------*/
-@navbar-height:50px;
+@navbar-height: 50px;
 body {
-  background-color: #ddd;
+  background-color: @background-color;
 }
 /*------------------------------------*\
    Classes utilitaires
@@ -31,8 +31,57 @@ body {
 .last {
   margin-bottom: 80px;
 }
-.no-margin-top{
-  margin-top : 0px;
+.no-margin-top {
+  margin-top: 0;
+}
+/*------------------------------------*\
+   Couleurs
+\*------------------------------------*/
+@rouge: #e73754;
+@bleu: #5fb2e1;
+@orange: #f7a74c;
+@vert: #7eac5b;
+@noir: #1d1d1b;
+@background-color: #eee;
+/*------------------------------------*\
+   Police
+\*------------------------------------*/
+.text {
+  font-family: 'Lato', sans-serif;
+}
+.text h3 {
+  text-transform: uppercase;
+  font-size: 23px;
+  line-height: 0.5;
+}
+.text p {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 0.5;
+}
+.title {
+  font-size: 46px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h2.subtitle {
+  font-size: 46px;
+}
+h3.subtitle  {
+  font-size: 23px;
+}
+.subtitle {
+  margin-top: 0;
+  padding-top: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+text-center {
+  text-align: center;
 }
 /**
  * /!\ Ne rien écrire dans le bloc du dessous, grunt injecte automatiquement tous les nouveaux fichiers Less trouvés
