@@ -1,23 +1,15 @@
-<div ng-controller="Section1Ctrl" id="section_1"  class="section section1">
+<div ng-controller="Section1Ctrl" id="section_1" class="section section1">
   <div class="container first">
 
     <div class="section1-header">
       <h1 class="title">Plourhan</h1>
-      <h2 class="subtitle">25 km</h2>
+      <h3 class="subtitle">10.06.2015</h3>
     </div>
 
     <div class="row">
       <div class="col-md-4 section1-dataviz-header text">
-        <h3>10.06.2015</h3>
-        <p>
-          Rayonnement de la course
-        </p>
-        <p>
-          Blablabla sur la course
-        </p>
-        <p>
-          Dans blabla ville truc machin
-        </p>
+        <h2 class="no-margin-top title text-center">25KM</h2>
+        <h3 class="subtitle text-center">Courus par des sportifs de toute la france</h3>
       </div>
 
       <div class="col-md-4">
@@ -34,11 +26,11 @@
     </div>
 
     <div class="row">
-      <div class="col-md-4 dataviz">
-        DATAVIZ
+      <div class="col-md-4">
+        <div id="map" class="dv-map"></div>
       </div>
-      <div class="col-md-4 dataviz">
-        DATAVIZ
+      <div class="col-md-4">
+        <canvas id="doughnut" class="chart chart-doughnut" data="doughnut.data" labels="doughnut.labels" colours="doughnut.colours" options="doughnut.options"> </canvas>
       </div>
       <div class="col-md-4 dataviz">
         DATAVIZ

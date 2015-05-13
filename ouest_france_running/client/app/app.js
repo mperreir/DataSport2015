@@ -14,7 +14,8 @@ angular.module('hyblabApp', [
     'ui.router',
     'ui.bootstrap',
     'angular-parallax',
-    'duScroll'
+    'duScroll',
+    'chart.js'
   ])
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
