@@ -25,6 +25,7 @@
     "angular-tooltips": "~0.1.9",
     "semantic-ui-icon": "~1.12.1",
     "angular-count-to": "*",
-    "angular-chart.js": "~0.7.1"
+    "angular-chart.js": "~0.7.1",
+    "animate.css": "~3.2.6"
   }
 }

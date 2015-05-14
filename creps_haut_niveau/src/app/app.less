@@ -2,6 +2,7 @@
 @import (less) 'core/less/_palette.less';
 @import (less) 'introduction/introduction.less';
 @import (less) 'description/description.less';
+@import (less) 'departements/departements.less';
 @import (less) 'hommefemme/hommefemme.less';
 @import (less) 'credits/credits.less';
 @import (less) 'region/region.less';
@@ -38,6 +39,10 @@ p, span {
   margin: auto;
 }
 
+.m0 {
+  margin: 0;
+}
+
 .tooltip {
   display: inline;
   position: relative;
@@ -54,4 +59,16 @@ p, span {
   position: absolute;
   z-index: 98;
   font-size: 2em;
+}
+
+#fp-nav {
+  ul {
+    li {
+      a {
+        span {
+          background-color: @white;
+        }
+      }
+    }
+  }
 }

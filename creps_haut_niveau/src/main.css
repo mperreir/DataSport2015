@@ -92,8 +92,10 @@
   margin-left: 10px;
   border-top: 1px solid #efefed;
 }
-#description p {
+#description .description--last {
   padding-top: 40px;
+}
+#description .description--first {
   padding-bottom: 40px;
 }
 #description img {
@@ -101,6 +103,24 @@
   height: auto;
   margin: auto;
   margin-bottom: 20px;
+}
+#departements {
+  background-color: #efefed;
+  color: #232835;
+}
+#departements .map-container {
+  position: relative;
+}
+#departements .map-container .dpt--infos {
+  position: absolute;
+}
+#departements .map-container .dpt--age {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+#departements .wrapper {
+  height: 80%;
 }
 #hommefemme .bar--title,
 #hommefemme .bar--label {
@@ -114,7 +134,7 @@
   height: 7px;
   width: 0%;
   border-radius: 10px;
-  transition: width 1s;
+  transition: width .5s;
   clear: both;
   display: block;
 }
@@ -133,7 +153,8 @@
   margin-left: 0;
 }
 #hommefemme .bar--icon {
-  width: 16%;
+  min-width: 16%;
+  max-height: 31px;
   height: auto;
   margin: auto;
 }
@@ -144,7 +165,7 @@
 #hommefemme hr {
   width: 50%;
   background-color: #efefed;
-  margin: 20px auto;
+  margin: 16px auto;
 }
 #hommefemme h2 {
   font-size: 2em;
@@ -164,6 +185,10 @@
 #credits .credit--label {
   text-align: center;
   padding: 0;
+}
+#region {
+  background-color: #efefed;
+  color: #232835;
 }
 #region .region--block {
   width: 50vw;
@@ -296,6 +321,9 @@ span {
 .center-block {
   margin: auto;
 }
+.m0 {
+  margin: 0;
+}
 .tooltip {
   display: inline;
   position: relative;
@@ -311,4 +339,7 @@ span {
   position: absolute;
   z-index: 98;
   font-size: 2em;
+}
+#fp-nav ul li a span {
+  background-color: #efefed;
 }
