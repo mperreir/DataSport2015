@@ -1,12 +1,42 @@
 [
   {
+    "name": "Amélie Pouillade",
+    "img": "assets/img/credits/amélie.jpg",
+    "school": "Staps"
+  },
+  {
+    "name": "Manon Daguin",
+    "img": "assets/img/credits/manon.jpg",
+    "school": "Staps"
+  },
+  {
+    "name": "Fanny Tourancheau",
+    "img": "assets/img/credits/fanny.jpg",
+    "school": "Staps"
+  },
+  {
+    "name": "Pauline Roussel",
+    "img": "assets/img/credits/pauline.jpg",
+    "school": "Staps"
+  },
+  {
+    "name": "Fabien Manhé",
+    "img": "http://lorempixel.com/400/400/",
+    "school": "Ecole De Design Nantes"
+  },
+  {
+    "name": "Adrien Frey",
+    "img": "http://lorempixel.com/400/400/",
+    "school": "Ecole De Design Nantes"
+  },
+  {
     "name": "Tom Dupisre",
-    "img": "https://scontent.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1798061_451710101633390_7925505478305428334_n.jpg?oh=7a1b703d8eb65f8cea4941c2ad9a2e8b&oe=55CC777C",
+    "img": "http://lorempixel.com/400/400/",
     "school": "Polytech"
   }, 
   {
     "name": "Antoine Chalifour",
-    "img": "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xat1/v/t1.0-9/10577107_608031895981660_6597013620875038747_n.jpg?oh=df0e84843bcc3aa6a4798e8420ad19e2&oe=55D97ACA&__gda__=1439457301_92d96d3b0b4ddbdca659a43ae2d34d43",
+    "img": "http://lorempixel.com/400/400/",
     "school": "Polytech"
   }
 ]

@@ -7,9 +7,9 @@
   src: url(assets/fonts/CassannetBold.otf);
 }
 #introduction {
-  background: url(https://unsplash.imgix.net/photo-1417716226287-2f8cd2e80274?fit=crop&fm=jpg);
+  background: url(assets/img/cover.jpg);
   background-size: cover;
-  background-position: bottom center;
+  background-position: top center;
   position: relative;
 }
 #introduction .overlay {
@@ -92,6 +92,16 @@
   margin-left: 10px;
   border-top: 1px solid #efefed;
 }
+#description p {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#description img {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 20px;
+}
 #hommefemme .bar--title,
 #hommefemme .bar--label {
   text-align: center;
@@ -142,10 +152,22 @@
 #credits {
   text-align: center;
 }
+#credits .credit--list {
+  max-width: 75%;
+  margin: auto;
+}
 #credits .credit--avatar {
   border-radius: 50%;
-  width: 100%;
+  width: 50%;
   height: auto;
+}
+#credits .credit--label {
+  text-align: center;
+  padding: 0;
+}
+#region .region--block {
+  width: 50vw;
+  height: 50vh;
 }
 #region .icon--male {
   color: #5ac2df;
@@ -157,6 +179,32 @@
   font-size: 3em;
   margin: -0.3em;
 }
+#region .svg--podium path {
+  fill: red;
+}
+#region .circle {
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  padding: 5% 5%;
+  border-radius: 50%;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  background: none;
+  color: #ec6347;
+  font-family: Helvetica, Arial Black, sans;
+  font-size: 3em;
+  text-align: center;
+  border: 5px solid #ec6347;
+}
+#region .open {
+  top: 0px;
+  left: 0px;
+  width: 6em;
+  height: 6em;
+}
 body {
   padding: 0;
   margin: 0;
@@ -164,6 +212,10 @@ body {
   font-size: 62.5%;
   background-color: #232835;
   color: #efefed;
+}
+p,
+span {
+  font-size: 1.6em;
 }
 .section > div {
   height: 100%;

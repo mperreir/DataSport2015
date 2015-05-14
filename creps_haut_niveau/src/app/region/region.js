@@ -1,35 +1,21 @@
 (function(){
   'use strict';
 
-
-
   angular.module('hyblab.creps')
   .controller('RegionCtrl', ['$q', 'Data',function($q, Data){
   	var vm = this;
 
+    vm.region = Data.region;
+    console.log(vm.region);
 
-  	Data.getAll()
-  		.then(function(response){
-  			vm.data = response.data;
-  		});
+    var gender = vm.region.gender;
+    vm.total = vm.region.total;
+    var age = vm.region.age;
 
-  	var pFemale = Data.getFemales()
-  		.then(function(response){
-  			vm.femaleCount = response.data.length;
-  		});
+    var ratio = (gender.males/vm.total)*10;
 
-  	var pMale = Data.getMales()
-  		.then(function(response){
-  			vm.maleCount = response.data.length;
-  		});
-
-      $q.all([pFemale,pMale])
-        .then(function(){
-          var total = vm.maleCount + vm.femaleCount;
-          var ratio = (vm.maleCount/total)*10;
-
-          var ratioMale = Math.round(ratio);
-          var ratioFemale = 10 - ratioMale;
+    var ratioMale = Math.round(ratio);
+    var ratioFemale = 10 - ratioMale;
 
           var rangeMale = [];
           for(var i=0;i<ratioMale;i++)
@@ -46,11 +32,18 @@
           vm.rangeMale = rangeMale;
           vm.rangeFemale = rangeFemale;
 
-         //    vm.ratioFemale =  arrFemale;
-        });
+          // à changer forcément
+        $(document).ready(function() {
+          setTimeout(function() {
+        $('#circle').addClass('open');
+        }, 500);
 
+            vm.doughlabels = ["Mineurs de haut niveau","Majeurs de haut niveau"];
+            vm.doughdata = [age.underage,age.adult];
+           
+});
   }])
-  .directive('crepsRegion', [function(){
+  .directive('crepsRegion',[function(){
     return {
       restrict: 'EA',
       templateUrl: 'app/region/region.template.html',

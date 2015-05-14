@@ -1,9 +1,14 @@
-<div>
-  <h1 class="section--title">Crédits</h1>
-  <div class="row">
-    <div class="col-xs-offset-2 col-xs-10 col-sm-3" ng-repeat="person in credits.people">
-      <img ng-src="{{person.img}}" class="credit--avatar">
-      {{person.name}}
+<div class="row middle-xs">
+  <div>
+    <h1 class="section--title">Crédits</h1>
+    <div class="row center-xs credit--list">
+      <div class="col-xs-2" ng-repeat="person in credits.people">
+        <div>
+          <img ng-src="{{person.img}}" class="credit--avatar">
+          <p class="credit--label">{{person.name}}</p>
+          <p class="credit--label">{{person.school}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
