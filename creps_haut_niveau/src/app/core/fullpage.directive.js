@@ -6,6 +6,7 @@
     return function(scope, element, attrs){
       var id = attrs.id;
       $('#' + id).fullpage({
+        navigation: true,
         afterLoad: function(anchor, index){
           var eventName = '';
           switch(index){

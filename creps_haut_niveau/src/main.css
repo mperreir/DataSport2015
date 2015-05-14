@@ -102,6 +102,13 @@
   margin: auto;
   margin-bottom: 20px;
 }
+#departements {
+  background-color: #efefed;
+  color: #232835;
+}
+#departements .map-container {
+  position: relative;
+}
 #hommefemme .bar--title,
 #hommefemme .bar--label {
   text-align: center;
@@ -247,4 +254,7 @@ span {
   position: absolute;
   z-index: 98;
   font-size: 2em;
+}
+#fp-nav ul li a span {
+  background-color: #efefed;
 }
