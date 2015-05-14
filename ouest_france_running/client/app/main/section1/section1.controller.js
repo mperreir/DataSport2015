@@ -61,35 +61,33 @@ angular.module('hyblabApp')
     });
 
     var dv2 = {
-      data : [
-      	{
-      		value : 300,
-      		color: 'rgba(231,55,84,1)',
-          title : 'Femmes'
-      	},
-      	{
-      		value : 700,
-      		color: 'rgba(29,29,27,1)',
-          title : 'Hommes'
-      	}
-      ],
+      data: [{
+        value: 300,
+        color: 'rgba(231,55,84,1)',
+        title: 'Femmes'
+      }, {
+        value: 700,
+        color: 'rgba(29,29,27,1)',
+        title: 'Hommes'
+      }],
       options: {
-        animateRotate : true,
-        animateScale : true,
-        animationByData : false,
-        animationSteps : 50,
+        segmentShowStroke: false,
+        animateRotate: true,
+        animateScale: true,
+        animationByData: false,
+        animationSteps: 100,
         animationEasing: 'linear',
-        canvasBorders : false,
-        graphTitle : '',
-        legend : false,
-        inGraphDataShow : false,
-        annotateDisplay : true,
-        spaceBetweenBar : 0,
-        graphTitleFontSize: 18
+        canvasBorders: false,
+        graphTitle: '',
+        legend: false,
+        inGraphDataShow: false,
+        annotateDisplay: true,
+        spaceBetweenBar: 0,
+        graphTitleFontSize: 18,
       }
     };
 
-    var dv2Diagram = new Chart(document.getElementById('dv2').getContext('2d')).Doughnut(dv2.data,dv2.options);
+    var dv2Diagram = new Chart(document.getElementById('dv2').getContext('2d')).Doughnut(dv2.data, dv2.options);
 
     var dv3 = {
       data: {
@@ -111,13 +109,12 @@ angular.module('hyblabApp')
         }]
       },
       options: {
+        pointDot: false,
         animationLeftToRight: true,
         animationByDataset: true,
         animationSteps: 100,
         animationEasing: 'linear',
         canvasBorders: false,
-        canvasBordersWidth: 3,
-        canvasBordersColor: 'transparent',
         graphTitle: '',
         legend: false,
         inGraphDataShow: false,
@@ -126,28 +123,55 @@ angular.module('hyblabApp')
       }
     };
 
-    var dv3Diagram = new Chart(document.getElementById('dv3').getContext('2d')).Radar(dv3.data,dv3.options);
+    var dv3Diagram = new Chart(document.getElementById('dv3').getContext('2d')).Radar(dv3.data, dv3.options);
 
-    $scope.dv4 = {
+    var dv4 = {
       data: {
-        labels: ['Plus rapide', 'Moyenne', 'Plus lent'],
-        series: [
-          [20.15, 28.40, 39.6]
-        ]
+        labels: ['Départ'],
+        datasets: [{
+          fillColor: 'rgba(29,29,27,0.5)',
+          strokeColor: 'rgba(29,29,27,0.5)',
+          pointColor: 'rgba(231,55,84,0.5)',
+          pointstrokeColor: 'transparent',
+          data: [10],
+          title: 'Arrivée du premier'
+        }, {
+          fillColor: 'rgba(29,29,27,1)',
+          strokeColor: 'rgba(29,29,27,1)',
+          pointColor: 'rgba(29,29,27,0.5)',
+          pointstrokeColor: 'transparent',
+          data: [15],
+          title: 'Arrivée du dernier'
+        }]
       },
       options: {
-        axisX: {
-          // On the x-axis start means top and end means bottom
-          position: 'start'
-        },
-        axisY: {
-          // On the y-axis start means left and end means right
-          position: 'start'
-        },
-        reverseData: true,
-        horizontalBars: true
+        scaleShowLabels: false,
+        barShowStroke: false,
+        animationStartWithDataset: 1,
+        animationStartWithData: 1,
+        animationSteps: 100,
+        canvasBorders: false,
+        graphTitle: '',
+        legend: true,
+        legendBorders: false,
+        legendPosX: 3,
+        legendPosY: 2,
+        legendFontFamily: 'sans-serif',
+        legendFontSize: 12,
+        maxLegendCols: 1,
+        legendFillColor: '#eee',
+        inGraphDataShow: true,
+        annotateDisplay: false,
+        scaleShowGridLines: false,
+        scaleOverride: true,
+        scaleSteps: 2,
+        scaleStepWidth: 10,
+        scaleStartValue: 0
       }
     };
+
+    var dv4Diagram = new Chart(document.getElementById('dv4').getContext('2d')).HorizontalBar(dv4.data, dv4.options);
+
 
 
 
