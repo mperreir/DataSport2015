@@ -196,9 +196,17 @@
   background-color: #efefed;
   color: #232835;
 }
+#region .title--nb--licence {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 #region .region--title {
   font-style: italic;
-  font-weight: 200;
+  font-weight: 300;
+}
+#region .comphf--style {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 #region .icon--male {
   color: #2f81d3;
@@ -251,6 +259,8 @@
 #region .bandeau--style {
   color: #efefed;
   background-color: #e85138;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 4px;
 }
@@ -284,6 +294,39 @@
 }
 #region .bandeau--nb.small {
   font-size: 3em;
+}
+#region .svg--podium {
+  width: 70%;
+  height: auto;
+}
+#region .bar--label--homme {
+  text-align: right;
+  font-style: italic;
+  font-weight: 200;
+  color: #2f81d3;
+  font-size: 1.5em;
+}
+#region .bar--label--femme {
+  font-style: italic;
+  font-weight: 200;
+  color: #ef4878;
+  font-size: 1.5em;
+}
+#region .bar--label--pourhomme {
+  font-style: italic;
+  font-weight: 200;
+  color: #2f81d3;
+  float: right;
+  margin: 0;
+  line-height: 0;
+}
+#region .bar--label--pourfemme {
+  font-style: italic;
+  font-weight: 200;
+  color: #ef4878;
+  float: left;
+  margin: 0;
+  line-height: 0;
 }
 body {
   padding: 0;
