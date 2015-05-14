@@ -6,6 +6,7 @@
   	var vm = this;
     vm.counthomme = 0;
     vm.countfemme = 0;
+    vm.valuetotal = 0;
 
     vm.region = Data.region;
     console.log(vm.region);
@@ -26,6 +27,7 @@
       $scope.$apply(function(){
         vm.counthomme = 63;
         vm.countfemme = 37;
+        vm.valuetotal = 1026000;
 
         vm.hautNiveau = vm.region.hautNiveau.total;
         vm.sportifsListes = vm.region.total;
