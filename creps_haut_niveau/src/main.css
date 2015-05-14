@@ -177,6 +177,9 @@
   max-width: 75%;
   margin: auto;
 }
+#credits .credit--person {
+  padding: 10px;
+}
 #credits .credit--avatar {
   border-radius: 50%;
   width: 50%;
@@ -184,7 +187,10 @@
 }
 #credits .credit--label {
   text-align: center;
-  padding: 0;
+  margin: 0;
+}
+#credits .credit--school {
+  font-size: 1.2em;
 }
 #region {
   background-color: #efefed;
@@ -277,12 +283,15 @@ span {
   font-size: 2em;
 }
 #fp-nav ul li a span {
-  background-color: #efefed;
+  background-color: #e79634;
 }
 .scale {
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 .scale:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
+}
+.icon--red {
+  color: #ec6347;
 }

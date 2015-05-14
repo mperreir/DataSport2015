@@ -2,22 +2,22 @@
   {
     "name": "Amélie Pouillade",
     "img": "assets/img/credits/amélie.jpg",
-    "school": "Staps"
+    "school": "STAPS"
   },
   {
     "name": "Manon Daguin",
     "img": "assets/img/credits/manon.jpg",
-    "school": "Staps"
+    "school": "STAPS"
   },
   {
     "name": "Fanny Tourancheau",
     "img": "assets/img/credits/fanny.jpg",
-    "school": "Staps"
+    "school": "STAPS"
   },
   {
     "name": "Pauline Roussel",
     "img": "assets/img/credits/pauline.jpg",
-    "school": "Staps"
+    "school": "STAPS"
   },
   {
     "name": "Fabien Manhé",
@@ -32,11 +32,11 @@
   {
     "name": "Tom Dupisre",
     "img": "http://lorempixel.com/400/400/",
-    "school": "Polytech"
+    "school": "Polytech Nantes"
   }, 
   {
     "name": "Antoine Chalifour",
     "img": "http://lorempixel.com/400/400/",
-    "school": "Polytech"
+    "school": "Polytech Nantes"
   }
 ]

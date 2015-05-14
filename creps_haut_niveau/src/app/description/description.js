@@ -7,9 +7,9 @@
       restrict: 'EA',
       templateUrl: 'app/description/description.template.html',
       link: function(scope, element, attrs){
-        var $ps = $('p').hide();
-        var $spans = $('span').hide();
-        var $imgs = $('img').hide();
+        var $ps = element.find('p').hide();
+        var $spans = element.find('span').hide();
+        var $imgs = element.find('img').hide();
 
         scope.$on('slide:description', function(){
           $ps.show().addClass('animated').addClass('fadeIn');
