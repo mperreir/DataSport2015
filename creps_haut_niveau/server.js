@@ -17,26 +17,22 @@ app.use(express.static(path.join(__dirname, dir)));
 */
 app.get('/api/region/', function(req, res, next){
   var toSend = {
-    total: 0,
-    gender: {
-      males: 0,
-      females: 0
+    total: donnees.length,
+    hautNiveau: {
+      total: 0,
+      underage: 0
     },
-    age: {
-      underage: 0,
-      adult: 0
-    }
+    espoirs: {
+      total: 0,
+      underage: 0
+    },
+    partenaires: 0
   };
 
   var today = Date.now();
 
   donnees.forEach(function(person){
     var category = person['Catégorie'];
-    var gender = person['Sexe'] === 'M' ? 'males' : 'females';
-    if(!isHautNiveau(category)) return;
-
-    toSend.total++;
-    toSend.gender[gender]++;
     var birthDateStr = person['Date de naissance'];
     var day = birthDateStr.substr(0, 2);
     var month = birthDateStr.substr(3, 2);
@@ -46,8 +42,16 @@ app.get('/api/region/', function(req, res, next){
     var birthDate = new Date(fullDate);
     var datediff = today - birthDate;
     var age = datediff / (24 * 60 * 60 * 1000 * 365);
-    if(age > 18) toSend.age.adult++;
-    else toSend.age.underage++;
+
+    if(isHautNiveau(category)){
+      toSend.hautNiveau.total++;
+      if(age < 18) toSend.hautNiveau.underage++;
+    }
+    else if(category === 'Espoirs'){
+      toSend.espoirs.total++;
+      if(age < 18) toSend.espoirs.underage++;
+    }
+    else if(category === 'Partenaire d entrainement') toSend.partenaires++;
   });
 
   res.json(toSend);
