@@ -88,14 +88,14 @@ angular.module('hyblabApp')
           strokeColor: 'rgba(231,55,84,1)',
           pointColor: 'rgba(231,55,84,0.5)',
           pointstrokeColor: 'transparent',
-          data: [95, 53, 99, 10, 73, 27, 82, 6],
+          data: [35, 43, 59, 25, 31, 50, 66, 3],
           title: 'Femmes'
         }, {
           fillColor: 'rgba(29,29,27,0.5)',
           strokeColor: 'rgba(29,29,27,1)',
           pointColor: 'rgba(29,29,27,0.5)',
           pointstrokeColor: 'transparent',
-          data: [35, 43, 59, 25, 31, 50, 66, 3],
+          data: [95, 53, 99, 10, 73, 27, 82, 80],          
           title: 'Hommes'
         }]
       },
