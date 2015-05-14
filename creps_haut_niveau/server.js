@@ -58,7 +58,108 @@ app.get('/api/region/', function(req, res, next){
 });
 
 app.get('/api/departements/', function(req, res, next){
+  var toSend = {
+    '44': {
+      total: 0
+    },
+    '49': {
+      total: 0
+    },
+    '53': {
+      total: 0
+    },
+    '72': {
+      total: 0
+    },
+    '85': {
+      total: 0
+    }
+  };
 
+  var sportsObj44 = {};
+  var sportsObj49 = {};
+  var sportsObj53 = {};
+  var sportsObj72 = {};
+  var sportsObj85 = {};
+
+  donnees.forEach(function(person){
+    if(!isHautNiveau(person['Catégorie'])) return;
+
+    var dpt = person['Code département'];
+    var federation = person['Fédération'];
+    var sportsObj;
+    toSend[dpt].total++;
+    if(dpt === 44) {
+      sportsObj = sportsObj44;      
+    }
+    else if(dpt === 49) {
+      sportsObj = sportsObj49;
+    }
+    else if(dpt === 53) {
+      sportsObj = sportsObj53;
+    }
+    else if(dpt === 72) {
+      sportsObj = sportsObj72;
+    }
+    else if(dpt === 85) {
+      sportsObj = sportsObj85;
+    }
+
+    sportsObj[federation] = sportsObj[federation] || {
+      name: federation,
+      total: 0
+    };
+
+    sportsObj[federation].total++;
+  });
+
+  var sportsArr44 = [];
+  var sportsArr49 = [];
+  var sportsArr53 = [];
+  var sportsArr72 = [];
+  var sportsArr85 = [];
+
+  for(index in sportsObj44){
+    sportsArr44.push(sportsObj44[index]);
+  }
+
+  for(index in sportsObj49){
+    sportsArr49.push(sportsObj49[index]);
+  }
+
+  for(index in sportsObj53){
+    sportsArr53.push(sportsObj53[index]);
+  }
+
+  for(index in sportsObj72){
+    sportsArr72.push(sportsObj72[index]);
+  }
+
+  for(index in sportsObj85){
+    sportsArr85.push(sportsObj85[index]);
+  }
+
+
+  
+
+  function sortArray(a, b){
+    if(a.total < b.total) return 1;
+    else return -1;
+  }
+
+  sportsArr44.sort(sortArray);
+  sportsArr49.sort(sortArray);
+  sportsArr53.sort(sortArray);
+  sportsArr72.sort(sortArray);
+  sportsArr85.sort(sortArray);
+
+  toSend['44'].sports = sportsArr44.slice(0, 3);
+  toSend['49'].sports = sportsArr49.slice(0, 3);
+  toSend['53'].sports = sportsArr53.slice(0, 3);
+  toSend['72'].sports = sportsArr72.slice(0, 3);
+  toSend['85'].sports = sportsArr85.slice(0, 3);
+
+  res.json(toSend);
 });
 
 app.get('/api/status/', function(req, res, next){

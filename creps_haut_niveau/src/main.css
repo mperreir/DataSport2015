@@ -328,3 +328,10 @@ span {
 #fp-nav ul li a span {
   background-color: #efefed;
 }
+.scale {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.scale:hover {
+  transform: scale(1.1);
+}
