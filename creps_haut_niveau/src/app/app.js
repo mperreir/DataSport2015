@@ -20,9 +20,5 @@
         '<div class="section" creps-credits id="credits"></div>' +
       '</div>'
     })
-  }])
-
-  .run(function(){
-    console.log('Angular app running');
-  });
+  }]);
 })();
