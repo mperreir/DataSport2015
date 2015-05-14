@@ -9,9 +9,15 @@
       var max = attrs.max;
       var ratio = value / max * 100;
 
-      element.css('width', ratio + '%');
       element.addClass('bar');
       element.addClass('bar--' + type);
+
+      scope.$on('slide:changed', function(){
+        element.css('width', '0');
+      });
+      scope.$on('slide:gender', function(){
+        element.css('width', ratio + '%');
+      });
     }
   }]);
 })();

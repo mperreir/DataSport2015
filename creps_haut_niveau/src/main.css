@@ -96,9 +96,13 @@
 #hommefemme .bar--label {
   text-align: center;
 }
+#hommefemme .bar--label p {
+  font-size: 1.6em;
+}
 #hommefemme .bar {
   margin: 4px;
   height: 7px;
+  width: 0%;
   border-radius: 10px;
   transition: width 1s;
   clear: both;
@@ -132,6 +136,9 @@
   background-color: #efefed;
   margin: 20px auto;
 }
+#hommefemme h2 {
+  font-size: 2em;
+}
 #credits {
   text-align: center;
 }
@@ -161,7 +168,7 @@ body {
 .section > div {
   height: 100%;
   max-width: 960px;
-  min-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 .height-100 {

@@ -13,7 +13,9 @@
     $stateProvider.state('running', {
       template: '<div id="fullpage" fullpage>' +
         '<div class="section" creps-introduction id="introduction"></div>' +
+        '<div class="section" creps-description id="description"></div>' +
         '<div class="section" creps-region id="region"></div>' +
+        '<div class="section" creps-departements id="departements"></div>' +
         '<div class="section" creps-hommefemme id="hommefemme"></div>' +
         '<div class="section" creps-credits id="credits"></div>' +
       '</div>'
