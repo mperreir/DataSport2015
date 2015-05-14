@@ -205,6 +205,70 @@
   width: 6em;
   height: 6em;
 }
+#region .bar--title,
+#region .bar--label {
+  text-align: center;
+}
+#region .bar--label p {
+  font-size: 1.6em;
+}
+#region .bar {
+  margin: 4px;
+  height: 7px;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 1s;
+  clear: both;
+  display: block;
+}
+#region .bar--male {
+  background-color: #5ac2df;
+}
+#region .bar--female {
+  background-color: #ec6347;
+}
+#region .bar--right {
+  float: right;
+  margin-right: 0;
+}
+#region .bar--left {
+  float: left;
+  margin-left: 0;
+}
+#region .bar--icon {
+  width: 16%;
+  height: auto;
+  margin: auto;
+}
+#region .bar--container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#region hr {
+  width: 50%;
+  background-color: #efefed;
+  margin: 20px auto;
+}
+#region h2 {
+  font-size: 2em;
+}
+#region .nblicence {
+  font-size: 5em;
+  text-align: right;
+}
+#region .licence {
+  display: table-cell;
+  vertical-align: middle ;
+}
+#region .bandeau--style {
+  background-color: #e85138;
+  height: 100px;
+  margin-left: -100%;
+  margin-right: -100%;
+}
+#region .graphs--style {
+  margin-top: 10px;
+}
 body {
   padding: 0;
   margin: 0;

@@ -1,42 +1,44 @@
-<div>
-		<div class="row center-xs">
-			<div class="col-xs-6">
-				<div  class="region--block">
-					<div class="row">
-						<img src='assets/img/podium.svg' class="svg svg--podium">
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div class="region--block">
-					<div id="circle" class="circle">
-						 <span count-to='{{region.total}}' value="0" duration="2"></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row center-xs">
-			<div class="col-xs-6 ">
-				<div class="region--block">
-					<div class="row">
-						<canvas id="pie" class="chart chart-doughnut" data="region.doughdata"
- 							 labels="region.doughlabels"></canvas> 
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div class="region--block">
+<div id="dataviz1">
+	<h1><i> Région n°1 en licenciés : et le Haut Niveau ? </i></h1>
+	<div class="row">
+		<div class="col-xs-6"><h2 class="nblicence">1 026 000 </h2></div> 
+		<div class="licence col-xs-6"> <h2 class="licence"> Licenciés </h2></div>
+	</div>
+	<div id="hommefemme" class="row">
 
-					<div class="row">
-						<span ng-repeat='n in region.rangeMale'>
-							<i class="male icon icon--male"> </i>
-						</span>
-						<span ng-repeat='n in region.rangeFemale'>
-							<i class="female icon icon--female"> </i>
-						</span>
-					</div>
-			
-				</div>
+	</div>
+	<div id="bandeau" class="row bandeau--style center-xs">
+		<div class="col-xs-2">
+			<img id="regionsvg" src="assets/img/region.svg"></img>
+		</div>
+		<div class="col-xs-2">
+			<div class="row">
+				Ok
+			</div>
+			<div class="row">
+				Ok2
 			</div>
 		</div>
+		<div class="col-xs-2">
+
+		</div>
+		<div class="col-xs-2">
+
+		</div>
+		<div class="col-xs-2">
+
+		</div>
+	</div>
+
+	<div id="graphs" class="row center-xs graphs--style">
+		<div class="col-xs-4">
+			<canvas id="pie" class="chart chart-doughnut" data="region.doughdata"
+ 							 labels="region.doughlabels">
+ 			</canvas> 
+ 		</div>
+ 		<div class="col-xs-4">
+ 			<img src="assets/img/Podium.svg"></img>
+ 		</div>
+	</div>
+
 </div>
