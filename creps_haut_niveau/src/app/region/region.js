@@ -8,40 +8,18 @@
     vm.region = Data.region;
     console.log(vm.region);
 
-    var gender = vm.region.gender;
-    vm.total = vm.region.total;
-    var age = vm.region.age;
 
-    var ratio = (gender.males/vm.total)*10;
+    vm.hautNiveau = vm.region.hautNiveau.total;
+    vm.sportifsListes = vm.region.total;
+    vm.espoirs = vm.region.espoirs.total;
+    vm.partenaires = vm.region.partenaires;
 
-    var ratioMale = Math.round(ratio);
-    var ratioFemale = 10 - ratioMale;
+    vm.moins18espoir = vm.region.espoirs.underage;
+    vm.moins18hn = vm.region.hautNiveau.underage;
 
-          var rangeMale = [];
-          for(var i=0;i<ratioMale;i++)
-            {
-              rangeMale.push(i);
-            }
-
-          var rangeFemale = [];
-          for(var i=0;i<ratioFemale;i++)
-            {
-              rangeFemale.push(i);
-            }
-
-          vm.rangeMale = rangeMale;
-          vm.rangeFemale = rangeFemale;
-
-          // à changer forcément
-        $(document).ready(function() {
-          setTimeout(function() {
-        $('#circle').addClass('open');
-        }, 500);
-
-            vm.doughlabels = ["Mineurs de haut niveau","Majeurs de haut niveau"];
-            vm.doughdata = [age.underage,age.adult];
+    vm.doughlabels = ["Mineurs de haut niveau","Majeurs de haut niveau"];
+    vm.doughdata = [vm.moins18espoir,vm.moins18hn];
            
-});
   }])
   .directive('crepsRegion',[function(){
     return {

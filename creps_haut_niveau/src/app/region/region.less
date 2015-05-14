@@ -3,60 +3,129 @@
 #region {
 	background-color: @white;
   color: @dark;
-
-	.region--block{
-
-		width: 50vw;
-		height: 50vh;
+	
+	.region--title {
+		font-style: italic;
+		font-weight: 200;
 	}
 
 	.icon--male
 	{
-		color:@bleu;
+		color:@bleum;
 		font-size: 3em;
-		margin:-0.3em;
 
 	}
 
 
 	.icon--female
 	{
-		 color:@rouge;
+		 color:@rougef;
 		 font-size: 3em;
-		 margin:-0.3em;
 	}
 
-	.svg--podium path
-	{
-		fill: red;
 
-	}
+  .bar {
+    margin: 4px;
+    height: 7px;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 1s;
+    clear: both;
+    display: block;
+  }
 
-	.circle {
-	  position: relative;
-	  display: inline-block;
-	  width: 4em;
-	  height: 4em;
-	  padding: 5% 5%;
-	  border-radius: 50%;
+  .bar--male {
+    background-color: @bleum;
+  }
+
+  .bar--female {
+    background-color: @rougef;
+  }
+
+  .bar--right {
+    float: right;
+    margin-right: 0;
+  }
+
+  .bar--left {
+    float: left;
+    margin-left: 0;
+  }
+
+  .bar--icon {
+    width: 16%;
+    height: auto;
+    margin: auto;
+  }
+
+  .bar--container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
 
-	  	 -webkit-transition-duration: 2s;
-		 -webkit-transition-property: all;
-		 -webkit-transition-timing-function: ease-in-out;
-	  background:none;
-	  color: @rouge;
-	  font-family: Helvetica, Arial Black, sans;
-	  font-size: 3em;
-	  text-align: center;
-	  border:5px solid @rouge;
-	}
 
-	.open {
-    top: 0px;
-    left: 0px;
-    width: 6em;
-    height: 6em;
-}
+
+  .nblicence {
+	 font-family: 'Cassannet';
+	 font-size: 7em;
+  }
+
+
+  .licence {
+  	 font-weight: 300;
+  	font-size: 3em;
+  }
+
+  .bandeau--style{
+  	color:@white;
+	background-color: @orangebandeau;
+  	padding-top: 10px;
+  	padding-bottom: 4px;
+  	 p {
+  	 	margin: 5px;
+
+  	 }
+
+  	img {
+  	width:30%;
+  	height: auto;
+  		}
+  }
+
+  .bandeau--top{
+  	margin:10px;
+  }
+
+  .bandeau--bottom{
+  	p{
+  		font-weight: 200;
+  		font-style: italic;
+  	}
+  }
+
+  .graphs--style {
+  	margin-top: 10px;
+  }
+
+  .bandeau--nb {
+  	 font-style: normal;
+  	 font-family: 'Cassannet';
+  	 line-height: 0.5;
+
+	 &.big{
+	 	font-size: 7em;
+	 }
+
+	 &.medium{
+	 	font-size: 4em;
+	 }
+
+	 &.small{
+	 	font-size: 3em;
+	 }
+  }
+	
+
 
 }

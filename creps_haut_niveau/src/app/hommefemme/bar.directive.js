@@ -6,6 +6,7 @@
     return function(scope, element, attrs){
       var type = attrs.type || 'male';
       var value = attrs.value || 0;
+      var event = attrs.event;
       var max = attrs.max;
       var ratio = value / max * 100;
 
@@ -15,7 +16,7 @@
       // scope.$on('slide:changed', function(){
       //   element.css('width', '0');
       // });
-      scope.$on('slide:gender', function(){
+      scope.$on('slide:' + event, function(){
         element.css('width', ratio + '%');
       });
     }
