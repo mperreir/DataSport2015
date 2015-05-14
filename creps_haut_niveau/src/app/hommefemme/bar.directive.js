@@ -12,9 +12,9 @@
       element.addClass('bar');
       element.addClass('bar--' + type);
 
-      scope.$on('slide:changed', function(){
-        element.css('width', '0');
-      });
+      // scope.$on('slide:changed', function(){
+      //   element.css('width', '0');
+      // });
       scope.$on('slide:gender', function(){
         element.css('width', ratio + '%');
       });

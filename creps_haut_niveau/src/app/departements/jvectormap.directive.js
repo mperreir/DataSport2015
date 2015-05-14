@@ -7,7 +7,7 @@
     return function(scope, element, attrs){
       var elClass = attrs.class;
 
-      element.css('height', '70%');
+      element.css('height', '80%');
       element.css('width', '100%');
       
       setTimeout(function(){
@@ -65,7 +65,6 @@
                 return name;
               },
               offsets: function(code){
-                console.log(code);
                 return (code === '44') ? [0, -20] : [0, 0];
               }
             }

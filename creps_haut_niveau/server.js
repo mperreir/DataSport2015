@@ -9,42 +9,6 @@ var credits = require('./data/credits');
 
 app.use(express.static(path.join(__dirname, dir)));
 
-app.get('/api/all',function(req,res,next){
-	res.json(donnees);
-});
-
-app.get('/api/females',function(req,res,next){
-  var filterArray = (req.query.category && req.query.category.split(',')) || false;
-	var females = donnees.filter(function(personne){
-    var selected = true;
-    if(filterArray){
-      var isFiltered = false;
-      filterArray.forEach(function(filter){
-        isFiltered = isFiltered || (personne['Catégorie'] === filter);
-      });
-      selected = isFiltered;
-    }
-		return selected && (personne.Sexe === 'F');
-	});
-	res.json(females);
-});
-
-app.get('/api/males',function(req,res,next){
-	var filterArray = (req.query.category && req.query.category.split(',')) || false;
-  var males = donnees.filter(function(personne){
-    var selected = true;
-    if(filterArray){
-      var isFiltered = false;
-      filterArray.forEach(function(filter){
-        isFiltered = isFiltered || (personne['Catégorie'] === filter);
-      });
-      selected = isFiltered;
-    }
-    return selected && (personne.Sexe === 'M');
-  });
-  res.json(males);
-});
-
 /**
 * A renvoyer :
 * - count total
@@ -87,6 +51,10 @@ app.get('/api/region/', function(req, res, next){
   });
 
   res.json(toSend);
+});
+
+app.get('/api/departements/', function(req, res, next){
+
 });
 
 app.get('/api/status/', function(req, res, next){

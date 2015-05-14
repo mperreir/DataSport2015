@@ -10,7 +10,9 @@
 
     $q.all(allP)
     .then(function(){
-      $state.go('running');
+      setTimeout(function(){
+        $state.go('running');
+      }, 500);
     })
   }]);
 })();

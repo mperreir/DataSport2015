@@ -10,7 +10,7 @@
         afterLoad: function(anchor, index){
           var eventName = '';
           switch(index){
-            case 1: eventName = 'intro';
+            case 1: eventName = 'introduction';
               break;
             case 2: eventName = 'description';
               break;
