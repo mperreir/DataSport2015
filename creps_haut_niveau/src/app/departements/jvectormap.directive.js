@@ -30,7 +30,7 @@
             },
             hover: {
               fill: '#232835',
-              "fill-opacity": 0.7,
+              "fill-opacity": 0.4,
               cursor: 'pointer'
             },
             selected: {
