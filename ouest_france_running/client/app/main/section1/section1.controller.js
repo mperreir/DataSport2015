@@ -60,25 +60,36 @@ angular.module('hyblabApp')
       }
     });
 
-    $scope.dv2 = {
-      data: {
-        labels: ['H', 'F'],
-        series: [{
-          data: 70,
-          className: 'element-first'
-        }, {
-          data: 30,
-          className: 'element-second'
-        }]
-      },
+    var dv2 = {
+      data : [
+      	{
+      		value : 300,
+      		color: 'rgba(231,55,84,1)',
+          title : 'Femmes'
+      	},
+      	{
+      		value : 700,
+      		color: 'rgba(29,29,27,1)',
+          title : 'Hommes'
+      	}
+      ],
       options: {
-        donut: true,
-        donutWidth: 60,
-        startAngle: 0,
-        total: 100,
-        showLabel: true
+        animateRotate : true,
+        animateScale : true,
+        animationByData : false,
+        animationSteps : 50,
+        animationEasing: 'linear',
+        canvasBorders : false,
+        graphTitle : '',
+        legend : false,
+        inGraphDataShow : false,
+        annotateDisplay : true,
+        spaceBetweenBar : 0,
+        graphTitleFontSize: 18
       }
     };
+
+    var dv2Diagram = new Chart(document.getElementById('dv2').getContext('2d')).Doughnut(dv2.data,dv2.options);
 
     var dv3 = {
       data: {
@@ -95,16 +106,16 @@ angular.module('hyblabApp')
           strokeColor: 'rgba(29,29,27,1)',
           pointColor: 'rgba(29,29,27,0.5)',
           pointstrokeColor: 'transparent',
-          data: [95, 53, 99, 10, 73, 27, 82, 80],          
+          data: [95, 53, 99, 10, 73, 27, 82, 80],
           title: 'Hommes'
         }]
       },
       options: {
         animationLeftToRight: true,
         animationByDataset: true,
-        animationSteps: 200,
+        animationSteps: 100,
         animationEasing: 'linear',
-        canvasBorders: true,
+        canvasBorders: false,
         canvasBordersWidth: 3,
         canvasBordersColor: 'transparent',
         graphTitle: '',
