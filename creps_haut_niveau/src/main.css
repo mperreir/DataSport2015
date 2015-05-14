@@ -190,52 +190,17 @@
   background-color: #efefed;
   color: #232835;
 }
-#region .region--block {
-  width: 50vw;
-  height: 50vh;
+#region .region--title {
+  font-style: italic;
+  font-weight: 200;
 }
 #region .icon--male {
-  color: #5ac2df;
+  color: #2f81d3;
   font-size: 3em;
-  margin: -0.3em;
 }
 #region .icon--female {
-  color: #ec6347;
+  color: #ef4878;
   font-size: 3em;
-  margin: -0.3em;
-}
-#region .svg--podium path {
-  fill: red;
-}
-#region .circle {
-  position: relative;
-  display: inline-block;
-  width: 4em;
-  height: 4em;
-  padding: 5% 5%;
-  border-radius: 50%;
-  -webkit-transition-duration: 2s;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
-  background: none;
-  color: #ec6347;
-  font-family: Helvetica, Arial Black, sans;
-  font-size: 3em;
-  text-align: center;
-  border: 5px solid #ec6347;
-}
-#region .open {
-  top: 0px;
-  left: 0px;
-  width: 6em;
-  height: 6em;
-}
-#region .bar--title,
-#region .bar--label {
-  text-align: center;
-}
-#region .bar--label p {
-  font-size: 1.6em;
 }
 #region .bar {
   margin: 4px;
@@ -247,10 +212,10 @@
   display: block;
 }
 #region .bar--male {
-  background-color: #5ac2df;
+  background-color: #2f81d3;
 }
 #region .bar--female {
-  background-color: #ec6347;
+  background-color: #ef4878;
 }
 #region .bar--right {
   float: right;
@@ -269,30 +234,50 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#region hr {
-  width: 50%;
-  background-color: #efefed;
-  margin: 20px auto;
-}
-#region h2 {
-  font-size: 2em;
-}
 #region .nblicence {
-  font-size: 5em;
-  text-align: right;
+  font-family: 'Cassannet';
+  font-size: 7em;
 }
 #region .licence {
-  display: table-cell;
-  vertical-align: middle ;
+  font-weight: 300;
+  font-size: 3em;
 }
 #region .bandeau--style {
+  color: #efefed;
   background-color: #e85138;
-  height: 100px;
-  margin-left: -100%;
-  margin-right: -100%;
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+#region .bandeau--style p {
+  margin: 5px;
+}
+#region .bandeau--style img {
+  width: 30%;
+  height: auto;
+}
+#region .bandeau--top {
+  margin: 10px;
+}
+#region .bandeau--bottom p {
+  font-weight: 200;
+  font-style: italic;
 }
 #region .graphs--style {
   margin-top: 10px;
+}
+#region .bandeau--nb {
+  font-style: normal;
+  font-family: 'Cassannet';
+  line-height: 0.5;
+}
+#region .bandeau--nb.big {
+  font-size: 7em;
+}
+#region .bandeau--nb.medium {
+  font-size: 4em;
+}
+#region .bandeau--nb.small {
+  font-size: 3em;
 }
 body {
   padding: 0;
@@ -306,7 +291,7 @@ p,
 span {
   font-size: 1.6em;
 }
-.section > div {
+.section--wrapper {
   height: 100%;
   max-width: 960px;
   max-width: 90%;

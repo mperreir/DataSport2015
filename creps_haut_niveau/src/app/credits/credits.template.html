@@ -1,12 +1,14 @@
-<div class="row middle-xs">
-  <div>
-    <h1 class="section--title">Crédits</h1>
-    <div class="row center-xs credit--list">
-      <div class="col-xs-2" ng-repeat="person in credits.people">
-        <div>
-          <img ng-src="{{person.img}}" class="credit--avatar">
-          <p class="credit--label">{{person.name}}</p>
-          <p class="credit--label">{{person.school}}</p>
+<div class="section--wrapper">
+  <div class="row middle-xs">
+    <div>
+      <h1 class="section--title">Crédits</h1>
+      <div class="row center-xs credit--list">
+        <div class="col-xs-2" ng-repeat="person in credits.people">
+          <div>
+            <img ng-src="{{person.img}}" class="credit--avatar">
+            <p class="credit--label">{{person.name}}</p>
+            <p class="credit--label">{{person.school}}</p>
+          </div>
         </div>
       </div>
     </div>
