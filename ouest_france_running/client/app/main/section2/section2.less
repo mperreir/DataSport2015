@@ -2,10 +2,15 @@
      Classe ajoutant l'image de fond au div
 \*------------------------------------*/
 .parallax-2 {
-  background-image: url("../assets/images/running.svg");
+  background: url("../assets/images/running.svg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .section2-header {
+  margin-top: 65px;
   padding-bottom: 15px;
   margin-bottom: 35px;
   border-bottom: 2px solid @noir;

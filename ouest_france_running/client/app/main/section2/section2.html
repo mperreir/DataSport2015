@@ -1,8 +1,8 @@
-<div ng-controller="Section2Ctrl"  id="section_2" data-scrollspy-broadcast>
+<div ng-controller="Section2Ctrl">
   <div parallax-background parallax-ratio="0.2" class="parallax-container parallax-2">
   </div>
 
-  <div class="section">
+  <div class="section" id="section_2" data-scrollspy-broadcast>
     <div class="container">
       <div class="section2-header">
         <h1 class="title">Récapitulatif des temps</h1>
@@ -26,7 +26,9 @@
       <div class="section2-dv-header">
 
         <div class="section2-title">
-          <h1 class="title">120  <small class="subtitle">coureurs</small></h1>
+          <h1 class="title"><ng-count-up from="0" to="25" duration="4"></ng-count-up>
+            <small class="subtitle">coureurs</small>
+          </h1>
         </div>
 
         <div class="podium-second">
@@ -41,6 +43,19 @@
 
 
       </div>
+
+
+      <div class="row">
+        <div class="col-md-12 dataviz">
+          <canvas id="dv5-1" height="80px" width="1060px"></canvas>
+          <canvas id="dv5-2" height="80px" width="1060px"></canvas>
+          <canvas id="dv5-3" height="80px" width="1060px"></canvas>
+          <canvas id="dv5-4" height="80px" width="1060px"></canvas>
+        </div>
+      </div>
+
+
+
 
 
 

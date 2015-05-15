@@ -15,6 +15,7 @@ angular.module('hyblabApp')
       zoomButtons: false,
       backgroundColor: 'none',
       regionsSelectable: false,
+      zoomOnScroll: false,
       regionStyle: {
         initial: {
           fill: '#1D1D1B'

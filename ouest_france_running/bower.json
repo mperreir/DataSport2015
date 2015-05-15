@@ -17,7 +17,8 @@
     "angular-parallax": "~0.0.1",
     "angular-scroll": "~0.7.0",
     "bootstrap-autohidingnavbar": "~1.0.0",
-    "comma-separated-values": "~3.6.1"
+    "comma-separated-values": "~3.6.1",
+    "ng-countUp.js": "~0.1.2"
   },
   "devDependencies": {
     "angular-mocks": ">=1.2.*",
