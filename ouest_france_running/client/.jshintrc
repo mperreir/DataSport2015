@@ -25,6 +25,7 @@
     "$": true,
     "_": true,
     "Chart":true,
+    "Papa": true,
     "moment": true,
     "describe": true,
     "beforeEach": true,
