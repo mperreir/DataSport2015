@@ -8,6 +8,15 @@
 
 angular.module('hyblabApp')
   .controller('MainCtrl', function() {
+    
+    //Recupération des données
+    var csv = new CSV('../assets/data/25km.csv',
+    {
+      header : true,
+      cellDelimiter : ' '
+    });
+    var csvParsed = csv.parse();
+    console.log(../assets/data/25km.csv);
 
     // Vide pour l'instant
 
