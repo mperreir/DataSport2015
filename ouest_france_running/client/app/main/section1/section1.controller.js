@@ -24,18 +24,15 @@ angular.module('hyblabApp')
       markers: [{
         latLng: [47.2172500, -1.5533600],
         name: 'Nantes'
-      }, {
-        latLng: [48.1119800, -1.6742900],
-        name: 'Rennes'
       }],
       markerStyle: {
         initial: {
-          fill: '#fff',
+          fill: 'rgba(231,55,84,1)',
           stroke: 'none',
           'fill-opacity': 1,
           'stroke-width': 1,
           'stroke-opacity': 1,
-          r: 5
+          r: 6
         },
         hover: {
           stroke: '#eee',
@@ -89,44 +86,46 @@ angular.module('hyblabApp')
       }
     };
 
-    var dv2Diagram = new Chart(document.getElementById('dv2').getContext('2d')).Doughnut(dv2.data, dv2.options);
+    
 
     var dv3 = {
       data: {
         labels: ['Espoir ', 'Junior ', 'Sénior ', 'Vétéran 1 ', 'Vétéran 2 ', 'Vétéran 3 ', 'Vétéran 4 ', 'Vétéran 5 '],
         datasets: [{
-          fillColor: 'rgba(231,55,84,0.5)',
-          strokeColor: 'rgba(231,55,84,1)',
-          pointColor: 'rgba(231,55,84,0.5)',
-          pointstrokeColor: 'transparent',
-          data: [35, 43, 59, 25, 31, 50, 66, 3],
-          title: 'Femmes'
-        }, {
-          fillColor: 'rgba(29,29,27,0.5)',
+          fillColor: 'rgba(29,29,27,1)',
           strokeColor: 'rgba(29,29,27,1)',
           pointColor: 'rgba(29,29,27,0.5)',
           pointstrokeColor: 'transparent',
           data: [95, 53, 99, 10, 73, 27, 82, 80],
           title: 'Hommes'
+        }, {
+          fillColor: 'rgba(231,55,84,1)',
+          strokeColor: 'rgba(231,55,84,1)',
+          pointColor: 'rgba(231,55,84,0.5)',
+          pointstrokeColor: 'transparent',
+          data: [35, 43, 59, 25, 31, 50, 66, 3],
+          title: 'Femmes'
         }]
       },
       options: {
-        pointDot: false,
-        animationLeftToRight: true,
-        animationByDataset: true,
-        animationSteps: 100,
-        animationEasing: 'linear',
-        canvasBorders: false,
-        graphTitle: '',
-        legend: false,
-        inGraphDataShow: false,
-        annotateDisplay: true,
-        graphTitleFontSize: 18,
+        animationStartWithDataset : 1,
+        animationStartWithData : 1,
+        animationLeftToRight : true,
+        animationByDataset : true,
+        animationSteps : 100,
+        animationEasing: "linear",
+        canvasBorders : false,
+        graphTitle :'',
+        legend : false,
+        inGraphDataShow : true,
+        annotateDisplay : true,
+        scaleShowGridLines: false,
         responsive : true
+
       }
     };
 
-    var dv3Diagram = new Chart(document.getElementById('dv3').getContext('2d')).Radar(dv3.data, dv3.options);
+    var dv3Diagram = new Chart(document.getElementById('dv3').getContext('2d')).StackedBar(dv3.data, dv3.options);
 
     var dv4 = {
       data: {

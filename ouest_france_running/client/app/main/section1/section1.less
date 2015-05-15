@@ -1,44 +1,68 @@
 .parallax-1 {
-  background: url("../assets/images/running.svg") no-repeat center center fixed;
+  background: url("../assets/images/image1.svg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-
 .section1-header {
   margin-bottom: 40px;
 }
-
 .section1-dataviz-header {
   margin-bottom: 40px;
 }
-
 .dataviz {
   height: 200px;
 }
 .section1 {
   padding-top: 50px;
 }
-
 .element-first {
   fill: none;
   stroke: @noir;
   //stroke-width: 10px;
 }
-
 .element-second {
   fill: none;
   stroke: @rouge;
 }
-
 .ct-chart .ct-label {
   font-size: 16px;
-  fill : #fff;
-  color : #000;
+  fill: #fff;
+  color: #000;
   font-family: 'Lato', sans-serif;
 }
-
 .bloc1 {
-  margin-bottom : 100px;;
+  margin-bottom: 100px;
+}
+.dv2 {
+  position: relative;
+}
+.coureurhommecontour {
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: 164px;
+
+  background-color: #ddd;
+}
+.coureurhommecontour img {
+  position: absolute;
+  top: 0;
+  z-index:2;
+}
+.coureurfemmecontour {
+  position: absolute;
+  top: 0;
+  left: 135px;
+  height: 100px;
+  width: 212px;
+
+  background-color: #ddd;
+}
+.coureurfemmecontour img {
+  position: absolute;
+  top: 0;
+  left: 135px;
+  z-index:1;
 }
