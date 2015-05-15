@@ -85,6 +85,7 @@ angular.module('hyblabApp')
         annotateDisplay: true,
         spaceBetweenBar: 0,
         graphTitleFontSize: 18,
+        responsive : true
       }
     };
 
@@ -120,7 +121,8 @@ angular.module('hyblabApp')
         legend: false,
         inGraphDataShow: false,
         annotateDisplay: true,
-        graphTitleFontSize: 18
+        graphTitleFontSize: 18,
+        responsive : true
       }
     };
 
