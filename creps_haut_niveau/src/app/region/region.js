@@ -13,9 +13,7 @@
     vm.sportifsListes = 0;
     vm.espoirs = 0;
     vm.partenaires = 0;
-
-
-    
+  
     $scope.$on('slide:region',function(){
       $scope.$apply(function(){
         vm.counthomme = 63;
@@ -27,19 +25,20 @@
         vm.espoirs = vm.region.espoirs.total;
         vm.partenaires = vm.region.partenaires;
 
-            
-        vm.doughlabels = ["Moins de 18 ans en Espoir","Moins de 18 ans en Haut Niveau"];
-        vm.doughdata = [vm.region.espoirs.underage,vm.region.hautNiveau.underage];
-        vm.doughcolours = ["#E85138","#f5907f"];
+        if(!vm.doughdata){
+          vm.doughlabels = ["Moins de 18 ans en Espoir","Moins de 18 ans en Haut Niveau"];
+          vm.doughdata = [vm.region.espoirs.underage,vm.region.hautNiveau.underage];
+          vm.doughcolours = ["#E85138","#f5907f"];
 
-        vm.doughoptions = {
+          vm.doughoptions = {
             scaleShowHorizontalLines: false,
             scaleShowVerticalLines: false,
             segmentStrokeColor : "rgba(255,255,255,0)",
-             animateRotate : true,
-              percentageInnerCutout: 75,
-              responsive : true
-    };
+            animateRotate : true,
+            percentageInnerCutout: 75,
+            responsive : true
+          };
+        }
 
       });
     });
