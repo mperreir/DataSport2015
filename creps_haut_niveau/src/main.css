@@ -238,48 +238,38 @@
   background-color: #efefed;
   color: #232835;
 }
-#departements .map-container {
+#departements .map--wrapper {
   position: relative;
 }
-#departements .map-container .dpt--infos {
+#departements .map--wrapper .map--container {
   position: absolute;
-}
-#departements .map-container .dpt--age {
-  width: 30%;
-  height: 40%;
-  bottom: 5%;
-  left: 0;
-}
-#departements .map-container .dpt--sports {
   top: 0;
+  bottom: 0;
   left: 0;
-  max-width: 40%;
-  max-height: 30%;
+  right: 0;
+  z-index: 100;
+}
+#departements .map--wrapper .infos--container--top {
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+#departements .map--wrapper .infos--container--top .dpt--sport {
   text-align: center;
 }
-#departements .map-container .dpt--sports img {
-  width: 40%;
-  margin: auto;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-#departements .map-container .dpt--sports img path {
-  fill: #232835;
-}
-#departements .map-container .dpt--listes {
-  right: 0;
-  top: 0;
-  width: 25%;
-}
-#departements .map-container .dpt--listes p {
-  margin: 0;
-}
-#departements .map-container .dpt--listes .listes--nb {
+#departements .map--wrapper .infos--container--top .listes--nb {
+  font-size: 6em;
   font-family: 'Cassannet';
-  font-size: 8em;
-  float: right;
 }
-#departements .map-container .dpt--listes .listes--label--infos {
+#departements .map--wrapper .infos--container--top .listes--nb--label {
+  display: inline-block;
+  margin-left: 10px;
+}
+#departements .map--wrapper .infos--container--top .listes--nb--label span:last-child {
+  display: block;
   font-style: italic;
 }
 #departements .wrapper {
@@ -493,8 +483,21 @@
   margin: 0;
   line-height: 0;
 }
-#region .text--inside {
+#region .pie--wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#region .pie--wrapper .text--inside {
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 body {
   padding: 0;

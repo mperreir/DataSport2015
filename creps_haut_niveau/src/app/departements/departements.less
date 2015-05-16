@@ -4,56 +4,43 @@
   background-color: @white;
   color: @dark;
   
-  .map-container {
+  .map--wrapper {
     position: relative;
 
-    .dpt--infos {
+    .map--container {
       position: absolute;
-    }
-
-    .dpt--age {
-      width: 30%;
-      height: 40%;
-      bottom: 5%;
-      left: 0;
-    }
-
-    .dpt--sports {
       top: 0;
+      bottom: 0;
       left: 0;
-      max-width: 40%;
-      max-height: 30%;
-      text-align: center;
-
-      img {
-        width: 40%;
-        margin: auto;
-        margin-bottom: 5px;
-        margin-top: 5px;
-
-        path {
-          fill: @dark;
-        }
-      }
-    }
-
-    .dpt--listes {
       right: 0;
-      top: 0;
-      width: 25%;
+      z-index: 100;
+    }
 
-      p {
-        margin: 0;
+    .infos--container--top {
+      position: absolute;
+      top: 0;
+      bottom: 50%;
+      left: 0;
+      right: 0;
+      z-index: 50;
+
+      .dpt--sport {
+        text-align: center;
       }
 
       .listes--nb {
+        font-size: 6em;
         font-family: 'Cassannet';
-        font-size: 8em;
-        float: right;
       }
 
-      .listes--label--infos {
-        font-style: italic;
+      .listes--nb--label {
+        display: inline-block;
+        margin-left: 10px;
+
+        span:last-child {
+          display: block;
+          font-style: italic;
+        }
       }
     }
   }

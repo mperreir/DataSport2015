@@ -1,38 +1,27 @@
 <div class="row middle-xs section--wrapper height-100vh">
   <div class="col-xs-12 wrapper">
     <h1>Haut Niveau : les choix ambitieux de la région</h1>
-    <div class="height-100 map-container">
-      <div creps-jvectormap class="region-map"></div>
-      <div class="dpt--infos dpt--sports">
-        <div class="row">
-          <div class="col-xs-4" ng-repeat="sport in departements.selected.sports">
-            <img ng-src="{{sport.icon}}">
-            <p>{{sport.name}}</p>
-          </div>
-        </div>
+    <div class="height-100 map--wrapper">
+      <div class="row map--container">
+        <div creps-jvectormap class="region-map"></div>
       </div>
-      <div class="dpt--infos dpt--listes">
-        <div class="row bottom-xs">
-          <div class="col-xs-6">
-            <div>
-              <p class="listes--nb">{{departements.selected.total}}</p>
-            </div>
-          </div>
-          <div class="col-xs-6 listes--label">
-            <div>
-              <p class="listes--label--text">listés</p>
-              <p class="listes--label--infos">(HN + Espoirs)</p>
+      <div class="row infos--container--top">
+        <div class="col-xs-12 col-sm-4">
+          <div class="row">
+            <div class="col-xs-4 dpt--sport" ng-repeat="sport in departements.selected.sports">
+              <img ng-src="{{sport.icon}}">
+              <p>{{sport.name}}</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="dpt--infos dpt--age">
-        <div>
-          <canvas id="pieAge" class="chart chart-doughnut" data="departements.doughData"
-              labels="departements.doughLabel" colours="departements.doughcolours" options="departements.doughoptions">
-          </canvas>
+        <div class="col-sm-offset-5 col-sm-3">
+          <div>
+            <span class="listes--nb">{{departements.selected.total}}</span>
+            <div class="listes--nb--label">
+              <span>listés</span>
+              <span>(HN + Espoirs)</span>
+            </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
