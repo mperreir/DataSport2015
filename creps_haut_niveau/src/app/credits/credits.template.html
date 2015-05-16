@@ -1,58 +1,56 @@
-<div class="section--wrapper">
-  <div class="row middle-xs">
-    <div>
-      <h1 class="section--title">Crédits</h1>
-      <div class="row center-xs">
-        <div class="col-xs-4 col-sm-8">
-          <p>Sité réalisé avec <i class="icon heart icon--red"></i> par l'équipe du Hyblab Datasport 2015 :</p>
+<div class="section--wrapper row middle-xs">
+  <div>
+    <h1 class="section--title">Crédits</h1>
+    <div class="row center-xs">
+      <div class="col-xs-4 col-sm-8">
+        <p>Sité réalisé avec <i class="icon heart icon--red"></i> par l'équipe du Hyblab Datasport 2015 :</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-xs-4">
+        <div class="row center-xs">
+          <div class="col-xs-12">
+            <p>Ecole De Design Nantes</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'Ecole De Design Nantes' }">
+            <div class="scale">
+              <img ng-src="{{person.img}}" class="credit--avatar">
+              <p class="credit--label">{{person.name}}</p>
+              <p class="credit--label credit--school">{{person.school}}</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-4 col-xs-4">
-          <div class="row center-xs">
-            <div class="col-xs-12">
-              <p>Ecole De Design Nantes</p>
-            </div>
+      <div class="col-xs-4 col-xs-4">
+        <div class="row center-xs">
+          <div class="col-xs-12">
+            <p>STAPS</p>
           </div>
-          <div class="row">
-            <div class="col-xs-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'Ecole De Design Nantes' }">
-              <div class="scale">
-                <img ng-src="{{person.img}}" class="credit--avatar">
-                <p class="credit--label">{{person.name}}</p>
-                <p class="credit--label credit--school">{{person.school}}</p>
-              </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'STAPS' }">
+            <div class="scale">
+              <img ng-src="{{person.img}}" class="credit--avatar">
+              <p class="credit--label">{{person.name}}</p>
+              <p class="credit--label credit--school">{{person.school}}</p>
             </div>
           </div>
         </div>
-        <div class="col-xs-4 col-xs-4">
-          <div class="row center-xs">
-            <div class="col-xs-12">
-              <p>STAPS</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'STAPS' }">
-              <div class="scale">
-                <img ng-src="{{person.img}}" class="credit--avatar">
-                <p class="credit--label">{{person.name}}</p>
-                <p class="credit--label credit--school">{{person.school}}</p>
-              </div>
-            </div>
+      </div>
+      <div class="col-xs-4 col-xs-4">
+        <div class="row center-xs">
+          <div class="col-xs-12">
+            <p>Polytech Nantes</p>
           </div>
         </div>
-        <div class="col-xs-4 col-xs-4">
-          <div class="row center-xs">
-            <div class="col-xs-12">
-              <p>Polytech Nantes</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'Polytech Nantes'} ">
-              <div class="scale">
-                <img ng-src="{{person.img}}" class="credit--avatar">
-                <p class="credit--label">{{person.name}}</p>
-                <p class="credit--label credit--school">{{person.school}}</p>
-              </div>
+        <div class="row">
+          <div class="col-xs-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'Polytech Nantes'} ">
+            <div class="scale">
+              <img ng-src="{{person.img}}" class="credit--avatar">
+              <p class="credit--label">{{person.name}}</p>
+              <p class="credit--label credit--school">{{person.school}}</p>
             </div>
           </div>
         </div>
