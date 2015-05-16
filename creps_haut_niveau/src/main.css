@@ -427,19 +427,6 @@
   margin: 0;
   line-height: 0;
 }
-#region .text--inside {
-  position: absolute;
-}
-#region .svg--test {
-  position: absolute;
-  fill: black;
-}
-#region .svg--test path {
-  fill: #000000;
-}
-#region .svg--test circle {
-  fill: #000000;
-}
 body {
   padding: 0;
   margin: 0;
