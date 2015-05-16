@@ -117,25 +117,25 @@ angular.module('hyblabApp')
         animationLeftToRight: true,
         animationByDataset: true,
         animationSteps: 100,
-        animationEasing: "linear",
+        animationEasing: 'linear',
         canvasBorders: false,
         graphTitle: '',
         legend: false,
         datasetFill: false,
         scaleShowLabels: false,
         scaleShowLine: false,
-        scaleLineColor: "rgba(0,0,0,.0)",
+        scaleLineColor: 'rgba(0,0,0,.0)',
         scaleLineWidth: 0,
         scaleOverlay: false,
-        scaleFontFamily: "sans-serif",
+        scaleFontFamily: 'sans-serif',
         scaleFontSize: 14,
-        scaleFontStyle: "normal",
-        scaleFontColor: "#222",
+        scaleFontStyle: 'normal',
+        scaleFontColor: '#222',
         inGraphDataShow: false,
         annotateDisplay: true,
-        annotateLabel: "<%=v3 + ' ' + (v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? ' ' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ' ' : '')%>",
+        annotateLabel: '<%=v3 + \' \' + (v1 == \'\' ? \'\' : v1) + (v1!=\'\' && v2 !=\'\' ? \' \' : \'\')+(v2 == \'\' ? \'\' : v2)+(v1!=\'\' || v2 !=\'\' ? \' \' : \'\')%>',
         scaleShowGridLines: false,
-        rotateLabels: "smart",
+        rotateLabels: 'smart',
         responsive: true
 
       }
@@ -152,14 +152,14 @@ angular.module('hyblabApp')
           pointColor: 'rgba(231,55,84,0.5)',
           pointstrokeColor: 'transparent',
           data: [10],
-          title: 'Arrivée du premier'
+          title: 'Temps du premier coureur'
         }, {
           fillColor: 'rgba(29,29,27,1)',
           strokeColor: 'rgba(29,29,27,1)',
           pointColor: 'rgba(29,29,27,0.5)',
           pointstrokeColor: 'transparent',
           data: [15],
-          title: 'Arrivée du dernier'
+          title: 'Temps du dernier coureur'
         }]
       },
       options: {
@@ -175,20 +175,25 @@ angular.module('hyblabApp')
         legendPosX: 3,
         legendPosY: 2,
         legendFontFamily: 'sans-serif',
-        legendFontSize: 12,
+        legendFontSize: 14,
         maxLegendCols: 1,
         legendFillColor: '#eee',
         inGraphDataShow: true,
-        inGraphDataTmpl: "<%=v3 + ' min'%>",
-        inGraphDataFontFamily: "'Arial'",
+        inGraphDataTmpl: '<%=v3 + \' min\'%>',
+        inGraphDataFontFamily: 'sans-serif',
         inGraphDataFontSize: 14,
-        inGraphDataFontColor: "#222",
-        annotateDisplay: false,
+        inGraphDataFontColor: '#222',
+        annotateDisplay: true,
+        annotateLabel: '<%=(v1 == \'\' ? \'\' : v1) + (v1!=\'\' && v2 !=\'\' ? \' - \' : \'\') + v3 + \' minutes\' %>',
         scaleShowGridLines: false,
         scaleOverride: true,
         scaleSteps: 2,
         scaleStepWidth: 10,
-        scaleStartValue: 0
+        scaleStartValue: 0,
+        scaleFontFamily: 'sans-serif',
+			scaleFontSize: 18,
+			scaleFontColor: '#222',
+        responsive: true
       }
     };
 

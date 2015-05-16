@@ -57,15 +57,18 @@ angular.module('hyblabApp')
       graphTitle: '',
       legend: false,
       inGraphDataShow: true,
-      inGraphDataTmpl: "<%=v3 + ' min'%>",
-      inGraphDataFontFamily: "'sans-serif'",
+      inGraphDataTmpl: '<%=\' \' + v3 + \' min\'%>',
+      inGraphDataFontFamily: 'sans-serif',
       inGraphDataFontSize: 14,
-      inGraphDataFontColor: "#222",
+      inGraphDataFontColor: '#222',
       annotateDisplay: false,
       scaleShowGridLines: false,
       scaleOverride: true,
       scaleSteps: 6,
       scaleStepWidth: 10,
+      scaleFontFamily: 'sans-serif',
+    scaleFontSize: 16,
+    scaleFontColor: '#222',
       scaleStartValue: 0
     };
 
