@@ -461,7 +461,7 @@
   font-size: 3em;
 }
 #region .svg--podium {
-  width: 70%;
+  width: 50%;
   height: auto;
 }
 #region .bar--label--homme {
@@ -492,6 +492,9 @@
   float: left;
   margin: 0;
   line-height: 0;
+}
+#region .text--inside {
+  position: absolute;
 }
 body {
   padding: 0;
