@@ -131,7 +131,7 @@ app.get('/api/departements/', function(req, res, next){
     sportsObj[federation] = sportsObj[federation] || {
       name: federation.replace(rx, ''),
       federation: federation,
-      icon: 'assets/img/sports/' + federation.replace(/\s+/g, '-').toLowerCase() + '.svg',
+      icon: 'assets/img/sports/' + federation.replace(/\s+/g, '-').toLowerCase() + '_bleu.svg',
       total: 0
     };
 

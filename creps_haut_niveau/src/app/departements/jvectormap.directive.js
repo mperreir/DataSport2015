@@ -3,7 +3,7 @@
 
   angular.module('hyblab.creps')
 
-  .directive('crepsJvectormap', ['$rootScope', function($rootScope){
+  .directive('crepsJvectormap', ['$rootScope', '$window', function($rootScope, $window){
     return function(scope, element, attrs){
       var elClass = attrs.class;
 
@@ -48,6 +48,7 @@
           labels: {
             regions: {
               render: function(code){
+                if($window.innerWidth <= 768) return code;
                 var name = '';
 
                 switch(code){

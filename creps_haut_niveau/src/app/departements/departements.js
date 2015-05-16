@@ -5,7 +5,6 @@
 
   .controller('DepartementsCtrl', ['$scope', 'Data', function($scope, Data){
     var vm = this;
-    console.log(Data.departements);
     var departements = Data.departements;
     vm.doughcolours = ["#E85138","#f5907f"];
     vm.doughoptions = {
@@ -27,7 +26,7 @@
 
     function setSelected(dpt){
       vm.selected = departements[dpt];
-      vm.doughLabel = ['Moins de 18 ans en Espoirs', 'Moins de 18 ans en Haut Niveau'];
+      vm.doughLabel = ['Moins de 18 ans en Espoir', 'Moins de 18 ans en Haut Niveau'];
       vm.doughData = [vm.selected.age.espoirs, vm.selected.age.hautNiveau];
     }
   }])
