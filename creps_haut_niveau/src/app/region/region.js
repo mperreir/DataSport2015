@@ -4,14 +4,11 @@
   angular.module('hyblab.creps')
   .controller('RegionCtrl', ['$scope', 'Data',function($scope, Data){
   	var vm = this;
+    vm.region = Data.region;
+
     vm.counthomme = 0;
     vm.countfemme = 0;
     vm.valuetotal = 0;
-
-    vm.region = Data.region;
-    console.log(vm.region);
-
-
     vm.hautNiveau = 0;
     vm.sportifsListes = 0;
     vm.espoirs = 0;

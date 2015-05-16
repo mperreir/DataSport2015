@@ -12,9 +12,9 @@
         var $imgs = element.find('img').hide();
 
         scope.$on('slide:description', function(){
-          $ps.show().addClass('animated').addClass('fadeIn');
-          $imgs.show().addClass('animated').addClass('fadeIn');
-          $spans.show().addClass('animated').addClass('fadeIn');
+          $ps.fadeIn();
+          $imgs.fadeIn();
+          $spans.fadeIn();
         });
       }
     };

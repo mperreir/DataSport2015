@@ -60,19 +60,39 @@ app.get('/api/region/', function(req, res, next){
 app.get('/api/departements/', function(req, res, next){
   var toSend = {
     '44': {
-      total: 0
+      total: 0,
+      age: {
+        espoirs: 0,
+        hautNiveau: 0
+      }
     },
     '49': {
-      total: 0
+      total: 0,
+      age: {
+        espoirs: 0,
+        hautNiveau: 0
+      }
     },
     '53': {
-      total: 0
+      total: 0,
+      age: {
+        espoirs: 0,
+        hautNiveau: 0
+      }
     },
     '72': {
-      total: 0
+      total: 0,
+      age: {
+        espoirs: 0,
+        hautNiveau: 0
+      }
     },
     '85': {
-      total: 0
+      total: 0,
+      age: {
+        espoirs: 0,
+        hautNiveau: 0
+      }
     }
   };
 
@@ -81,9 +101,12 @@ app.get('/api/departements/', function(req, res, next){
   var sportsObj53 = {};
   var sportsObj72 = {};
   var sportsObj85 = {};
+  var today = Date.now();
+  var rx = /Fédération\sFrançaise\s(d)*(e )*(')*(u )*/g;
 
   donnees.forEach(function(person){
-    if(!isHautNiveau(person['Catégorie'])) return;
+    var category = person['Catégorie'];
+    if(!isHautNiveau(category) && category !== 'Espoirs') return;
 
     var dpt = person['Code département'];
     var federation = person['Fédération'];
@@ -106,9 +129,30 @@ app.get('/api/departements/', function(req, res, next){
     }
 
     sportsObj[federation] = sportsObj[federation] || {
-      name: federation,
+      name: federation.replace(rx, ''),
+      federation: federation,
+      icon: 'assets/img/sports/' + federation.replace(/\s+/g, '-').toLowerCase() + '.svg',
       total: 0
     };
+
+    var birthDateStr = person['Date de naissance'];
+    var day = birthDateStr.substr(0, 2);
+    var month = birthDateStr.substr(3, 2);
+    var year = birthDateStr.substr(6);
+
+    var fullDate = month + '/' + day + '/' + year;
+    var birthDate = new Date(fullDate);
+    var datediff = today - birthDate;
+    var age = datediff / (24 * 60 * 60 * 1000 * 365);
+
+    if(age < 18){
+      if(category === 'Espoirs'){
+        toSend[dpt].age.espoirs++;
+      }
+      else {
+        toSend[dpt].age.hautNiveau++;
+      }
+    }
 
     sportsObj[federation].total++;
   });

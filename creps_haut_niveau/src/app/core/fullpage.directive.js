@@ -16,7 +16,7 @@
               break;
             case 3: eventName = 'region';
               break;
-            case 4: eventName = 'departments';
+            case 4: eventName = 'departements';
               break;
             case 5: eventName = 'gender';
               break;

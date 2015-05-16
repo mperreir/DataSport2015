@@ -5,6 +5,7 @@
   .controller('LoadingCtrl', ['$q', '$state', 'Data', 'Credits', function($q, $state, Data, Credits){
     var allP = [];
     allP.push(Data.getRegionInfo());
+    allP.push(Data.getDepartementsInfo());
     allP.push(Data.getRepartition());
     allP.push(Credits.get());
 

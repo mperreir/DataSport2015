@@ -11,13 +11,20 @@
 				.then(function(response){
 					service.region = response.data;
 				});
-			}
+			};
+
 			service.getRepartition = function(){
 				return $http.get('api/status')
 				.then(function(response){
 					service.repartition = response.data;
 				});
-			}
-		}]);
+			};
 
+			service.getDepartementsInfo = function(){
+				return $http.get('api/departements')
+				.then(function(response){
+					service.departements = response.data
+				});
+			};
+		}]);
 })();

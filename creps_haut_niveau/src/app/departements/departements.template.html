@@ -1,15 +1,38 @@
-<div class="row middle-xs section--wrapper">
+<div class="row middle-xs section--wrapper height-100vh">
   <div class="col-xs-12 wrapper">
+    <h1>Haut Niveau : les choix ambitieux de la région</h1>
     <div class="height-100 map-container">
-      <h1>Haut Niveau : les choix ambitieux de la région</h1>
       <div creps-jvectormap class="region-map"></div>
       <div class="dpt--infos dpt--sports">
-        
+        <div class="row">
+          <div class="col-xs-4" ng-repeat="sport in departements.selected.sports">
+            <img ng-src="{{sport.icon}}">
+            <p>{{sport.name}}</p>
+          </div>
+        </div>
       </div>
-      <div class="dpt--infos dpt--licencies">
-        
+      <div class="dpt--infos dpt--listes">
+        <div class="row bottom-xs">
+          <div class="col-xs-6">
+            <div>
+              <p class="listes--nb">{{departements.selected.total}}</p>
+            </div>
+          </div>
+          <div class="col-xs-6 listes--label">
+            <div>
+              <p class="listes--label--text">listés</p>
+              <p class="listes--label--infos">(HN + Espoirs)</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="dpt--infos dpt--age"></div>
+      <div class="dpt--infos dpt--age">
+        <div>
+          <canvas id="pieAge" class="chart chart-doughnut" data="departements.doughtData"
+              labels="departements.doughtLabel" colours="departemens.doughtColours">
+          </canvas>
+        </div>
+      </div>
     </div>
   </div>
 </div>
