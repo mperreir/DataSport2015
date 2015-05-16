@@ -58,6 +58,8 @@ angular.module('hyblabApp')
       }
     });
 
+
+
     var dv2 = {
       data: [{
         value: 300,
@@ -81,12 +83,14 @@ angular.module('hyblabApp')
         inGraphDataShow: false,
         annotateDisplay: true,
         spaceBetweenBar: 0,
-        graphTitleFontSize: 18,
-        responsive : true
+
+        responsive: true
       }
     };
 
-    
+
+
+
 
     var dv3 = {
       data: {
@@ -108,19 +112,31 @@ angular.module('hyblabApp')
         }]
       },
       options: {
-        animationStartWithDataset : 1,
-        animationStartWithData : 1,
-        animationLeftToRight : true,
-        animationByDataset : true,
-        animationSteps : 100,
+        animationStartWithDataset: 1,
+        animationStartWithData: 1,
+        animationLeftToRight: true,
+        animationByDataset: true,
+        animationSteps: 100,
         animationEasing: "linear",
-        canvasBorders : false,
-        graphTitle :'',
-        legend : false,
-        inGraphDataShow : true,
-        annotateDisplay : true,
+        canvasBorders: false,
+        graphTitle: '',
+        legend: false,
+        datasetFill: false,
+        scaleShowLabels: false,
+        scaleShowLine: false,
+        scaleLineColor: "rgba(0,0,0,.0)",
+        scaleLineWidth: 0,
+        scaleOverlay: false,
+        scaleFontFamily: "sans-serif",
+        scaleFontSize: 14,
+        scaleFontStyle: "normal",
+        scaleFontColor: "#222",
+        inGraphDataShow: false,
+        annotateDisplay: true,
+        annotateLabel: "<%=v3 + ' ' + (v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? ' ' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ' ' : '')%>",
         scaleShowGridLines: false,
-        responsive : true
+        rotateLabels: "smart",
+        responsive: true
 
       }
     };
@@ -163,6 +179,10 @@ angular.module('hyblabApp')
         maxLegendCols: 1,
         legendFillColor: '#eee',
         inGraphDataShow: true,
+        inGraphDataTmpl: "<%=v3 + ' min'%>",
+        inGraphDataFontFamily: "'Arial'",
+        inGraphDataFontSize: 14,
+        inGraphDataFontColor: "#222",
         annotateDisplay: false,
         scaleShowGridLines: false,
         scaleOverride: true,
