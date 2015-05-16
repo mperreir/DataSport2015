@@ -82,14 +82,16 @@
 	</div>
 
 	<div class="section-wrapper">
-		<div id="graphs" class="row center-xs graphs--style">
+		<div id="graphs" class="row center-xs middle-xs graphs--style">
 			<div class="col-xs-6">
-				<canvas id="pie" class="chart chart-doughnut" data="region.doughdata"
-	 							 labels="region.doughlabels">
-	 			</canvas> 
+						<canvas id="dough" class="chart chart-doughnut dough--style" data="region.doughdata" labels="region.doughlabels" colours = "region.doughcolours" options="region.doughoptions">
+			 			</canvas> 
+			 			<p class="text--inside">Nombre de moins de <br/> 18 ans listés <br /> en Pays de la Loire <br />(incluant les 1997)</p>
 	 		</div>
 	 		<div class="col-xs-6">
-	 			<img src="assets/img/podium.svg" class="svg--podium"></img>
+	 			<div>
+	 				<img src="assets/img/podium.svg" class="svg--podium"></img>
+	 			</div>
 	 		</div>
 		</div>
 	</div>
