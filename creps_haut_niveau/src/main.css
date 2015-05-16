@@ -269,6 +269,10 @@
     font-size: 10em;
     font-family: 'Cassannet';
   }
+  #departements .map--wrapper .infos--container--top .dpt--sport img {
+    width: 70%;
+    margin: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   #departements .map--wrapper .infos--container--top {
@@ -319,6 +323,9 @@
 #hommefemme .bar--label {
   text-align: center;
 }
+#hommefemme .bar--title {
+  margin: 8px;
+}
 #hommefemme .bar--label p {
   font-size: 1.6em;
 }
@@ -355,10 +362,12 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#hommefemme .bar--container--right {
+#hommefemme .bar--container--right,
+#hommefemme .bar--legend--right {
   margin-left: -25px;
 }
-#hommefemme .bar--container--left {
+#hommefemme .bar--container--left,
+#hommefemme .bar--legend--left {
   margin-right: -25px;
 }
 #hommefemme hr {
@@ -368,6 +377,11 @@
 }
 #hommefemme h2 {
   font-size: 2em;
+}
+#hommefemme .legend--circle {
+  display: block;
+  font-size: 5em;
+  line-height: 0.8em;
 }
 #credits {
   text-align: center;

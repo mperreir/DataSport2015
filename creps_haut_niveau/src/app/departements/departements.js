@@ -5,7 +5,6 @@
 
   .controller('DepartementsCtrl', ['$scope', 'Data', function($scope, Data){
     var vm = this;
-    console.log(Data.departements);
     var departements = Data.departements;
     vm.doughcolours = ["#E85138","#f5907f"];
     vm.doughoptions = {
