@@ -390,16 +390,12 @@
 #credits {
   text-align: center;
 }
-#credits .credit--list {
-  max-width: 75%;
-  margin: auto;
-}
 #credits .credit--person {
-  padding: 10px;
+  padding: 1.5em;
 }
 #credits .credit--avatar {
   border-radius: 50%;
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 #credits .credit--label {
