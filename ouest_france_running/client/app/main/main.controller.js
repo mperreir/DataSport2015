@@ -8,16 +8,19 @@
 
 angular.module('hyblabApp')
   .controller('MainCtrl', function() {
+    var wow = new WOW().init();
     
     //Recupération des données
     var dataPath = "../../assets/data/25km.csv";
-    var csv = new Papa.parse(dataPath,{
-      download : true,
-      delimiter : '    ',
+    var csv = new Papa.parse(dataPath, {
+      download: true,
+      delimiter: '    ',
       header: true,
       encoding: 'UTF8',
       skipEmptyLines: true,
-      complete: function(results) { console.log(results); }
+      complete: function(results) {
+        console.log(results);
+      }
     });
 
     // Vide pour l'instant
