@@ -9,7 +9,7 @@
           <div class="infos--container--top row center-xs">
             <div class="col-xs-8 col-sm-4">
               <p>Les sports les plus pratiqués</p>
-              <div class="row middle-xs">
+              <div class="row middle-xs sports--container animated">
                 <div class="col-xs-4 dpt--sport" ng-repeat="sport in departements.selected.sports">
                   <img ng-src="{{sport.icon}}">
                   <p>{{sport.name}}</p>
@@ -17,7 +17,7 @@
               </div>
             </div>
             <div class="col-xs-4 col-sm-offset-5 col-sm-3">
-              <div class="listes">
+              <div class="listes animated">
                 <span class="listes--nb">{{departements.selected.total}}</span>
                 <div class="listes--nb--label">
                   <span>listés</span>

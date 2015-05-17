@@ -38,7 +38,20 @@
       controller: 'DepartementsCtrl',
       controllerAs: 'departements',
       link: function(scope, element, attrs){
+        var $sports = element.find('.sports--container');
+        var $listes = element.find('.listes');
 
+        function onAnimationEnd($el){
+          $el.removeClass('flipInX');
+        }
+
+        $sports.bind('animationend webkitAnimationEnd oAnimationEnd', onAnimationEnd.bind(this, $sports));
+        $listes.bind('animationend webkitAnimationEnd oAnimationEnd', onAnimationEnd.bind(this, $listes));
+
+        scope.$on('departement:selected', function(){
+          $sports.addClass('flipInX');
+          $listes.addClass('flipInX');
+        });
       }
     }
   }]);

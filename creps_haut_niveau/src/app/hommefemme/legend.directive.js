@@ -9,8 +9,6 @@
       var orientation = attrs.orientation || 'left';
 
       element.css('width', '100%');
-      console.log(max);
-      console.log(nbSegments);
 
       var interval = max / nbSegments;
       var width = interval * (100 / max);
