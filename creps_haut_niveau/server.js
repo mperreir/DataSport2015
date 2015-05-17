@@ -183,9 +183,6 @@ app.get('/api/departements/', function(req, res, next){
     sportsArr85.push(sportsObj85[index]);
   }
 
-
-  
-
   function sortArray(a, b){
     if(a.total < b.total) return 1;
     else return -1;

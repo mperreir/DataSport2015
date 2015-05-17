@@ -184,13 +184,13 @@
 }
 #introduction .title {
   text-align: center;
-  font-size: 2.5em;
-  line-height: 2em;
+  font-size: 1.5rem;
 }
 #introduction .title--text {
   font-family: 'Cassannet', sans-serif;
   text-transform: uppercase;
   margin: 0;
+  line-height: 1.5rem;
 }
 #introduction .title--sep {
   font-family: 'Rawengulk';
@@ -201,11 +201,12 @@
   margin: auto;
   overflow: hidden;
   width: 60%;
+  margin-bottom: 0.5rem;
 }
 #introduction .title--sep:before {
   content: "";
   display: inline-block;
-  height: 0.5em;
+  height: 1.5rem;
   vertical-align: bottom;
   width: 100%;
   margin-left: -100%;
@@ -215,7 +216,7 @@
 #introduction .title--sep:after {
   content: "";
   display: inline-block;
-  height: 0.5em;
+  height: 1.5rem;
   vertical-align: bottom;
   width: 100%;
   margin-right: -100%;
@@ -223,16 +224,16 @@
   border-top: 1px solid #efefed;
 }
 #description .description--last {
-  padding-top: 40px;
+  padding-top: 1.5em;
 }
 #description .description--first {
-  padding-bottom: 40px;
+  padding-bottom: 1.5em;
 }
 #description img {
   width: 50%;
   height: auto;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 1.5em;
 }
 #departements {
   background-color: #efefed;
@@ -283,19 +284,16 @@
     margin: auto;
   }
   #departements .map--wrapper .infos--container--top .listes--nb {
-    font-size: 7em;
+    font-size: 5em;
     font-family: 'Cassannet';
   }
 }
 #departements .map--wrapper .infos--container--top .dpt--sport {
   text-align: center;
 }
-#departements .map--wrapper .infos--container--top .dpt--sport p {
-  margin: 5px;
-}
 #departements .map--wrapper .infos--container--top .listes--nb--label {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 1.5em;
 }
 #departements .map--wrapper .infos--container--top .listes--nb--label span:last-child {
   display: block;
@@ -319,15 +317,21 @@
 #departements .wrapper {
   height: 100%;
 }
+#hommefemme .text--description {
+  max-width: 70%;
+  text-align: center;
+  margin: 1.5em auto;
+}
+#hommefemme .bar--wrapper {
+  max-width: 80%;
+  margin: auto;
+}
 #hommefemme .bar--title,
 #hommefemme .bar--label {
   text-align: center;
 }
 #hommefemme .bar--title {
-  margin: 8px;
-}
-#hommefemme .bar--label p {
-  font-size: 1.6em;
+  margin: 0.8em;
 }
 #hommefemme .bar {
   margin: 0.5vh;
@@ -376,11 +380,11 @@
   margin: 1vh auto;
 }
 #hommefemme h2 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 #hommefemme .legend--circle {
   display: block;
-  font-size: 5em;
+  font-size: 2em;
   line-height: 0.8em;
 }
 #credits {
@@ -409,21 +413,35 @@
   background-color: #efefed;
   color: #232835;
 }
+#region .region--top {
+  max-height: 50%;
+  overflow: hidden;
+}
 #region .title--nb--licence {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#region .title--nb--licence .nblicence {
+  font-family: 'Cassannet';
+  font-size: 3.3em;
+}
+#region .title--nb--licence .licence {
+  font-weight: 300;
+  font-size: 1.5em;
 }
 #region .comphf--style {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-#region .icon--male {
+#region .comphf--style .icon {
+  font-size: 2.5em;
+  text-align: left;
+}
+#region .comphf--style .icon--male {
   color: #2f81d3;
-  font-size: 3em;
 }
-#region .icon--female {
+#region .comphf--style .icon--female {
   color: #ef4878;
-  font-size: 3em;
 }
 #region .bar {
   margin: 4px;
@@ -454,61 +472,45 @@
   margin: auto;
 }
 #region .bar--container {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-#region .nblicence {
-  font-family: 'Cassannet';
-  font-size: 7em;
-}
-#region .licence {
-  font-weight: 300;
-  font-size: 3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 #region .bandeau--style {
   color: #efefed;
   background-color: #e85138;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 4px;
-}
-#region .bandeau--style p {
-  margin: 5px;
+  margin-top: 0.3em;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 #region .bandeau--style img {
   width: 30%;
   height: auto;
 }
-#region .bandeau--top {
-  margin: 10px;
+#region .bandeau--style .bandeau--bigger {
+  font-size: 5em;
+  margin: 0;
 }
-#region .bandeau--top p {
-  font-weight: 200;
-  font-style: italic;
-}
-#region .bandeau--bigger {
-  font-size: 6em;
-}
-#region .graphs--style {
-  margin-top: 10px;
-}
-#region .bandeau--nb {
-  font-style: normal;
+#region .bandeau--style .bandeau--nb {
   font-family: 'Cassannet';
-  line-height: 0.5;
 }
-#region .bandeau--nb.big {
-  font-size: 9em;
-}
-#region .bandeau--nb.medium {
-  font-size: 6em;
-}
-#region .bandeau--nb.small {
+#region .bandeau--style .bandeau--nb.big {
   font-size: 5em;
 }
+#region .bandeau--style .bandeau--nb.medium {
+  font-size: 3.3em;
+}
+#region .bandeau--style .bandeau--nb.small {
+  font-size: 2.5em;
+}
+#region .bandeau--style .bandeau--legend {
+  padding: 0;
+  margin: 0;
+}
 #region .svg--podium {
-  width: 80%;
+  width: 74%;
   height: auto;
 }
 #region .bar--label--homme {
@@ -516,13 +518,13 @@
   font-style: italic;
   font-weight: 200;
   color: #2f81d3;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 #region .bar--label--femme {
   font-style: italic;
   font-weight: 200;
   color: #ef4878;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 #region .bar--label--pourhomme {
   font-style: italic;
@@ -555,13 +557,42 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 62.5%;
   background-color: #232835;
   color: #efefed;
 }
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 66%;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  body {
+    font-size: 120%;
+  }
+}
 p,
 span {
-  font-size: 1.6em;
+  font-size: 1em;
 }
 .section--wrapper {
   max-width: 960px;
@@ -594,7 +625,7 @@ span {
   padding: 5px 15px;
   position: absolute;
   z-index: 98;
-  font-size: 2em;
+  font-size: 2rem;
 }
 #fp-nav ul li a span {
   background-color: #e79634;
@@ -605,6 +636,7 @@ span {
 .section--wrapper h1 {
   font-style: italic;
   font-weight: 300;
+  font-size: 1.2em;
 }
 .pie--wrapper {
   position: relative;
@@ -623,6 +655,9 @@ span {
   text-align: center;
 }
 .pie--wrapper .doughnut-legend {
-  font-size: 1.3em;
+  font-size: 1em;
   margin-top: 10px;
+}
+.text-center {
+  text-align: center;
 }
