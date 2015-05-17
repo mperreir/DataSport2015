@@ -442,7 +442,7 @@
   font-size: 5em;
 }
 #region .svg--podium {
-  width: 50%;
+  width: 80%;
   height: auto;
 }
 #region .bar--label--homme {
@@ -484,17 +484,6 @@
     width: 130%;
     height: auto;
   }
-}
-#region .dough--label--left p {
-  color: #f5907f;
-  postion: absolute;
-  text-align: right;
-}
-#region .dough--label--right p {
-  margin-left: -8%;
-  color: #E85138;
-  postion: absolute;
-  text-align: left;
 }
 body {
   padding: 0;
