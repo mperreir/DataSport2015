@@ -1,6 +1,5 @@
 @import (less) '../core/less/_palette.less';
 #region {
-<<<<<<< HEAD
 	background-color: @white;
   color: @dark;
 
@@ -102,13 +101,15 @@
 
   .bandeau--top{
   	margin:10px;
+    p{
+      font-weight: 200;
+      font-style: italic;
+    }
   }
 
-  .bandeau--bottom{
-  	p{
-  		font-weight: 200;
-  		font-style: italic;
-  	}
+  .bandeau--bigger{
+    font-size: 6em;
+  	
   }
 
   .graphs--style {
@@ -121,15 +122,15 @@
   	 line-height: 0.5;
 
 	 &.big{
-	 	font-size: 7em;
+	 	font-size: 9em;
 	 }
 
 	 &.medium{
-	 	font-size: 4em;
+	 	font-size: 6em;
 	 }
 
 	 &.small{
-	 	font-size: 3em;
+	 	font-size: 5em;
 	 }
   }
 
@@ -172,6 +173,39 @@
 		line-height: 0;
   	
   }
+  
+  @media screen and (max-width: 758px) {
+    .small--hide {
+        display: none !important;
+    }
+}
+
+   @media screen and (min-width: 767px) {
+    .bandeau--style {
+            img {
+                width:130%;
+                height: auto;
+                  }
+    }
+}
+
+  .dough--label--left {
+    p {
+    color:#f5907f;
+    postion:absolute;
+    text-align: right;
+    }
+  }
+
+  .dough--label--right {
+    p{
+    margin-left: -8%;
+    color:#E85138;
+    postion:absolute;
+    text-align: left;
+     }
+  }
+
 
 
 

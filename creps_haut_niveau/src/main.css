@@ -6,96 +6,39 @@
   font-family: 'Cassannet';
   src: url(assets/fonts/CassannetBold.otf);
 }
-@-webkit-keyframes spaceboots {
-  0% {
-    -webkit-transform: translate(2px, 1px) rotate(0deg);
-            transform: translate(2px, 1px) rotate(0deg);
-  }
-  10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    -webkit-transform: translate(-3px, 0px) rotate(1deg);
-            transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    -webkit-transform: translate(0px, 2px) rotate(0deg);
-            transform: translate(0px, 2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg);
-            transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    -webkit-transform: translate(-1px, 1px) rotate(-1deg);
-            transform: translate(-1px, 1px) rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: translate(-3px, -2px) rotate(0deg);
-            transform: translate(-3px, -2px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: translate(2px, 1px) rotate(-1deg);
-            transform: translate(2px, 1px) rotate(-1deg);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -2px) rotate(1deg);
-            transform: translate(-1px, -2px) rotate(1deg);
-  }
-  90% {
-    -webkit-transform: translate(2px, -1px) rotate(0deg);
-            transform: translate(2px, -1px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(1px, -2px) rotate(-1deg);
-            transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
 @keyframes spaceboots {
   0% {
-    -webkit-transform: translate(2px, 1px) rotate(0deg);
-            transform: translate(2px, 1px) rotate(0deg);
+    transform: translate(2px, 1px) rotate(0deg);
   }
   10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
+    transform: translate(-1px, -2px) rotate(-1deg);
   }
   20% {
-    -webkit-transform: translate(-3px, 0px) rotate(1deg);
-            transform: translate(-3px, 0px) rotate(1deg);
+    transform: translate(-3px, 0px) rotate(1deg);
   }
   30% {
-    -webkit-transform: translate(0px, 2px) rotate(0deg);
-            transform: translate(0px, 2px) rotate(0deg);
+    transform: translate(0px, 2px) rotate(0deg);
   }
   40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg);
-            transform: translate(1px, -1px) rotate(1deg);
+    transform: translate(1px, -1px) rotate(1deg);
   }
   50% {
-    -webkit-transform: translate(-1px, 1px) rotate(-1deg);
-            transform: translate(-1px, 1px) rotate(-1deg);
+    transform: translate(-1px, 1px) rotate(-1deg);
   }
   60% {
-    -webkit-transform: translate(-3px, -2px) rotate(0deg);
-            transform: translate(-3px, -2px) rotate(0deg);
+    transform: translate(-3px, -2px) rotate(0deg);
   }
   70% {
-    -webkit-transform: translate(2px, 1px) rotate(-1deg);
-            transform: translate(2px, 1px) rotate(-1deg);
+    transform: translate(2px, 1px) rotate(-1deg);
   }
   80% {
-    -webkit-transform: translate(-1px, -2px) rotate(1deg);
-            transform: translate(-1px, -2px) rotate(1deg);
+    transform: translate(-1px, -2px) rotate(1deg);
   }
   90% {
-    -webkit-transform: translate(2px, -1px) rotate(0deg);
-            transform: translate(2px, -1px) rotate(0deg);
+    transform: translate(2px, -1px) rotate(0deg);
   }
   100% {
-    -webkit-transform: translate(1px, -2px) rotate(-1deg);
-            transform: translate(1px, -2px) rotate(-1deg);
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 .shake-over {
@@ -103,17 +46,11 @@
   position: relative;
 }
 .shake-over:hover {
-  -webkit-animation-name: 'spaceboots';
-          animation-name: 'spaceboots';
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: 'spaceboots';
+  animation-duration: 7s;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .shake-over.inline {
   display: inline-block;
@@ -121,25 +58,17 @@
 .shake-inf {
   display: block;
   position: relative;
-  -webkit-animation-name: 'spaceboots';
-          animation-name: 'spaceboots';
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: 'spaceboots';
+  animation-duration: 7s;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .scale {
   transition: all .5s;
 }
 .scale:hover {
-  -webkit-transform: scale(1.02);
-      -ms-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
 #introduction {
   background: url(assets/img/cover.jpg);
@@ -164,10 +93,15 @@
   right: 0;
   height: 18%;
   z-index: 50;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #252a37 99%, #232835 100%);
   /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(99%, #252a37), color-stop(100%, #232835));
   /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #252a37 99%, #232835 100%);
   /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #252a37 99%, #232835 100%);
   /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #252a37 99%, #232835 100%);
   /* IE10+ */
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #252a37 99%, #232835 100%);
   /* W3C */
@@ -483,9 +417,12 @@
 #region .bandeau--top {
   margin: 10px;
 }
-#region .bandeau--bottom p {
+#region .bandeau--top p {
   font-weight: 200;
   font-style: italic;
+}
+#region .bandeau--bigger {
+  font-size: 6em;
 }
 #region .graphs--style {
   margin-top: 10px;
@@ -496,13 +433,13 @@
   line-height: 0.5;
 }
 #region .bandeau--nb.big {
-  font-size: 7em;
+  font-size: 9em;
 }
 #region .bandeau--nb.medium {
-  font-size: 4em;
+  font-size: 6em;
 }
 #region .bandeau--nb.small {
-  font-size: 3em;
+  font-size: 5em;
 }
 #region .svg--podium {
   width: 50%;
@@ -537,7 +474,28 @@
   margin: 0;
   line-height: 0;
 }
-
+@media screen and (max-width: 758px) {
+  #region .small--hide {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 767px) {
+  #region .bandeau--style img {
+    width: 130%;
+    height: auto;
+  }
+}
+#region .dough--label--left p {
+  color: #f5907f;
+  postion: absolute;
+  text-align: right;
+}
+#region .dough--label--right p {
+  margin-left: -8%;
+  color: #E85138;
+  postion: absolute;
+  text-align: left;
+}
 body {
   padding: 0;
   margin: 0;
