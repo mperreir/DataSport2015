@@ -94,18 +94,18 @@ angular.module('hyblabApp')
 
 
     $scope.tabGenres = {
-      'homme': 'section2-selector-active',
-      'femme': 'section2-selector-active'
+      'homme': 'active',
+      'femme': 'active'
     };
 
     $scope.tabCat = {
-      'es': 'section2-selector-active',
-      'ju': 'section2-selector-active',
-      'se': 'section2-selector-active',
-      'v1': 'section2-selector-active',
-      'v2': 'section2-selector-active',
-      'v3': 'section2-selector-active',
-      'v4': 'section2-selector-active'
+      'es': 'active',
+      'ju': 'active',
+      'se': 'active',
+      'v1': 'active',
+      'v2': 'active',
+      'v3': 'active',
+      'v4': 'active'
     };
 
     /**
@@ -113,10 +113,10 @@ angular.module('hyblabApp')
      * @param  {[string]} id
      */
      $scope.clicGenre = function(id) {
-      if ($scope.tabGenres[id] === 'section2-selector-active') {
+      if ($scope.tabGenres[id] === 'active') {
         $scope.tabGenres[id] = '';
       } else {
-        $scope.tabGenres[id] = 'section2-selector-active';
+        $scope.tabGenres[id] = 'active';
       }
       console.log('Genre mofifié : ' + id +'. Valeur actuelle : ' + $scope.tabGenres[id]);
     };
@@ -126,10 +126,10 @@ angular.module('hyblabApp')
      * @param  {[string]} id
      */
     $scope.clicCat = function(id) {
-      if ($scope.tabCat[id] === 'section2-selector-active') {
+      if ($scope.tabCat[id] === 'active') {
         $scope.tabCat[id] = '';
       } else {
-        $scope.tabCat[id] = 'section2-selector-active';
+        $scope.tabCat[id] = 'active';
       }
       console.log('Catégorie modifiée : ' + id  +'. Valeur actuelle : ' + $scope.tabCat[id]);
     };
