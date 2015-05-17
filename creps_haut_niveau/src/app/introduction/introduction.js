@@ -3,19 +3,15 @@
 
   angular.module('hyblab.creps')
 
+  /**
+   * La directive en charge du rendu de la page de titre.
+   *
+   * @return {Directive}
+   */
   .directive('crepsIntroduction', [function(){
     return {
       restrict: 'EA',
-      templateUrl: 'app/introduction/introduction.template.html',
-      link: function(scope, element, attrs){
-        var $title1 = element.find('.title .title--text:first-child');
-        var $title2 = element.find('.title .title--text:last-child');
-        var $sep = element.find('.title--sep');
-
-        $title1.addClass('animated').addClass('fadeInLeft');
-        $sep.addClass('animated').addClass('fadeIn');
-        $title2.addClass('animated').addClass('fadeInRight');
-      }
+      templateUrl: 'app/introduction/introduction.template.html'
     };
   }]);
 })();

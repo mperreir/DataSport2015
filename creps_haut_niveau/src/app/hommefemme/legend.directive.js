@@ -2,6 +2,16 @@
   'use strict';
 
   angular.module('hyblab.creps')
+
+  /**
+   * La directive permettant d'ajouter la légend à des bars horizontales.
+   * La directive attend :
+   * - un maximum
+   * - un nombre de segments
+   * - l'orientation, par defaut 'left'
+   * 
+   * @return {Directive}
+   */
   .directive('crepsBarlegend', [function(){
     return function(scope, element, attrs){
       var max = attrs.max;

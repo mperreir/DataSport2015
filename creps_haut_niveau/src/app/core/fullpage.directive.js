@@ -2,6 +2,15 @@
   'use strict';
 
   angular.module('hyblab.creps')
+
+  /**
+   * Directive permettant l'intégration de fullpage dans AngularJS.
+   * La directive lit l'ID de la balise et applique simplement .fullpage()
+   *
+   * La directive broadcast des évènements sur le $rootScope à chaque changement de slide.
+   * 
+   * @return {Directive}
+   */
   .directive('fullpage', ['$rootScope', function($rootScope){
     return function(scope, element, attrs){
       var id = attrs.id;

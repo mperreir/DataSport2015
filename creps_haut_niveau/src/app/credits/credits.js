@@ -3,18 +3,19 @@
 
   angular.module('hyblab.creps')
 
-  .controller('CreditsCtrl', ['Credits', function(Credits){
-    var vm = this;
-
-    vm.people = Credits.credits;
-  }])
-
-  .directive('crepsCredits', [function(){
+  /**
+   * Création de la directive affichant la section Crédits.
+   * 
+   * @return {Directive}
+   */
+  .directive('crepsCredits', ['Data', function(Data){
     return {
       restrict: 'EA',
+      scope: {}, // scope isolé
       templateUrl: 'app/credits/credits.template.html',
-      controller: 'CreditsCtrl',
-      controllerAs: 'credits'
+      link: function(scope){
+        scope.people = Data.credits;
+      }
     };
   }]);
 })();

@@ -3,6 +3,13 @@
 
   angular.module('hyblab.creps')
 
+  /**
+   * Gère le databinding entre la vue et les données des départements.
+   * Le controller réagit aux évènements emits par la directive jvectormap
+   * pour récupérer le département courant.
+   * 
+   * @return {Controller}
+   */
   .controller('DepartementsCtrl', ['$scope', 'Data', function($scope, Data){
     var vm = this;
     var departements = Data.departements;
@@ -31,6 +38,12 @@
     }
   }])
 
+  /**
+   * La directive en charge de la section affichant les informations sur les départements.
+   * Le binding est laissé au controller, les manipulations de DOM à la fonction link.
+   *  
+   * @return {Directive}
+   */
   .directive('crepsDepartements', [function(){
     return {
       restrict: 'EA',
@@ -38,6 +51,14 @@
       controller: 'DepartementsCtrl',
       controllerAs: 'departements',
       link: function(scope, element, attrs){
+        /*
+        On gère les manipulations de DOM (animations) dans le link puisque c'est
+        la fonction dans laquelle on est sur que le DOM est rendu.
+
+        Lorsqu'un nouveau département est sélectionné, on ajoute la classe
+        permettant de jouer l'animation.
+        En fin d'animation on supprime la classe.
+         */
         var $sports = element.find('.sports--container');
         var $listes = element.find('.listes');
 

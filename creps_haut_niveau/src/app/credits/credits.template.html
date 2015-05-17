@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="row center-xs">
-          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'Ecole De Design Nantes' }">
+          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in people | filter: { school: 'Ecole De Design Nantes' }">
             <div class="scale">
               <img ng-src="{{person.img}}" class="credit--avatar">
               <p class="credit--label">{{person.name}}</p>
@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="row center-xs">
-          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'STAPS' }">
+          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in people | filter: { school: 'STAPS' }">
             <div class="scale">
               <img ng-src="{{person.img}}" class="credit--avatar">
               <p class="credit--label">{{person.name}}</p>
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="row center-xs">
-          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in credits.people | filter: { school: 'Polytech Nantes'} ">
+          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in people | filter: { school: 'Polytech Nantes'} ">
             <div class="scale">
               <img ng-src="{{person.img}}" class="credit--avatar">
               <p class="credit--label">{{person.name}}</p>

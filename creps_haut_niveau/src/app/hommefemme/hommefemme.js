@@ -3,6 +3,11 @@
 
   angular.module('hyblab.creps')
 
+  /**
+   * Le controller en charge du binding avec le template de comparaison H /F.
+   * 
+   * @return {Controller}
+   */
   .controller('HommefemmeCtrl', ['Data', function(Data){
     var vm = this;
     
@@ -29,6 +34,12 @@
     vm.maxCategory = (maxSportEspoirs > maxSportHautNiveau) ? maxSportEspoirs : maxSportHautNiveau;
   }])
 
+  /**
+   * La directive en charge du rendu de la section de comparaison de hommes 
+   * et des femmes
+   * 
+   * @return {Directive}
+   */
   .directive('crepsHommefemme', [function(){
     return {
       restrict: 'EA',

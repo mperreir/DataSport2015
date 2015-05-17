@@ -2,9 +2,16 @@
   'use strict';
 
   angular.module('hyblab.creps')
+
+  /**
+   * Le controller de la section présentant les données générales
+   * de la Region.
+   * 
+   * @return {Controller}
+   */
   .controller('RegionCtrl', ['$scope', 'Data',function($scope, Data){
   	var vm = this;
-    vm.region = Data.region;
+    var region = Data.region;
 
     vm.counthomme = 0;
     vm.countfemme = 0;
@@ -13,8 +20,6 @@
     vm.sportifsListes = 0;
     vm.espoirs = 0;
     vm.partenaires = 0;
-
-
     
     $scope.$on('slide:region',function(){
       $scope.$apply(function(){
@@ -22,29 +27,35 @@
         vm.countfemme = 37;
         vm.valuetotal = 1026000;
 
-        vm.hautNiveau = vm.region.hautNiveau.total;
-        vm.sportifsListes = vm.region.total;
-        vm.espoirs = vm.region.espoirs.total;
-        vm.partenaires = vm.region.partenaires;
+        vm.hautNiveau = region.hautNiveau.total;
+        vm.sportifsListes = region.total;
+        vm.espoirs = region.espoirs.total;
+        vm.partenaires = region.partenaires;
 
             
         vm.doughlabels = ["Moins de 18 ans en Espoir","Moins de 18 ans en Haut Niveau"];
-        vm.doughdata = [vm.region.espoirs.underage,vm.region.hautNiveau.underage];
+        vm.doughdata = [region.espoirs.underage,region.hautNiveau.underage];
         vm.doughcolours = ["#E85138","#f5907f"];
 
         vm.doughoptions = {
-            scaleShowHorizontalLines: false,
-            scaleShowVerticalLines: false,
-            segmentStrokeColor : "rgba(255,255,255,0)",
-             animateRotate : true,
-              percentageInnerCutout: 75,
-              responsive : true
-    };
-
+          scaleShowHorizontalLines: false,
+          scaleShowVerticalLines: false,
+          segmentStrokeColor : "rgba(255,255,255,0)",
+          animateRotate : true,
+          percentageInnerCutout: 75,
+          responsive : true
+        };
       });
     });
            
   }])
+
+  /**
+   * La directive en charge du rendu de la section présentant les données
+   * de la région.
+   * 
+   * @return {Directive}
+   */
   .directive('crepsRegion',[function(){
     return {
       restrict: 'EA',
