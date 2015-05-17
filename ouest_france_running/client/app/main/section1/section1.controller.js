@@ -83,7 +83,7 @@ angular.module('hyblabApp')
         inGraphDataShow: false,
         annotateDisplay: true,
         spaceBetweenBar: 0,
-
+        dynamicDisplay:true,
         responsive: true
       }
     };
@@ -136,6 +136,7 @@ angular.module('hyblabApp')
         annotateLabel: '<%=v3 + \' \' + (v1 == \'\' ? \'\' : v1) + (v1!=\'\' && v2 !=\'\' ? \' \' : \'\')+(v2 == \'\' ? \'\' : v2)+(v1!=\'\' || v2 !=\'\' ? \' \' : \'\')%>',
         scaleShowGridLines: false,
         rotateLabels: 'smart',
+        dynamicDisplay:true,
         responsive: true
 
       }
@@ -193,6 +194,7 @@ angular.module('hyblabApp')
         scaleFontFamily: 'sans-serif',
 			scaleFontSize: 18,
 			scaleFontColor: '#222',
+      dynamicDisplay:true,
         responsive: true
       }
     };

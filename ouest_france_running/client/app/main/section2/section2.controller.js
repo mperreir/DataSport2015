@@ -79,7 +79,9 @@ angular.module('hyblabApp')
       scaleFontFamily: 'sans-serif',
       scaleFontSize: 16,
       scaleFontColor: '#222',
-      scaleStartValue: 0
+      scaleStartValue: 0,
+      dynamicDisplay:true,
+      responsive: true
     };
 
     var Diagram1 = new Chart(document.getElementById('dv5-1').getContext('2d')).HorizontalBar(data1, options);
