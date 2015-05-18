@@ -21,7 +21,7 @@
       var ratio = value / max * 100;
       var isRendered = false;
       var windowHeight = $window.innerHeight;
-      var offset = element.offset().top - windowHeight/2;
+      var offset = element.offset().top - windowHeight/1.2;
 
       element.addClass('bar');
       element.addClass('bar--' + type);

@@ -1,24 +1,33 @@
 @import (less) '../core/less/_palette.less';
 
 #credits {
+  background-color: @white;
+  color: @dark;
   text-align: center;
 
   .credit--person {
     padding: @sep;
+
+    &:hover {
+      .credit--avatar {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      }
+    }
   }
 
   .credit--avatar {
     border-radius: 50%;
     width: 40%;
     height: auto;
+    transition: box-shadow 0.4s;
   }
-
+  
   .credit--label {
     text-align: center;
     margin: 0;
   }
 
-  .credit--school {
+  .credit--name {
     font-size: 1.2em;
   }
 }

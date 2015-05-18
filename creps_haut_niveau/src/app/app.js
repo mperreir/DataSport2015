@@ -35,7 +35,7 @@
    * - <section>.template.html  -> le template de la section
    * - <section>.less           -> la feuille de style de la section
    */
-  angular.module('hyblab.creps', ['ui.router', '720kb.tooltips', 'angular-chartist','countTo','chart.js'])
+  angular.module('hyblab.creps', ['ui.router', 'ngFitText', 'angular-chartist', 'countTo', 'chart.js'])
 
   /**
    * Configuration générale de l'application.
