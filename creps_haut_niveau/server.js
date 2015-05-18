@@ -51,7 +51,7 @@ app.get('/api/region/', function(req, res, next){
       toSend.espoirs.total++;
       if(age < 18) toSend.espoirs.underage++;
     }
-    else if(category === 'Partenaire d entrainement') toSend.partenaires++;
+    else if(category === 'Partenaire d entrainement' || category === 'Reconversion') toSend.partenaires++;
   });
 
   res.json(toSend);

@@ -399,6 +399,29 @@
 #credits .credit--school {
   font-size: 1.2em;
 }
+#credits #bandeau {
+  padding: 8px;
+}
+#credits #bandeau li {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+}
+#credits #bandeau img {
+  height: 64px;
+}
+#credits #bandeau #datasport {
+  margin: 20px 0;
+  height: 135px;
+  float: left;
+}
+#credits #bandeau ul {
+  text-align: center;
+}
+#credits #bandeau .institutionnel {
+  height: 48px;
+}
 #region {
   background-color: #efefed;
   color: #232835;
