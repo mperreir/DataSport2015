@@ -429,6 +429,22 @@
 #credits #bandeau .institutionnel {
   height: 48px;
 }
+#credits .bandeau {
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#credits .bandeau img {
+  max-height: 60px;
+  max-width: auto;
+}
+#credits .bandeau--bigger {
+  padding-bottom: 15px;
+}
+#credits .bandeau--bigger img {
+  max-height: 80px;
+  max-width: auto;
+}
 #region {
   background-color: #efefed;
   color: #232835;
