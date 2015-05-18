@@ -54,8 +54,14 @@ angular.module('hyblabApp')
     }
 
     function pourcentageHomme(Object){
-      dataSlide1.nbHomme =  Object.data.length-(Object.data.length*pourcentageFemme(Object));
-      return dataSlide1.pourcentageHomme = 100-pourcentageFemme(Object);
+      var countH = 0;
+        for(var i = 0; i<Object.data.length; i++){
+          if(Object.data[i].Sexe === "M"){
+            countH++;
+          }
+        }
+      dataSlide1.nbHomme = countH;
+      return dataSlide1.pourcentageHomme = (countH/Object.data.length)*100;
     }
 
     function tempsMoyen(tab){
@@ -87,14 +93,6 @@ angular.module('hyblabApp')
           min = parseInt(tab[i]["Nb.Secondes"], 10);
         }
       }
-      var hours   = Math.floor(min / 3600);
-      var minutes = Math.floor((min - (hours * 3600)) / 60);
-      var seconds = min - (hours * 3600) - (minutes * 60);
-
-      if (hours   < 10) {hours   = "0"+hours;}
-      if (minutes < 10) {minutes = "0"+minutes;}
-      if (seconds < 10) {seconds = "0"+seconds;}
-      min    = hours+':'+minutes+':'+seconds;
       return min;
     }
 
@@ -105,14 +103,6 @@ angular.module('hyblabApp')
           max = parseInt(tab[i]["Nb.Secondes"], 10);
         }
       }
-      var hours   = Math.floor(max / 3600);
-      var minutes = Math.floor((max - (hours * 3600)) / 60);
-      var seconds = max - (hours * 3600) - (minutes * 60);
-
-      if (hours   < 10) {hours   = "0"+hours;}
-      if (minutes < 10) {minutes = "0"+minutes;}
-      if (seconds < 10) {seconds = "0"+seconds;}
-      max    = hours+':'+minutes+':'+seconds;
       return max;
     }
 
@@ -178,6 +168,17 @@ angular.module('hyblabApp')
       dataSlide1.repartitionCatSexe.veteran5.femme = Object.filter(catV5).filter(estFemme).length;
     }
 
+    function formatage(tab){
+      for(var i = 0; i<tab.length; i++){
+        dataSlide2.push({
+          'nom' : tab[i].Nom,
+          'prenom' :tab[i].Prénom,
+          'cat' : tab[i]["Abbrev. Catégorie"],
+          'temps' : parseInt(tab[i]["Nb.Secondes"],10),
+          'sexe' : tab[i].Sexe,
+        })
+      }
+    }
 
     var csvParsed = new Papa.parse(dataPath,{
       download : true,
@@ -200,9 +201,13 @@ angular.module('hyblabApp')
         dataSlide1.dernier = tempsDernier(results.data);
         dataSlide1.premier = tempsPremier(results.data);
         cptCatSexe(results.data);
-
+        
         $scope.dataSlide1 = dataSlide1;
         $scope.loaded = true;
+
+        console.log(dataSlide1);
+        formatage(results.data);
+        console.log(dataSlide2);
       }
     });
 
