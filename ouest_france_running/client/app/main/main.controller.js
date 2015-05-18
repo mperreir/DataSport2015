@@ -8,8 +8,8 @@
 
 angular.module('hyblabApp')
   .controller('MainCtrl', function() {
+    var wow = new WOW().init();
     
-    //Recupération des données
     var dataPath = "../../assets/data/45km.csv";
     
     function pourcentageFemme(Object){
@@ -47,7 +47,7 @@ angular.module('hyblabApp')
       var time    = hours+':'+minutes+':'+seconds;
       return time;
     }
-    
+    var dataPath = "../../assets/data/25km.csv";
     var csvParsed = new Papa.parse(dataPath,{
       download : true,
       delimiter : '\t',

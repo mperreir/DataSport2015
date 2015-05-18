@@ -22,4 +22,5 @@ angular.module('hyblabApp', [
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
+
   });

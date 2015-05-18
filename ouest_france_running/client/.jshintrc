@@ -26,6 +26,8 @@
     "_": true,
     "Chart":true,
     "Papa": true,
+    "scrollReveal":true,
+    "WOW":true,
     "moment": true,
     "describe": true,
     "beforeEach": true,
