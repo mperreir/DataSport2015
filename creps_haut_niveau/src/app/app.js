@@ -55,9 +55,9 @@
         '<div creps-introduction id="introduction"></div>'
         + '<div creps-description id="description"></div>'
         + '<div creps-region id="region"></div>'
-        + '<div class="section" creps-departements id="departements"></div>'
-        + '<div class="section" creps-hommefemme id="hommefemme"></div>'
-        + '<div class="section" creps-credits id="credits"></div>'
+        + '<div creps-departements id="departements"></div>'
+        + '<div creps-hommefemme id="hommefemme"></div>'
+        + '<div creps-credits id="credits"></div>'
     })
   }]);
 })();

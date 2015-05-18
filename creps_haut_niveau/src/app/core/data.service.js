@@ -44,7 +44,7 @@
 		 * @return {Promise}
 		 */
 		service.getRepartition = function(){
-			return $http.get('api/status/?count=6')
+			return $http.get('api/status/?count=10')
 			.then(function(response){
 				service.repartition = response.data;
 			});

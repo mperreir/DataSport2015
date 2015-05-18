@@ -15,7 +15,11 @@
       templateUrl: 'app/credits/credits.template.html',
       link: function(scope){
         scope.people = Data.credits;
+
+        scope.people.forEach(function(person){
+          person.delay = Math.random() + 's';
+        });
       }
-    };
+    }
   }]);
 })();
