@@ -20,6 +20,7 @@
         var windowHeight = $window.innerHeight;
         var region = Data.region;
         console.log(region);
+        var offset = scope.offset = section.offset().top - windowHeight/4;
 
         scope.counthomme = 0;
         scope.countfemme = 0;
@@ -41,7 +42,7 @@
         scope.doughcolours = ["#E85138","#f5907f"];
 
         $document.on('scroll', function(){
-          if(!isRendered && $document.scrollTop() > section.offset().top - windowHeight/2){
+          if(!isRendered && $document.scrollTop() > offset){
             isRendered = true;
             scope.$apply(function(){
               console.log('uhergz');

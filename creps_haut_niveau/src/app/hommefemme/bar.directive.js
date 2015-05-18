@@ -13,19 +13,23 @@
    * 
    * @return {Directtive}
    */
-  .directive('crepsBar', [function(){
+  .directive('crepsBar', ['$document', '$window', function($document, $window){
     return function(scope, element, attrs){
       var type = attrs.type || 'male';
       var value = attrs.value || 0;
       var max = attrs.max;
-      var event = attrs.event;
       var ratio = value / max * 100;
+      var isRendered = false;
+      var windowHeight = $window.innerHeight;
+      var offset = element.offset().top - windowHeight/2;
 
       element.addClass('bar');
       element.addClass('bar--' + type);
 
-      scope.$on('slide:' + event, function(){
-        element.css('width', ratio + '%');
+      $document.on('scroll', function(){
+        if(!isRendered && $document.scrollTop() > offset){
+          element.css('width', ratio + '%');
+        }
       });
     }
   }]);
