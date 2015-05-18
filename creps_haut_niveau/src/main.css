@@ -304,6 +304,13 @@
     width: 100%;
   }
 }
+#departements .title--doughnut {
+  font-style: italic;
+  text-align: center;
+  font-weight: 200;
+  color: #e85138;
+  font-size: 1em;
+}
 #hommefemme .text--description {
   max-width: 70%;
   text-align: center;
@@ -530,14 +537,14 @@
 }
 #region .title--doughnut {
   font-style: italic;
-  font-weight: 200;
+  font-weight: 300;
   color: #e85138;
   font-size: 1em;
 }
 #region .title--svg {
   font-style: italic;
-  font-weight: 200;
-  color: #5ac2df;
+  font-weight: 300;
+  color: #232835;
   font-size: 1em;
 }
 @media screen and (max-width: 758px) {
