@@ -11,18 +11,36 @@ angular.module('hyblabApp')
     var wow = new WOW().init();
     
     var dataPath = "../../assets/data/25km.csv";
-    var listDepartement = {};
-    var dataSlide1= {
+    var dataSlide1 = {
       'nomVille' : '',
       'date' : '',
       'distance': 0,
       'nbCoureurs' : 0,
       'nbFemme': 0,
+      'pourcentageFemme':0,
       'nbHomme': 0,
-      'listDepartement' : {},
+      'pourcentageHomme':0,
+      'listeDepartement' : {},
+      'repartitionCatSexe': {
+        'espoir' : {},
+        'junior' : {},
+        'senior' : {},
+        'veteran1' : {},
+        'veteran2' : {},
+        'veteran3' : {},
+        'veteran4' : {},
+        'veteran5' : {}
+      },
       'premier' :0,
       'dernier' :0,
-    }
+    };
+    var dataSlide2 = [{
+      'nom' : '',
+      'prenom' : '',
+      'cat' : '',
+      'temps' : 0,
+      'sexe' :''
+    }];
     
     function pourcentageFemme(Object){
       var countF = 0;
@@ -31,11 +49,13 @@ angular.module('hyblabApp')
             countF++;
           }
         }
-      return dataSlide1.nbFemme = (countF/Object.data.length)*100;
-    };
+      dataSlide1.nbFemme = countF;  
+      return dataSlide1.pourcentageFemme = (countF/Object.data.length)*100;
+    }
     
     function pourcentageHomme(Object){
-      return dataSlide1.nbHomme = 100-pourcentageFemme(Object);
+      dataSlide1.nbHomme =  Object.data.length-(Object.data.length*pourcentageFemme(Object));
+      return dataSlide1.pourcentageHomme = 100-pourcentageFemme(Object);
     }
     
     function tempsMoyen(tab){
@@ -65,7 +85,6 @@ angular.module('hyblabApp')
       for(var i = 0; i<tab.length; i++){
         if(parseInt(tab[i]["Nb.Secondes"], 10) != 0 && parseInt(tab[i]["Nb.Secondes"], 10)<min){
           min = parseInt(tab[i]["Nb.Secondes"], 10);
-          console.log(min);
         }
       }
       var hours   = Math.floor(min / 3600);
@@ -75,21 +94,38 @@ angular.module('hyblabApp')
       if (hours   < 10) {hours   = "0"+hours;}
       if (minutes < 10) {minutes = "0"+minutes;}
       if (seconds < 10) {seconds = "0"+seconds;}
-      var min    = hours+':'+minutes+':'+seconds;
+      min    = hours+':'+minutes+':'+seconds;
       return min;
+    }
+    
+    function tempsDernier(tab){
+      var max= 0;
+      for(var i = 0; i<tab.length; i++){
+        if(parseInt(tab[i]["Nb.Secondes"], 10) != 0 && parseInt(tab[i]["Nb.Secondes"], 10)>max){
+          max = parseInt(tab[i]["Nb.Secondes"], 10);
+        }
+      }
+      var hours   = Math.floor(max / 3600);
+      var minutes = Math.floor((max - (hours * 3600)) / 60);
+      var seconds = max - (hours * 3600) - (minutes * 60);
+
+      if (hours   < 10) {hours   = "0"+hours;}
+      if (minutes < 10) {minutes = "0"+minutes;}
+      if (seconds < 10) {seconds = "0"+seconds;}
+      max    = hours+':'+minutes+':'+seconds;
+      return max;
     }
     
     function listDpt(tab){
       for(var i = 0; i<tab.length; i++){
         if(tab[i]["Code"].substring(0,2)!=""){
-          var dpt = tab[i]["Code"].substring(0,2)
-          if(!dataSlide1.listDepartement["FR-"+dpt]){
-            dataSlide1.listDepartement["FR-"+dpt] = 0;
+          var dpt = tab[i]["Code"].substring(0,2);
+          if(!dataSlide1.listeDepartement["FR-"+dpt]){
+            dataSlide1.listeDepartement["FR-"+dpt] = 0;
           }
-          dataSlide1.listDepartement["FR-"+dpt]++;
+          dataSlide1.listeDepartement["FR-"+dpt]++;
         }
       }
-      console.log(dataSlide1.listDepartement);
     }
     
     function estFemme(Object){
@@ -119,6 +155,28 @@ angular.module('hyblabApp')
     function catV4(Object){
       return Object["Abbrev. Catégorie"] =="V4";
     }
+    function catV5(Object){
+      return Object["Abbrev. Catégorie"] =="V5";
+    }
+    
+    function cptCatSexe(Object){
+      dataSlide1.repartitionCatSexe.espoir.femme = Object.filter(catES).filter(estFemme).length;
+      dataSlide1.repartitionCatSexe.espoir.homme = Object.filter(catES).filter(estHomme).length;
+      dataSlide1.repartitionCatSexe.junior.femme = Object.filter(catJU).filter(estFemme).length;
+      dataSlide1.repartitionCatSexe.junior.homme = Object.filter(catJU).filter(estHomme).length;
+      dataSlide1.repartitionCatSexe.senior.femme = Object.filter(catSE).filter(estFemme).length;
+      dataSlide1.repartitionCatSexe.senior.homme = Object.filter(catSE).filter(estFemme).length;
+      dataSlide1.repartitionCatSexe.veteran1.homme = Object.filter(catV1).filter(estHomme).length;
+      dataSlide1.repartitionCatSexe.veteran1.femme = Object.filter(catV1).filter(estFemme).length;
+      dataSlide1.repartitionCatSexe.veteran2.homme = Object.filter(catV2).filter(estHomme).length;
+      dataSlide1.repartitionCatSexe.veteran2.femme = Object.filter(catV2).filter(estFemme).length;
+      dataSlide1.repartitionCatSexe.veteran3.homme = Object.filter(catV3).filter(estHomme).length;
+      dataSlide1.repartitionCatSexe.veteran3.femme = Object.filter(catV3).filter(estFemme).length;
+      dataSlide1.repartitionCatSexe.veteran4.homme = Object.filter(catV4).filter(estHomme).length;
+      dataSlide1.repartitionCatSexe.veteran4.femme = Object.filter(catV4).filter(estFemme).length;
+      dataSlide1.repartitionCatSexe.veteran5.homme = Object.filter(catV5).filter(estHomme).length;
+      dataSlide1.repartitionCatSexe.veteran5.femme = Object.filter(catV5).filter(estFemme).length;
+    }
     
     
     var csvParsed = new Papa.parse(dataPath,{
@@ -129,16 +187,21 @@ angular.module('hyblabApp')
       skipEmptyLines: true,
       complete: function(results) {
         console.log(results);
-        console.log("nombre participants : "+results.data.length);
-        console.log("pourcentage d'hommes : "+pourcentageHomme(results));
-        //console.log(pourcentageFemme(results));
-        console.log(tempsMoyen(results.data));
-        var tabFemme = (results.data).filter(estFemme);
-        var tabHomme = (results.data).filter(estHomme);
-        var tabFSE = tabFemme.filter(catSE);
-        listDpt(results.data);
-        console.log("premier : "+tempsPremier(results.data));
         
+        dataSlide1.distance = results.data[1]["Distance"];
+        dataSlide1.nomVille = results.data[1]["Ville Compet."];
+        dataSlide1.date = results.data[1]["Date Compet."];
+        dataSlide1.nbCoureurs = results.data.length;
+        dataSlide1.pourcentageHomme = pourcentageHomme(results);
+        dataSlide1.pourcentageFemme = pourcentageFemme(results);
+        var tabES = (results.data).filter(catSE);
+        var tabHomme = tabES.filter(estHomme);
+        
+        listDpt(results.data);
+        dataSlide1.dernier = tempsDernier(results.data);
+        dataSlide1.premier = tempsPremier(results.data);
+        cptCatSexe(results.data);
+        console.log(dataSlide1);
       }
     });
      
