@@ -54,6 +54,8 @@
               scope.espoirs = region.espoirs.total;
               scope.partenaires = region.partenaires;
               scope.doughdata = [region.espoirs.underage,region.hautNiveau.underage];
+
+              
             });
           }
         });

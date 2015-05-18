@@ -421,11 +421,11 @@
 }
 #region .title--nb--licence .nblicence {
   font-family: 'Cassannet';
-  font-size: 3.3em;
+  font-size: 5em;
 }
 #region .title--nb--licence .licence {
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 3.3em;
 }
 #region .comphf--style {
   margin-top: 1em;
@@ -477,7 +477,6 @@
   color: #efefed;
   background-color: #e85138;
   margin-top: 0.3em;
-  margin-bottom: 1.5em;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 0.3em;
@@ -539,6 +538,25 @@
   float: left;
   margin: 0;
   line-height: 0;
+}
+#region .div--separateur--L {
+  margin-top: 2.5em;
+}
+#region .div--separateur--Xl {
+  margin-top: 4.5em;
+  background-color: #efefed;
+}
+#region .title--doughnut {
+  font-style: italic;
+  font-weight: 200;
+  color: #e85138;
+  font-size: 1em;
+}
+#region .title--svg {
+  font-style: italic;
+  font-weight: 200;
+  color: #5ac2df;
+  font-size: 1em;
 }
 @media screen and (max-width: 758px) {
   #region .small--hide {
@@ -635,6 +653,8 @@ span {
   font-style: italic;
   font-weight: 300;
   font-size: 1.2em;
+  margin-top: 0;
+  padding-top: 2.5em;
 }
 .pie--wrapper {
   position: relative;

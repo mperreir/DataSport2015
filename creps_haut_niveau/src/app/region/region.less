@@ -14,12 +14,12 @@
 
     .nblicence {
       font-family: 'Cassannet';
-      font-size: @accentL;
+      font-size: @accentXl;
     }
 
     .licence {
       font-weight: 300;
-      font-size: @accent;
+      font-size: @accentL;
     }
 	}
 
@@ -84,7 +84,6 @@
   	color:@white;
   	background-color: @orangebandeau;
   	margin-top: @sepXs;
-  	margin-bottom: @sep;
     padding-left: @sepSm;
     padding-right: @sepSm;
     padding-top: @sepXs;
@@ -152,12 +151,36 @@
   }
 
   .bar--label--pourfemme{
-  		font-style: italic;
+  	font-style: italic;
 		font-weight: 200;
 		color: @rougef;
 		float:left;
 		margin:0;
 		line-height: 0;
+  }
+
+  .div--separateur--L{
+  margin-top:@sepL;
+  }
+
+  .div--separateur--Xl{
+  margin-top:@sepXl;
+  background-color: @white;
+  }
+
+  .title--doughnut{
+    font-style: italic;
+    font-weight: 200;
+    color: @orangebandeau;
+    font-size: @sectionText;
+  }
+
+
+  .title--svg{
+    font-style: italic;
+    font-weight: 200;
+    color: @bleu;
+    font-size: @sectionText;
   }
   
   @media screen and (max-width: 758px) {
