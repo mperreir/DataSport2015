@@ -10,6 +10,8 @@ angular.module('hyblabApp')
 
     console.log('Chargement du controlleur section1');
 
+    console.log($scope.dataSlide1);
+
 
     $scope.open = function() {
 
@@ -26,28 +28,20 @@ angular.module('hyblabApp')
 
 
 
-    var mapData = {
-      'FR-44': 130,
-      'FR-22': 250,
-      'FR-85': 10,
-      'FR-35': 45,
-      'FR-56': 80,
-      'FR-29': 100,
-      'FR-75': 95
-    };
+
 
     $('#map').vectorMap({
       map: 'fr_mill_en',
       series: {
         regions: [{
-          values: mapData,
+          values: $scope.dataSlide1.listeDepartement,
           scale: ['#1D1D1B', '#ffffff'],
           normalizeFunction: 'polynomial'
         }]
       },
       onRegionTipShow: function(e, el, code) {
-        if (mapData[code]) {
-          el.html(el.html() + ' - ' + mapData[code] + ' participants');
+        if ($scope.dataSlide1.listeDepartement[code]) {
+          el.html(el.html() + ' - ' + $scope.dataSlide1.listeDepartement[code] + ' participants');
         } else {
           e.preventDefault();
         }
@@ -140,14 +134,26 @@ angular.module('hyblabApp')
           strokeColor: 'rgba(29,29,27,1)',
           pointColor: 'rgba(29,29,27,0.5)',
           pointstrokeColor: 'transparent',
-          data: [95, 53, 99, 10, 73, 27, 82],
+          data: [$scope.dataSlide1.repartitionCatSexe.junior.homme,
+            $scope.dataSlide1.repartitionCatSexe.espoir.homme,
+            $scope.dataSlide1.repartitionCatSexe.senior.homme,
+            $scope.dataSlide1.repartitionCatSexe.veteran1.homme,
+            $scope.dataSlide1.repartitionCatSexe.veteran2.homme,
+            $scope.dataSlide1.repartitionCatSexe.veteran3.homme,
+            $scope.dataSlide1.repartitionCatSexe.veteran4.homme],
           title: 'Hommes'
         }, {
           fillColor: 'rgba(231,55,84,1)',
           strokeColor: 'rgba(231,55,84,1)',
           pointColor: 'rgba(231,55,84,0.5)',
           pointstrokeColor: 'transparent',
-          data: [35, 43, 59, 25, 31, 50, 66],
+          data: [$scope.dataSlide1.repartitionCatSexe.junior.femme,
+            $scope.dataSlide1.repartitionCatSexe.espoir.femme,
+            $scope.dataSlide1.repartitionCatSexe.senior.femme,
+            $scope.dataSlide1.repartitionCatSexe.veteran1.femme,
+            $scope.dataSlide1.repartitionCatSexe.veteran2.femme,
+            $scope.dataSlide1.repartitionCatSexe.veteran3.femme,
+            $scope.dataSlide1.repartitionCatSexe.veteran4.femme],
           title: 'Femmes'
         }]
       },
@@ -192,14 +198,14 @@ angular.module('hyblabApp')
           strokeColor: 'rgba(29,29,27,0.5)',
           pointColor: 'rgba(231,55,84,0.5)',
           pointstrokeColor: 'transparent',
-          data: [10],
+          data: [$scope.dataSlide1.premier],
           title: 'Temps du premier coureur'
         }, {
           fillColor: 'rgba(29,29,27,1)',
           strokeColor: 'rgba(29,29,27,1)',
           pointColor: 'rgba(29,29,27,0.5)',
           pointstrokeColor: 'transparent',
-          data: [15],
+          data: [$scope.dataSlide1.dernier],
           title: 'Temps du dernier coureur'
         }]
       },

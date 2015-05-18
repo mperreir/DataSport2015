@@ -7,9 +7,9 @@
 'use strict';
 
 angular.module('hyblabApp')
-  .controller('MainCtrl', function() {
+  .controller('MainCtrl', function($scope) {
     var wow = new WOW().init();
-    
+
     var dataPath = "../../assets/data/25km.csv";
     var dataSlide1 = {
       'nomVille' : '',
@@ -41,7 +41,7 @@ angular.module('hyblabApp')
       'temps' : 0,
       'sexe' :''
     }];
-    
+
     function pourcentageFemme(Object){
       var countF = 0;
         for(var i = 0; i<Object.data.length; i++){
@@ -49,25 +49,25 @@ angular.module('hyblabApp')
             countF++;
           }
         }
-      dataSlide1.nbFemme = countF;  
+      dataSlide1.nbFemme = countF;
       return dataSlide1.pourcentageFemme = (countF/Object.data.length)*100;
     }
-    
+
     function pourcentageHomme(Object){
       dataSlide1.nbHomme =  Object.data.length-(Object.data.length*pourcentageFemme(Object));
       return dataSlide1.pourcentageHomme = 100-pourcentageFemme(Object);
     }
-    
+
     function tempsMoyen(tab){
       var temps = 0, count = 0;
       for(var i = 0; i<tab.length; i++){
         if(parseInt(tab[i]["Nb.Secondes"], 10) != 0){
-            temps +=parseInt(tab[i]["Nb.Secondes"], 10); 
+            temps +=parseInt(tab[i]["Nb.Secondes"], 10);
             count++;
         }
       }
       var tpsMoyen = temps/count;
-      
+
       var sec_num = parseInt(tpsMoyen, 10);
       var hours   = Math.floor(sec_num / 3600);
       var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
@@ -79,7 +79,7 @@ angular.module('hyblabApp')
       var time    = hours+':'+minutes+':'+seconds;
       return time;
     }
-    
+
     function tempsPremier(tab){
       var min= Infinity;
       for(var i = 0; i<tab.length; i++){
@@ -97,7 +97,7 @@ angular.module('hyblabApp')
       min    = hours+':'+minutes+':'+seconds;
       return min;
     }
-    
+
     function tempsDernier(tab){
       var max= 0;
       for(var i = 0; i<tab.length; i++){
@@ -115,7 +115,7 @@ angular.module('hyblabApp')
       max    = hours+':'+minutes+':'+seconds;
       return max;
     }
-    
+
     function listDpt(tab){
       for(var i = 0; i<tab.length; i++){
         if(tab[i]["Code"].substring(0,2)!=""){
@@ -127,7 +127,7 @@ angular.module('hyblabApp')
         }
       }
     }
-    
+
     function estFemme(Object){
       return Object.Sexe =="F";
     }
@@ -158,7 +158,7 @@ angular.module('hyblabApp')
     function catV5(Object){
       return Object["Abbrev. Catégorie"] =="V5";
     }
-    
+
     function cptCatSexe(Object){
       dataSlide1.repartitionCatSexe.espoir.femme = Object.filter(catES).filter(estFemme).length;
       dataSlide1.repartitionCatSexe.espoir.homme = Object.filter(catES).filter(estHomme).length;
@@ -177,8 +177,8 @@ angular.module('hyblabApp')
       dataSlide1.repartitionCatSexe.veteran5.homme = Object.filter(catV5).filter(estHomme).length;
       dataSlide1.repartitionCatSexe.veteran5.femme = Object.filter(catV5).filter(estFemme).length;
     }
-    
-    
+
+
     var csvParsed = new Papa.parse(dataPath,{
       download : true,
       delimiter : '\t',
@@ -186,8 +186,7 @@ angular.module('hyblabApp')
       encoding: 'UTF8',
       skipEmptyLines: true,
       complete: function(results) {
-        console.log(results);
-        
+
         dataSlide1.distance = results.data[1]["Distance"];
         dataSlide1.nomVille = results.data[1]["Ville Compet."];
         dataSlide1.date = results.data[1]["Date Compet."];
@@ -196,13 +195,15 @@ angular.module('hyblabApp')
         dataSlide1.pourcentageFemme = pourcentageFemme(results);
         var tabES = (results.data).filter(catSE);
         var tabHomme = tabES.filter(estHomme);
-        
+
         listDpt(results.data);
         dataSlide1.dernier = tempsDernier(results.data);
         dataSlide1.premier = tempsPremier(results.data);
         cptCatSexe(results.data);
-        console.log(dataSlide1);
+
+        $scope.dataSlide1 = dataSlide1;
+        $scope.loaded = true;
       }
     });
-     
+
   });
