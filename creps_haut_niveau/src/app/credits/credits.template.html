@@ -7,52 +7,11 @@
       </div>
     </div>
     <div class="row center-xs">
-      <div class="col-xs-12 col-sm-4">
-        <div class="row center-xs">
-          <div class="col-xs-12">
-            <p>Ecole De Design Nantes</p>
-          </div>
-        </div>
-        <div class="row center-xs">
-          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in people | filter: { school: 'Ecole De Design Nantes' }">
-            <div class="scale">
-              <img ng-src="{{person.img}}" class="credit--avatar">
-              <p class="credit--label">{{person.name}}</p>
-              <p class="credit--label credit--school">{{person.school}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-4">
-        <div class="row center-xs">
-          <div class="col-xs-12">
-            <p>STAPS</p>
-          </div>
-        </div>
-        <div class="row center-xs">
-          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in people | filter: { school: 'STAPS' }">
-            <div class="scale">
-              <img ng-src="{{person.img}}" class="credit--avatar">
-              <p class="credit--label">{{person.name}}</p>
-              <p class="credit--label credit--school">{{person.school}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-4">
-        <div class="row center-xs">
-          <div class="col-xs-12">
-            <p>Polytech Nantes</p>
-          </div>
-        </div>
-        <div class="row center-xs">
-          <div class="col-xs-4 col-sm-6 credit--person" ng-repeat="person in people | filter: { school: 'Polytech Nantes'} ">
-            <div class="scale">
-              <img ng-src="{{person.img}}" class="credit--avatar">
-              <p class="credit--label">{{person.name}}</p>
-              <p class="credit--label credit--school">{{person.school}}</p>
-            </div>
-          </div>
+      <div class="col-xs-4 col-sm-3 credit--person" ng-repeat="person in people">
+        <div class="scale">
+          <img ng-src="{{person.img}}" class="credit--avatar">
+          <p class="credit--label">{{person.name}}</p>
+          <p class="credit--label credit--school">{{person.school}}</p>
         </div>
       </div>
     </div>

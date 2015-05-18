@@ -16,7 +16,7 @@
    */
   .directive('crepsJvectormap', ['$rootScope', '$window', function($rootScope, $window){
     return function(scope, element, attrs){
-      element.css('height', '85%');
+      element.css('height', '83%');
       element.css('width', '100%');
       
       $(element).vectorMap({

@@ -1,18 +1,23 @@
 @import (less) '../core/less/_palette.less';
 
 #hommefemme {
+  .text--description {
+    max-width: 70%;
+    text-align: center;
+    margin: @sep auto;
+  }
+
+  .bar--wrapper {
+    max-width: 80%;
+    margin: auto;
+  }
+
   .bar--title, .bar--label {
     text-align: center;
   }
 
   .bar--title {
-    margin: 8px;
-  }
-
-  .bar--label {
-    p {
-      font-size: 1.6em;
-    }
+    margin: @sepS;
   }
 
   .bar {
@@ -70,12 +75,12 @@
   }
 
   h2 {
-    font-size: 2em;
+    font-size: @accent;
   }
 
   .legend--circle {
     display: block;
-    font-size: 5em;
+    font-size: 2em;
     line-height: 0.8em;
   }
 }
