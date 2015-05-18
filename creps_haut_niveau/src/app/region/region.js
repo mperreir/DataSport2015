@@ -20,7 +20,7 @@
         var windowHeight = $window.innerHeight;
         var region = Data.region;
         console.log(region);
-        var offset = scope.offset = section.offset().top - windowHeight/4;
+        var offset = scope.offset = section.offset().top - windowHeight/1.2;
 
         scope.counthomme = 0;
         scope.countfemme = 0;

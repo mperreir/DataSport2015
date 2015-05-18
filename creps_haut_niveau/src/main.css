@@ -215,11 +215,9 @@
 }
 #description .description--last {
   padding-top: 1.5em;
-  margin-bottom: 4.5em;
 }
 #description .description--first {
   padding-bottom: 1.5em;
-  margin-top: 4.5em;
 }
 #description img {
   width: 50%;
@@ -401,10 +399,6 @@
   background-color: #efefed;
   color: #232835;
 }
-#region .region--top {
-  max-height: 50%;
-  overflow: hidden;
-}
 #region .title--nb--licence {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -470,8 +464,8 @@
   margin-bottom: 2.5em;
   padding-left: 1em;
   padding-right: 1em;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 #region .bandeau--style img {
   width: 30%;
@@ -548,6 +542,36 @@ body {
   background-color: #232835;
   color: #efefed;
 }
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 66%;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  body {
+    font-size: 120%;
+  }
+}
 p,
 span {
   font-size: 1em;
@@ -556,18 +580,13 @@ span {
   max-width: 960px;
   max-width: 90%;
   margin: 0 auto;
+  padding: 4.5em;
 }
 .height-100 {
   height: 100%;
 }
 .height-100vh {
   height: 100vh;
-}
-.center-block {
-  margin: auto;
-}
-.m0 {
-  margin: 0;
 }
 .tooltip {
   display: inline;
@@ -636,4 +655,52 @@ span {
 }
 .shadow-1 {
   box-shadow: 0 40px 77px 0 rgba(0, 0, 0, 0.33), 0 27px 24px 0 rgba(0, 0, 0, 0.3);
+}
+.accent-blue {
+  color: #5ac2df;
+}
+.accent-red {
+  color: #ec6347;
+}
+.accent-female {
+  color: #ef4878;
+}
+.accent-male {
+  color: #2f81d3;
+}
+.title--enormous {
+  font-size: 7em;
+  font-weight: 700;
+}
+.title--big {
+  font-size: 2em;
+}
+.title--section {
+  text-align: center;
+  max-width: 80%;
+  margin: 2.5em auto;
+}
+.title--section span {
+  display: block;
+}
+.title--section hr {
+  width: 70%;
+}
+.center-block {
+  margin: auto;
+}
+.m0 {
+  margin: 0 !important;
+}
+.mt0 {
+  margin-top: 0 !important;
+}
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.ml0 {
+  margin-left: 0 !important;
+}
+.mr0 {
+  margin-right: 0 !important;
 }

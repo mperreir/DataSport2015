@@ -27,6 +27,7 @@
     "angular-count-to": "*",
     "angular-chart.js": "~0.7.1",
     "animate.css": "~3.2.6",
-    "wow.js": "~1.1.2"
+    "wow.js": "~1.1.2",
+    "fartscroll": "*"
   }
 }

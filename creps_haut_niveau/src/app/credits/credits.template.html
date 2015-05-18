@@ -3,15 +3,15 @@
     <h1 class="section--title">Remerciements</h1>
     <div class="row center-xs">
       <div class="col-xs-6 col-sm-8 wow fadeIn">
-        <p>Sité réalisé avec <i class="icon heart icon--red"></i> par l'équipe du Hyblab Datasport 2015 :</p>
+        <p>Sité réalisé avec <i class="icon heart icon--red wow pulse infinite"></i> par l'équipe du Hyblab Datasport 2015 :</p>
       </div>
     </div>
     <div class="row center-xs">
       <div class="col-xs-4 col-sm-3 credit--person" ng-repeat="person in people">
-        <div class="scale wow bounceIn" data-wow-delay="{{person.delay}}">
-          <img ng-src="{{person.img}}" class="credit--avatar">
-          <p class="credit--label">{{person.name}}</p>
-          <p class="credit--label credit--school">{{person.school}}</p>
+        <div class="scale">
+          <img ng-src="{{person.img}}" class="credit--avatar wow rotateIn" data-wow-delay="{{person.delay}}">
+          <p class="credit--label wow bounceIn" data-wow-delay="{{person.delay}}">{{person.name}}</p>
+          <p class="credit--label credit--school wow bounceIn" data-wow-delay="{{person.delay}}">{{person.school}}</p>
         </div>
       </div>
     </div>
