@@ -1,6 +1,23 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div class="wrapper" data-spy="scroll">
 
+  <div ng-if="!loaded" class="loader-content">
+    <div class="container loader">
+      <center>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+      </center>
+    </div>
+  </div>
+
   <div ng-if="loaded">
 
     <section1 data="{{dataSlide1}}"></section1>
