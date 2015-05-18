@@ -19,4 +19,12 @@ angular.module('hyblabApp')
       $scope.loaded = true;
     });
 
+    $scope.$on('Dataset switched', function() {
+       $scope.loaded = false;
+       Data.getPromise().then(function() {
+         $scope.dataSlide1 = Data.getDataSlide1();
+         $scope.loaded = true;
+       });
+    });
+
   });

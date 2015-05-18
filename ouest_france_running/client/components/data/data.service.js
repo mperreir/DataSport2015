@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hyblabApp')
-  .factory('Data', function($q) {
+  .factory('Data', function($q, $rootScope) {
 
     // Variables
 
@@ -9,6 +9,8 @@ angular.module('hyblabApp')
     var dataPath;
 
     var csvParsed;
+
+    var promise;
 
     var dataSlide1 = {
       'nomVille': '',
@@ -246,13 +248,22 @@ angular.module('hyblabApp')
 
         });
 
-        //On renvoit la promesse
+        //On stocke et renvoie la promesse
+        promise = deferred.promise;
         return deferred.promise;
 
+      },
+      getPromise: function() {
+        return promise;
       },
 
       getDataSlide1: function() {
         return dataSlide1;
+      },
+
+      switchData: function(dataPath){
+        this.create(dataPath);
+        $rootScope.$broadcast('Dataset switched');
       }
 
     };
