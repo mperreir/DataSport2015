@@ -6,12 +6,52 @@
 'use strict';
 
 angular.module('hyblabApp')
-  .controller('Section1Ctrl', function($scope) {
+  .controller('Section1Ctrl', function($scope, $modal) {
 
     console.log('Chargement du controlleur section1');
 
+
+    $scope.open = function() {
+
+      var modalInstance = $modal.open({
+        animation: true,
+        templateUrl: 'myModalContent.html',
+        controller: 'ModalInstanceCtrl',
+        size: 'lg',
+        resolve: {}
+      });
+
+    };
+
+
+
+
+    var mapData = {
+      'FR-44': 130,
+      'FR-22': 250,
+      'FR-85': 10,
+      'FR-35': 45,
+      'FR-56': 80,
+      'FR-29': 100,
+      'FR-75': 95
+    };
+
     $('#map').vectorMap({
       map: 'fr_mill_en',
+      series: {
+        regions: [{
+          values: mapData,
+          scale: ['#1D1D1B', '#ffffff'],
+          normalizeFunction: 'polynomial'
+        }]
+      },
+      onRegionTipShow: function(e, el, code) {
+        if (mapData[code]) {
+          el.html(el.html() + ' - ' + mapData[code] + ' participants');
+        } else {
+          e.preventDefault();
+        }
+      },
       zoomButtons: false,
       backgroundColor: 'none',
       regionsSelectable: false,
@@ -22,8 +62,8 @@ angular.module('hyblabApp')
         }
       },
       markers: [{
-        latLng: [47.2172500, -1.5533600],
-        name: 'Nantes'
+        latLng: [48.6303, -2.86861],
+        name: 'Plourhan'
       }],
       markerStyle: {
         initial: {
@@ -35,7 +75,7 @@ angular.module('hyblabApp')
           r: 6
         },
         hover: {
-          stroke: '#eee',
+          stroke: 'rgba(231,55,84,1)',
           'stroke-width': 2,
           cursor: 'pointer'
         },
@@ -83,7 +123,7 @@ angular.module('hyblabApp')
         inGraphDataShow: false,
         annotateDisplay: true,
         spaceBetweenBar: 0,
-        dynamicDisplay:true,
+        dynamicDisplay: true,
         responsive: true
       }
     };
@@ -94,20 +134,20 @@ angular.module('hyblabApp')
 
     var dv3 = {
       data: {
-        labels: ['Espoir ', 'Junior ', 'Sénior ', 'Vétéran 1 ', 'Vétéran 2 ', 'Vétéran 3 ', 'Vétéran 4 ', 'Vétéran 5 '],
+        labels: ['Junior ', 'Espoir ', 'Sénior ', 'Vétéran 1 ', 'Vétéran 2 ', 'Vétéran 3 ', 'Vétéran 4 '],
         datasets: [{
           fillColor: 'rgba(29,29,27,1)',
           strokeColor: 'rgba(29,29,27,1)',
           pointColor: 'rgba(29,29,27,0.5)',
           pointstrokeColor: 'transparent',
-          data: [95, 53, 99, 10, 73, 27, 82, 80],
+          data: [95, 53, 99, 10, 73, 27, 82],
           title: 'Hommes'
         }, {
           fillColor: 'rgba(231,55,84,1)',
           strokeColor: 'rgba(231,55,84,1)',
           pointColor: 'rgba(231,55,84,0.5)',
           pointstrokeColor: 'transparent',
-          data: [35, 43, 59, 25, 31, 50, 66, 3],
+          data: [35, 43, 59, 25, 31, 50, 66],
           title: 'Femmes'
         }]
       },
@@ -136,7 +176,7 @@ angular.module('hyblabApp')
         annotateLabel: '<%=v3 + \' \' + (v1 == \'\' ? \'\' : v1) + (v1!=\'\' && v2 !=\'\' ? \' \' : \'\')+(v2 == \'\' ? \'\' : v2)+(v1!=\'\' || v2 !=\'\' ? \' \' : \'\')%>',
         scaleShowGridLines: false,
         rotateLabels: 'smart',
-        dynamicDisplay:true,
+        dynamicDisplay: true,
         responsive: true
 
       }
@@ -192,9 +232,9 @@ angular.module('hyblabApp')
         scaleStepWidth: 10,
         scaleStartValue: 0,
         scaleFontFamily: 'sans-serif',
-			scaleFontSize: 18,
-			scaleFontColor: '#222',
-      dynamicDisplay:true,
+        scaleFontSize: 18,
+        scaleFontColor: '#222',
+        dynamicDisplay: true,
         responsive: true
       }
     };
