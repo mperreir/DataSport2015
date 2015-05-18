@@ -262,6 +262,41 @@ angular.module('hyblabApp')
       },
 
       switchData: function(dataPath){
+
+        // Reset des données
+        dataSlide1 = {
+          'nomVille': '',
+          'date': '',
+          'distance': 0,
+          'nbCoureurs': 0,
+          'nbFemme': 0,
+          'pourcentageFemme': 0,
+          'nbHomme': 0,
+          'pourcentageHomme': 0,
+          'listeDepartement': {},
+          'repartitionCatSexe': {
+            'espoir': {},
+            'junior': {},
+            'senior': {},
+            'veteran1': {},
+            'veteran2': {},
+            'veteran3': {},
+            'veteran4': {},
+            'veteran5': {}
+          },
+          'premier': 0,
+          'dernier': 0,
+        };
+
+
+        dataSlide2 = [{
+          'nom': '',
+          'prenom': '',
+          'cat': '',
+          'temps': 0,
+          'sexe': ''
+        }];
+
         this.create(dataPath);
         $rootScope.$broadcast('Dataset switched');
       }
