@@ -201,13 +201,12 @@ angular.module('hyblabApp')
         dataSlide1.dernier = tempsDernier(results.data);
         dataSlide1.premier = tempsPremier(results.data);
         cptCatSexe(results.data);
-        
+
+        formatage(results.data);
+
         $scope.dataSlide1 = dataSlide1;
         $scope.loaded = true;
 
-        console.log(dataSlide1);
-        formatage(results.data);
-        console.log(dataSlide2);
       }
     });
 
