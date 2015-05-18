@@ -16,6 +16,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: @dark;
   color: @white;
+  font-weight: 300;
 }
 
 p, span {
@@ -126,11 +127,29 @@ p, span {
 }
 
 .title--enormous {
-  font-size: 7em;
   font-weight: 700;
+
+  @media screen {
+    @media (max-width: 768px) {
+      font-size: 4em;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 7em;
+    }
+  }
 }
 
 .title--big {
+  @media screen {
+    @media (max-width: 768px) {
+      font-size: 1em;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 2em;
+    }
+  }
   font-size: 2em;
 }
 
