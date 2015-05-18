@@ -225,9 +225,11 @@
 }
 #description .description--last {
   padding-top: 1.5em;
+  margin-bottom: 4.5em;
 }
 #description .description--first {
   padding-bottom: 1.5em;
+  margin-top: 4.5em;
 }
 #description img {
   width: 50%;
