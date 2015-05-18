@@ -1,45 +1,54 @@
-<div class="row middle-xs section--wrapper height-100vh">
+<div class="section--wrapper">
+  <div class="title--section">
+    <span class="title--enormous">Et en détails ?</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>  
   <div class="col-xs-12 wrapper">
-    <div class="height-100 map--wrapper">
+    <div class="height-100vh map--wrapper">
       <div class="row map--container">
         <div creps-jvectormap class="region-map" id="region-map"></div>
       </div>
       <div class="row">
-          <div class="infos--container--top row center-xs">
-            <div class="col-xs-8 col-sm-4">
-              <div class="row middle-xs sports--container animated">
-                <div class="col-xs-4 dpt--sport" ng-repeat="sport in departements.selected.sports">
-                  <img ng-src="{{sport.icon}}">
-                  <p>{{sport.name}}</p>
-                </div>
+        <div class="infos--container--top row center-xs">
+          <div class="col-xs-8 col-sm-4">
+            <div class="row middle-xs sports--container animated">
+              <div class="col-xs-4 dpt--sport" ng-repeat="sport in departements.selected.sports">
+                <img ng-src="{{sport.icon}}">
+                <p>{{sport.name}}</p>
               </div>
-              <p class="dpt--sports--title">Les sports les plus pratiqués</p>
             </div>
-            <div class="col-xs-4 col-sm-offset-5 col-sm-3">
-              <div class="listes animated">
-                <span class="listes--nb">{{departements.selected.total}}</span>
-                <div class="listes--nb--label">
-                  <span>listés</span>
-                  <span>(HN + Espoirs)</span>
-                </div>
+            <p class="dpt--sports--title">Les sports les plus pratiqués</p>
+          </div>
+          <div class="col-xs-4 col-sm-offset-5 col-sm-3">
+            <div class="listes animated">
+              <span class="listes--nb">{{departements.selected.total}}</span>
+              <div class="listes--nb--label">
+                <span>listés</span>
+                <span>(HN + Espoirs)</span>
               </div>
             </div>
           </div>
-          <div class="infos--container--down row center-xs start-sm">
-            <div class="col-xs-8 col-sm-4">
-              <div>
-                <div class="pie--wrapper">
-                  <canvas id="pieAge" class="chart chart-doughnut" data="departements.doughData"
-                      labels="departements.doughLabel" colours="departements.doughcolours" options="departements.doughoptions" legend="true">
-                  </canvas>
-                  <div class="text--inside">
-                    <p>Proportion de -18 <br/> en espoirs et <br/> haut niveau</p>
-                  </div>
+        </div>
+        <div class="infos--container--down row center-xs start-sm">
+          <div class="col-xs-8 col-sm-4">
+            <div>
+              <div class="pie--wrapper">
+                <canvas id="pieAge" class="chart chart-doughnut" data="departements.doughData"
+                    labels="departements.doughLabel" colours="departements.doughcolours" options="departements.doughoptions" legend="true">
+                </canvas>
+                <div class="text--inside">
+                  <p>Proportion de -18 <br/> en espoirs et <br/> haut niveau</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>

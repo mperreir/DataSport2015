@@ -304,9 +304,6 @@
     width: 100%;
   }
 }
-#departements .wrapper {
-  height: 100%;
-}
 #hommefemme .text--description {
   max-width: 70%;
   text-align: center;
@@ -409,7 +406,7 @@
 }
 #region .title--nb--licence .licence {
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 3.3em;
 }
 #region .comphf--style {
   margin-top: 2.5em;
@@ -524,6 +521,25 @@
   margin: 0;
   line-height: 0;
 }
+#region .div--separateur--L {
+  margin-top: 2.5em;
+}
+#region .div--separateur--Xl {
+  margin-top: 4.5em;
+  background-color: #efefed;
+}
+#region .title--doughnut {
+  font-style: italic;
+  font-weight: 200;
+  color: #e85138;
+  font-size: 1em;
+}
+#region .title--svg {
+  font-style: italic;
+  font-weight: 200;
+  color: #5ac2df;
+  font-size: 1em;
+}
 @media screen and (max-width: 758px) {
   #region .small--hide {
     display: none !important;
@@ -610,12 +626,6 @@ span {
 .icon--red {
   color: #ec6347;
 }
-.section--wrapper h1 {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1.2em;
-  margin-top: 2.5em;
-}
 .pie--wrapper {
   position: relative;
   width: 100%;
@@ -635,9 +645,6 @@ span {
 .pie--wrapper .doughnut-legend {
   font-size: 1em;
   margin-top: 10px;
-}
-.text-center {
-  text-align: center;
 }
 .transition {
   height: 100px;
@@ -685,6 +692,9 @@ span {
 }
 .title--section hr {
   width: 70%;
+}
+.text-center {
+  text-align: center;
 }
 .center-block {
   margin: auto;
