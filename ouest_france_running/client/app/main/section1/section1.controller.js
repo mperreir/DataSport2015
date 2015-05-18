@@ -13,6 +13,45 @@ angular.module('hyblabApp')
     console.log($scope.dataSlide1);
 
 
+    String.prototype.toHHMMSS = function() {
+      var secNum = parseInt(this, 10); // don't forget the second param
+      var hours = Math.floor(secNum / 3600);
+      var minutes = Math.floor((secNum - (hours * 3600)) / 60);
+      var seconds = secNum - (hours * 3600) - (minutes * 60);
+
+      if (hours < 10) {
+        hours = '0' + hours;
+      }
+      if (minutes < 10) {
+        minutes = '0' + minutes;
+      }
+      if (seconds < 10) {
+        seconds = '0' + seconds;
+      }
+      var time = hours + ':' + minutes + ':' + seconds;
+      return time;
+    };
+
+    Number.prototype.toHHMMSS = function() {
+      var secNum = parseInt(this, 10); // don't forget the second param
+      var hours = Math.floor(secNum / 3600);
+      var minutes = Math.floor((secNum - (hours * 3600)) / 60);
+      var seconds = secNum - (hours * 3600) - (minutes * 60);
+
+      if (hours < 10) {
+        hours = '0' + hours;
+      }
+      if (minutes < 10) {
+        minutes = '0' + minutes;
+      }
+      if (seconds < 10) {
+        seconds = '0' + seconds;
+      }
+      var time = hours + ':' + minutes + ':' + seconds;
+      return time;
+    };
+
+
     $scope.open = function() {
 
       var modalInstance = $modal.open({
@@ -22,12 +61,7 @@ angular.module('hyblabApp')
         size: 'lg',
         resolve: {}
       });
-
     };
-
-
-
-
 
 
     $('#map').vectorMap({
@@ -140,7 +174,8 @@ angular.module('hyblabApp')
             $scope.dataSlide1.repartitionCatSexe.veteran1.homme,
             $scope.dataSlide1.repartitionCatSexe.veteran2.homme,
             $scope.dataSlide1.repartitionCatSexe.veteran3.homme,
-            $scope.dataSlide1.repartitionCatSexe.veteran4.homme],
+            $scope.dataSlide1.repartitionCatSexe.veteran4.homme
+          ],
           title: 'Hommes'
         }, {
           fillColor: 'rgba(231,55,84,1)',
@@ -153,7 +188,8 @@ angular.module('hyblabApp')
             $scope.dataSlide1.repartitionCatSexe.veteran1.femme,
             $scope.dataSlide1.repartitionCatSexe.veteran2.femme,
             $scope.dataSlide1.repartitionCatSexe.veteran3.femme,
-            $scope.dataSlide1.repartitionCatSexe.veteran4.femme],
+            $scope.dataSlide1.repartitionCatSexe.veteran4.femme
+          ],
           title: 'Femmes'
         }]
       },
