@@ -69,7 +69,7 @@ angular.module('hyblabApp')
       } else {
         $scope.tabCat[id] = 'active';
       }
-      console.log('Catégorie modifiée : ' + id + '. Valeur actuelle : ' + $scope.tabCat[id]  + $scope.nbCoureursSlide2 + 'Coureurs');
+      console.log('Catégorie modifiée : ' + id + '. Valeur actuelle : ' + $scope.tabCat[id] + $scope.nbCoureursSlide2 + 'Coureurs');
       updateTab();
       console.log(tableauActuel);
     };
@@ -99,12 +99,17 @@ angular.module('hyblabApp')
       $scope.first = getFirst(tableauActuel);
       $scope.second = getSecond(tableauActuel);
       $scope.third = getThird(tableauActuel);
+
+      $scope.tempsFirst = $scope.first.temps.toHHMMSS();
+      $scope.tempsSecond = $scope.second.temps.toHHMMSS();
+      $scope.tempsThird = $scope.third.temps.toHHMMSS();
+
       $scope.last = plusLent(tableauActuel);
       $scope.mean = tempsMoyen(tableauActuel);
       $scope.nbCoureursSlide2 = tableauActuel.length;
-      Diagram1 = new Chart(document.getElementById('dv5-1').getContext('2d')).HorizontalBar(data1, options);
-      Diagram2 = new Chart(document.getElementById('dv5-2').getContext('2d')).HorizontalBar(data2, options);
-      Diagram3 = new Chart(document.getElementById('dv5-3').getContext('2d')).HorizontalBar(data3, options);
+      Diagram1 = new Chart(document.getElementById('dv5-1').getContext('2d')).HorizontalBar(getData1(), options);
+      Diagram2 = new Chart(document.getElementById('dv5-2').getContext('2d')).HorizontalBar(getData2(), options);
+      Diagram3 = new Chart(document.getElementById('dv5-3').getContext('2d')).HorizontalBar(getData3(), options);
     };
 
 
@@ -129,7 +134,7 @@ angular.module('hyblabApp')
       return tab[0].temps;
     };
     var plusLent = function(tab) {
-      return tab[tab.length -1].temps;
+      return tab[tab.length - 1].temps;
     };
     var tempsMoyen = function(tab) {
 
@@ -147,6 +152,13 @@ angular.module('hyblabApp')
     $scope.first = getFirst(tableauActuel);
     $scope.second = getSecond(tableauActuel);
     $scope.third = getThird(tableauActuel);
+
+
+    $scope.tempsFirst = $scope.first.temps.toHHMMSS();
+    $scope.tempsSecond = $scope.second.temps.toHHMMSS();
+    $scope.tempsThird = $scope.third.temps.toHHMMSS();
+
+
     $scope.last = plusLent(tableauActuel);
     $scope.mean = tempsMoyen(tableauActuel);
     $scope.nbCoureursSlide2 = tableauActuel.length;
@@ -160,38 +172,46 @@ angular.module('hyblabApp')
 
     console.log('Chargement du controlleur section2');
 
-    var data1 = {
-      labels: ['Plus rapide  '],
-      datasets: [{
-        fillColor: '#6c6c65',
-        strokeColor: '#6c6c65',
-        data: [$scope.first.temps]
-      }]
+    var getData1 = function() {
+      return {
+        labels: ['Plus rapide  '],
+        datasets: [{
+          fillColor: '#6c6c65',
+          strokeColor: '#6c6c65',
+          data: [$scope.first.temps]
+        }]
+      };
     };
-    var data2 = {
-      labels: ['Moyenne     '],
-      datasets: [{
-        fillColor: '#86867e',
-        strokeColor: '#86867e',
-        data: [$scope.mean]
-      }]
+    var getData2 = function() {
+      return {
+        labels: ['Moyenne     '],
+        datasets: [{
+          fillColor: '#86867e',
+          strokeColor: '#86867e',
+          data: [$scope.mean]
+        }]
+      };
     };
-    var data3 = {
-      labels: ['Plus lent      '],
-      datasets: [{
-        fillColor: '#9f9f98',
-        strokeColor: '#9f9f98',
-        data: [$scope.last]
-      }]
+    var getData3 = function() {
+      return {
+        labels: ['Plus lent      '],
+        datasets: [{
+          fillColor: '#9f9f98',
+          strokeColor: '#9f9f98',
+          data: [$scope.last]
+        }]
+      };
     };
 
-    var data4 = {
-      labels: ['Votre temps'],
-      datasets: [{
-        fillColor: 'rgba(231,55,84,1)',
-        strokeColor: 'rgba(231,55,84,1)',
-        data: [31]
-      }]
+    var getData4 = function() {
+      return {
+        labels: ['Votre temps'],
+        datasets: [{
+          fillColor: 'rgba(231,55,84,1)',
+          strokeColor: 'rgba(231,55,84,1)',
+          data: [31]
+        }]
+      };
     };
 
 
@@ -224,10 +244,9 @@ angular.module('hyblabApp')
       responsive: true
     };
 
-    var Diagram1 = new Chart(document.getElementById('dv5-1').getContext('2d')).HorizontalBar(data1, options);
-    var Diagram2 = new Chart(document.getElementById('dv5-2').getContext('2d')).HorizontalBar(data2, options);
-    var Diagram3 = new Chart(document.getElementById('dv5-3').getContext('2d')).HorizontalBar(data3, options);
-    var Diagram4 = new Chart(document.getElementById('dv5-4').getContext('2d')).HorizontalBar(data4, options);
+    var Diagram1 = new Chart(document.getElementById('dv5-1').getContext('2d')).HorizontalBar(getData1(), options);
+    var Diagram2 = new Chart(document.getElementById('dv5-2').getContext('2d')).HorizontalBar(getData2(), options);
+    var Diagram3 = new Chart(document.getElementById('dv5-3').getContext('2d')).HorizontalBar(getData3(), options);
 
 
 

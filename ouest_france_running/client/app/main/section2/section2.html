@@ -32,24 +32,24 @@
           </h1>
         </div>
 
-        <div class="podium second" popover-title="Philippe Peter" popover="119eme V1" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="200" popover-append-to-body="true">
+        <div class="podium second" popover-title="{{first.prenom}} {{first.nom}}" popover="{{tempsFirst}}" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="200" popover-append-to-body="true">
           2
         </div>
-        <div class="podium first" popover-title="Philippe Peter" popover="119eme V1" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="200" popover-append-to-body="true">
+        <div class="podium first" popover-title="{{second.prenom}} {{second.nom}}" popover="{{tempsSecond}}" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="200" popover-append-to-body="true">
           1
         </div>
-        <div class="podium third" popover-title="Philippe Peter" popover="119eme V1" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="200" popover-append-to-body="true">
+        <div class="podium third" popover-title="{{third.prenom}} {{third.nom}}" popover="{{tempsThird}}" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="200" popover-append-to-body="true">
           3
         </div>
 
         <div class="value second">
-          <ng-count-up from="0" to="20" duration="4"></ng-count-up> min
+          {{tempsFirst}}
         </div>
         <div class="value first">
-          <ng-count-up from="0" to="21" duration="4"></ng-count-up> min
+          {{tempsSecond}}
         </div>
         <div class="value third">
-          <ng-count-up from="0" to="22" duration="4"></ng-count-up> min
+          {{tempsThird}}
         </div>
 
 
@@ -61,7 +61,6 @@
           <canvas id="dv5-1" height="25px"></canvas>
           <canvas id="dv5-2" height="25px"></canvas>
           <canvas id="dv5-3" height="25px"></canvas>
-          <canvas id="dv5-4" height="25px"></canvas>
         </div>
       </div>
 
