@@ -326,6 +326,10 @@
   text-align: center;
   margin: 1.5em auto;
 }
+#hommefemme .text--description--bas {
+  max-width: 70%;
+  text-align: center;
+}
 #hommefemme .bar--wrapper {
   max-width: 80%;
   margin: auto;
@@ -532,7 +536,6 @@
   color: #efefed;
   background-color: #e85138;
   margin-top: 0.3em;
-  margin-bottom: 2.5em;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 1em;
@@ -613,6 +616,9 @@
   font-weight: 300;
   color: #232835;
   font-size: 1.1em;
+}
+#region .text--explic {
+  margin-bottom: 2.5em;
 }
 @media screen and (max-width: 758px) {
   #region .small--hide {
