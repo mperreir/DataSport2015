@@ -38,5 +38,10 @@
     "name": "Antoine Chalifour",
     "img": "http://lorempixel.com/400/400/",
     "school": "Polytech Nantes"
+  },
+  {
+    "name": "Jean Michel Eon",
+    "img": "assets/img/credits/jeanmichel.jpg",
+    "school": "Responsable Haut Niveau au Creps"
   }
 ]
