@@ -181,7 +181,8 @@
   font-family: 'Cassannet', sans-serif;
   text-transform: uppercase;
   margin: 0;
-  line-height: 1.5rem;
+  margin-bottom: -0.5rem;
+  margin-top: -0.3rem;
 }
 #introduction .title--sep {
   font-family: 'Rawengulk';
@@ -221,7 +222,7 @@
   padding-bottom: 1.5em;
 }
 #description img {
-  width: 50%;
+  width: 70%;
   height: auto;
   margin: auto;
   margin-bottom: 1.5em;
@@ -361,6 +362,9 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+#hommefemme .bar--legend {
+  margin-bottom: 4.5em;
+}
 #hommefemme .bar--container--right,
 #hommefemme .bar--legend--right {
   margin-left: -25px;
@@ -392,12 +396,21 @@
 }
 #credits .credit--person:hover .credit--avatar {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 0.4s ease;
 }
 #credits .credit--avatar {
   border-radius: 50%;
   width: 40%;
   height: auto;
   transition: box-shadow 0.4s;
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+  -webkit-transition: -webkit-filter 0.4s ease, filter 0.4s ease;
 }
 #credits .credit--label {
   text-align: center;
@@ -670,6 +683,9 @@ span {
   font-size: 1.1em;
   margin-top: 10px;
 }
+.jvectormap-tip {
+  display: none !important;
+}
 .transition {
   height: 100px;
 }
@@ -689,15 +705,19 @@ span {
 }
 .accent-blue {
   color: #5ac2df;
+  font-weight: 400;
 }
 .accent-red {
   color: #ec6347;
+  font-weight: 400;
 }
 .accent-female {
   color: #ef4878;
+  font-weight: 400;
 }
 .accent-male {
   color: #2f81d3;
+  font-weight: 400;
 }
 .title--enormous {
   font-weight: 700;
@@ -736,6 +756,9 @@ span {
 .title--section hr {
   width: 70%;
 }
+.title--section p {
+  margin-bottom: 4.5em;
+}
 .text-center {
   text-align: center;
 }
@@ -756,4 +779,13 @@ span {
 }
 .mr0 {
   margin-right: 0 !important;
+}
+.p0 {
+  padding: 0;
+}
+.pt0 {
+  padding-top: 0;
+}
+.pb0 {
+  padding-bottom: 0;
 }
