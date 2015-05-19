@@ -38,7 +38,7 @@
           responsive : true
         };
         
-        scope.doughlabels = ["Moins de 18 ans en Espoir ", 'Plus de 18 ans en Espoir ',"Moins de 18 ans en Haut Niveau ", 'Plus de 18 ans en Haut Niveau '];
+        scope.doughlabels = ["- de 18 ans en Espoir ", '+ de 18 ans en Espoir ',"- de 18 ans en Haut Niveau ", '+ de 18 ans en Haut Niveau '];
         scope.doughcolours = ["#f5907f","#E85138", '#A1D5EA', '#2F81D3'];
 
         $document.on('scroll', function(){
