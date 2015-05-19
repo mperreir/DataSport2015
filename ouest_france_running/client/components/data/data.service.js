@@ -38,9 +38,7 @@ angular.module('hyblabApp')
 
 
     var dataSlide2 = [];
-    
-    var dataSlide3 = [];
-    
+
     var tabDV6 = [];
 
     //Fonctions utilitaires
@@ -201,19 +199,33 @@ angular.module('hyblabApp')
         }
       }
     }
-    
+
+
+    function isNotNul(Object) {
+        return Object['Nb.Secondes'] !== 0;
+    }
+
     function recupTemps(tab){
-      for (var i = 0; i < tab.length; i++) {
-        if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0){
-          dataSlide3[i] = parseInt(tab[i]['Nb.Secondes'], 10);
-        }
-      }
-      dataSlide3.sort();
-      var ecart = dataSlide3[dataSlide3.length-1]-dataSlide3[0];
+
+      var dataSlide3 = [];
+
+      dataSlide3 = tab.filter(isNotNul);
+      console.log(dataSlide3);
+
+
+
+
+      var tailleTab = dataSlide3.length;
+
+      console.log(tailleTab);
+
+      var ecart = dataSlide3[tailleTab -1] - dataSlide3[0];
+      console.log('ecart : ' + ecart);
       var palier = Math.round(ecart/20);
+      console.log('palier : ' + palier);
       var indicePalier = 1;
       var indiceTabPrec = 0;
-      
+
       for (var j = 0; j < dataSlide3.length; j++){
         if(dataSlide3[j]>palier*indicePalier){
           tabDV6[indicePalier-1] = j-indiceTabPrec;
@@ -283,13 +295,13 @@ angular.module('hyblabApp')
       getDataSlide2: function() {
         return dataSlide2;
       },
-      
+
       getDataSlide3: function() {
         return tabDV6;
       },
 
       switchData: function(dataPath){
-        
+
         // Reset des données
         dataSlide1 = {
           'nomVille': '',
@@ -317,7 +329,6 @@ angular.module('hyblabApp')
 
 
         dataSlide2 = [];
-        dataSlide3 = [];
         tabDV6 = [];
 
         this.create(dataPath);
