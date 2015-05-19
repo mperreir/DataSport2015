@@ -10,6 +10,9 @@ angular.module('hyblabApp')
 
     console.log('Chargement du controlleur section1');
     $scope.dataSlide1.distance = parseFloat($scope.dataSlide1.distance);
+    $scope.dataSlide1.pourcentageHomme = $scope.dataSlide1.pourcentageHomme.toFixed(2);
+    $scope.dataSlide1.pourcentageFemme = $scope.dataSlide1.pourcentageFemme.toFixed(2);
+    console.log($scope.dataSlide1);
 
 
     /**********************************************************************************/
