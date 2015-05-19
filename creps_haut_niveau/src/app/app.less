@@ -92,6 +92,10 @@ p, span {
   
 }
 
+.jvectormap-tip {
+  display: none !important;
+}
+
 .transition {
   height: 100px;
 }
@@ -112,18 +116,22 @@ p, span {
 
 .accent-blue {
   color: @bleu;
+  font-weight: 400;
 }
 
 .accent-red {
   color: @rouge;
+  font-weight: 400;
 }
 
 .accent-female {
   color: @rougef;
+  font-weight: 400;
 }
 
 .accent-male {
-  color: @bleum,
+  color: @bleum;
+  font-weight: 400;
 }
 
 .title--enormous {
@@ -165,6 +173,10 @@ p, span {
   hr {
     width: 70%;
   }
+
+  p {
+    margin-bottom: @sepXl;
+  }
 }
 
 .text-center {
@@ -193,4 +205,16 @@ p, span {
 
 .mr0 {
   margin-right: 0 !important;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.pt0 {
+  padding-top: 0;
+}
+
+.pb0 {
+  padding-bottom: 0;
 }

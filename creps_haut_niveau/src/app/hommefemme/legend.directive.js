@@ -29,7 +29,8 @@
 
         if(i === 0){
           if(orientation === 'left'){
-            div.css('width', width / 2 + '%');
+            div.css('width', width / 2 + '%')
+              .css('text-align', 'left');
           }
           else {
             div.css('width', width / 2 + '%')
@@ -42,7 +43,8 @@
               .css('text-align', 'right');
           }
           else {
-            div.css('width', width / 2 + '%');
+            div.css('width', width / 2 + '%')
+              .css('text-align', 'left');
           }
         }
         else {

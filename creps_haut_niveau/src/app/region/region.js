@@ -38,8 +38,8 @@
           responsive : true
         };
         
-        scope.doughlabels = ["Moins de 18 ans en Espoir","Moins de 18 ans en Haut Niveau"];
-        scope.doughcolours = ["#E85138","#f5907f"];
+        scope.doughlabels = ["Moins de 18 ans en Espoir ", 'Plus de 18 ans en Espoir ',"Moins de 18 ans en Haut Niveau ", 'Plus de 18 ans en Haut Niveau '];
+        scope.doughcolours = ["#f5907f","#E85138", '#A1D5EA', '#2F81D3'];
 
         $document.on('scroll', function(){
           if(!isRendered && $document.scrollTop() > offset){
@@ -50,11 +50,14 @@
               scope.countfemme = 37;
               scope.valuetotal = 1026000;
 
+              var majeursEspoirs = region.espoirs.total - region.espoirs.underage;
+              var majeursHN = region.hautNiveau.total - region.hautNiveau.underage;
+
               scope.hautNiveau = region.hautNiveau.total;
               scope.sportifsListes = region.total;
               scope.espoirs = region.espoirs.total;
               scope.partenaires = region.partenaires;
-              scope.doughdata = [region.espoirs.underage,region.hautNiveau.underage];
+              scope.doughdata = [region.espoirs.underage, majeursEspoirs, region.hautNiveau.underage, majeursHN];
 
               
             });

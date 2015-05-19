@@ -1,5 +1,5 @@
 <div class="section--wrapper">
-  <div class="title--section">
+  <div class="title--section mt0">
     <span class="title--enormous wow fadeIn">Et en détails ?</span>
     <p class="wow flipInX">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -15,16 +15,7 @@
       </div>
       <div class="row">
         <div class="infos--container--top row center-xs">
-          <div class="col-xs-8 col-sm-4">
-            <div class="row middle-xs sports--container animated">
-              <div class="col-xs-4 dpt--sport" ng-repeat="sport in departements.selected.sports">
-                <img ng-src="{{sport.icon}}">
-                <p>{{sport.name}}</p>
-              </div>
-            </div>
-            <p class="dpt--sports--title">Les sports les plus pratiqués</p>
-          </div>
-          <div class="col-xs-4 col-sm-offset-5 col-sm-3">
+          <div class="col-xs-12 col-sm-offset-5 col-sm-3">
             <div class="listes animated">
               <span class="listes--nb">{{departements.selected.total}}</span>
               <div class="listes--nb--label">
@@ -32,6 +23,15 @@
                 <span>(HN + Espoirs)</span>
               </div>
             </div>
+          </div>
+          <div class="col-xs-12 first-sm col-sm-4">
+            <div class="row middle-xs sports--container animated">
+              <div class="col-xs-4 dpt--sport" ng-repeat="sport in departements.selected.sports">
+                <img ng-src="{{sport.icon}}">
+                <p>{{sport.name}}</p>
+              </div>
+            </div>
+            <p class="dpt--sports--title">Les sports les plus pratiqués à Haut Niveau</p>
           </div>
         </div>
         <div class="infos--container--down row center-xs start-sm">
