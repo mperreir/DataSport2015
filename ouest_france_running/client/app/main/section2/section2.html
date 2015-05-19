@@ -9,17 +9,17 @@
       </div>
 
       <div class="selectors">
-        <span class="selector" ng-class="tabGenres['homme']" ng-click="clicGenre('homme')">Hommes</span>
-        <span class="selector" ng-class="tabGenres['femme']" ng-click="clicGenre('femme')">Femmes</span>
+        <span class="selector" ng-class="tabGenres['M']" ng-click="clicGenre('M')">Hommes</span>
+        <span class="selector" ng-class="tabGenres['F']" ng-click="clicGenre('F')">Femmes</span>
         <br/>
         <br/>
-        <span class="selector" ng-class="tabCat['ju']" ng-click="clicCat('ju')" popover="Junior - 18 à 19 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">JU</span>
-        <span class="selector" ng-class="tabCat['es']" ng-click="clicCat('es')" popover="Espoir - 20 à 22 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">ES</span>
-        <span class="selector" ng-class="tabCat['se']" ng-click="clicCat('se')" popover="Senior - 23 à 39 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">SE</span>
-        <span class="selector" ng-class="tabCat['v1']" ng-click="clicCat('v1')" popover="Vétéran 1 - 40 à 49 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">V1</span>
-        <span class="selector" ng-class="tabCat['v2']" ng-click="clicCat('v2')" popover="Vétéran 2 - 50 à 59 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">V2</span>
-        <span class="selector" ng-class="tabCat['v3']" ng-click="clicCat('v3')" popover="Vétéran 3 - 60 à 69 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">V3</span>
-        <span class="selector" ng-class="tabCat['v4']" ng-click="clicCat('v4')" popover="Vétéran 4 - 70 ans et +" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">V4</span>
+        <span class="selector" ng-class="tabCat['JU']" ng-click="clicCat('JU')" popover="Junior - 18 à 19 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">JU</span>
+        <span class="selector" ng-class="tabCat['ES']" ng-click="clicCat('ES')" popover="Espoir - 20 à 22 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">ES</span>
+        <span class="selector" ng-class="tabCat['SE']" ng-click="clicCat('SE')" popover="Senior - 23 à 39 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">SE</span>
+        <span class="selector" ng-class="tabCat['V1']" ng-click="clicCat('V1')" popover="Vétéran 1 - 40 à 49 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">V1</span>
+        <span class="selector" ng-class="tabCat['V2']" ng-click="clicCat('V2')" popover="Vétéran 2 - 50 à 59 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">V2</span>
+        <span class="selector" ng-class="tabCat['V3']" ng-click="clicCat('V3')" popover="Vétéran 3 - 60 à 69 ans" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">V3</span>
+        <span class="selector" ng-class="tabCat['V4']" ng-click="clicCat('V4')" popover="Vétéran 4 - 70 ans et +" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">V4</span>
       </div>
 
 
@@ -27,7 +27,7 @@
 
         <div class="section2-title">
           <h1 class="title">
-            <ng-count-up from="0" to="25" duration="4"></ng-count-up>
+            <ng-count-up from="0" to="{{nbCoureursSlide2}}" duration="4"></ng-count-up>
             <small class="subtitle">coureurs</small>
           </h1>
         </div>
