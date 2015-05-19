@@ -289,7 +289,7 @@ angular.module('hyblabApp')
       },
 
       switchData: function(dataPath){
-
+        
         // Reset des données
         dataSlide1 = {
           'nomVille': '',
