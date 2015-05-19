@@ -11,6 +11,11 @@
     &:hover {
       .credit--avatar {
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        filter: grayscale(0%);
+        filter: gray; 
+        -webkit-filter: grayscale(0%);
+        filter: none;
+        transition: 0.4s ease;
       }
     }
   }
@@ -20,6 +25,9 @@
     width: 40%;
     height: auto;
     transition: box-shadow 0.4s;
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%); 
+    -webkit-transition: filter 0.4s ease; 
   }
   
   .credit--label {
