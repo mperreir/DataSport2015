@@ -1,4 +1,4 @@
-<div ng-controller="Section1Ctrl" id="section_1" class="section">
+<div ng-controller="Section1Ctrl" class="section">
 
 
 
@@ -31,7 +31,7 @@
     </div>
   </script>
 
-  <div class="container first  section1">
+  <div class="container first  section1"  id="section_1" data-scrollspy-broadcast>
     <div class="infos" ng-click="open()">
       <span class="fa-stack">
         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -79,7 +79,7 @@
             <img src="../assets/images/coureur homme.svg" alt="" />
             <div class="pourcenthomme wow slideInUp" data-wow-duration="4s" style="{{heightHomme}}"></div>
           </div>
-          <div class="coureurfemme" popover="{{dataSlide1.pourcentageFemme}} % de femmes ({{dataSlide1.nbFemme}} coureuses)" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">
+          <div class="coureurfemme" popover="{{dataSlide1.pourcentageFemme}} % de femmes ({{dataSlide1.nbFcdemme}} coureuses)" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">
             <div class="pourcentfemme wow slideInUp" data-wow-duration="4s" style="{{heightFemme}}"></div>
             <img src="../assets/images/coureur femme.svg" alt="" />
           </div>

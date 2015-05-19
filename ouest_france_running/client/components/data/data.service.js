@@ -37,13 +37,7 @@ angular.module('hyblabApp')
     };
 
 
-    var dataSlide2 = [{
-      'nom': '',
-      'prenom': '',
-      'cat': '',
-      'temps': 0,
-      'sexe': ''
-    }];
+    var dataSlide2 = [];
 
     //Fonctions utilitaires
 
@@ -235,6 +229,8 @@ angular.module('hyblabApp')
             dataSlide1.dernier = getTempsDernier(results.data);
             dataSlide1.premier = getTempsPremier(results.data);
             cptCatSexe(results.data);
+
+            //Traitement section 2
             formatage(results.data);
 
             //Traitement section 2d
@@ -259,6 +255,10 @@ angular.module('hyblabApp')
 
       getDataSlide1: function() {
         return dataSlide1;
+      },
+
+      getDataSlide2: function() {
+        return dataSlide2;
       },
 
       switchData: function(dataPath){
