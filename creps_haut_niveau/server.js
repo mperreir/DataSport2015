@@ -228,7 +228,7 @@ app.get('/api/status/', function(req, res, next){
 
     sportsObj[federation] = sportsObj[federation] || {
       name: federation,
-      icon: 'assets/img/sports/' + icon + '.svg',
+      icon: 'assets/img/sports/' + icon + '_hf.svg',
       espoirs: {
         males: 0,
         females: 0
@@ -249,26 +249,39 @@ app.get('/api/status/', function(req, res, next){
     }
   });
 
-  Object.keys(sportsObj).forEach(function(index){
-    sportsArr.push(sportsObj[index]);
-  });
+  // Object.keys(sportsObj).forEach(function(index){
+  //   sportsArr.push(sportsObj[index]);
+  // });
 
-  var sorted = sportsArr.sort(function(a, b){
-    var totalA = a.espoirs.males
-      + a.espoirs.females
-      + a.hautNiveau.males
-      + a.hautNiveau.females;
+  // var sorted = sportsArr.sort(function(a, b){
+  //   var totalA = a.espoirs.males
+  //     + a.espoirs.females
+  //     + a.hautNiveau.males
+  //     + a.hautNiveau.females;
 
-    var totalB = b.espoirs.males
-      + b.espoirs.females
-      + b.hautNiveau.males
-      + b.hautNiveau.females;
+  //   var totalB = b.espoirs.males
+  //     + b.espoirs.females
+  //     + b.hautNiveau.males
+  //     + b.hautNiveau.females;
 
-    if(totalA > totalB) return -1;
-    else return 1;
-  });
+  //   if(totalA > totalB) return -1;
+  //   else return 1;
+  // });
+  // 
+  sportsArr.push(sportsObj['Fédération Française de Natation']);
+  sportsArr.push(sportsObj['Fédération Française de Judo-Jujitsu Kendo et Disciplines Associées']);
+  sportsArr.push(sportsObj['Fédération Française de Gymnastique']);
+  
+  sportsArr.push(sportsObj['Fédération Française de Volley-Ball']);
+  sportsArr.push(sportsObj['Fédération Française de Handball']);
+  sportsArr.push(sportsObj['Fédération Française de Basketball']);
 
-  toSend.sports = sorted.slice(0, count);
+  sportsArr.push(sportsObj['Fédération Française de Cyclisme']);
+  sportsArr.push(sportsObj['Fédération Française de Canoë-Kayak']);
+  sportsArr.push(sportsObj['Fédération Française des Sociétés d\'Aviron']);
+
+  // toSend.sports = sorted.slice(0, count);
+  toSend.sports = sportsArr;
   res.json(toSend);
 });
 

@@ -21,12 +21,12 @@
   },
   {
     "name": "Fabien Mahé",
-    "img": "http://lorempixel.com/400/400/",
+    "img": "assets/img/credits/fabien.jpg",
     "school": "Ecole de Design Nantes Atlantique"
   },
   {
     "name": "Adrien Frey",
-    "img": "http://lorempixel.com/400/400/",
+    "img": "assets/img/credits/adrien.jpg",
     "school": "Ecole de Design Nantes Atlantique"
   },
   {
@@ -36,7 +36,7 @@
   }, 
   {
     "name": "Antoine Chalifour",
-    "img": "http://lorempixel.com/400/400/",
+    "img": "assets/img/credits/antoine.jpg",
     "school": "Polytech Nantes"
   },
   {
