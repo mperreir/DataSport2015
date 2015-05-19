@@ -17,6 +17,8 @@ angular.module('hyblabApp')
     promesseCreation.then(function() {
       $scope.dataSlide1 = Data.getDataSlide1();
       $scope.dataSlide2 = Data.getDataSlide2();
+      
+      $scope.dataSlide3 = Data.getDataSlide3();
       $scope.loaded = true;
     });
 
@@ -25,6 +27,8 @@ angular.module('hyblabApp')
        Data.getPromise().then(function() {
          $scope.dataSlide1 = Data.getDataSlide1();         
          $scope.dataSlide2 = Data.getDataSlide2();
+         
+      $scope.dataSlide3 = Data.getDataSlide3();
          $scope.loaded = true;
        });
     });

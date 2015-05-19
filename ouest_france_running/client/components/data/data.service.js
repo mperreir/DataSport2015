@@ -38,6 +38,10 @@ angular.module('hyblabApp')
 
 
     var dataSlide2 = [];
+    
+    var dataSlide3 = [];
+    
+    var tabDV6 = [];
 
     //Fonctions utilitaires
 
@@ -197,10 +201,27 @@ angular.module('hyblabApp')
         }
       }
     }
-
-
-
-
+    
+    function recupTemps(tab){
+      for (var i = 0; i < tab.length; i++) {
+        if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0){
+          dataSlide3[i] = parseInt(tab[i]['Nb.Secondes'], 10);
+        }
+      }
+      dataSlide3.sort();
+      var ecart = dataSlide3[dataSlide3.length-1]-dataSlide3[0];
+      var palier = Math.round(ecart/20);
+      var indicePalier = 1;
+      var indiceTabPrec = 0;
+      
+      for (var j = 0; j < dataSlide3.length; j++){
+        if(dataSlide3[j]>palier*indicePalier){
+          tabDV6[indicePalier-1] = j-indiceTabPrec;
+          indicePalier++;
+          indiceTabPrec = j;
+        }
+      }
+    }
 
     //Fonctions à retourner
 
@@ -235,8 +256,8 @@ angular.module('hyblabApp')
             //Traitement section 2
             formatage(results.data);
 
-            //Traitement section 2d
-
+            //Traitement section 3
+            recupTemps(results.data);
             //Le traitement est terminé (on ajoute du temps pour voir le loader)
             window.setTimeout(
               function() {
@@ -261,6 +282,10 @@ angular.module('hyblabApp')
 
       getDataSlide2: function() {
         return dataSlide2;
+      },
+      
+      getDataSlide3: function() {
+        return tabDV6;
       },
 
       switchData: function(dataPath){
@@ -291,13 +316,9 @@ angular.module('hyblabApp')
         };
 
 
-        dataSlide2 = [{
-          'nom': '',
-          'prenom': '',
-          'cat': '',
-          'temps': 0,
-          'sexe': ''
-        }];
+        dataSlide2 = [];
+        dataSlide3 = [];
+        tabDV6 = [];
 
         this.create(dataPath);
         $rootScope.$broadcast('Dataset switched');
