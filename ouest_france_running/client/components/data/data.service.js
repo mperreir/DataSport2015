@@ -186,13 +186,15 @@ angular.module('hyblabApp')
 
     function formatage(tab) {
       for (var i = 0; i < tab.length; i++) {
-        dataSlide2.push({
-          'nom': tab[i].Nom,
-          'prenom': tab[i].Prénom,
-          'cat': tab[i]['Abbrev. Catégorie'],
-          'temps': parseInt(tab[i]['Nb.Secondes'], 10),
-          'sexe': tab[i].Sexe,
-        });
+        if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0){
+          dataSlide2.push({
+            'nom': tab[i].Nom,
+            'prenom': tab[i].Prénom,
+            'cat': tab[i]['Abbrev. Catégorie'],
+            'temps': parseInt(tab[i]['Nb.Secondes'], 10),
+            'sexe': tab[i].Sexe,
+          });
+        }
       }
     }
 
