@@ -9,8 +9,12 @@ angular.module('hyblabApp')
   .controller('Section1Ctrl', function($scope, $modal) {
 
     console.log('Chargement du controlleur section1');
+    $scope.dataSlide1.distance = parseFloat($scope.dataSlide1.distance);
 
-    console.log($scope.dataSlide1);
+
+    /**********************************************************************************/
+    /****************************Fonctions utilitaires*********************************/
+    /**********************************************************************************/
 
 
     String.prototype.toHHMMSS = function() {
@@ -52,6 +56,14 @@ angular.module('hyblabApp')
     };
 
 
+
+
+    /**********************************************************************************/
+    /*************************************Modal****************************************/
+    /**********************************************************************************/
+
+
+
     $scope.open = function() {
 
       var modalInstance = $modal.open({
@@ -62,6 +74,14 @@ angular.module('hyblabApp')
         resolve: {}
       });
     };
+
+
+
+
+    /**********************************************************************************/
+    /*********************************Visualisation 1**********************************/
+    /**********************************************************************************/
+
 
 
     $('#map').vectorMap({
@@ -128,34 +148,25 @@ angular.module('hyblabApp')
 
 
 
-    var dv2 = {
-      data: [{
-        value: 300,
-        color: 'rgba(231,55,84,1)',
-        title: 'Femmes'
-      }, {
-        value: 700,
-        color: 'rgba(29,29,27,1)',
-        title: 'Hommes'
-      }],
-      options: {
-        segmentShowStroke: false,
-        animateRotate: true,
-        animateScale: true,
-        animationByData: false,
-        animationSteps: 100,
-        animationEasing: 'linear',
-        canvasBorders: false,
-        graphTitle: '',
-        legend: false,
-        inGraphDataShow: false,
-        annotateDisplay: true,
-        spaceBetweenBar: 0,
-        dynamicDisplay: true,
-        responsive: true
-      }
-    };
 
+    /**********************************************************************************/
+    /*********************************Visualisation 2**********************************/
+    /**********************************************************************************/
+
+
+    $scope.heightHomme = 'height: ' + Math.round(186 * ($scope.dataSlide1.pourcentageHomme / 100)) + 'px;';
+    console.log($scope.heightHomme);
+
+    $scope.heightFemme = 'height: ' + Math.round(190 * ($scope.dataSlide1.pourcentageFemme / 100)) + 'px;';
+    console.log($scope.heightFemme);
+
+
+
+
+
+    /**********************************************************************************/
+    /*********************************Visualisation 3**********************************/
+    /**********************************************************************************/
 
 
 
@@ -226,6 +237,14 @@ angular.module('hyblabApp')
 
     var dv3Diagram = new Chart(document.getElementById('dv3').getContext('2d')).StackedBar(dv3.data, dv3.options);
 
+
+
+
+    /**********************************************************************************/
+    /*********************************Visualisation 4**********************************/
+    /**********************************************************************************/
+
+
     var dv4 = {
       data: {
         labels: ['Départ'],
@@ -256,7 +275,7 @@ angular.module('hyblabApp')
         legend: true,
         legendBorders: false,
         legendPosX: 3,
-        legendPosY: 2,
+        legendPosY: 1,
         legendFontFamily: 'sans-serif',
         legendFontSize: 14,
         maxLegendCols: 1,
@@ -271,6 +290,7 @@ angular.module('hyblabApp')
         scaleShowGridLines: false,
         scaleFontFamily: 'sans-serif',
         scaleFontSize: 18,
+        scaleStartValue: 0,
         scaleFontColor: '#222',
         dynamicDisplay: true,
         responsive: true

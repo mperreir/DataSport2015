@@ -1,46 +1,33 @@
 <div ng-controller="Section1Ctrl" id="section_1" class="section">
 
-  <div parallax-background parallax-ratio="0.2" class="parallax-container parallax-1">
-  </div>
+
+
+  <div parallax-background parallax-ratio="0.2" class="parallax-container parallax-1"></div>
 
 
 
   <script type="text/ng-template" id="myModalContent.html">
     <div class="modal-body">
-
       <div class="container">
-
         <div class="infos" ng-click="ok()">
           <i class="fa fa-times-circle-o"></i>
         </div>
-
         <div class="header">
           <h1 class="title">A propos</h1>
         </div>
-        <br/><br/><br/>
+        <br/>
+        <br/>
+        <br/>
         <p class="text">
-
-        Ouest France Running vous offre la possibilité de consulter vos résultats de courses à pied, une vision à la fois globale et personalisable.
-        <br/>
-        <br/>
-        Le système permet de comparer ses résultats face aux autres concurrents, de se resituer par rapport à l’ensemble des arrivées.
-        <br/>
-        <br/>
-        En tant que coureur, vous avez la possibilité de découvrir une nouvelle expérience de visualisation de vos résultats.
-        <br/>
-        <br/>
-        D’une manière plus générale, ce service est dédié aux amateurs de course et permet de visualiser le déroulements des évènements running.
-
+          Ouest France Running vous offre la possibilité de consulter vos résultats de courses à pied, une vision à la fois globale et personalisable.
+          <br/>
+          <br/> Le système permet de comparer ses résultats face aux autres concurrents, de se resituer par rapport à l’ensemble des arrivées.
+          <br/>
+          <br/> En tant que coureur, vous avez la possibilité de découvrir une nouvelle expérience de visualisation de vos résultats.
+          <br/>
+          <br/> D’une manière plus générale, ce service est dédié aux amateurs de course et permet de visualiser le déroulements des évènements running.
         </p>
-
-
-
       </div>
-
-
-
-
-
     </div>
   </script>
 
@@ -51,7 +38,6 @@
         <i class="fa fa-question fa-stack-1x"></i>
       </span>
     </div>
-
 
 
     <div class="header">
@@ -90,12 +76,12 @@
       <div class="col-md-4  dataviz">
         <div class="coureurs center-block">
           <div class="coureurhomme" popover="{{dataSlide1.pourcentageHomme}} % d'hommes ({{dataSlide1.nbHomme}} coureurs)" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">
-            <img src="../assets/images/coureur homme.svg" alt=""/>
-            <div class="pourcenthomme wow slideInUp data-wow-duration=" 4s ""></div>
+            <img src="../assets/images/coureur homme.svg" alt="" />
+            <div class="pourcenthomme wow slideInUp" data-wow-duration="4s" style="{{heightHomme}}"></div>
           </div>
           <div class="coureurfemme" popover="{{dataSlide1.pourcentageFemme}} % de femmes ({{dataSlide1.nbfemme}} coureuses)" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="1000" popover-append-to-body="true">
-            <div class="pourcentfemme wow slideInUp data-wow-duration=" 4s ""></div>
-            <img src="../assets/images/coureur femme.svg" alt=""/>
+            <div class="pourcentfemme wow slideInUp" data-wow-duration="4s" style="{{heightFemme}}"></div>
+            <img src="../assets/images/coureur femme.svg" alt="" />
           </div>
         </div>
 
