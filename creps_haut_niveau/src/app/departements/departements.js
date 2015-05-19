@@ -33,7 +33,7 @@
 
     function setSelected(dpt){
       vm.selected = departements[dpt];
-      vm.doughLabel = ['Moins de 18 ans en Espoir', 'Moins de 18 ans en Haut Niveau'];
+      vm.doughLabel = ['Espoirs', 'Haut Niveau'];
       vm.doughData = [vm.selected.age.espoirs, vm.selected.age.hautNiveau];
     }
   }])
