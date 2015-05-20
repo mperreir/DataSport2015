@@ -3,232 +3,233 @@
 angular.module('hyblabApp')
   .factory('Data', function($q, $rootScope) {
 
-    // Variables
+      // Variables
 
 
-    var dataPath;
+      var dataPath;
 
-    var csvParsed;
+      var csvParsed;
 
-    var promise;
+      var promise;
 
-    var dataSlide1 = {
-      'nomVille': '',
-      'date': '',
-      'distance': 0,
-      'nbCoureurs': 0,
-      'nbFemme': 0,
-      'pourcentageFemme': 0,
-      'nbHomme': 0,
-      'pourcentageHomme': 0,
-      'listeDepartement': {},
-      'repartitionCatSexe': {
-        'espoir': {},
-        'junior': {},
-        'senior': {},
-        'veteran1': {},
-        'veteran2': {},
-        'veteran3': {},
-        'veteran4': {},
-        'veteran5': {}
-      },
-      'premier': 0,
-      'dernier': 0,
-    };
-
-
-    var dataSlide2 = [];
-
-    var tabDV6 = [];
-
-    //Fonctions utilitaires
+      var dataSlide1 = {
+        'nomVille': '',
+        'date': '',
+        'distance': 0,
+        'nbCoureurs': 0,
+        'nbFemme': 0,
+        'pourcentageFemme': 0,
+        'nbHomme': 0,
+        'pourcentageHomme': 0,
+        'listeDepartement': {},
+        'repartitionCatSexe': {
+          'espoir': {},
+          'junior': {},
+          'senior': {},
+          'veteran1': {},
+          'veteran2': {},
+          'veteran3': {},
+          'veteran4': {},
+          'veteran5': {}
+        },
+        'premier': 0,
+        'dernier': 0,
+      };
 
 
-    function setPourcentageFemme(Object) {
-      var countF = 0;
-      for (var i = 0; i < Object.data.length; i++) {
-        if (Object.data[i].Sexe === 'F') {
-          countF++;
-        }
-      }
-      dataSlide1.nbFemme = countF;
-      dataSlide1.pourcentageFemme = (countF / Object.data.length) * 100;
-    }
+      var dataSlide2 = [];
 
-    function setPourcentageHomme(Object) {
-      var countH = 0;
-      for (var i = 0; i < Object.data.length; i++) {
-        if (Object.data[i].Sexe === 'M') {
-          countH++;
-        }
-      }
-      dataSlide1.nbHomme = countH;
-      dataSlide1.pourcentageHomme = (countH / Object.data.length) * 100;
-    }
+      var tabDV6 = [];
 
-    function getTempsMoyen(tab) {
-      var temps = 0,
-        count = 0;
-      for (var i = 0; i < tab.length; i++) {
-        if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0) {
-          temps += parseInt(tab[i]['Nb.Secondes'], 10);
-          count++;
-        }
-      }
-      var tpsMoyen = temps / count;
+      //Fonctions utilitaires
 
-      var secNum = parseInt(tpsMoyen, 10);
-      var hours = Math.floor(secNum / 3600);
-      var minutes = Math.floor((secNum - (hours * 3600)) / 60);
-      var seconds = secNum - (hours * 3600) - (minutes * 60);
 
-      if (hours < 10) {
-        hours = '0' + hours;
-      }
-      if (minutes < 10) {
-        minutes = '0' + minutes;
-      }
-      if (seconds < 10) {
-        seconds = '0' + seconds;
-      }
-      var time = hours + ':' + minutes + ':' + seconds;
-      return time;
-    }
-
-    function getTempsPremier(tab) {
-      var min = Infinity;
-      for (var i = 0; i < tab.length; i++) {
-        if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0 && parseInt(tab[i]['Nb.Secondes'], 10) < min) {
-          min = parseInt(tab[i]['Nb.Secondes'], 10);
-        }
-      }
-      return min;
-    }
-
-    function getTempsDernier(tab) {
-      var max = 0;
-      for (var i = 0; i < tab.length; i++) {
-        if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0 && parseInt(tab[i]['Nb.Secondes'], 10) > max) {
-          max = parseInt(tab[i]['Nb.Secondes'], 10);
-        }
-      }
-      return max;
-    }
-
-    function setListDpt(tab) {
-      for (var i = 0; i < tab.length; i++) {
-        if (tab[i].Code.substring(0, 2) !== '') {
-          var dpt = tab[i].Code.substring(0, 2);
-          if (!dataSlide1.listeDepartement['FR-' + dpt]) {
-            dataSlide1.listeDepartement['FR-' + dpt] = 0;
+      function setPourcentageFemme(Object) {
+        var countF = 0;
+        for (var i = 0; i < Object.data.length; i++) {
+          if (Object.data[i].Sexe === 'F') {
+            countF++;
           }
-          dataSlide1.listeDepartement['FR-' + dpt]++;
+        }
+        dataSlide1.nbFemme = countF;
+        dataSlide1.pourcentageFemme = (countF / Object.data.length) * 100;
+      }
+
+      function setPourcentageHomme(Object) {
+        var countH = 0;
+        for (var i = 0; i < Object.data.length; i++) {
+          if (Object.data[i].Sexe === 'M') {
+            countH++;
+          }
+        }
+        dataSlide1.nbHomme = countH;
+        dataSlide1.pourcentageHomme = (countH / Object.data.length) * 100;
+      }
+
+      function getTempsMoyen(tab) {
+        var temps = 0,
+          count = 0;
+        for (var i = 0; i < tab.length; i++) {
+          if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0) {
+            temps += parseInt(tab[i]['Nb.Secondes'], 10);
+            count++;
+          }
+        }
+        var tpsMoyen = temps / count;
+
+        var secNum = parseInt(tpsMoyen, 10);
+        var hours = Math.floor(secNum / 3600);
+        var minutes = Math.floor((secNum - (hours * 3600)) / 60);
+        var seconds = secNum - (hours * 3600) - (minutes * 60);
+
+        if (hours < 10) {
+          hours = '0' + hours;
+        }
+        if (minutes < 10) {
+          minutes = '0' + minutes;
+        }
+        if (seconds < 10) {
+          seconds = '0' + seconds;
+        }
+        var time = hours + ':' + minutes + ':' + seconds;
+        return time;
+      }
+
+      function getTempsPremier(tab) {
+        var min = Infinity;
+        for (var i = 0; i < tab.length; i++) {
+          if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0 && parseInt(tab[i]['Nb.Secondes'], 10) < min) {
+            min = parseInt(tab[i]['Nb.Secondes'], 10);
+          }
+        }
+        return min;
+      }
+
+      function getTempsDernier(tab) {
+        var max = 0;
+        for (var i = 0; i < tab.length; i++) {
+          if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0 && parseInt(tab[i]['Nb.Secondes'], 10) > max) {
+            max = parseInt(tab[i]['Nb.Secondes'], 10);
+          }
+        }
+        return max;
+      }
+
+      function setListDpt(tab) {
+        for (var i = 0; i < tab.length; i++) {
+          if (tab[i].Code.substring(0, 2) !== '') {
+            var dpt = tab[i].Code.substring(0, 2);
+            if (!dataSlide1.listeDepartement['FR-' + dpt]) {
+              dataSlide1.listeDepartement['FR-' + dpt] = 0;
+            }
+            dataSlide1.listeDepartement['FR-' + dpt]++;
+          }
         }
       }
-    }
 
-    function estFemme(Object) {
-      return Object.Sexe === 'F';
-    }
+      function estFemme(Object) {
+        return Object.Sexe === 'F';
+      }
 
-    function estHomme(Object) {
-      return Object.Sexe === 'M';
-    }
+      function estHomme(Object) {
+        return Object.Sexe === 'M';
+      }
 
-    function estCatES(Object) {
-      return Object['Abbrev. Catégorie'] === 'ES';
-    }
+      function estCatES(Object) {
+        return Object['Abbrev. Catégorie'] === 'ES';
+      }
 
-    function estCatJU(Object) {
-      return Object['Abbrev. Catégorie'] === 'JU';
-    }
+      function estCatJU(Object) {
+        return Object['Abbrev. Catégorie'] === 'JU';
+      }
 
-    function estCatSE(Object) {
-      return Object['Abbrev. Catégorie'] === 'SE';
-    }
+      function estCatSE(Object) {
+        return Object['Abbrev. Catégorie'] === 'SE';
+      }
 
-    function estCatV1(Object) {
-      return Object['Abbrev. Catégorie'] === 'V1';
-    }
+      function estCatV1(Object) {
+        return Object['Abbrev. Catégorie'] === 'V1';
+      }
 
-    function estCatV2(Object) {
-      return Object['Abbrev. Catégorie'] === 'V2';
-    }
+      function estCatV2(Object) {
+        return Object['Abbrev. Catégorie'] === 'V2';
+      }
 
-    function estCatV3(Object) {
-      return Object['Abbrev. Catégorie'] === 'V3';
-    }
+      function estCatV3(Object) {
+        return Object['Abbrev. Catégorie'] === 'V3';
+      }
 
-    function estCatV4(Object) {
-      return Object['Abbrev. Catégorie'] === 'V4';
-    }
+      function estCatV4(Object) {
+        return Object['Abbrev. Catégorie'] === 'V4';
+      }
 
-    function estCatV5(Object) {
-      return Object['Abbrev. Catégorie'] === 'V5';
-    }
+      function estCatV5(Object) {
+        return Object['Abbrev. Catégorie'] === 'V5';
+      }
 
-    function cptCatSexe(Object) {
-      dataSlide1.repartitionCatSexe.espoir.femme = Object.filter(estCatES).filter(estFemme).length;
-      dataSlide1.repartitionCatSexe.espoir.homme = Object.filter(estCatES).filter(estHomme).length;
-      dataSlide1.repartitionCatSexe.junior.femme = Object.filter(estCatJU).filter(estFemme).length;
-      dataSlide1.repartitionCatSexe.junior.homme = Object.filter(estCatJU).filter(estHomme).length;
-      dataSlide1.repartitionCatSexe.senior.femme = Object.filter(estCatSE).filter(estFemme).length;
-      dataSlide1.repartitionCatSexe.senior.homme = Object.filter(estCatSE).filter(estFemme).length;
-      dataSlide1.repartitionCatSexe.veteran1.homme = Object.filter(estCatV1).filter(estHomme).length;
-      dataSlide1.repartitionCatSexe.veteran1.femme = Object.filter(estCatV1).filter(estFemme).length;
-      dataSlide1.repartitionCatSexe.veteran2.homme = Object.filter(estCatV2).filter(estHomme).length;
-      dataSlide1.repartitionCatSexe.veteran2.femme = Object.filter(estCatV2).filter(estFemme).length;
-      dataSlide1.repartitionCatSexe.veteran3.homme = Object.filter(estCatV3).filter(estHomme).length;
-      dataSlide1.repartitionCatSexe.veteran3.femme = Object.filter(estCatV3).filter(estFemme).length;
-      dataSlide1.repartitionCatSexe.veteran4.homme = Object.filter(estCatV4).filter(estHomme).length;
-      dataSlide1.repartitionCatSexe.veteran4.femme = Object.filter(estCatV4).filter(estFemme).length;
-      dataSlide1.repartitionCatSexe.veteran5.homme = Object.filter(estCatV5).filter(estHomme).length;
-      dataSlide1.repartitionCatSexe.veteran5.femme = Object.filter(estCatV5).filter(estFemme).length;
-    }
+      function cptCatSexe(Object) {
+        dataSlide1.repartitionCatSexe.espoir.femme = Object.filter(estCatES).filter(estFemme).length;
+        dataSlide1.repartitionCatSexe.espoir.homme = Object.filter(estCatES).filter(estHomme).length;
+        dataSlide1.repartitionCatSexe.junior.femme = Object.filter(estCatJU).filter(estFemme).length;
+        dataSlide1.repartitionCatSexe.junior.homme = Object.filter(estCatJU).filter(estHomme).length;
+        dataSlide1.repartitionCatSexe.senior.femme = Object.filter(estCatSE).filter(estFemme).length;
+        dataSlide1.repartitionCatSexe.senior.homme = Object.filter(estCatSE).filter(estFemme).length;
+        dataSlide1.repartitionCatSexe.veteran1.homme = Object.filter(estCatV1).filter(estHomme).length;
+        dataSlide1.repartitionCatSexe.veteran1.femme = Object.filter(estCatV1).filter(estFemme).length;
+        dataSlide1.repartitionCatSexe.veteran2.homme = Object.filter(estCatV2).filter(estHomme).length;
+        dataSlide1.repartitionCatSexe.veteran2.femme = Object.filter(estCatV2).filter(estFemme).length;
+        dataSlide1.repartitionCatSexe.veteran3.homme = Object.filter(estCatV3).filter(estHomme).length;
+        dataSlide1.repartitionCatSexe.veteran3.femme = Object.filter(estCatV3).filter(estFemme).length;
+        dataSlide1.repartitionCatSexe.veteran4.homme = Object.filter(estCatV4).filter(estHomme).length;
+        dataSlide1.repartitionCatSexe.veteran4.femme = Object.filter(estCatV4).filter(estFemme).length;
+        dataSlide1.repartitionCatSexe.veteran5.homme = Object.filter(estCatV5).filter(estHomme).length;
+        dataSlide1.repartitionCatSexe.veteran5.femme = Object.filter(estCatV5).filter(estFemme).length;
+      }
 
-    function formatage(tab) {
-      for (var i = 0; i < tab.length; i++) {
-        if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0){
-          dataSlide2.push({
-            'nom': tab[i].Nom,
-            'prenom': tab[i].Prénom,
-            'cat': tab[i]['Abbrev. Catégorie'],
-            'temps': parseInt(tab[i]['Nb.Secondes'], 10),
-            'sexe': tab[i].Sexe,
-          });
+      function formatage(tab) {
+        for (var i = 0; i < tab.length; i++) {
+          if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0) {
+            dataSlide2.push({
+              'nom': tab[i].Nom,
+              'prenom': tab[i].Prénom,
+              'cat': tab[i]['Abbrev. Catégorie'],
+              'temps': parseInt(tab[i]['Nb.Secondes'], 10),
+              'sexe': tab[i].Sexe,
+            });
+          }
         }
       }
-    }
 
 
-    function isNotNul(Object) {
+      function isNotNul(Object) {
         return Object['Nb.Secondes'] !== 0;
-    }
+      }
 
-    function recupTemps(tab){
+      function recupTemps(tab) {
 
-      var dataSlide3 = [];
+        var dataSlide3 = [];
 
-      dataSlide3 = tab.filter(isNotNul);
-      console.log(dataSlide3);
+        for (var i = 0; i < tab.length; i++) {
+          if (parseInt(tab[i]['Nb.Secondes'], 10) !== 0) {
+            dataSlide3.push(parseFloat(tab[i]['Nb.Secondes']));
+          }
+        }
 
-
+        dataSlide3.sort(function(a, b) {
+          return a - b;
+        });
 
 
       var tailleTab = dataSlide3.length;
 
-      console.log(tailleTab);
-
-      var ecart = dataSlide3[tailleTab -1] - dataSlide3[0];
-      console.log('ecart : ' + ecart);
-      var palier = Math.round(ecart/20);
-      console.log('palier : ' + palier);
+      var ecart = dataSlide3[tailleTab - 1] - dataSlide3[0];
+      var palier = Math.round(ecart / 15);
       var indicePalier = 1;
       var indiceTabPrec = 0;
 
-      for (var j = 0; j < dataSlide3.length; j++){
-        if(dataSlide3[j]>palier*indicePalier){
-          tabDV6[indicePalier-1] = j-indiceTabPrec;
+      for (var j = 0; j < dataSlide3.length; j++) {
+        if (dataSlide3[j] > palier * indicePalier) {
+          tabDV6[indicePalier - 1] = j - indiceTabPrec;
           indicePalier++;
           indiceTabPrec = j;
         }
@@ -300,7 +301,7 @@ angular.module('hyblabApp')
         return tabDV6;
       },
 
-      switchData: function(dataPath){
+      switchData: function(dataPath) {
 
         // Reset des données
         dataSlide1 = {
