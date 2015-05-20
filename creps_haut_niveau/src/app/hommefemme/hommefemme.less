@@ -1,0 +1,95 @@
+@import (less) '../core/less/_palette.less';
+
+#hommefemme {
+  .text--description {
+    max-width: 70%;
+    text-align: center;
+    margin: @sep auto;
+  }
+
+  .text--description--bas {
+    max-width: 70%;
+    text-align: center;
+  }
+
+  .bar--wrapper {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .bar--title, .bar--label {
+    text-align: center;
+  }
+
+  .bar--title {
+    margin: @sepS;
+  }
+
+  .bar {
+    margin: 0.5vh;
+    height: 0.8vh;
+    width: 0%;
+    border-radius: 10px;
+    transition: width .5s;
+    clear: both;
+    display: block;
+  }
+
+  .bar--male {
+    background-color: @bleum;
+  }
+
+  .bar--female {
+    background-color: @rougef;
+  }
+
+  .bar--right {
+    float: right;
+    margin-right: 0;
+  }
+
+  .bar--left {
+    float: left;
+    margin-left: 0;
+  }
+
+  .bar--icon {
+    min-width: 20%;
+    max-height: 4vh;
+    height: auto;
+    margin: auto;
+  }
+
+  .bar--container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .bar--legend {
+    margin-bottom: @sepXl;
+  }
+
+  .bar--container--right, .bar--legend--right {
+    margin-left: -25px;
+  }
+
+  .bar--container--left, .bar--legend--left {
+    margin-right: -25px;
+  }
+
+  hr {
+    width: 50%;
+    background-color: @white;
+    margin: 1vh auto;
+  }
+
+  h2 {
+    font-size: @accent;
+  }
+
+  .legend--circle {
+    display: block;
+    font-size: 2em;
+    line-height: 0.8em;
+  }
+}

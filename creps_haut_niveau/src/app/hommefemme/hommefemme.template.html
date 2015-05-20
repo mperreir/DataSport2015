@@ -1,0 +1,76 @@
+<div class="section--wrapper">
+  <h1 class="title--enormous text-center mb0 mt0 wow fadeIn">Et les femmes ?</h1>
+  <div class="row center-xs">
+    <div class="col-xs-12">
+    <p class="text--description wow flipInX"> 
+      En France, on recense 37% de <span class="accent-female">femmes</span> titulaires d’une licence sportive pour 63% d’<span class="accent-male">hommes</span>. En Pays de Loire, 218 femmes sont listées dont 79 répertoriées Haut Niveau, contre 361 hommes dont quasiment 50% sont répertoriés HN.
+    </p>
+  </div>
+  </div>
+
+  <div class="row center-xs">
+    <div class="col-xs-12 col-sm-8">
+      <div class="row">
+        <h2 class="col-xs-5 bar--title">Espoirs</h2>
+        <h2 class="col-xs-offset-2 col-xs-5 bar--title">Haut Niveau</h2>
+      </div>
+
+      <div class="row middle-xs">
+        <div class="col-xs-5 bar--container--left">
+          <div>
+            <div class="bar--right" 
+              creps-bar 
+              event="gender" 
+              type="male" 
+              value="{{hommefemme.total.espoirs.males}}" 
+              max="{{hommefemme.maxEspoirs}}"></div>
+            <div class="bar--right" creps-bar event="gender" type="female" value="{{hommefemme.total.espoirs.females}}" max="{{hommefemme.maxEspoirs}}"></div>
+          </div>
+        </div>
+        <div class="col-xs-2 bar--label"><p>Total</p></div>
+        <div class="col-xs-5 bar--container--right">
+          <div>
+            <div class="bar--left" creps-bar event="gender" type="male" value="{{hommefemme.total.hautNiveau.males}}" max="{{hommefemme.maxHautNiveau}}"></div>
+            <div class="bar--left" creps-bar event="gender" type="female" value="{{hommefemme.total.hautNiveau.females}}" max="{{hommefemme.maxHautNiveau}}"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="row middle-xs bar--container" ng-repeat="sport in hommefemme.sports">
+        <div class="col-xs-5 bar--container--left">
+          <div>
+            <div class="bar--right" creps-bar event="gender" type="male" value="{{sport.espoirs.males}}" max="{{hommefemme.maxCategory}}"></div>
+            <div class="bar--right" creps-bar event="gender" type="female" value="{{sport.espoirs.females}}" max="{{hommefemme.maxCategory}}"></div>
+          </div>
+        </div>
+        <div class="col-xs-2 bar--label"><img ng-src="{{sport.icon}}" class="bar--icon scale"></div>
+        <div class="col-xs-5 bar--container--right">
+          <div>
+            <div class="bar--left" creps-bar event="gender" type="male" value="{{sport.hautNiveau.males}}" max="{{hommefemme.maxCategory}}"></div>
+            <div class="bar--left" creps-bar event="gender" type="female" value="{{sport.hautNiveau.females}}" max="{{hommefemme.maxCategory}}"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row middle-xs">
+        <div class="col-xs-5 bar--legend--left">
+          <div creps-barlegend max="{{hommefemme.maxCategory}}" segments="4" orientation="right"></div>
+        </div>
+        <div class="col-xs-2 bar--label"><p>#</p></div>
+        <div class="col-xs-5 bar--legend--right">
+          <div creps-barlegend max="{{hommefemme.maxCategory}}" segments="4" orientation="left"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row text-center center-xs">
+    <p class="text--description--bas wow flipInX" data-wow-delay="0.2s">
+      On pourrait affirmer que les femmes listées espoir atteignent moins le HN que les hommes</p>
+    <p>
+      La pratique féminine à HN semble diminuer dans les sports où le corps est l’outil de <span class="accent-red">performance</span> comme en gymnastique, natation ou en judo.<br/>
+      Elle semble au contraire perdurer dans les sports d’endurance (cyclisme, aviron, canoë-kayak) où l’<span class="accent-blue">expérience</span> et la <span class="accent-blue">maturité</span> sont un avantage.<br/>
+      Il est plus difficile d'accèder au Haut Niveau pour les femmes pratiquants des sports populaires (sports collectifs).
+    </p>
+  </div>
+</div>

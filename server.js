@@ -29,9 +29,9 @@ app.use('/presse_ocean_foot',presse_ocean_foot);
 
 
 // redirect root page to Hyblab server
-app.use(/\/$/,function(req, res, next){
-	res.redirect('http://www.hyblab.fr/evenements/hyblab-datajournalisme/');
-});
+// app.use(/\/$/,function(req, res, next){
+// 	res.redirect('http://www.hyblab.fr/evenements/hyblab-datajournalisme/');
+// });
 
 
 // launch app

@@ -1,0 +1,199 @@
+@import (less) '../core/less/_palette.less';
+#region {
+	background-color: @white;
+  color: @dark;
+
+	.title--nb--licence{
+		margin-top: @sepSm;
+		margin-bottom: @sepSm;
+
+    .nblicence {
+      font-family: 'Cassannet';
+      font-size: @accentXl;
+    }
+
+    .licence {
+      font-weight: 300;
+      font-size: @accentL;
+    }
+	}
+
+	.comphf--style {
+		margin-top: @sepL;
+		margin-bottom: @sepL;
+
+    .icon {
+      font-size: @accentM;
+      text-align: left;
+    }
+
+    .icon--male {
+      color:@bleum;
+    }
+
+    .icon--female {
+       color:@rougef;
+    }
+	}
+
+  .bar {
+    margin: 4px;
+    height: 7px;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 1s;
+    clear: both;
+    display: block;
+  }
+
+  .bar--male {
+    background-color: @bleum;
+  }
+
+  .bar--female {
+    background-color: @rougef;
+  }
+
+  .bar--right {
+    float: right;
+    margin-right: 0;
+  }
+
+  .bar--left {
+    float: left;
+    margin-left: 0;
+  }
+
+  .bar--icon {
+    width: 16%;
+    height: auto;
+    margin: auto;
+  }
+
+  .bar--container {
+    margin-top: @sepSm;
+    margin-bottom: @sepSm;
+  }
+
+  .bandeau--style{
+  	color:@white;
+  	background-color: @orangebandeau;
+  	margin-top: @sepXs;
+    padding-left: @sepSm;
+    padding-right: @sepSm;
+    padding-top: @sepSm;
+  	padding-bottom: @sepSm;
+
+  	img {
+  	  width:30%;
+  	  height: auto;
+  	}
+
+    .bandeau--bigger{
+      font-size: @accentXl;
+      margin: 0;
+    }
+
+    .bandeau--nb {
+      font-family: 'Cassannet';
+
+      &.big{
+        font-size: @accentXl;
+      }
+
+      &.medium{
+        font-size: @accentL;
+      }
+
+      &.small{
+        font-size: @accentM;
+      }
+    }
+
+    .bandeau--legend {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .svg--podium{
+  	width: 74%;
+  	height: auto;
+  }
+	
+  .bar--label--homme{
+  	text-align: right;
+		font-style: italic;
+		font-weight: 200;
+		color: @bleum;
+		font-size: @sectionText;
+  }
+
+  .bar--label--femme{
+  		font-style: italic;
+		font-weight: 200;
+		color: @rougef;
+		font-size: @sectionText;
+  }
+
+  .bar--label--pourhomme{
+  	font-style: italic;
+		font-weight: 200;
+		color: @bleum;
+		float:right;
+		margin:0;
+		line-height: 0;
+  }
+
+  .bar--label--pourfemme{
+  	font-style: italic;
+		font-weight: 200;
+		color: @rougef;
+		float:left;
+		margin:0;
+		line-height: 0;
+  }
+
+  .div--separateur--L{
+  margin-top:@sepL;
+  }
+
+  .div--separateur--Xl{
+  margin-top:@sepXl;
+  background-color: @white;
+  }
+
+  .title--doughnut{
+    font-style: italic;
+    font-weight: 300;
+    color: @orangebandeau;
+    font-size: @sectionText;
+  }
+
+
+  .title--svg{
+    font-style: italic;
+    font-weight: 300;
+    color: @dark;
+    font-size: @sectionText;
+  }
+
+  .text--explic{
+    margin-bottom:@sepL;
+  }
+  
+  @media screen and (max-width: 758px) {
+    .small--hide {
+      display: none !important;
+    }
+  }
+
+   @media screen and (min-width: 767px) {
+    .bandeau--style {
+      img {
+        width:130%;
+        height: auto;
+      }
+    }
+  }
+}

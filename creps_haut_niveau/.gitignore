@@ -1,0 +1,6 @@
+src/bower_components/
+node_modules/
+build/
+.Rhistory
+.tmp/
+src/main.css

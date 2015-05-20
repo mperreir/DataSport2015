@@ -1,0 +1,117 @@
+@import (less) '../core/less/_palette.less';
+
+#departements {
+  background-color: @white;
+  color: @dark;
+  
+  .map--wrapper {
+    position: relative;
+
+    .map--container {
+      @media screen {
+        @media (min-width: 768px) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+          height: 256px;
+        }
+      }
+    }
+
+    .infos--container--top {
+      @media screen {
+        @media (min-width: 768px) {
+          position: absolute;
+          top: 0;
+          bottom: 50%;
+          left: 0;
+          right: 0;
+          z-index: 50;
+
+          .listes--nb {
+            font-size: @accentXxl;
+            font-family: 'Cassannet';
+          }
+
+          .dpt--sport {
+            img {
+              width: 70%;
+              margin: auto;
+            }
+          }
+
+          .listes {
+            position: relative;
+            bottom: -150px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .dpt--sport {
+            img {
+              width: 37%;
+              margin: auto;
+            }
+          }
+
+          margin-top: -50px;
+
+          .listes--nb {
+            font-size: @accentXl;
+            font-family: 'Cassannet';
+          }
+        }
+      }
+
+      .dpt--sport {
+        text-align: center;
+      }
+
+      .listes--nb--label {
+        display: inline-block;
+        margin-left: @sep;
+
+        span:last-child {
+          display: block;
+          font-style: italic;
+        }
+      }
+    }
+
+    .infos--container--down {
+      @media screen {
+        @media (min-width: 768px) {
+          position: absolute;
+          top: 50%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 50;
+
+          .pie--wrapper {
+            position: relative;
+            top: -75px;
+          }
+
+        }
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .title--doughnut{
+    font-style: italic;
+    text-align:center;
+    font-weight: 200;
+    color: @orangebandeau;
+    font-size: @sectionText;
+  }
+}

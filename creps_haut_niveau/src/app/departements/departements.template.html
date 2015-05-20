@@ -1,0 +1,47 @@
+<div class="section--wrapper pb0">
+  <div class="title--section mt0">
+    <span class="title--enormous wow fadeIn">Et en détails ?</span>
+    <p class="wow flipInX">Sélectionnez le département de votre choix et découvrez le nombre de listés, ainsi que le top 3 des sports les plus représentés.</p>
+  </div>  
+  <div class="col-xs-12 wrapper">
+    <div class="height-100vh map--wrapper">
+      <div class="row map--container">
+        <div creps-jvectormap class="region-map" id="region-map"></div>
+      </div>
+      <div class="row">
+        <div class="infos--container--top row center-xs">
+          <div class="col-xs-12 col-sm-offset-5 col-sm-3">
+            <div class="listes animated">
+              <span class="listes--nb">{{departements.selected.total}}</span>
+              <div class="listes--nb--label">
+                <span>listés</span>
+                <span>(HN + Espoirs)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 first-sm col-sm-4">
+            <div class="row middle-xs sports--container animated">
+              <div class="col-xs-4 dpt--sport" ng-repeat="sport in departements.selected.sports">
+                <img ng-src="{{sport.icon}}">
+                <p>{{sport.name}}</p>
+              </div>
+            </div>
+            <p class="dpt--sports--title">Les sports les plus pratiqués à Haut Niveau</p>
+          </div>
+        </div>
+        <div class="infos--container--down row center-xs start-sm">
+          <div class="col-xs-8 col-sm-4">
+            <div>
+              <div class="pie--wrapper">
+                <canvas id="pieAge" class="chart chart-doughnut" data="departements.doughData"
+                    labels="departements.doughLabel" colours="departements.doughcolours" options="departements.doughoptions" legend="true">
+                </canvas>
+                <p class="title--doughnut">Répartition des moins de 18 ans en Espoirs et Haut Niveau</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
