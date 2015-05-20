@@ -195,6 +195,7 @@ angular.module('hyblabApp')
               'cat': tab[i]['Abbrev. Catégorie'],
               'temps': parseInt(tab[i]['Nb.Secondes'], 10),
               'sexe': tab[i].Sexe,
+              'dossard' : tab[i].Numéro
             });
           }
         }
@@ -253,6 +254,7 @@ angular.module('hyblabApp')
           encoding: 'UTF8',
           skipEmptyLines: true,
           complete: function(results) {
+
 
             //Traitement section 1
             dataSlide1.distance = results.data[1].Distance;

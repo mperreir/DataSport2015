@@ -29,7 +29,7 @@
         </p>
       </div>
     </div>
-  </script>
+  </script>*
 
   <div class="container first  section1"  id="section_1" data-scrollspy-broadcast>
     <div class="infos" ng-click="open()">
@@ -40,41 +40,38 @@
     </div>
 
 
-    <div class="header">
-      <h1 class="title">{{dataSlide1.nomVille}}</h1>
-      <h3 class="subtitle">{{dataSlide1.data}}</h3>
-    </div>
 
-    <div class="row">
-      <div class="col-md-4 dataviz-header text">
-        <h2 class="no-margin-top title text-center">
+    <div class="row header">
+      <div class="col-md-6">
+        <h3 class="subtitle">ça s'est passé à</h3>
+        <h1 class="title">{{dataSlide1.nomVille}}</h1>
+        <h3 class="subtitle">Le {{dataSlide1.date}}</h3>
+        <br/>
+        <h3 class="subtitle">Une course de...</h3>
+        <h2 class="no-margin-top title">
           <ng-count-up from="0" to="{{dataSlide1.distance}}" duration="3"></ng-count-up>KM</h2>
-        <h3 class="subtitle text-center">Courus par des sportifs de toute la france</h3>
       </div>
 
-      <div class="col-md-4">
-        <h2 class="no-margin-top title text-center">
-          <ng-count-up from="0" to="{{dataSlide1.nbCoureurs}}" duration="5"></ng-count-up>
-        </h2>
-        <h3 class="subtitle text-center">Coureurs</h3>
-
-      </div>
-
-      <div class="col-md-4">
-        <h2 class="no-margin-top title text-center">
-          <ng-count-up from="0" to="7" duration="3"></ng-count-up>
-        </h2>
-        <h3 class="subtitle text-center">Catégories</h3>
-      </div>
-
-    </div>
-
-    <div class="row bloc1">
-      <div class="col-md-4  dataviz">
+      <div class="col-md-6  dataviz">
         <div id="map" class="dataviz"></div>
       </div>
-      <div class="col-md-4  dataviz">
-        <div class="coureurs center-block">
+
+    </div>
+
+
+    <div class="row bloc1">
+
+      <div class="col-md-6  dataviz-header text">
+        <h3 class="subtitle">Avec comme invités</h3>
+        <h2 class="no-margin-top title">
+          <ng-count-up from="0" to="{{dataSlide1.nbCoureurs}}" duration="5"></ng-count-up>
+        </h2>
+        <h3 class="subtitle">Coureurs</h3>
+        <br/>
+
+
+
+        <div class="coureurs">
           <div class="coureurhomme" popover="{{dataSlide1.pourcentageHomme}} % d'hommes ({{dataSlide1.nbHomme}} coureurs)" popover-trigger="mouseenter" popover-placement="bottom" popover-popup-delay="200" popover-append-to-body="true">
             <img src="../assets/images/coureur homme.svg" alt="" />
             <div class="pourcenthomme wow slideInUp" data-wow-duration="4s" style="{{heightHomme}}"></div>
@@ -86,14 +83,31 @@
         </div>
 
       </div>
-      <div class="col-md-4 dataviz">
-        <canvas id="dv3" height="150px"></canvas>
+
+      <div class="col-md-6  dataviz-header text">
+        <h3 class="subtitle">Divisés en</h3>
+        <h2 class="no-margin-top title">
+          <ng-count-up from="0" to="7" duration="3"></ng-count-up>
+        </h2>
+        <h3 class="subtitle">Catégories</h3>
+
+
+        <div class="dataviz dv3">
+          <canvas id="dv3" height="250px" width="450px"></canvas>
+        </div>
+
+
+
+
       </div>
+
     </div>
 
 
+
     <div class="row bloc2">
-      <div class="col-md-12 dataviz">
+      <h3 class="subtitle">Récapitulatif des temps :</h3>
+      <div class="dataviz">
         <canvas id="dv4" height="30px"></canvas>
       </div>
     </div>

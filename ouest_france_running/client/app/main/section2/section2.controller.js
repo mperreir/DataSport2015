@@ -16,9 +16,10 @@ angular.module('hyblabApp')
     /*************************************************************************************************/
     /****************Récupération, traitement et préparation des données******************************/
     /*************************************************************************************************/
-    /**************************************************************************************************/
-    /****************************************Manipulation**********************************************/
-    /*************************************************************************************************/
+
+
+
+
 
 
     $scope.tabGenres = {
@@ -203,13 +204,13 @@ angular.module('hyblabApp')
       };
     };
 
-    var getData4 = function() {
+    var getData4 = function(temps) {
       return {
         labels: ['Votre temps'],
         datasets: [{
           fillColor: 'rgba(231,55,84,1)',
           strokeColor: 'rgba(231,55,84,1)',
-          data: [31]
+          data: [temps]
         }]
       };
     };
@@ -247,6 +248,7 @@ angular.module('hyblabApp')
     var Diagram1 = new Chart(document.getElementById('dv5-1').getContext('2d')).HorizontalBar(getData1(), options);
     var Diagram2 = new Chart(document.getElementById('dv5-2').getContext('2d')).HorizontalBar(getData2(), options);
     var Diagram3 = new Chart(document.getElementById('dv5-3').getContext('2d')).HorizontalBar(getData3(), options);
+    var Diagram4 = new Chart(document.getElementById('dv5-4').getContext('2d')).HorizontalBar(getData4(0), options);
 
 
 
@@ -289,6 +291,22 @@ angular.module('hyblabApp')
       return time;
     };
 
+
+
+    $scope.search = function(dossard) {
+      $scope.erreurRecherche = false;
+      var result = _.find($scope.dataSlide2, { 'dossard': dossard });
+      if (result) {
+        $scope.connected = true;
+        console.log(result.temps);
+        Diagram4 = new Chart(document.getElementById('dv5-4').getContext('2d')).HorizontalBar(getData4(result.temps), options);
+
+      } else {
+        // on renvoie une erreur
+        $scope.erreurRecherche = true;
+
+      }
+    };
 
 
 

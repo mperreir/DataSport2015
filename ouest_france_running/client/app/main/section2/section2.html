@@ -42,17 +42,7 @@
           3
         </div>
 
-        <div class="value second">
-          {{tempsFirst}}
-        </div>
-        <div class="value first">
-          {{tempsSecond}}
-        </div>
-        <div class="value third">
-          {{tempsThird}}
-        </div>
-
-
+        
       </div>
 
 
@@ -61,6 +51,29 @@
           <canvas id="dv5-1" height="25px"></canvas>
           <canvas id="dv5-2" height="25px"></canvas>
           <canvas id="dv5-3" height="25px"></canvas>
+          <div ng-show="connected">
+              <canvas id="dv5-4" height="25px"></canvas>
+          </div>
+
+
+          <div ng-if="!connected">
+            <div class="text">
+              <h3>Vous y étiez ? Envie de comparer votre temps à celui des autres ?</h3>
+            </div>
+            <form class="form-inline" ng-submit="search(dossard)">
+              <input type="text" class="form-control" ng-model="dossard" placeholder="Votre numéro de dossard" required/>
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              <div ng-if="erreurRecherche">
+                <br/>
+                <div class="alert alert-danger" role="alert">
+
+                  <p>Impossible de vous trouver... :'( Pourquoi ne pas réessayer ?</p>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
         </div>
       </div>
 

@@ -33,7 +33,7 @@ angular.module('hyblabApp')
     var data = {
       labels: labels,
       datasets: [{
-        fillColor: 'rgba(0,0,0,0.2)',
+        fillColor: 'rgba(90,90,90,0.2)',
         strokeColor: 'rgba(80,80,80,1)',
         pointColor: 'rgba(231,55,84,1)',
         pointStrokeColor: 'rgba(231,55,84,1)',
@@ -56,13 +56,17 @@ angular.module('hyblabApp')
       inGraphDataFontFamily: 'sans-serif',
       inGraphDataFontSize: 14,
       inGraphDataFontColor: '#222',
+      inGraphDataVAlign: 'left',
+      inGraphDataAlign: 'center',
+      inGraphDataPaddingY: 15,
       annotateDisplay: false,
       scaleShowGridLines: false,
-
+      yAxisLabel: 'Nombre de coureurs dans cet intervalle de temps',
+      xAxisLabel: 'Intervalle d\'arrivée, du premier au dernier',
       scaleFontFamily: 'sans-serif',
       scaleFontSize: 16,
       scaleFontColor: '#222',
-
+      rotateLabels: 0,
       dynamicDisplay: true,
       responsive: true
     };

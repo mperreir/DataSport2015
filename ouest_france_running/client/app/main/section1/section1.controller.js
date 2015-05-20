@@ -232,8 +232,7 @@ angular.module('hyblabApp')
         annotateLabel: '<%=v3 + \' \' + (v1 == \'\' ? \'\' : v1) + (v1!=\'\' && v2 !=\'\' ? \' \' : \'\')+(v2 == \'\' ? \'\' : v2)+(v1!=\'\' || v2 !=\'\' ? \' \' : \'\')%>',
         scaleShowGridLines: false,
         rotateLabels: 'smart',
-        dynamicDisplay: true,
-        responsive: true
+        dynamicDisplay: true
 
       }
     };
@@ -250,7 +249,7 @@ angular.module('hyblabApp')
 
     var dv4 = {
       data: {
-        labels: ['Départ'],
+        labels: [''],
         datasets: [{
           fillColor: 'rgba(29,29,27,0.5)',
           strokeColor: 'rgba(29,29,27,0.5)',
@@ -275,7 +274,7 @@ angular.module('hyblabApp')
         animationSteps: 100,
         canvasBorders: false,
         graphTitle: '',
-        legend: true,
+        legend: false,
         legendBorders: false,
         legendPosX: 3,
         legendPosY: 1,
@@ -289,7 +288,7 @@ angular.module('hyblabApp')
         inGraphDataFontSize: 14,
         inGraphDataFontColor: '#222',
         annotateDisplay: true,
-        annotateLabel: '<%=(v1 == \'\' ? \'\' : v1) + (v1!=\'\' && v2 !=\'\' ? \' - \' : \'\') + v3.toHHMMSS() %>',
+        annotateLabel: '<%=(v1 == \'\' ? \'\' : v1) + (v1!=\'\' && v2 !=\'\' ? \' - \' : \'\') + \' : \' + v3.toHHMMSS() %>',
         scaleShowGridLines: false,
         scaleFontFamily: 'sans-serif',
         scaleFontSize: 18,
