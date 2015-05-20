@@ -33,8 +33,8 @@ angular.module('hyblabApp')
     var data = {
       labels: labels,
       datasets: [{
-        fillColor: 'rgba(90,90,90,0.2)',
-        strokeColor: 'rgba(80,80,80,1)',
+        fillColor: 'rgba(90,90,90,0.1)',
+        strokeColor: 'rgba(80,80,80,0.8)',
         pointColor: 'rgba(231,55,84,1)',
         pointStrokeColor: 'rgba(231,55,84,1)',
         data: $scope.dataSlide3,
