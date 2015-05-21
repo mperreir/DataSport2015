@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Analyse des données facebook du marathon de Nantes</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the Page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="overflow:hidden">
+
+
+    <!-- Full Page Image Background Carousel Header -->
+    <div id="myCarousel" class="carousel slide vertical" >
+        <!-- Indicators -->
+
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+			<div class="container" >
+                <img class="maximum_size" alt="fond d'écran"  src="img/Background1.svg">
+                <img class="maximum_size" alt="fond d'écran" alt="fond d'écran" src="img/Page1-fil rouge.svg">
+                <img id="Data1" class="maximum_size" alt="fond d'écran"  src="img/Page1.svg">
+              	
+					
+				    
+					
+			</div>					
+            </div>
+            <div class="item">  
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="container" >
+                    <img class="maximum_size" alt="fond d'écran"  src="img/Background2.svg#svgView(preserveAspectRatio(none))">
+					  <img class="maximum_size"   alt="fond d'écran" src="img/Page2-fil rouge.svg">
+					  <img  alt="fond d'écran" class="maximum_size" src="img/Page2.svg">
+					  
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="container" >
+                    <img class="maximum_size" alt="fond d'écran"  src="img/Background3-4-5.svg#svgView(preserveAspectRatio(none))">
+                    <img class="maximum_size" alt="fond d'écran" src="img/Page3-fil rouge.svg">
+					<img id="page3_texte1" alt="fond d'écran" class="maximum_size" src="img/Page3-texte1.svg">
+					<img id="page3_graph1" class="maximum_size" alt="fond d'écran" src="img/Page3-graphique1.svg">
+					<img id="page3_texte2" hidden="true" alt="fond d'écran" class="maximum_size" src="img/Page3-texte2.svg">
+					<img id="page3_graph2" hidden="true" class="maximum_size" alt="fond d'écran" src="img/Page3-graphique2.svg">
+					
+					<img id="page3x" hidden="true" class="page3_croix" onclick="page3_original()" alt="fond d'écran" src="img/x.svg">
+					<img id="page3+" class="page3_plus" onclick="page3_develop()" alt="fond d'écran" src="img/+.svg">
+                    
+                </div>
+            </div>
+            <div class="item">
+                <div class="container" >
+                    <img class="maximum_size" alt="fond d'écran"  src="img/Background3-4-5.svg#svgView(preserveAspectRatio(none))">
+                    <img class="maximum_size"  alt="fond d'écran" src="img/Page4-fil rouge.svg">
+					<img alt="fond d'écran" class="maximum_size" src="img/Page4-graphique.svg">
+					<img id="page4_texte1" alt="fond d'écran" class="maximum_size" src="img/Page4-texte1.svg">
+					<img id="page4_texte2" alt="fond d'écran" class="maximum_size" hidden="true" src="img/Page4-texte2.svg">
+					
+                    <img id="page4+" class="page4_plus" onclick="page4_develop()" alt="fond d'écran" src="img/+.svg">
+                    <img id="page4x" hidden="true" class="page4_croix" onclick="page4_original()" alt="fond d'écran" src="img/x.svg">
+                </div>
+            </div>
+			 <div class="item">
+                <div class="container" >
+                    <img class="maximum_size" alt="fond d'écran"  src="img/Background3-4-5.svg#svgView(preserveAspectRatio(none))">
+					<img class="maximum_size"  alt="fond d'écran" src="img/Page5-fil rouge.svg">
+					
+					<img id="page5_texte1" alt="fond d'écran" class="maximum_size" src="img/Page5-texte1.svg">
+					<img id="page5_texte1" alt="fond d'écran" class="maximum_size" src="img/Page5-titre.svg">
+					<img id="page5_texte2" alt="fond d'écran" hidden="true" class="maximum_size" src="img/Page5-texte2.svg">
+					<img id="page5_texte3" alt="fond d'écran" hidden="true" class="maximum_size" src="img/Page5-texte3.svg">
+					
+					
+					<div id="page5_graphe" class="page5_graphe" ></div>
+					
+					<img id="page5_graphique21" hidden="true" alt="fond d'écran" class="maximum_size" src="img/Page5-graphique2-1.svg">
+					<img id="page5_graphique22" hidden="true" alt="fond d'écran" class="maximum_size" src="img/Page5-graphique2-2.svg">
+					<img id="page5_graphique23" hidden="true" alt="fond d'écran" class="maximum_size" src="img/Page5-graphique2-3.svg">
+					<img id="page5_graphique31" hidden="true" alt="fond d'écran" class="maximum_size" src="img/Page5-graphique3-1.svg">
+					<img id="page5_graphique32" hidden="true" alt="fond d'écran" class="maximum_size" src="img/Page5-graphique3-2.svg">
+					<img id="page5_graphique33" hidden="true" alt="fond d'écran" class="maximum_size" src="img/Page5-graphique3-3.svg">
+
+	
+					
+					<img id="page5_data1" class="page5_data1" onclick="page5_data1_change()" alt="fond d'écran" src="img/data1G.svg">
+                    <img id="page5_data2" class="page5_data2" onclick="page5_data2_change()" alt="fond d'écran" src="img/data2.svg">
+                    <img id="page5_data3" class="page5_data3" onclick="page5_data3_change()" alt="fond d'écran" src="img/data3.svg">
+			  </div>
+            </div>
+            <div class="item">
+                <div class="container" >
+                    
+                    <img class="maximum_size" alt="fond d'écran"  src="img/Background6.svg#svgView(preserveAspectRatio(none))">
+                    <img class="maximum_size"  alt="fond d'écran" src="img/Page6-fil rouge.svg">
+					<img alt="fond d'écran" class="maximum_size" src="img/Page6-photo.svg">
+					<img alt="fond d'écran" class="maximum_size" src="img/Page6-texte1.svg">
+					<img alt="fond d'écran" class="maximum_size" src="img/Page6-partenaires-01.png">
+					
+					</div>
+            </div>
+        </div>
+
+      <!-- Controls --> <!-- 
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+        -->
+
+    </div>
+    
+
+   
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/highcharts.js"></script>
+    <script src="js/modules/exporting.js"></script>
+	<script src="js/modules/data.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/mycarousel.js"></script>
+    
+</body>
+
+</html>

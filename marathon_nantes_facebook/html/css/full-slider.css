@@ -1,0 +1,201 @@
+/*!
+ * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html,
+body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+		background-color: #FFFFFF;
+}
+
+.carousel,
+.item,
+.active {
+      position: relative;
+      width:100%;
+	  height:100%;
+      margin: 0px 0px 0px 0px;
+}
+
+.carousel-inner {
+
+      position: relative;
+      width:100%;
+	  height:100%;
+      margin: 0px 0px 0px 0px;
+}
+
+.carousel-indicators li {
+  background-color: #159b9f;
+}
+.carousel-indicators .active {
+  background-color: #262d37;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+}
+
+.carousel slide vertical {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+}
+.mover {
+    position: absolute;
+    top: 10%;
+}
+
+.page3_plus {
+    position: absolute;
+    height: 5%;
+    top: 41%;
+    left: 49%;
+    cursor: pointer;
+}
+
+.page3_croix {
+    position: absolute;
+    height: 5%;
+    top: 47%;
+    left: 49%;
+    cursor: pointer;
+}
+
+.page4_plus {
+    position: absolute;
+    height: 5%;
+    top: 40%;
+    left: 48.5%;
+    cursor: pointer;
+}
+
+.page4_croix {
+    position: absolute;
+    height: 5%;
+    top: 40%;
+    left: 48.5%;
+    cursor: pointer;
+}
+
+.page5_data1 {
+    position: absolute;
+    height: 3%;
+    top: 15%;
+    left: 38%;
+    cursor: pointer;
+}
+.page5_data2 {
+    position: absolute;
+    height: 3%;
+    top: 15%;
+    left: 48%;
+    cursor: pointer;
+}
+.page5_data3 {
+    position: absolute;
+    height: 3%;
+    top: 15%;
+    left: 58%;
+    cursor: pointer;
+}
+
+.page5_graphe {
+    position: absolute;
+    height: 48%;
+    top: 20%;
+    left: 24%;
+}
+
+
+
+.background_svg {
+    position: absolute;
+    width: 100%;
+height: 100%;
+}
+
+footer {
+    margin: 0px 0;
+}
+
+.maximum_size {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+.fil_rouge {
+position: absolute;
+
+width: 100%;
+height: 100%;
+}
+
+.container {
+width: 100%;
+height: 100%;
+position: absolute;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------ */
+.vertical .carousel-inner {
+  height: 100%;
+}
+
+.carousel.vertical .item {
+  -webkit-transition: 1.2s ease-in-out top;
+     -moz-transition: 1.2s ease-in-out top;
+      -ms-transition: 1.2s ease-in-out top;
+       -o-transition: 1.2s ease-in-out top;
+          transition: 1.2s ease-in-out top;
+}
+
+.carousel.vertical .active {
+  top: 0;
+}
+
+.carousel.vertical .next {
+  top: 100%;
+}
+
+.carousel.vertical .prev {
+  top: -100%;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+.carousel.vertical .active.left {
+  top: -100%;
+}
+
+.carousel.vertical .active.right {
+  top: 100%;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}

@@ -1,0 +1,351 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+/* TOGGLE TYPE */
+.toggle_radio_type *{
+  margin:0px;
+  padding:0px;
+}
+.toggle_radio_type{
+  position: relative;
+  background: rgba(0,0,0,.1);
+  margin: 4px auto;
+  overflow: hidden;
+  padding: 0 !important;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  height: 26px;
+  width: 100%;
+}
+.toggle_radio_type > * {
+  float: left;
+}
+.toggle_radio_type input[type=radio]{
+  display: none;
+  /*position: fixed;*/
+}
+.toggle_radio_type label{
+  font: 90%/1.618 "Source Sans Pro";
+  color: rgba(0,0,0,.9);
+  z-index: 0;
+  display: block;
+  width: 25%;
+  height: 20px;
+  margin: 3px 0px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+  /*background: rgba(0,0,0,.1);*/
+  text-align: center;
+  /*margin: 0 2px;*/
+}
+.toggle_option_slider_type{
+  /*display: none;*/
+  /*background: red;*/
+  width: 25%;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+#type_club_1:checked ~ .toggle_option_slider_type{
+  background: rgba(0,0,0,.3);
+  left: 0%;
+}
+#type_club_2:checked ~ .toggle_option_slider_type{
+  background: rgba(0,0,0,.3);
+  left: 25%;
+}
+#type_club_3:checked ~ .toggle_option_slider_type{
+  background: rgba(0,0,0,.3);
+  left: 50%;
+}
+#type_club_4:checked ~ .toggle_option_slider_type{
+  background: rgba(0,0,0,.3);
+  left: 75%;
+}
+
+/* TOGGLE ACCUEIL */
+.toggle_radio_accueil *{
+  margin:0px;
+  padding:0px;
+}
+.toggle_radio_accueil{
+  position: relative;
+  background: rgba(0,0,0,.1);
+  margin: 4px auto;
+  overflow: hidden;
+  padding: 0 !important;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  height: 26px;
+  width: 100%;
+}
+.toggle_radio_accueil > * {
+  float: left;
+}
+.toggle_radio_accueil input[type=radio]{
+  display: none;
+  /*position: fixed;*/
+}
+.toggle_radio_accueil label{
+  font: 90%/1.618 "Source Sans Pro";
+  color: rgba(0,0,0,.9);
+  z-index: 0;
+  display: block;
+  width: 25%;
+  height: 20px;
+  margin: 3px 0px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+  /*background: rgba(0,0,0,.1);*/
+  text-align: center;
+  /*margin: 0 2px;*/
+}
+.toggle_option_slider_accueil{
+  /*display: none;*/
+  /*background: red;*/
+  width: 25%;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+#accueil_club_1:checked ~ .toggle_option_slider_accueil{
+  background: rgba(0,0,0,.3);
+  left: 0%;
+}
+#accueil_club_2:checked ~ .toggle_option_slider_accueil{
+  background: rgba(0,0,0,.3);
+  left: 25%;
+}
+#accueil_club_3:checked ~ .toggle_option_slider_accueil{
+  background: rgba(0,0,0,.3);
+  left: 50%;
+}
+#accueil_club_4:checked ~ .toggle_option_slider_accueil{
+  background: rgba(0,0,0,.3);
+  left: 75%;
+}
+
+/* TOGGLE HANDI */
+.toggle_radio_handi *{
+  margin:0px;
+  padding:0px;
+}
+.toggle_radio_handi{
+  position: relative;
+  background: rgba(0,0,0,.1);
+  margin: 4px auto;
+  overflow: hidden;
+  padding: 0 !important;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  height: 26px;
+  width: 100%;
+}
+.toggle_radio_handi > * {
+  float: left;
+}
+.toggle_radio_handi input[type=radio]{
+  display: none;
+}
+.toggle_radio_handi label{
+  font: 90%/1.618 "Source Sans Pro";
+  color: rgba(0,0,0,.9);
+  z-index: 0;
+  display: block;
+  width: 33%;
+  height: 20px;
+  margin: 3px 0px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.toggle_option_slider_handi{
+  width: 33%;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+#handi_club_1:checked ~ .toggle_option_slider_handi{
+  background: rgba(0,0,0,.3);
+  left: 0%;
+}
+#handi_club_2:checked ~ .toggle_option_slider_handi{
+  background: rgba(0,0,0,.3);
+  left: 33%;
+}
+#handi_club_3:checked ~ .toggle_option_slider_handi{
+  background: rgba(0,0,0,.3);
+  left: 66%;
+}
+
+/* TOGGLE POP */
+.toggle_radio_pop *{
+  margin:0px;
+  padding:0px;
+}
+.toggle_radio_pop{
+  position: relative;
+  background: rgba(0,0,0,.1);
+  margin: 4px auto;
+  overflow: hidden;
+  padding: 0 !important;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  height: 26px;
+  width: 100%;
+}
+.toggle_radio_pop > * {
+  float: left;
+}
+.toggle_radio_pop input[type=radio]{
+  display: none;
+}
+.toggle_radio_pop label{
+  font: 90%/1.618 "Source Sans Pro";
+  color: rgba(0,0,0,.9);
+  z-index: 0;
+  display: block;
+  width: 33%;
+  height: 20px;
+  margin: 3px 0px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.toggle_option_slider_pop{
+  width: 33%;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+#pop_etab_1:checked ~ .toggle_option_slider_pop{
+  background: rgba(0,0,0,.3);
+  left: 0%;
+}
+#pop_etab_2:checked ~ .toggle_option_slider_pop{
+  background: rgba(0,0,0,.3);
+  left: 33%;
+}
+#pop_etab_3:checked ~ .toggle_option_slider_pop{
+  background: rgba(0,0,0,.3);
+  left: 66%;
+}
+
+
+
+/* TOGGLE ACCUEIL ETAB */
+.toggle_radio_accueil_etab *{
+  margin:0px;
+  padding:0px;
+}
+.toggle_radio_accueil_etab{
+  position: relative;
+  background: rgba(0,0,0,.1);
+  margin: 4px auto;
+  overflow: hidden;
+  padding: 0 !important;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  height: 26px;
+  width: 100%;
+}
+.toggle_radio_accueil_etab > * {
+  float: left;
+}
+.toggle_radio_accueil_etab input[type=radio]{
+  display: none;
+}
+.toggle_radio_accueil_etab label{
+  font: 90%/1.618 "Source Sans Pro";
+  color: rgba(0,0,0,.9);
+  z-index: 0;
+  display: block;
+  width: 33%;
+  height: 20px;
+  margin: 3px 0px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.toggle_option_slider_accueil_etab{
+  width: 33%;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+#accueil_etab_1:checked ~ .toggle_option_slider_accueil_etab{
+  background: rgba(0,0,0,.3);
+  left: 0%;
+}
+#accueil_etab_2:checked ~ .toggle_option_slider_accueil_etab{
+  background: rgba(0,0,0,.3);
+  left: 33%;
+}
+#accueil_etab_3:checked ~ .toggle_option_slider_accueil_etab{
+  background: rgba(0,0,0,.3);
+  left: 66%;
+}

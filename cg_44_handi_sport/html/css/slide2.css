@@ -1,0 +1,467 @@
+/************************************ FEUILLE DE STYLE SLIDE 2 ************************************
+
+
+TITLES : 
+
+H1 : abs;
+H2 : Titre page ;
+H3 : Titres parties;
+H4 : Titres sous parties;
+H5 : 
+H6 : 
+
+
+COLORS : 
+vert : #47B27B;
+
+
+FONTS : 
+
+font-family: 'Avenir';
+font-family: 'Lobster Two', cursive;  -> WEBFONT CHECK OK
+
+
+*/
+
+/* GENERAL */ 
+
+
+	#div2{
+		background-color: white;
+		width: 100%;
+		cursor: url(img/curseur.png), auto;
+	}
+
+	#grid{
+		width: 960px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	#flechefinale{
+	width: 50px;
+	position: relative;
+	top: 30px;
+	left: 900px;
+
+}
+
+	#div2 h2{
+		text-align: center;
+		margin: 100px 0 100px 0;
+		font-size: 45px;
+		font-family: 'Lobster', cursive;
+		font-weight: 400;
+		color: #47B27B;
+	}
+
+	#div2 .text{
+		width: 660px;
+		display: block;
+		margin: 0 auto 150px auto;
+		text-align: center;
+		font-size: 14px;
+	}
+
+	#div2 h3{
+		margin: 40px auto 0px auto;
+		color: #47B27B;
+		text-transform: uppercase;
+		font-weight: 100;
+		text-align: center;
+	}
+
+	.separ{
+		width: 960px;
+		margin: 0 auto;
+		display: block;
+	}
+
+/************************************ CHANGER POUR PLACEMENT ************************************/
+    
+/* PICTO ILLUSTRATION */ 
+
+	.illu{
+		position: relative;
+	}
+
+	/* TITRE */
+
+    .avion{
+    	width: 110px;
+		margin-bottom: -57px;
+    	top: 80px;
+	}
+
+    .nuage1{
+		top: 220px;
+		right: 10px;
+		width: 90px;
+	}
+
+	.nuage2{
+		width: 120px;
+		margin-bottom: -62px;
+		top: 130px;
+		left: 570px;
+	}
+
+	/* REGION */ 
+
+	.mongo{
+		height: 90px;
+		margin-bottom: -90px;
+		left: 670px;
+		top: 36px;
+	}
+
+	.nuage3{
+		width: 150px;
+		margin-bottom: -78px;
+		left: 750px;
+		top: 110px;
+	}
+
+	.nuage4{
+		width: 140px;
+		margin-bottom: -72px;
+		right: 270px;
+		top: 50px;
+	}
+
+	.nuage5{
+		width: 150px;
+		margin-bottom: -78px;
+		left: 750px;
+		bottom: 50px;
+	}
+
+	.nuage6{
+		width: 140px;
+		margin-bottom: -72px;
+		right: 120px;
+		top: 10px;
+	}
+
+
+
+
+
+
+
+	.triangle{
+		width: 30px;
+		display: block;
+		margin: -18px auto -2px auto;
+
+	}
+
+/* INFOBULLES */ 
+
+	.infobulle{
+		width: 280px;
+		background-color: #47B27B;
+		padding: 5px;
+		height: 45px;
+		position: relative;
+	}
+
+	.infobulle .pictoinfo{
+		background-color: #47B27B;
+		border-radius: 50%;
+		border: 3px solid white;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		top: -20px;
+		left: -20px;
+		margin: 0;
+	}
+
+	.infobulle .textinfo{
+		color: white;
+		font-size: 12px;
+		font-weight: 100;
+		margin: 0 10px 0 15px;
+		text-align: justify;
+		position: relative;
+		top: -30px;
+	}
+
+	.infobulle .pictoinfo p{;
+		color: white;
+		font-weight: 800;
+		font-size: 18px;
+		text-align: center;
+		vertical-align: center;
+		margin: 3px 0 0 0;
+	}
+
+	#france .infobulle {
+
+		left: -100px;
+		margin: -70px 0 0 0;
+
+	}
+
+/* MAPS  */
+
+	svg {
+		display: block;
+		margin: 50px auto;
+	}
+
+	g.bulle {
+	   cursor: pointer;
+
+	   /*border: 1px solid black;*/
+	   }
+
+	g.bulle g {
+	   display: none;
+	   }
+
+	g.bulle:hover g {
+	   display: block;  
+	   }
+
+	 #carteregion{
+	 	margin: -60px 0 -50px 0;
+	 }
+
+/* EN FRANCE */
+
+	#div2 h4{
+		margin: 70px auto 5px auto;
+		color: #47B27B;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+
+
+	.detail{
+		font-size: 12px;
+		color: #47B27B;
+		width: 400px;
+		margin: -50px auto 0 auto;
+		display: block;
+		font-weight: 300;
+		text-align: center;
+	}
+
+
+
+
+
+	#topfrance{
+		width: 100%;
+		background-color: #47B27B;
+		color: white;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		padding: 0;
+	}
+
+	#topfrance li{
+		display: inline-block;
+		margin: 30px 10px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 13px;
+		width: 140px;
+
+	}
+
+	#topfrance img{
+		border-radius: 50%;
+		background-color: white;
+		border: none;
+	}
+
+	.top{
+		text-align: center;
+		margin: 0 0 150px 0;
+		padding: 0;
+	}
+
+	#div2 ul h4{
+		margin: 10px 0 5px 0;
+		text-align: left;
+	}
+
+	.top ol li{
+		margin: 20px 0;
+		font-size: 18px;
+		text-align: left;
+		font-weight: 900;
+		list-style-type: decimal;
+		color: #47B27B;
+	}
+
+	#classedep li, #sportsuni li{
+		margin: 20px 0;
+		text-align: left;
+		list-style-type: none;
+	}
+
+	#classedep h4, #sportsuni h4{
+		padding: 0 0 0 39px;
+	}
+
+
+	.top ol li p, #classedep li p, #sportsuni li p{
+		color: black;
+		font-weight: 300;
+		font-size: 14px;
+	}
+
+	#topregion, #topdep, #sportsuni, #classedep{
+		width: 360px;
+		margin: 10px 40px;
+		font-size: 14px;
+		padding: 0;
+		font-weight: 300;
+		list-style-type: none;
+		display: inline-block;
+		vertical-align: top;
+		text-transform: uppercase;
+	}
+
+	#sportsuni h4{
+		padding: 15px 0 5px 39px;
+	}
+
+	.top .loire9, .top .loire9 li{
+		margin: 0 10px;
+		padding: 0;
+		font-weight: 600;
+		font-size: 14px;
+		color: #47B27B;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+
+	#analyse{
+		font-weight: 300;
+		font-size: 14px;
+		color: #47B27B;
+		width: 400px;
+		padding:  0 0 0 46px;
+	}
+
+	#info2, #departementstaps .infobulle{
+		display: inline-block;
+	}
+
+	#departementstaps .infobulle{
+		left: 300px;
+		bottom: 150px;
+		margin: 0 0 -40px 0;
+	}
+
+	#info2 svg{
+		margin: 0;
+		width: 400px;
+		height: 250px;
+		overflow: visible;
+	}
+
+
+	/* CNDS*/
+
+	#cnds{
+		width: 760px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	#cnds h5{
+		text-transform: uppercase;
+		font-weight: 700;
+		padding: 0 0 0 63px;
+		margin: 40px 0 20px 0;
+		font-size: 18px;
+		color: #47B27B;
+	}
+
+	#info3{
+		background-color: #47B27B;
+		color: white;
+		width: 380px;
+		padding: 0 20px;
+		vertical-align: top;
+		margin: 0;
+		position: relative;
+		right: 10px;
+	}
+
+	#cnds li{
+		list-style-type: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 40px;
+		width: 260px;
+		vertical-align: top;
+		padding-left: 20px;
+		margin: 0;
+
+	}
+
+	#specialli{
+		background-color: #47B27B; 
+		color: white;
+
+	}
+
+	#defcnds{
+		color: #47B27B;
+		font-size: 12px;
+		position: relative;
+		bottom: 20px;
+		left: 320px;
+		width: 415px;
+		margin: -20px 0 0 0;
+		font-weight: 300;
+
+	}
+
+	#info3 li{
+		list-style-type: none;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+		width: 120px;
+		margin: -20px 0 20px 0;
+		display: inline-block;
+		padding: 0;
+		font-size: 12px;
+	}
+
+	#info3 svg{
+		margin-bottom: 0px;
+	}
+
+	#cnds ul{
+		margin: 0;
+		display: inline-block;
+	}
+
+
+	#svgmal{
+		margin-bottom: -500px;
+	}
+
+	#departementstaps h6{
+		font-size: 14px;
+		color: #47B27B;
+		text-transform: uppercase;
+
+	}
+
+	#sauvetage{
+		width: 400px;
+	}
+

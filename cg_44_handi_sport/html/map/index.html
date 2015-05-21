@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+		<meta charset="UTF-8" />
+		
+		<title>Offre de pratique sportive pour les personnes en situation de handicap dans le 44</title>
+		
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+   		<link rel="stylesheet" href="css/design.css" />
+    	<link rel="stylesheet" href="css/design1.css" />
+		<link rel="stylesheet" href="css/sidebar.css" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>		
+
+	
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  		<script type="text/javascript" src="http://matchingnotes.com/javascripts/leaflet-google.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="bower_components/leaflet_plugin/kml.js"></script> 
+		<script type="text/javascript" src="js/dataroulette.js">
+
+	    </script>
+	</head>
+	
+	<body>
+    	<div id="wrapper1" class="wrapper toggled">
+
+			<div id="sidebar-wrapper-1" class="sidebar-wrapper">
+				<div id=filtre>
+					<h1 id="calque1p" onclick="updateCalqueClub(true)" class="calqueActivated" >Offre des Clubs Sportifs</h1> 
+					<div class="separator"></div><div class="separator2"></div>
+					
+					Type de club
+          			<div class="toggle_radio_type">
+			            <input type="radio" class="toggle_option" id="type_club_1" name="type_club" onchange="updateFiltreClub()" value="Tous" checked>
+			            <input type="radio" class="toggle_option" id="type_club_2" name="type_club" onchange="updateFiltreClub()" value="HANDISPORT">
+			            <input type="radio" class="toggle_option" id="type_club_3" name="type_club" onchange="updateFiltreClub()" value="SPORT ADAPTÉ">
+			            <input type="radio" class="toggle_option" id="type_club_4" name="type_club" onchange="updateFiltreClub()" value="LES DEUX">
+			            
+			            <label for="type_club_1"><p>Tous</p></label>
+			            <label for="type_club_2"><p>Handisport</p></label>
+			            <label for="type_club_3"><p>Sport Adapté</p></label>
+			            <label for="type_club_4"><p>Les deux</p></label>
+			            
+			            <div class="toggle_option_slider_type">
+			            </div>
+			        </div>
+
+					Accueil
+          			<div class="toggle_radio_accueil">
+          				
+			            <input type="radio" class="toggle_option" id="accueil_club_1" name="accueil_club" onchange="updateFiltreClub()" value="Tous" checked>
+			            <input type="radio" class="toggle_option" id="accueil_club_2" name="accueil_club" onchange="updateFiltreClub()" value="RÉGULIER">
+			            <input type="radio" class="toggle_option" id="accueil_club_3" name="accueil_club" onchange="updateFiltreClub()" value="PEUT ACCUEILLIR">
+			            <input type="radio" class="toggle_option" id="accueil_club_4" name="accueil_club" onchange="updateFiltreClub()" value="PONCTUEL">
+			            
+			            <label for="accueil_club_1"><p>Tous</p></label>
+			            <label for="accueil_club_2"><p>Régulier</p></label>
+			            <label for="accueil_club_3"><p>Peut accueillir</p></label>
+			            <label for="accueil_club_4"><p>Ponctuel</p></label>
+			            
+			            <div class="toggle_option_slider_accueil">
+			            </div>
+			        </div>
+
+					Handiguide
+          			<div class="toggle_radio_handi">
+          				
+			            <input type="radio" class="toggle_option" id="handi_club_1" name="handi_club" onchange="updateFiltreClub()" value="TOUS" checked>
+			            <input type="radio" class="toggle_option" id="handi_club_2" name="handi_club" onchange="updateFiltreClub()" value="OUI">
+			            <input type="radio" class="toggle_option" id="handi_club_3" name="handi_club" onchange="updateFiltreClub()" value="NON">
+			            
+			            <label for="handi_club_1"><p>Tous</p></label>
+			            <label for="handi_club_2"><p>Oui</p></label>
+			            <label for="handi_club_3"><p>Non</p></label>
+			            
+			            <div class="toggle_option_slider_handi">
+			            </div>
+			        </div>
+
+					Catégorie de sport
+					<select id="categorie_club" onchange="updateFiltreClub()" disabled>
+						<option value="Tous" >Tous</option>	
+						<option value="ATHLÉTISME" >Athletisme</option>
+						<option value="AUTRES SPORTS">Autres Sports</option>
+						<option value="CYCLE ET SPORTS MÉCANIQUES">Cycle Et Sports Mécaniques</option>
+						<option value="FITNESS ET ACTIVITÉS GYMNIQUES">Fitness Et Activites Gymniques</option>
+						<option value="NATATION">Natation</option>
+						<option value="SPORTS COLLECTIFS">Sports Collectifs</option>
+						<option value="SPORTS DE COMBAT">Sports De Combat</option>
+						<option value="SPORTS DE NATURE">Sports De Nature</option>
+						<option value="SPORTS DE PRÉCISIONS">Sports De Precisions</option>
+						<option value="SPORTS DE RAQUETTES">Sports De Raquettes</option>
+					</select>				
+					<div class="separator"></div>
+					<h1 id="calque2p" onclick="updateCalqueConseil()" class="calqueActivated">Offre du Conseil Général 44</h1> 
+					<div class="separator"></div>
+					<h1 id="calque3p" onclick="updateCalqueEtablissements(true)" class="calqueActivated">Établissements spécialisés</h1> 
+					<div class="separator"></div><div class="separator2"></div>
+
+					Population
+          			<div class="toggle_radio_pop">
+          				
+			            <input type="radio" class="toggle_option" id="pop_etab_1" name="pop_etab" onchange="updateFiltreEtablissement()" value="TOUS" checked>
+			            <input type="radio" class="toggle_option" id="pop_etab_2" name="pop_etab" onchange="updateFiltreEtablissement()" value="JEUNES">
+			            <input type="radio" class="toggle_option" id="pop_etab_3" name="pop_etab" onchange="updateFiltreEtablissement()" value="ADULTES">
+			            
+			            <label for="pop_etab_1"><p>Tous</p></label>
+			            <label for="pop_etab_2"><p>Jeunes</p></label>
+			            <label for="pop_etab_3"><p>Adultes</p></label>
+			            
+			            <div class="toggle_option_slider_pop">
+			            </div>
+			        </div>
+			        
+					Accueil
+          			<div class="toggle_radio_accueil_etab">
+          				
+			            <input type="radio" class="toggle_option" id="accueil_etab_1" name="accueil_etab" onchange="updateFiltreEtablissement()" value="TOUS" checked>
+			            <input type="radio" class="toggle_option" id="accueil_etab_2" name="accueil_etab" onchange="updateFiltreEtablissement()" value="JOURNEE">
+			            <input type="radio" class="toggle_option" id="accueil_etab_3" name="accueil_etab" onchange="updateFiltreEtablissement()" value="JOURNEE/NUIT">
+			            
+			            <label for="accueil_etab_1"><p>Tous</p></label>
+			            <label for="accueil_etab_2"><p>Journée</p></label>
+			            <label for="accueil_etab_3"><p>Journée / Nuit</p></label>
+			            
+			            <div class="toggle_option_slider_accueil_etab">
+			            </div>
+			        </div>			        
+		
+				</div>	
+			</div>	
+		</div>	
+		
+		<div id="wrapper2" class="wrapper toggled">
+			<div id="sidebar-wrapper-2" class="sidebar-wrapper">	  	
+		  		<div id="legende">
+					<h1>Établissements Sportifs</h1> 
+					<div class="separator"></div>
+		  			<div id ="containerlegendeTailleClub" class="containerlegende">
+			  			<div class="contentLegende contentLegendeTailleClub">
+			  				<img src="img/icon_map/legend_club_grand.png" alt="Test"/> 
+			  				<p>Accueil régulier</p>
+			  			</div>
+			  			<div class="contentLegende contentLegendeTailleClub">
+			  				<img src="img/icon_map/legend_club_moyen.png" alt="Test"/>
+			  				<p>Peut accueillir</p>
+			  			</div>
+			  			<div class="contentLegende contentLegendeTailleClub">
+			  				<img src="img/icon_map/legend_club_petit.png" alt="Test"/>
+			  				<p>Accueil ponctuel</p>
+			  			</div>
+		  			</div>
+  					<div class="separator"></div>
+					<div id ="containerlegendeTypeClub">
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_bleuf_grand.png" alt="Test"/> 
+			  				<p> Sports collectifs</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_orange_grand.png" alt="Test"/> 
+			  				<p> Sports de précision</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_vertf_grand.png" alt="Test"/> 
+			  				<p> Athlétisme</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_jaune_grand.png" alt="Test"/> 
+			  				<p> Sports de raquette</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_rose_grand.png" alt="Test"/> 
+			  				<p> Sports mécaniques</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_rouge_grand.png" alt="Test"/> 
+			  				<p> Sports de combat</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_noir_grand.png" alt="Test"/> 
+			  				<p> Fitness & Gym</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_vertc_grand.png" alt="Test"/> 
+			  				<p> Sports de nature</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_bleuc_grand.png" alt="Test"/> 
+			  				<p> Natation</p>
+  						</div>
+  						<div class="contentTypeClub">
+  							<img src="img/icon_map/clubs/club_entier_violet_grand.png" alt="Test"/> 
+			  				<p> Autres sports</p>
+  						</div>
+  					</div>
+					<div class="separator"></div>
+  					<h1>Établissements spécialisés</h1> 
+  					<div id ="containerlegendeEtablissementSpecialise" class="containerlegende">
+  						<div class="contentLegende contentLegendeEtablissementSpecialise">
+			  				<img src="img/icon_map/etablissements/etab_triangle_petit.png" alt="Test"/> 
+			  				<p>Accueil de jour</p>
+			  			</div>
+			  			<div class="contentLegende contentLegendeEtablissementSpecialise">
+			  				<img src="img/icon_map/etablissements/etab_triangle_grand.png" alt="Test"/> 
+			  				<p>Accueil J + Nuit</p>
+			  			</div>
+		  			</div>
+  					<div class="separator"></div>
+				</div>
+			 </div>
+		</div>
+		
+		<div id="wrapper3" class="wrapper toggled">
+			<div id="sidebar-wrapper-3" class="sidebar-wrapper">	  	
+		  		<div id="show">
+		  			<h1 id='title_show'></h1>
+		  			<div class="separator"></div>
+		  			<p id='adress_show'></p>
+				  	<div class="separator"></div>
+				  	<p id='accueil_show'></p>
+				  	<p id='type_show'></p>
+		  			<div class="separator"></div>
+		  			<p id='discipline_show'></p>
+		  			<p id='cat_show'></p>
+				 	<div class="separator"></div>
+		  			<p id='affil_show'></p>
+		  			<p id='cnds_show'></p>
+		  			<div class="separator"></div>
+		  			<p id='nb_show'></p>
+					<br>
+					<img id='handi_show'/>
+				  	<br>
+				  	<img src='img/boutton_close.png' href="#menu-toggle-3" id="menu-toggle-3"/>
+				  	
+				</div>
+			 </div>
+		</div>
+		
+		<div id="wrapper4">
+	        <div id="page-content-wrapper">
+				<div id="header">
+					<div id="contentHeaderWrapper4">
+						<span id="title"><strong>Data</strong>Roulette</span>
+						<span id="name_show"></span>
+						<a href="#menu-toggle-1" id="menu-toggle-1" class="boutonMenu">Affichage</a>
+						<a href="#menu-toggle-2" id="menu-toggle-2" class="boutonMenu">Légende</a>
+						
+					</div>
+				</div>
+	  			<div id="map"></div>
+			</div>
+		</div>
+
+	    <script type="text/javascript" >
+		    $("#menu-toggle-1").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper1").toggleClass("toggled");
+		        $("#wrapper2").toggleClass("toggled",true);
+		        $("#wrapper3").toggleClass("toggled",true);
+		    });
+
+	    	$("#menu-toggle-2").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper1").toggleClass("toggled",true);
+		        $("#wrapper2").toggleClass("toggled");
+		        $("#wrapper3").toggleClass("toggled",true);
+		    });
+
+	    	$("#menu-toggle-3").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper1").toggleClass("toggled",true);
+		        $("#wrapper2").toggleClass("toggled",true);
+		        $("#wrapper3").toggleClass("toggled",true);
+		    });
+
+	    	$("#dataroulette").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper1").toggleClass("toggled",true);
+		        $("#wrapper2").toggleClass("toggled",true);
+		        $("#wrapper3").toggleClass("toggled",true);
+		    });
+	  	</script>  
+	  	
+	</body>
+</html>
+
