@@ -28,7 +28,6 @@
     "angular-chart.js": "~0.7.1",
     "animate.css": "~3.2.6",
     "wow.js": "~1.1.2",
-    "fartscroll": "*",
     "ngFitText": "~3.3.3"
   }
 }
