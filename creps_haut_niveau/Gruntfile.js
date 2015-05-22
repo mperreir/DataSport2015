@@ -38,7 +38,8 @@ module.exports = function(grunt){
     jshint: {
       options: {
         jshintrc: true
-      }
+      },
+      files: ['src/**/*.js', '!src/bower_components/**/*', '!src/assets/**/*', 'server.js']
     },
 
     less: {

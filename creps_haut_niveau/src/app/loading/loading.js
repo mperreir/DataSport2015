@@ -15,7 +15,7 @@
    * 
    * @return {Controller}
    */
-  .controller('LoadingCtrl', ['$q', '$state', 'Data', function($q, $state, Data){
+  .controller('LoadingCtrl', ['$q', '$state', '$timeout', 'Data', function($q, $state, $timeout, Data){
     var allP = [];
     allP.push(Data.getRegionInfo());
     allP.push(Data.getDepartementsInfo());
@@ -24,9 +24,9 @@
 
     $q.all(allP)
     .then(function(){
-      setTimeout(function(){
+      $timeout(function(){
         $state.go('running');
       }, 500);
-    })
+    });
   }]);
 })();

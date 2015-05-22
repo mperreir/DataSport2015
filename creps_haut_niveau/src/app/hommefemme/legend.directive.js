@@ -1,4 +1,4 @@
-(function(){
+(function($){
   'use strict';
 
   angular.module('hyblab.creps')
@@ -37,7 +37,7 @@
               .css('text-align', 'right');
           }
         }
-        else if(i == max){
+        else if(i === max){
           if(orientation === 'left'){
             div.css('width', width / 2 + '%')
               .css('text-align', 'right');
@@ -56,4 +56,4 @@
       }
     };
   }]);
-})();
+})(jQuery);

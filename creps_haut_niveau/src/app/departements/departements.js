@@ -74,6 +74,6 @@
           $listes.addClass('flipInX');
         });
       }
-    }
+    };
   }]);
 })();

@@ -24,11 +24,11 @@
     var maxSportEspoirs = 0;
     var maxSportHautNiveau = 0;
     sports.forEach(function(sport){
-      if(sport.espoirs.males > maxSportEspoirs) maxSportEspoirs = sport.espoirs.males;
-      if(sport.espoirs.females > maxSportEspoirs) maxSportEspoirs = sport.espoirs.females;
+      if(sport.espoirs.males > maxSportEspoirs) { maxSportEspoirs = sport.espoirs.males; }
+      if(sport.espoirs.females > maxSportEspoirs) { maxSportEspoirs = sport.espoirs.females; }
 
-      if(sport.hautNiveau.males > maxSportHautNiveau) maxSportHautNiveau = sport.hautNiveau.males;
-      if(sport.hautNiveau.females > maxSportHautNiveau) maxSportHautNiveau = sport.hautNiveau.females;
+      if(sport.hautNiveau.males > maxSportHautNiveau) { maxSportHautNiveau = sport.hautNiveau.males; }
+      if(sport.hautNiveau.females > maxSportHautNiveau) { maxSportHautNiveau = sport.hautNiveau.females; }
     });
 
     vm.maxCategory = (maxSportEspoirs > maxSportHautNiveau) ? maxSportEspoirs : maxSportHautNiveau;
