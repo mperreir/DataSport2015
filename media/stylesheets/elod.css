@@ -1,0 +1,34 @@
+/*===================================================
+   MIT Liscence
+   Charles Peinet - Interaction design
+   http://www.charles-perinet.fr/
+   charles.perinet@gmail.com
+====================================================*/
+/* line 11, ../sass/elod.scss */
+.row {
+  *zoom: 1;
+  display: block;
+  position: relative;
+  margin: -5px;
+  width: 100%;
+  overflow-x: hidden;
+  clear: both;
+}
+/* line 12, ../sass/elod.scss */
+.row:before, .row:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 18, ../sass/elod.scss */
+.row:after {
+  clear: both;
+}
+
+/* line 36, ../sass/elod.scss */
+.col {
+  float: left;
+  padding: 15px;
+  zoom: 1;
+}
