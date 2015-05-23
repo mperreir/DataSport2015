@@ -1,0 +1,34 @@
+{
+  "name": "creps_haut_niveau",
+  "version": "1.0.0",
+  "homepage": "https://github.com/antoinechalifour/DataSport2015",
+  "authors": [
+    "Antoine Chalifour <antoine.chalifour@gmail.com>",
+    "Tom Dupisre <tom.dupisre@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "flexboxgrid": "~6.1.1",
+    "angular": "~1.3.15",
+    "fullpage": "~2.6.5",
+    "angular-chartist.js": "~3.1.1",
+    "angular-ui-router": "~0.2.14",
+    "loaders.css": "~0.1.1",
+    "angular-tooltips": "~0.1.9",
+    "semantic-ui-icon": "~1.12.1",
+    "angular-count-to": "*",
+    "angular-chart.js": "~0.7.1",
+    "animate.css": "~3.2.6",
+    "wow.js": "~1.1.2",
+    "fartscroll": "*",
+    "ngFitText": "~3.3.3"
+  }
+}

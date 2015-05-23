@@ -1,0 +1,113 @@
+<div id="region">
+	<div class="section--wrapper">
+		<div class="row m0">
+			<div class="title--section">
+				<span class="title--big">Les pays de la Loire, c'est :</span>
+			</div>	
+		</div>
+
+		<div class="row center-xs title--nb--licence m0">
+			<div class="col-xs-12">
+				<div>
+					<span class="nblicence" count-to="{{valuetotal}}" value="0" duration="2.3"></span>
+					<span class="licence"> Licenciés </span>
+				</div>
+			</div>
+		</div>
+		<div id="comphf" class="row comphf--style m0">
+			<div class="col-xs-6">
+				<div class="row">
+					<div class="col-xs-11">
+						<div>
+							<div class="bar--right" creps-bar type="male" value="646380" max="1026000"></div>
+							<p class="bar--label--pourhomme"> <span count-to="{{counthomme}}" value="0" duration="1.5"></span>%<p>
+						</div>
+						<div class="bar--label--homme">646380 Hommes</div>
+					</div>
+					<div class="col-xs-1">
+						<i class="male icon icon--male small--hide"> </i>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="row">
+					<div class="col-xs-1">
+						<i class="female icon icon--female small--hide"> </i>
+					</div>
+					<div class="col-xs-11">
+						<div>
+						 	<div class="bar--left" creps-bar type="female" value="379620" max="1026000"></div>
+						 	<p class="bar--label--pourfemme"> <span count-to="{{countfemme}}" value="0" duration="1.5"></span>%<p>
+						</div>
+						<div class="bar--label--femme">379620 Femmes</div>
+					</div>
+				</div>
+			</div>
+			<div class="title--section mb0">
+				<span class="title--enormous">Et en haut niveau ?</span>
+			</div>	
+		</div>
+	</div>
+	
+	<div id="bandeau" class="bandeau--style center-xs">
+		<div class="row middle-xs bandeau--top m0">
+			<div class="col-xs-6 col-sm-1">
+				<div>
+					<img class="svg--region" src="assets/img/region.svg"></img>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-2">
+
+				<span class="bandeau--nb medium" count-to="{{sportifsListes}}" value="0" duration="3"></span>
+				<div><p class="bandeau--legend">Sportifs sur listes</p></div>
+			</div>
+			<div class="col-xs-6 col-sm-1 small--hide">
+				<p class="bandeau--bigger"> = <p>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+			    <span class="bandeau--nb big" count-to="{{hautNiveau}}" value="0" duration="3"></span>
+			   <div><p class="bandeau--legend text--bigger">Haut Niveau</p></div>
+			</div>
+			<div class="col-xs-6 col-sm-1 small--hide">
+				<p class="bandeau--bigger"> + <p>
+			</div>
+			<div class="col-xs-4 col-sm-2">			
+				<span class="bandeau--nb medium" count-to="{{espoirs}}" value="0" duration="3"></span>
+				<div><p class="bandeau--legend">Espoirs</p></div>
+			</div>
+			<div class="col-xs-6 col-sm-1 small--hide">
+				<p class="bandeau--bigger"> + <p>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<span class="bandeau--nb small" count-to="{{partenaires}}" value="0" duration="3"></span>
+				<div><p class="bandeau--legend">Partenaires d'entrainement <br /> Reconversions</p></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section--wrapper pt0">
+		<div class="row center-xs">
+			<div class="col-xs-12 col-sm-8 text--explic">
+				<p class="mb0">Aujourd'hui, en Pays de la Loire, le sport le plus représenté au sein des sportifs listés (HN et Espoirs) est la voile. Cette domination atypique est notamment liée à la proximité de la côte Atlantique et à la qualité des infrastructures.</p>
+				<p>La proportion des moins de 18 ans Espoirs est plus importante que celle des moins de 18 ans de Haut Niveau et la différence est notable. A l'inverse, lorsque l'on passe du côté des sportifs majeurs listés, la balance est plus équilibrée.</p>
+			</div>
+		</div>
+		<div class="row center-xs bottom-xs graphs--style m0">
+			<div class="col-xs-6">
+				<div>
+				<div class="pie--wrapper">
+					<canvas id="dough" class="chart chart-doughnut dough--style" data="doughdata" labels="doughlabels" colours = "doughcolours" options="doughoptions" legend="true">
+		 			</canvas> 
+					<p class="title--doughnut">Listés en Pays de la Loire</p>
+				</div>
+			</div>
+	 		</div>
+	 		<div class="col-xs-6">
+	 			<div>
+	 				<img src="assets/img/podium.svg" class="svg--podium"></img>
+					<p class="title--svg">Les sports les plus pratiqués à Haut Niveau</p>
+	 			</div>
+	 		</div>
+		</div>
+	</div>
+</div>

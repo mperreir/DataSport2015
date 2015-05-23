@@ -1,0 +1,182 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#map {
+    position:absolute;
+    z-index:1;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;    
+}
+
+#header {
+    position: relative;
+    z-index:2;
+    width: 100%;
+    height: 80px;
+    left : 0px;
+    top:0px;
+}
+
+#contentHeaderWrapper4 {
+    height: 100%;
+    line-height: 80px;
+    background-color : #47b27b;
+    /*box-shadow: 3px 3px 5px #7C7C7C;*/
+    
+    -moz-box-shadow: -1px 1px 5px 0px #7C7C7C;
+    -webkit-box-shadow: -1px 1px 5px 0px #7C7C7C;
+    -o-box-shadow: -1px 1px 5px 0px #7C7C7C;
+    box-shadow: -1px 1px 5px 0px #7C7C7C;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#7C7C7C, Direction=224, Strength=10);
+    
+    border-bottom-left-radius: 15px;
+    margin-left : 45px;
+}
+
+#title {
+    margin : 0 3%;
+    color: white;
+    font-size:40px;
+    font-family: 'Lato', sans-serif;
+}
+
+.boutonMenu {
+    padding : 0 5%;
+    color: white;
+    font-size:20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    top: -6px;
+}
+
+.boutonMenu:hover, .boutonMenu:focus{
+    top: -8px;
+    color: white;
+    text-decoration: none;
+    background-color: #3F9B9A;
+}
+
+#name_show{
+    position: absolute;
+    padding-right: 20px;
+    color: #FFF;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    right: 0;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+h1{
+    padding-left:6%;
+    font-size : 16px;
+    color : #47b27b;
+    font-weight: bold;    
+}
+
+.calqueNonActivated{
+     text-decoration: line-through;
+     color : #949494;
+}
+
+.calqueActivated{
+     color : #41a56d;
+     font-weight: bold;
+}
+
+/*Wrapper 3 */
+#show {
+    color : red;
+    padding-left:2%;
+    padding-right :2%;    
+}
+
+#show p{
+    padding-left:4%;
+    padding-right :4%; 
+    color : #767575;
+}
+
+#show img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#filtre {
+    color : #515151;
+    padding-left:4%;
+    padding-right :4%;
+}
+
+#filtre h1:hover {
+    cursor :pointer;
+}
+
+#legende {
+    color : #666666;
+    padding-left:2%;
+    padding-right :2%;
+}
+
+#title_show {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color : #3FB69A;
+}
+.separator {
+    margin: auto;
+    width:  85%;
+    height: 1px;
+    background-color: #bdbcbc;
+    margin-bottom : 8px;
+}
+.separator2 {
+    height: 20px;
+}
+
+
+.containerlegende {
+    white-space: nowrap;
+}
+.contentLegende {
+    white-space: normal;
+    display: inline-block;
+    text-align: center;
+}
+.contentLegendeTailleClub {
+    width: 33%;
+}
+.contentLegende img{
+    width: 26px;
+    height: 26px;
+    margin: 10px 10px;
+}
+
+.contentLegendeEtablissementSpecialise {
+    width: 50%;
+}
+.contentTypeClub {
+    display: inline-block;
+    width: 48%;
+    padding: 10px 0;
+}
+
+.contentTypeClub img {
+    float: left;
+}
+
+#containerlegendeTypeClub {
+    width: 85%;
+    margin: 0 auto;
+}

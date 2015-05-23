@@ -1,0 +1,85 @@
+@import (less) '../core/less/_palette.less';
+
+#introduction {
+  background: url(assets/img/cover.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #232835;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 50;
+  }
+
+  .intro--content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .title--text {
+    font-family: 'Cassannet', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: -0.5rem;
+    margin-top: -0.3rem;
+  }
+
+  .title--sep {
+    font-family: 'Rawengulk';
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .title--sep {
+    margin: auto;
+    overflow: hidden;
+    width: 60%;
+    margin-bottom: 0.5rem;
+  }
+
+  .title--sep:before {
+    content:"";
+    display: inline-block;
+    height: 1.5rem;
+    vertical-align: bottom;
+    width: 100%;
+    margin-left: -100%;
+    margin-right: 10px;
+    border-top: 1px solid @white;
+  }
+
+  .title--sep:after {
+    content:"";
+    display: inline-block;
+    height: 1.5rem;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid @white;
+  }
+}

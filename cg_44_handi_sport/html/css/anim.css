@@ -1,0 +1,44 @@
+
+		#anim{
+/* nomAnim tpAnim nbBoucle Tplancement */
+	 -webkit-animation: test 3s infinite 0s;
+        -moz-animation: test 3s infinite 2s;
+         -ms-animation: test 3s infinite 2s;
+          -o-animation: test 3s infinite 2s;
+             animation: test 3s infinite 2s;
+}
+
+ @-webkit-keyframes test{
+ 			 from {     opacity: 0;
+    					filter: alpha(opacity=0);
+    					padding-top: -25px;}
+		     45%  {     opacity: 0.9;
+    					filter: alpha(opacity=90); }
+		     to   {     opacity: 0;
+    					filter: alpha(opacity=0);
+    					padding-top: 50px; } } 
+
+    @-moz-keyframes test{   from {      opacity: 0;
+    					filter: alpha(opacity=0); }
+		     45%  {     opacity: 0.9;
+    					filter: alpha(opacity=90); }
+		     to   {     opacity: 0;
+    					filter: alpha(opacity=0); } } 
+     @-ms-keyframes test{   from {     opacity: 0;
+    					filter: alpha(opacity=0); }
+		     45%  {     opacity: 0.9;
+    					filter: alpha(opacity=90); }
+		     to   {     opacity: 0;
+    					filter: alpha(opacity=0); } } 
+      @-o-keyframes test{   from {      opacity: 0;
+    					filter: alpha(opacity=0); }
+		     45%  {     opacity: 0.9;
+    					filter: alpha(opacity=90); }
+		     to   {     opacity: 0;
+    					filter: alpha(opacity=0); }  } 
+         @keyframes test{   from {      opacity: 0;
+    					filter: alpha(opacity=0); }
+		     45%  {     opacity: 0.9;
+    					filter: alpha(opacity=90); }
+		     to   {     opacity: 0;
+    					filter: alpha(opacity=0); } } 

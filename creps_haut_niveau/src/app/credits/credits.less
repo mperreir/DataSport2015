@@ -1,0 +1,94 @@
+@import (less) '../core/less/_palette.less';
+
+#credits {
+  background-color: @white;
+  color: @dark;
+  text-align: center;
+
+  .credit--person {
+    padding: @sep;
+
+    &:hover {
+      .credit--avatar {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        filter: grayscale(0%);
+        filter: gray; 
+        -webkit-filter: grayscale(0%);
+        filter: none;
+        transition: 0.4s ease;
+      }
+    }
+  }
+
+  .credit--avatar {
+    border-radius: 50%;
+    width: 40%;
+    height: auto;
+    transition: box-shadow 0.4s;
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%); 
+    -webkit-transition: filter 0.4s ease; 
+  }
+  
+  .credit--label {
+    text-align: center;
+    margin: 0;
+  }
+
+  .credit--name {
+    font-size: 1.2em;
+  }
+
+  #bandeau {
+      padding: 8px;
+    }
+
+    #bandeau li{
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+
+
+    #bandeau img{
+      height: 64px;
+    }
+
+    #bandeau #datasport{
+      margin: 20px 0;
+      height: 135px;
+      float: left;
+    }
+
+    #bandeau ul{
+      text-align: center;
+    }
+
+    #bandeau .institutionnel
+    {
+      height: 48px;
+    } 
+
+    .bandeau
+    {
+      padding-bottom: 30px;
+      padding-left: 50px;
+      padding-right: 50px;
+      img{
+        max-height:60px;
+        max-width: auto;
+      }
+    }
+
+    .bandeau--bigger
+     {
+      padding-bottom: 15px;
+      img{
+        max-height:80px;
+        max-width: auto;
+      }
+    }
+
+    
+}

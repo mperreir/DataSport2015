@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="hyblab.creps">
+<head>
+  <meta name="viewport" 
+  content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#232835">
+  <meta charset="UTF-8">
+  <title>CREPS, sport à haut niveau</title>
+
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,200italic,300italic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css"> 
+
+
+  <!-- build:css app.css -->
+  <link rel="stylesheet" type="text/css" href="bower_components/semantic-ui-icon/icon.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/flexboxgrid/dist/flexboxgrid.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/loaders.css/loaders.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/chartist/dist/chartist.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-tooltips/dist/angular-tooltips.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-chart.js/dist/angular-chart.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="assets/jvectormap/jquery-jvectormap-2.0.2.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div ui-view></div>
+
+  <!-- build:js app.js -->
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/wow.js/dist/wow.min.js"></script>
+  <script type="text/javascript" src="assets/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+  <script type="text/javascript" src="assets/jvectormap/mapData.js"></script>
+  <script type="text/javascript" src="bower_components/fartscroll/fartscroll.js"></script>
+  <script type="text/javascript" src="bower_components/Chart.js/Chart.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-count-to/src/count-to.js"></script>
+  <script type="text/javascript" src="bower_components/angular-tooltips/dist/angular-tooltips.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-chartist.js/dist/angular-chartist.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+  <script type="text/javascript" src="bower_components/ngFitText/src/ng-FitText.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      new WOW().init();
+      //fartscroll();
+    });
+  </script>
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/core/data.service.js"></script>
+  <script type="text/javascript" src="app/loading/loading.js"></script>
+  <script type="text/javascript" src="app/introduction/introduction.js"></script>
+  <script type="text/javascript" src="app/description/description.js"></script>
+  <script type="text/javascript" src="app/region/region.js"></script>
+  <script type="text/javascript" src="app/departements/departements.js"></script>
+  <script type="text/javascript" src="app/departements/jvectormap.directive.js"></script>
+  <script type="text/javascript" src="app/hommefemme/hommefemme.js"></script>
+  <script type="text/javascript" src="app/hommefemme/bar.directive.js"></script>
+  <script type="text/javascript" src="app/hommefemme/legend.directive.js"></script>
+  <script type="text/javascript" src="app/credits/credits.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

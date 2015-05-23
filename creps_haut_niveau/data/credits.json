@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Amélie Pouillade",
+    "img": "assets/img/credits/amélie.jpg",
+    "school": "STAPS"
+  },
+  {
+    "name": "Manon Daguin",
+    "img": "assets/img/credits/manon.jpg",
+    "school": "STAPS"
+  },
+  {
+    "name": "Fanny Tourancheau",
+    "img": "assets/img/credits/fanny.jpg",
+    "school": "STAPS"
+  },
+  {
+    "name": "Pauline Roussel",
+    "img": "assets/img/credits/pauline.jpg",
+    "school": "STAPS"
+  },
+  {
+    "name": "Fabien Mahé",
+    "img": "assets/img/credits/fabien.jpg",
+    "school": "Ecole de Design Nantes Atlantique"
+  },
+  {
+    "name": "Adrien Frey",
+    "img": "assets/img/credits/adrien.jpg",
+    "school": "Ecole de Design Nantes Atlantique"
+  },
+  {
+    "name": "Tom Dupisre",
+    "img": "assets/img/credits/tom.jpg",
+    "school": "Polytech Nantes"
+  }, 
+  {
+    "name": "Antoine Chalifour",
+    "img": "assets/img/credits/antoine.jpg",
+    "school": "Polytech Nantes"
+  },
+  {
+    "name": "Jean Michel Eon",
+    "img": "assets/img/credits/jeanmichel.jpg",
+    "school": "Responsable Haut Niveau au Creps"
+  }
+]

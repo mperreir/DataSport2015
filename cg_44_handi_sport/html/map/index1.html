@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+		<meta charset="UTF-8" />
+		
+		<title>Hyblab</title>
+		
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    	<link rel="stylesheet" href="css/design.css" />
+		<link rel="stylesheet" href="css/sidebar.css" />
+		
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  		<script type="text/javascript" src="http://matchingnotes.com/javascripts/leaflet-google.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		
+		<script type="text/javascript" src="bower_components/leaflet_plugin/kml.js"></script> 
+   
+		<script type="text/javascript">
+	  		var map;
+	  		var tabMarkerClub = [];
+	  		var tabMarkerConseil = [];
+	  		var tabMarkerEtablissement = [];
+	  		
+	  		var clubActivated = false;
+	  		var conseilActivated = false;
+	  		var etabActivated = false;
+	  		
+	  		
+	  		function initialisation(){
+	  
+	  			map = L.map('map').setView([47.0797861, -2.0388789], 8);
+	        	
+	  			L.tileLayer('https://{s}.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={token}', {
+	  				maxZoom: 18,
+	  				attribution: 'Hyblab2015',
+	  				id: 'wicey.a7b0541c',
+	  				token: 'pk.eyJ1Ijoid2ljZXkiLCJhIjoiNHdmYkY1USJ9.nkVYKTEjvWAt9p7u6TBI1A#9'
+	  			}).addTo(map);
+	        	
+	        	var kmlLayer = new L.KML("./44.kml", {async: true});
+	                                                              
+		         kmlLayer.on("loaded", function(e) { 
+		            map.fitBounds(e.target.getBounds());
+		         });
+		                                                
+		         map.addLayer(kmlLayer);
+	        	
+	        	updateCalqueClub(true);
+	        	updateCalqueConseil();
+	        	updateCalqueEtablissements(true);
+	  		}
+	  			
+	  		function updateCalqueClub(activated){
+	  		  if (activated) clubActivated = !clubActivated;
+	  		  if(clubActivated){
+	  		  	  $('#calque1p').attr('class', 'calqueActivated'); 		
+		          var req = new XMLHttpRequest();
+		        	req.open("GET", "data/dataClub.json", true); 
+		        	req.onreadystatechange = addDataClubHandler;   // the handler 
+		        	req.send(null); 
+		         
+		        	function addDataClubHandler() 
+		        	{ 
+		        	   if (req.readyState == 4) 
+		        	   { 
+		        	      	var doc = eval('(' + req.responseText + ')'); 
+							addDataClub(doc);
+		        	   }
+		        	}
+		        	disableFiltresClubs(false);
+		  		  }
+	  		  
+		      else{	
+		      		$('#calque1p').attr('class', 'calqueNonActivated'); 	
+		        	removeDataClub();
+		        	disableFiltresClubs(true);
+		  		  }
+	  		}	
+	
+	      function updateCalqueConseil(){
+	  		  conseilActivated = !conseilActivated;
+	  		  if(conseilActivated){
+	  		   $('#calque2p').attr('class', 'calqueActivated');
+	          var req = new XMLHttpRequest();
+	        	req.open("GET", "data/dataConseilGeneral.json", true); 
+	        	req.onreadystatechange = addDataConseilHandler;   // the handler 
+	        	req.send(null); 
+	         
+	        	function addDataConseilHandler() 
+	        	{ 
+	        	   if (req.readyState == 4) 
+	        	   { 
+	        	      var doc = eval('(' + req.responseText + ')'); 
+					  addDataConseil(doc);
+	        	   }
+	        	}
+	  		  }
+	        	
+	        else {	
+	        	$('#calque2p').attr('class', 'calqueNonActivated'); 
+	        	removeDataConseil();
+	  		  }
+	  		}	
+	  		
+	  		function updateCalqueEtablissements(activated){
+	  		  if (activated) etabActivated = !etabActivated;
+	  		  if(etabActivated){
+	  		   $('#calque3p').attr('class', 'calqueActivated');
+	          var req = new XMLHttpRequest();
+	        	req.open("GET", "data/dataEtablissement.json", true); 
+	        	req.onreadystatechange = addDataEtablissementHandler;   // the handler 
+	        	req.send(null); 
+	         
+	        	function addDataEtablissementHandler() 
+	        	{ 
+	        	   if (req.readyState == 4) 
+	        	   { 
+	        	      var doc = eval('(' + req.responseText + ')'); 
+					  addDataEtablissement(doc);
+	        	   }
+	        	}
+	        	disableFiltresEtablissements(false);
+	  		  }
+	        	
+	        else{	
+	        	$('#calque3p').attr('class', 'calqueNonActivated'); 
+	        	removeDataEtablissement();
+	        	disableFiltresEtablissements(true);
+	  		  }
+	  		}	
+	  		
+	  		function addDataClub(doc){
+	  			
+		  		var filtreClubType = (function(row){ 
+					var type = document.getElementById('type_club').value;
+					var type_data = row.Type || 'null';
+					if(type == "Tous") return 1;
+				    return (type_data == type); 
+	
+				});  
+				
+		  		var filtreClubAccueil = (function(row){ 
+					var accueil = document.getElementById('accueil_club').value;
+					var accueil_data = row.Accueil || 'null';
+					if(accueil == "Tous") return 1;
+					return (accueil_data == accueil); 
+				});  			
+	  			
+		  		var filtreClubHandi = (function(row){ 
+					var handi = document.getElementById('handi_club').value;
+					var handi_data = row.Handiguide || 'null';
+					if(handi == "Tous") return 1;
+					return (handi_data == handi);
+				});  	
+				
+				var filtreClubCategorie = (function(row){ 
+					var categorie = document.getElementById('categorie_club').value;
+					var categorie_data = row.Categorie || 'null';
+					if(categorie == "Tous") return 1;
+					return (categorie_data == categorie);
+				});  
+	  			  			
+	  						
+	  			var i = 0;
+	  			
+	  			//Boucle sur tous les clubs
+	  			doc.filter(filtreClubType).filter(filtreClubAccueil).filter(filtreClubHandi).filter(filtreClubCategorie).forEach(function(entry){
+	  				
+	  				var url_image = '/img/icon_map/clubs/club_entier';
+	  				
+	                switch(entry.Categorie){
+	                	case "ATHLÉTISME" : url_image += '_vertf'; break;
+	                    case "AUTRES SPORTS" : url_image += '_violet'; break;
+	                    case "CYCLE ET SPORTS MÉCANIQUES" : url_image += '_rose'; break;
+	                    case "FITNESS ET ACTIVITÉS GYMNIQUES" : url_image += '_noir'; break;
+	                    case "NATATION" : url_image += '_bleuc'; break;
+	                 	case "SPORTS COLLECTIFS" : url_image += '_bleuf'; break;
+	                    case "SPORTS DE COMBAT" : url_image += '_rouge'; break;
+	                    case "SPORTS DE NATURE" : url_image += '_vertc'; break;
+	                    case "SPORTS DE PRÉCISIONS" : url_image += '_orange'; break;
+	                    case "SPORTS DE RAQUETTES" : url_image += '_jaune'; break;
+	                    default : url_image += '/img/icon_map/default_image'; break;
+	                }
+	
+	                switch(entry.Accueil){
+	                	case "REGULIER" : url_image += '_grand'; break;
+	                    case "PEUT ACCUEILLIR" : url_image += '_moyen'; break;
+	                    case "PONCTUEL" : url_image += '_petit'; break;
+	                    default : url_image += '_grand'; break;
+	                }
+	                
+	                url_image += '.png';
+	                
+		  			var iconClub = L.icon({
+					    iconUrl: url_image,
+					
+					    iconSize:     [26, 26], // size of the icon
+					    iconAnchor:   [13, 13], // point of the icon which will correspond to marker's location
+					    popupAnchor:  [0, 13] // point from which the popup should open relative to the iconAnchor
+					});                
+	
+					var marker = L.marker([entry.Latitude ,entry.Longitude],{icon: iconClub, opacity : 0.85}).addTo(map).on('mousedown', function onClick(e) {
+						console.log(entry.nb_show);
+						document.getElementById('title_show').innerHTML = entry.Nom;
+						document.getElementById('type_show').innerHTML = 'Type : ' + entry.Type;
+						document.getElementById('affil_show').innerHTML = 'Affilié : ' + entry.Affiliation;
+						document.getElementById('adress_show').innerHTML = 'Adresse complète : ' + entry.Adresse + ' ' + entry.CodePostal + ' ' + entry.Commune;
+						document.getElementById('discipline_show').innerHTML = 'Discipline pratiquée : ' + entry.Discipline;
+						document.getElementById('cnds_show').innerHTML = 'CNDS : ' + entry.CNDS;
+						document.getElementById('handi_show').innerHTML = 'HandiGuide : ' + entry.Handiguide;
+						document.getElementById('accueil_show').innerHTML = 'Accueil : ' + entry.Accueil;
+						document.getElementById('nb_show').innerHTML = 'Nombre dadhérents : ' + entry.Nombre;
+						document.getElementById('cat_show').innerHTML = 'Catégorie sportive : ' + entry.Categorie;
+
+				        $("#wrapper1").toggleClass("toggled",true);
+				        $("#wrapper2").toggleClass("toggled",true);
+				        $("#wrapper3").toggleClass("toggled",false);
+					    									
+					 }).on('mouseover', function onHover(e) {document.getElementById('name_show').innerHTML = entry.Nom;})
+					 .on('mouseout', function offHover(e) {document.getElementById('name_show').innerHTML = null;});
+					    
+	                tabMarkerClub[i] = marker;
+	                i++;
+				},this)
+	
+	  		}  		
+	
+	  		function addDataConseil(doc){
+	  			var i = 0;
+	  		
+	  			doc.forEach(function(entry){
+	  				var url_image = 'img/icon_map/conseil/conseil_marker.png'
+	  				
+	  				var iconConseil = L.icon({
+					    iconUrl: url_image,
+					
+					    iconSize:     [26, 41], // size of the icon
+					    iconAnchor:   [13, 41], // point of the icon which will correspond to marker's location
+					    popupAnchor:  [0, 13] // point from which the popup should open relative to the iconAnchor
+					});            	
+	  				
+	  				
+	                var marker = L.marker([entry.Latitude ,entry.Longitude],{icon: iconConseil, opacity : 0.85}).addTo(map).on('mousedown', function onClick(e) {
+					    									document.getElementById('title_show').innerHTML = entry.Nom;
+					    									document.getElementById('type_show').innerHTML = 'Type de handicap : ' + entry.Handicap;
+					    									document.getElementById('affil_show').innerHTML = 'Délégation : ' + entry.Delegation;
+					    									document.getElementById('adress_show').innerHTML = 'Commune : ' + entry.Commune + ' ' + entry.CP;
+					    									document.getElementById('discipline_show').innerHTML = 'Intervention : ' + entry.Intervention;
+					    									document.getElementById('cnds_show').innerHTML = 'Age : ' + entry.Age;
+					    									document.getElementById('handi_show').innerHTML = 'Cycle par an : ' + entry.Cycleparan;
+					    									document.getElementById('accueil_show').innerHTML = 'Seances par cycle : ' + entry.Seancesparcycle;
+					    									document.getElementById('nb_show').innerHTML = 'Nombre total dinterventions par an : ' + entry.Nbtotalinterventionparan;
+					    									document.getElementById('cat_show').innerHTML = '';
+					    									
+					    									$("#wrapper1").toggleClass("toggled",true);
+														    $("#wrapper2").toggleClass("toggled",true);
+														    $("#wrapper3").toggleClass("toggled",false);	
+					    									
+					    }).on('mouseover', function onHover(e) {document.getElementById('name_show').innerHTML = entry.Nom;}).on('mouseout', function offHover(e) {document.getElementById('name_show').innerHTML = '';});
+	
+	                
+	                tabMarkerConseil[i] = marker;
+	                
+	                i++;
+	            },this)
+	  		}
+	  		
+	  		function addDataEtablissement(doc){
+	  			
+	 	  		var filtreEtablissementPopulation = (function(row){ 
+					var population = document.getElementById('popu_eta').value;
+					var population_data = row.Population || 'null';
+					if(population == "Tous") return 1;
+				    return (population_data == population); 
+	
+				});  
+				
+		  		var filtreEtablissementAccueil = (function(row){ 
+					var accueil = document.getElementById('accueil_eta').value;
+					var accueil_data = row.Accueil || 'null';
+					if(accueil == "Tous") return 1;
+					return (accueil_data == accueil); 
+				});   			
+	  			
+	  			
+	  			var i = 0;
+	  			doc.filter(filtreEtablissementPopulation).filter(filtreEtablissementAccueil).forEach(function(entry){
+	  				
+	  				var url_image = '/img/icon_map/etablissements/etab_carre';
+	  				
+	                switch(entry.Accueil){
+	                	case "JOURNEE" : url_image += '_petit'; break;
+	                    case "JOURNEE/NUIT" : url_image += '_grand'; break;
+	                    default : url_image = '/img/icon_map/default_image'; break;
+	                }
+	                
+	                url_image += '.png';
+	                
+		  			var iconEtab = L.icon({
+					    iconUrl: url_image,
+					
+					    iconSize:     [26, 26], // size of the icon
+					    iconAnchor:   [13, 13], // point of the icon which will correspond to marker's location
+					    popupAnchor:  [0, 13] // point from which the popup should open relative to the iconAnchor
+					});                
+	                var marker = L.marker([entry.Latitude ,entry.Longitude],{icon: iconEtab, opacity : 0.9}).addTo(map).on('mousedown', function onClick(e) {
+					    									document.getElementById('title_show').innerHTML = entry.Nom;
+					    									document.getElementById('type_show').innerHTML = 'Type établissement : ' + entry.TypeEtablissement;
+					    									document.getElementById('affil_show').innerHTML = 'Population : ' + entry.Population;
+					    									document.getElementById('adress_show').innerHTML = 'Adresse complète : ' + entry.Adresse + ' ' + entry.CodePostal + ' ' + entry.Commune;
+					    									document.getElementById('discipline_show').innerHTML = 'Handicap : ' + entry.Handicap;
+					    									document.getElementById('cnds_show').innerHTML = 'Accueil : ' + entry.Accueil;
+					    									document.getElementById('handi_show').innerHTML = '';
+					    									document.getElementById('accueil_show').innerHTML = '';
+					    									document.getElementById('nb_show').innerHTML = '';
+					    									document.getElementById('cat_show').innerHTML = '';
+					    									
+					   										$("#wrapper1").toggleClass("toggled",true);
+														    $("#wrapper2").toggleClass("toggled",true);
+														    $("#wrapper3").toggleClass("toggled",false); 									
+					    									
+					    }).on('mouseover', function onHover(e) {document.getElementById('name_show').innerHTML = entry.Nom;}).on('mouseout', function offHover(e) {document.getElementById('name_show').innerHTML = '';});
+	
+	                
+	                tabMarkerEtablissement[i] = marker;
+	                i++;
+	            },this)
+	  		}  		
+	  		
+	
+	  		  		
+	
+	
+	  		function removeDataClub(){
+	  			tabMarkerClub.forEach(function(entry){
+	            	map.removeLayer(entry);
+	  			},this)
+	  			
+	  		}
+	  		
+	   		function removeDataConseil(){
+	  			tabMarkerConseil.forEach(function(entry){
+	            	map.removeLayer(entry);
+	  			},this)
+	  		} 
+	  		
+	  		function removeDataEtablissement(){
+	  			tabMarkerEtablissement.forEach(function(entry){
+	            	map.removeLayer(entry);
+	  			},this)
+	  		} 		
+	  		
+	  		function disableFiltresClubs(value)
+	  		{
+	  			console.log(value);
+
+	  			document.getElementById("type_club").disabled=value;
+	  			document.getElementById("accueil_club").disabled=value;
+	  			document.getElementById("handi_club").disabled=value;
+	  			document.getElementById("categorie_club").disabled=value;
+	  		}
+	  		
+	  		function disableFiltresEtablissements(value)
+	  		{
+	  			document.getElementById("popu_eta").disabled=value;
+	  			document.getElementById("accueil_eta").disabled=value;
+	  		}  		
+	  		
+			function updateFiltreClub(){
+				removeDataClub();
+				updateCalqueClub(false);
+			}
+			
+	 		function updateFiltreEtablissement(){
+				removeDataEtablissement();
+				updateCalqueEtablissements(false);
+			} 		
+	  		
+	  		function showSlideBar(){
+	  				
+	  		}
+	  			
+	  		google.maps.event.addDomListener(window, 'load', initialisation);
+		
+		    $("#menu-toggle").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper").toggleClass("toggled");
+		    });
+	    </script>
+	</head>
+	
+	<body>
+    	<div id="wrapper1" class="wrapper toggled">
+
+			<div id="sidebar-wrapper-1" class="sidebar-wrapper">
+				<div id=filtre>
+					<h1 id="calque1p" onclick="updateCalqueClub(true)" class="calqueActivated">Établissements Sportifs</h1> 
+					<div class="separator"></div><div class="separator2"></div>
+					<select id="type_club" onchange="updateFiltreClub()" >
+						<option value="Tous" >Tous</option>	
+						<option value="HANDISPORT" >Handisport</option>
+						<option value="SPORT ADAPTÉ">Sport adapté</option>
+						<option value="LES DEUX">Les deux</option>
+					</select>
+					
+					<select id="accueil_club" onchange="updateFiltreClub()" disabled>
+						<option value="Tous" >Tous</option>	
+						<option value="RÉGULIER" >Régulier</option>
+						<option value="PONCTUEL">Ponctuel</option>
+						<option value="PEUT ACCUEILLIR">Peut Accueillir</option>
+					</select>	
+					
+					<select id="handi_club" onchange="updateFiltreClub()" disabled>
+						<option value="Tous" >Tous</option>	
+						<option value="OUI" >Oui</option>
+						<option value="NON">Non</option>
+					</select>	
+					
+					<select id="categorie_club" onchange="updateFiltreClub()" disabled>
+						<option value="Tous" >Tous</option>	
+						<option value="ATHLÉTISME" >Athletisme</option>
+						<option value="AUTRES SPORTS">Autres Sports</option>
+						<option value="CYCLE ET SPORTS MÉCANIQUES">Cycle Et Sports Mécaniques</option>
+						<option value="FITNESS ET ACTIVITÉS GYMNIQUES">Fitness Et Activites Gymniques</option>
+						<option value="NATATION">Natation</option>
+						<option value="SPORTS COLLECTIFS">Sports Collectifs</option>
+						<option value="SPORTS DE COMBAT">Sports De Combat</option>
+						<option value="SPORTS DE NATURE">Sports De Nature</option>
+						<option value="SPORTS DE PRÉCISIONS">Sports De Precisions</option>
+						<option value="SPORTS DE RAQUETTES">Sports De Raquettes</option>
+					</select>				
+					<div class="separator"></div>
+					<h1 id="calque2p" onclick="updateCalqueConseil()" class="calqueActivated">Offre du Conseil Général 44</h1> 
+					<div class="separator"></div>
+					<h1 id="calque3p" onclick="updateCalqueEtablissements(true)" class="calqueActivated">Établissements spécialisés</h1> 
+					<div class="separator"></div><div class="separator2"></div>
+					<select id="popu_eta" onchange="updateFiltreEtablissement()" disabled>
+						<option value="Tous" >Tous</option>	
+						<option value="JEUNES" >Jeunes</option>
+						<option value="ADULTES">Adultes</option>
+					</select>
+					
+					<select id="accueil_eta" onchange="updateFiltreEtablissement()" disabled>
+						<option value="Tous" >Tous</option>	
+						<option value="JOURNEE" >Journée</option>
+						<option value="JOURNEE/NUIT">Journée et nuit</option>
+					</select>
+					
+					<div class="wrapper_button">
+						  <div class="toggle_radio">
+						    <input type="radio" class="toggle_option" id="first_toggle" name="toggle_option">
+						    <input type="radio" checked class="toggle_option" id="second_toggle" name="toggle_option">
+						    <input type="radio" class="toggle_option" id="third_toggle" name="toggle_option">
+						    <label for="first_toggle"><p>First Button</p></label>
+						    <label for="second_toggle"><p>Second Button</p></label>
+						    <label for="third_toggle"><p>Third Button</p></label>
+						    <div class="toggle_option_slider"></div>
+						  </div>
+					 </div>
+				</div>	
+			</div>	
+		</div>	
+		
+		<div id="wrapper2" class="wrapper toggled">
+			<div id="sidebar-wrapper-2" class="sidebar-wrapper">	  	
+		  		<div id="legende">
+		  			<h1>Etablissements sportifs</h1>
+		  			<img src="img/icon_map/legend_club_grand.png" alt="Test" height="26" width="26"> 
+		  			<img src="img/icon_map/legend_club_moyen.png" alt="Test" height="26" width="26">
+		  			<img src="img/icon_map/legend_club_petit.png" alt="Test" height="26" width="26">
+				</div>
+			 </div>
+		</div>
+		
+		<div id="wrapper3" class="wrapper toggled">
+			<div id="sidebar-wrapper-3" class="sidebar-wrapper">	  	
+		  		<div id="show">
+		  			<h1 id='title_show'></h1>
+		  			<div class="separator"></div>
+		  			<p id='type_show'></p>
+		  			<div class="separator"></div>
+		  			<p id='affil_show'></p>
+  		  			<div class="separator"></div>
+				  	<p id='adress_show'></p>
+				  	<div class="separator"></div>
+				  	<p id='discipline_show'></p>
+				 	<div class="separator"></div>
+				  	<p id='cnds_show'></p>
+		  			<div class="separator"></div>
+				  	<p id='handi_show'></p>
+		  			<div class="separator"></div>
+				  	<p id='accueil_show'></p>
+		  			<div class="separator"></div>
+				  	<p id='nb_show'></p>
+		  			<div class="separator"></div>
+				  	<p id='cat_show'></p>
+				  	<a href="#menu-toggle-3" id="menu-toggle-3">Fermer la description</a>
+				</div>
+			 </div>
+		</div>
+		
+		<div id="wrapper4">
+	        <div id="page-content-wrapper">
+				<div id="header">
+					<div id="contentHeaderWrapper4">
+						<span id="title"><strong>Data</strong>Roulette</span>
+						<a href="#menu-toggle-1" id="menu-toggle-1" class="boutonMenu">Affichage</a>
+						<a href="#menu-toggle-2" id="menu-toggle-2" class="boutonMenu">Légende</a>
+						<span id="name_show"></span>
+					</div>
+				</div>
+	  			<div id="map"></div>
+			</div>
+		</div>
+
+	    <script type="text/javascript" >
+		    $("#menu-toggle-1").click(function(e) {
+		    	console.log("Test");
+		        e.preventDefault();
+		        $("#wrapper1").toggleClass("toggled");
+		        $("#wrapper2").toggleClass("toggled",true);
+		        $("#wrapper3").toggleClass("toggled",true);
+		    });
+		    
+		    
+	    </script>
+	    <script type="text/javascript" >
+	    	$("#menu-toggle-2").click(function(e) {
+		    	console.log("Test");
+		        e.preventDefault();
+		        $("#wrapper1").toggleClass("toggled",true);
+		        $("#wrapper2").toggleClass("toggled");
+		        $("#wrapper3").toggleClass("toggled",true);
+		    });
+	  	</script>
+	  	
+	   <script type="text/javascript" >
+	    	$("#menu-toggle-3").click(function(e) {
+		    	console.log("Test");
+		        e.preventDefault();
+		        $("#wrapper1").toggleClass("toggled",true);
+		        $("#wrapper2").toggleClass("toggled",true);
+		        $("#wrapper3").toggleClass("toggled",true);
+		    });
+	  	</script>  	
+	</body>
+</html>
+
