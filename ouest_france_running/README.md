@@ -1,9 +1,9 @@
 # Descriptif du projet
 Média : Ouest France
 
-Sujet : Raconter une course
+Sujet : Raconter le déroulement d'un évènement running
 
-Equipe : Forest
+Equipe : Team Forest
 
 Patricipants :
 - EDNA : Johanna Rolland, Valentin Amossé
@@ -11,4 +11,18 @@ Patricipants :
 - STAPS : Guillaume Tricot, Simon Arnout, Alexandre Gaviniaux
 
 # Installation
+
+Prérequis : npm et node.
+
+## Installation des dépendances
+
+Exécuter les commandes suivantes :
+`npm install && bower install`
+
+## Build
+
+Exécuter la tâche grunt suivante :
+
+`grunt build`
+
 # Informations complémentaires
