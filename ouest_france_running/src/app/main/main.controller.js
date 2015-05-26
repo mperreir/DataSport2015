@@ -13,7 +13,7 @@ angular.module('hyblabApp')
     /*------------------------------------*\
         Récupération des données de la course
     \*------------------------------------*/
-    var promesseCreation = Data.create('../../assets/data/25km.csv');
+    var promesseCreation = Data.create('assets/data/25km.csv');
     $scope.loaded = false;
     promesseCreation.then(function() {
       $scope.dataSlide1 = Data.getDataSlide1();

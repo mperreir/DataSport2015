@@ -5,8 +5,8 @@ angular.module('hyblabApp')
     $scope.menu = [{}];
     //Chemin des courses
     var course = {
-      'plourhan25': '../../assets/data/25km.csv',
-      'plourhan45': '../../assets/data/45km.csv'
+      'plourhan25': 'assets/data/25km.csv',
+      'plourhan45': 'assets/data/45km.csv'
     };
     $scope.isCollapsed = true;
     $scope.isActive = function(route) {
