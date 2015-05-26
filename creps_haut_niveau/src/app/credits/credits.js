@@ -20,6 +20,6 @@
           person.delay = Math.random() + 's';
         });
       }
-    }
+    };
   }]);
 })();

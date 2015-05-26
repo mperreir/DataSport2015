@@ -19,7 +19,6 @@
         var isRendered = false;
         var windowHeight = $window.innerHeight;
         var region = Data.region;
-        console.log(region);
         var offset = scope.offset = section.offset().top - windowHeight/1.2;
 
         scope.counthomme = 0;
@@ -45,7 +44,6 @@
           if(!isRendered && $document.scrollTop() > offset){
             isRendered = true;
             scope.$apply(function(){
-              console.log('uhergz');
               scope.counthomme = 63;
               scope.countfemme = 37;
               scope.valuetotal = 1026000;

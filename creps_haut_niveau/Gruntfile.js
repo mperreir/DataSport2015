@@ -20,6 +20,11 @@ module.exports = function(grunt){
           dest: 'build',
           cwd: 'src',
           src: ['**/*.html', '!bower_components/**/*', 'assets/**/*']
+        }, {
+          expand: true,
+          dest: 'build',
+          cwd: 'src/bower_components/semantic-ui-icon',
+          src: ['assets/fonts/**.*']
         }]
       }
     },
@@ -38,7 +43,8 @@ module.exports = function(grunt){
     jshint: {
       options: {
         jshintrc: true
-      }
+      },
+      files: ['src/**/*.js', '!src/bower_components/**/*', '!src/assets/**/*', 'server.js']
     },
 
     less: {

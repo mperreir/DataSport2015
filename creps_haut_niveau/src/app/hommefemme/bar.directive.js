@@ -31,6 +31,6 @@
           element.css('width', ratio + '%');
         }
       });
-    }
+    };
   }]);
 })();

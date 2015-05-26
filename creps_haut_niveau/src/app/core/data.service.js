@@ -61,7 +61,7 @@
 		service.getDepartementsInfo = function(){
 			return $http.get('api/departements')
 			.then(function(response){
-				service.departements = response.data
+				service.departements = response.data;
 			});
 		};
 
