@@ -1,0 +1,62 @@
+@font-face {
+	/*marche avec otf seulement*/
+	
+    font-family: "UniversLTStd";
+    src: url('../font/UniversLTStd.otf') ;
+}
+
+#section0
+{
+    font-family: "UniversLTStd",sans-serif;
+    font-weight:bold;
+}
+
+
+#section0 h1
+{
+    
+    width: 70%;
+    text-align: center;
+    position: relative;
+    top:15%;
+    left: 15%;
+    color: #D66525;
+    font-size:3vw;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    
+    
+}
+
+#section0 p
+{
+    
+    width: 60%;
+    text-align: center;
+    position: relative;
+    top:25%;
+    left: 20%;
+    color: #494949;
+    font-size:1.3vw;
+    Line-Height: 2;
+    
+}
+
+#question
+{
+    
+}
+
+#opacdiv
+{
+    background-color:white;
+    opacity:0.7;
+    
+    width: 70%;
+    height:50%;
+    position: absolute;
+    top:38%;
+    left: 15%;
+    border-radius:1em;
+    
+}

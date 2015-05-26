@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Enquête Suaps</title>
+	<!--Css-->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+	<link rel="stylesheet" href="css/intro.css" />
+	<link rel="stylesheet" href="css/dataviz1.css" />
+	<link rel="stylesheet" href="css/dataviz2.css" />
+	<link rel="stylesheet" href="css/dataviz3.css" />
+	<link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+
+<div id="fullpage">
+  
+  <!--------------------------- INTRO ----------------------------------->
+	<div class="section " id="section0">
+	  <div style="background: url('img/HNCK23042.png') ;background-size: cover;height: 85%">
+	    <div id="opacdiv"></div>
+	        <!--image d'arrière plan libre de droit : https://picjumbo.com/testdrive/?i=HNCK2304-1300x866.jpg&l=https://picjumbo.com/girl-in-pink-running-sport-shoes/#1-->
+         <h1>SPORT UNIVERSITAIRE : motivations et impacts</h1>
+         <p>Dans le cadre du projet du HybLab DataSport2015, l’équipe des UniDataMoov’ a travaillé sur des données issues de l’enquête réalisée en mars 2015 auprès des étudiant(e)s à propos de leurs pratiques physiques. 
+A partir de ces données, l’équipe a choisi l’axe d’étude suivant : 
+En quoi l’entrée dans la vie étudiante influence-t-elle l’engagement des étudiant(e)s dans les pratiques physiques ? 
+En effet, le changement de lieu et rythme de vie obligent les étudiant(e)s à revoir leur organisation pour pratiquer leur activité physique. A l’inverse, un étudiant(e) non-pratiquant(e) peut-il trouver au sein de l’université, un cadre favorable à son implication dans une pratique nouvelle ?</p>
+         <!--
+         <p id="question">En quoi l’entrée dans la vie étudiante influence-t-elle les pratiques sportives ?</p>
+         -->
+   </div>
+	</div>
+  
+  
+  <!--------------------------- Datavisualisation 1 ----------------------------------->
+	<div class="section " id="section1">
+	  <div style="background-color: white; height: 85%">
+	      <p class='titreSection'>Pratique physique : Du lycéen à l’étudiant ?</p>
+	      <p id='titleparag1' class='titleparag' align="justify">L'entrée à l'université fait-elle évoluer la pratique sportive des étudiants?</p>
+        <p id='parag1' class='parag' align="justify"></p>
+        <!--
+        orange : D66525
+        bleu: 64B7B4-->
+        
+        
+		    <div  id="dataviz1" style="background-color: white; height: 80% ">
+          <div id="legend" style="width: 25vw">
+            <p> SURVOLEZ OU CLIQUEZ SUR LES ARCS POUR ZOOMER</p><p> CLIQUEZ AU CENTRE POUR DEZOOMER</p> 
+          </div>
+        </div>
+   </div>
+	</div>
+	<!--------------------------- Datavisualisation 2 ----------------------------------->
+	<div class="section" id="section2">
+	    <div  style="background-color: white; height: 85%">
+        <p class='titreSection'>Obstacles et intérêts pour la pratique</p>
+        <p id='titleparag2' class='titleparag' align="justify">Quels sont-ils ? Raisons et motivations.</p>
+        <!--<p id='parag2'class='parag' ><font size="4">Certains étudiants débutent une activité sportive en entrant à l'université, tandis que certains cessent de pratiquer. Cliquez sur les bulles pour découvrir les principales motivations et difficultés de ces étudiants.</font></p>
+        -->
+        <p id='parag2'class='parag' align="justify"><font size="3">On remarque que certains étudiants débutent une activité sportive en entrant à l'Université, alors que d’autres cessent de pratiquer: pourquoi? Cliquez sur les bulles pour découvrir quelles sont les motivations qui ont poussé les étudiants à pratiquer en entrant à l’Université, et quelles sont les difficultés qui ont empêché ces étudiants de pratiquer une activité sportive.</font></p>
+        
+        <div id="dataviz2" style="  height: 75%; width:55%; margin-left:30%; padding-top:5%">
+        </div>
+        <p class="titledataviz2" id='t2Dif' >Raisons du désengagement</p>
+        <p class="titledataviz2" id='t2Mot' >Motivations pour débuter</p>
+      </div>
+  </div>
+  
+  <!--------------------------- Datavisualisation 3 ----------------------------------->
+	<div class="section" id="section3">
+		<div  style="background-color: white; height: 85%">
+		    <div>
+          <p class='titreSection'>Quel impact sur l’IMC?</p>
+           <p class='parag' align="justify">Comparez votre IMC avec celui des étudiants de l’Université. La moyenne nationale française est de 24,6 pour les hommes et 23,2 pour les femmes.</p>
+          <!-- Histogramme-->
+          <div id="wrapper">
+            
+              <div id="chartContainer" >
+                
+              </div>
+              <!-- Formulaire -->
+              <div id="blank" ><p></p></div>
+              <div id="imcform" >
+                  <p align="justify" class="calculTitre" >Calculez votre IMC</p>
+                  <label id="labelpoids"for="poids">Entrez votre poids : </label>
+                  <input type="text" id="poids" placeholder="Poids (kilos)">
+                  <label id="labeltaille"for="taille">Entrez votre taille : </label>
+                  <input type="text" id="taille" placeholder="Taille (cm)">
+                  <input type="button" class="button" value="Calculer" onclick="calculIMC();">
+                  <!-- Résultat align="justify"-->
+                  <div id="divResIMC" ></div>
+              </div>
+            
+          </div>
+        </div>
+        <!-- Conseils-->
+        <img src="img/maigre.png" id="maigre" class="imgHisto"  alt="maigre"/>
+        <img src="img/normal.png" id="normal" class="imgHisto"   alt="normal"/>
+        <img src="img/surpoids.png" id="surpoids" class="imgHisto"  alt="surpoids"/>
+        <img src="img/obese.png" id="obese" class="imgHisto" alt="obese"/>
+        <div id="divConseilsIMC" ></div>
+        
+    </div>
+	</div>
+	
+	<!--------------------------- Bandeau Logo ----------------------------------->
+	        <div id="section4" class="section">
+            <p id="share_title">Partagez cette data-visualisation sur les réseaux sociaux.</p>
+            <div id="network">
+				<a href="" target="_blank"><img src="img/64-facebook.png" class="img_remerciement" alt=""></a>
+				<a href="" target="_blank"><img src="img/64-twitter.png" class="img_remerciement" alt=""></a>
+				<a href="" target="_blank"><img src="img/64-googleplus.png" class="img_remerciement" alt=""></a>
+            </div>
+            <div id="participants">
+        		<ul id="Polytech" class="leftEquipe">
+        			<li class="title1">POLYTECH</li>
+        			<li>Mounia Hamedi</li>
+        			<li>Paul Rivaud</li>
+        			
+        		</ul>
+        		<ul id="staps" class="leftEquipe">
+        			<li class="title1">STAPS</li>
+        			<li>David Chapet</li>
+        			<li>Celine Bernier</li>
+        			<li>Marine Bouguyon</li>
+        			<li>Léa Chauvelon</li>
+        		</ul>
+        		<ul id="design" class="leftEquipe">
+        			<li class="title1">EDNA</li>
+        			<li>Julie Fiolet </li>
+        			<li>Axel Masson</li>
+        		</ul>
+            
+          
+            
+            
+            <div id="groups">
+               
+            	<div id="firstLine">
+                
+                <a href="http://www.hyblab.fr" target="_blank"><img  class="img_remerciement" src="img/Hyblab DataSport.png" alt="Hyblab - Data Sport"></a>
+            		<a href="http://www.ouestmedialab.fr" target="_blank"><img class="img_remerciement" src="img/LogoOML.png" alt="Logo Ouest Media Lab"/></a>
+            	  <a href="http://www.lecolededesign.com/" target="_blank"><img class="img_remerciement" src="img/logo-EDNA.png" alt="Ecole de Design"></a>
+            	  <a href="http://www.univ-nantes.fr/" target="_blank"><img class="img_remerciement" src="img/logo_univ_nantes.png" alt="Université de Nantes"></a>
+            	  <a href="http://www.polytech.univ-nantes.fr/" target="_blank"><img class="img_remerciement" src="img/logo_polytech.png" alt="Polytech Nantes"></a>
+            	  
+            	</div>
+            	<div id="secondLine">
+            		
+            		
+            		<a href="http://www.creps-pdl.sports.gouv.fr/" target="_blank"><img class="img_remerciement" src="img/logo-CREPS.png" alt="CREPS"></a>
+            		<a href="http://www.paysdelaloire.fr/" target="_blank"><img class="img_remerciement" src="img/Region-pays-de-la-loire-300x300.png" alt="Pays de La Loire"></a>
+            		<a href="http://www.territoires-innovation.paysdelaloire.fr/" target="_blank"><img class="img_remerciement" src="img/PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a>
+            		<a href="http://www.nantesmetropole.fr/" target="_blank"><img  class="img_remerciement" src="img/Nantes-metropole.png" alt="Nantes Métropole"></a>
+            		
+            		
+            		
+                </div>
+                <div id="thirdLine">
+					<div class="lets_text">
+						<p>Données provenant du service universitaire des activités physiques et sportives <a href="https://www.univ-nantes.fr/34969603/0/fiche___pagelibre/&RH=1184341439414&RF=1184590345081" target="_blank"> </p>
+						
+						</div>
+				</div>
+            </div>
+        </div>
+	
+	<!--------------------------- Fin ----------------------------------->
+	</div> 	<!--fin fullpage-->
+</body>
+
+<!-- JAVASCRIPT -->
+<!--Librairies-->
+<script src="script/jquery.min.js"></script>
+<script src="script/jquery-ui.min.js"></script>
+<script type="text/javascript" src="script/jquery.fullPage.js"></script>
+<script src="script/d3.min.js" charset="utf-8"></script>
+<script src="script/jsapi.js"></script>
+<!--Scripts-->
+<script src="script/maPage.js"></script>
+<script src="script/imc.js"></script>
+<script type="text/javascript" src="script/dataviz2.js"></script>
+<script type="text/javascript" src="script/dataviz1.js"></script>
+
+
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////-->
+<!--Debut script dataviz1-->
+
+
+
+<!--//////////////////////////////////script dataviz3//////////////////////////////////-->
+<script>
+  google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data3 = google.visualization.arrayToDataTable([
+	    ['IMC', '% Homme ', '% Femme' ],
+      ['IMC<18,5', 2, 6.7],
+      ['18,5<IMC<25', 35.3, 45.1],
+      ['25<IMC<30', 3.3, 5.2],
+      ['IMC>30', 0.6, 1.6]
+    ]);
+    var options = {
+    focusTarget : 'category',
+    colors:['#D66525','#64B7B4'], 
+    // hAxis:{title: 'IMC',  titleTextStyle: {color: '#757575'}},
+    legend: { position: 'none', maxLines: 3, textStyle: {color: 'black', fontSize: 16 } },
+  	isStacked: true,
+  	// Displays tooltip on selection.
+  	// tooltip: { trigger: 'selection' }, 
+    };
+    var chart3 = new google.visualization.ColumnChart(document.getElementById('chartContainer'));
+    chart3.draw(data3, options);
+   }
+</script>    
+</html>

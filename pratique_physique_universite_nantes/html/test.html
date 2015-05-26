@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Enquête Suaps</title>
+	<!--Css-->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+	<link rel="stylesheet" href="css/dataviz1.css" />
+	<link rel="stylesheet" href="css/dataviz2.css" />
+	<link rel="stylesheet" href="css/dataviz3.css" />
+	<link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+
+<div id="fullpage">
+  <!--------------------------- Datavisualisation 1 ----------------------------------->
+	<div class="section " id="section1">
+	  <div style="background-color: white; height: 85%">
+	      <p class='titreSection'>Pratique université VS lycée</p>
+	      <p id='titleparag1' class='titleparag' align="justify">soustitre data1?</p>
+        <p id='parag1' class='parag' align="justify"><font size="4">paragraphe 1 dataviz1</font></p>
+        
+		    <div  id="dataviz1" style="background-color: white; height: 85%">
+          
+          <div id="legend"  >
+            <p>Survoler ou cliquer sur les arcs</p> 
+          </div>
+        
+        </div>
+   </div>
+	</div>
+	<!--------------------------- Datavisualisation 2 ----------------------------------->
+	<div class="section" id="section2">
+	    <div  style="background-color: white; height: 85%">
+        <p class='titreSection'>Variations du rythme sportif</p>
+        <p id='titleparag2' class='titleparag' align="justify">Comment s'expliquent-elles?</p>
+        <p id='parag2'class='parag' align="justify"><font size="4">Certains étudiants débutent une activité sportive en entrant à l'université, tandis que certains cessent de pratiquer. Cliquez sur les bulles pour découvrir les principales motivations et difficultés de ces étudiants.</font></p>
+        <div id="dataviz2" style=" height: 100%; width:50%; margin-left:30%; padding-top:1%">
+        </div>
+        <p class="titledataviz2" id='t2Dif' >Difficultés</p>
+        <p class="titledataviz2" id='t2Mot' >Motivations</p>
+      </div>
+  </div>
+  
+  <!--------------------------- Datavisualisation 3 ----------------------------------->
+	<div class="section" id="section3">
+		<div  style="background-color: white; height: 85%">
+		    <div>
+          <p class='titreSection'>Indice de Masse Corporelle</p>
+           <p class='parag'>paragraphe dataviz3</p>
+          <!-- Histogramme-->
+          <div id="wrapper">
+            
+              <div id="chartContainer" ></div>
+              <!-- Formulaire -->
+              <div id="blank" ><p></p></div>
+              <div id="imcform" >
+                  <p align="justify" class="calculTitre" >Calculez votre IMC</p>
+                  <label for="poids">Entrez votre poids : </label>
+                  <input type="text" id="poids" placeholder="Poids (kilos)">
+                  <label for="taille">Entrez votre taille : </label>
+                  <input type="text" id="taille" placeholder="Taille (cm)">
+                  <input type="button" class="button" value="Calculer" onclick="calculIMC();">
+                  <!-- Résultat align="justify"-->
+                  <div id="divResIMC" ></div>
+              </div>
+            
+          </div>
+        </div>
+        <!-- Conseils-->
+        <img src="img/maigre.png" id="maigre" class="imgHisto"  alt="maigre"/>
+        <img src="img/normal.png" id="normal" class="imgHisto"   alt="normal"/>
+        <img src="img/surpoids.png" id="surpoids" class="imgHisto"  alt="surpoids"/>
+        <img src="img/obese.png" id="obese" class="imgHisto" alt="obese"/>
+        <div id="divConseilsIMC" ></div>
+        
+    </div>
+	</div>
+	
+	<!--------------------------- Bandeau Logo ----------------------------------->
+	        <div id="section4" class="section">
+            <p id="share_title">Partagez cette data-visualisation sur les réseaux sociaux.</p>
+            <div id="network">
+				<a href="" target="_blank"><img src="img/64-facebook.png" class="img_remerciement" alt=""></a>
+				<a href="" target="_blank"><img src="img/64-twitter.png" class="img_remerciement" alt=""></a>
+				<a href="" target="_blank"><img src="img/64-googleplus.png" class="img_remerciement" alt=""></a>
+            </div>
+            <div id="participants">
+        		<ul id="Polytech" class="leftEquipe">
+        			<li class="title1">POLYTECH</li>
+        			<li>Mounia Hamedi</li>
+        			<li>Paul Riveaud</li>
+        			
+        		</ul>
+        		<ul id="staps" class="leftEquipe">
+        			<li class="title1">STAPS</li>
+        			<li>David Chapet</li>
+        			<li>Celine Bernier</li>
+        			<li>Marine Bouguyon</li>
+        			<li>Léa Chauvelon</li>
+        		</ul>
+        		<ul id="design" class="leftEquipe">
+        			<li class="title1">EDNA</li>
+        			<li>Julie Fiolet </li>
+        			<li>Axel Masson</li>
+        		</ul>
+            
+          
+            
+            
+            <div id="groups">
+               
+            	<div id="firstLine">
+                
+                <a href="http://www.hyblab.fr" target="_blank"><img  class="img_remerciement" src="img/Hyblab DataSport.png" alt="Hyblab - Data Sport"></a>
+            		<a href="http://www.ouestmedialab.fr" target="_blank"><img class="img_remerciement" src="img/LogoOML.png" alt="Logo Ouest Media Lab"/></a>
+            	  <a href="http://www.lecolededesign.com/" target="_blank"><img class="img_remerciement" src="img/logo-EDNA.png" alt="Ecole de Design"></a>
+            	  <a href="http://www.univ-nantes.fr/" target="_blank"><img class="img_remerciement" src="img/logo_univ_nantes.png" alt="Université de Nantes"></a>
+            	  <a href="http://www.polytech.univ-nantes.fr/" target="_blank"><img class="img_remerciement" src="img/logo_polytech.png" alt="Polytech Nantes"></a>
+            	  
+            	</div>
+            	<div id="secondLine">
+            		
+            		
+            		<a href="http://www.creps-pdl.sports.gouv.fr/" target="_blank"><img class="img_remerciement" src="img/logo-CREPS.png" alt="CREPS"></a>
+            		<a href="http://www.paysdelaloire.fr/" target="_blank"><img class="img_remerciement" src="img/Region-pays-de-la-loire-300x300.png" alt="Pays de La Loire"></a>
+            		<a href="http://www.territoires-innovation.paysdelaloire.fr/" target="_blank"><img class="img_remerciement" src="img/PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a>
+            		<a href="http://www.nantesmetropole.fr/" target="_blank"><img  class="img_remerciement" src="img/Nantes-metropole.png" alt="Nantes Métropole"></a>
+            		
+            		
+            		
+                </div>
+                <div id="thirdLine">
+					<div class="lets_text">
+						<p>Données provenant du service universitaire des activités physiques et sportives <a href="https://www.univ-nantes.fr/34969603/0/fiche___pagelibre/&RH=1184341439414&RF=1184590345081" target="_blank"> </p>
+						
+						</div>
+				</div>
+            </div>
+        </div>
+	
+	<!--------------------------- Fin ----------------------------------->
+	</div> 	<!--fin fullpage-->
+    </body>
+</html>
+
+<!--Librairies-->
+<script src="script/d3.min.js" charset="utf-8"></script>
+<script src="script/jquery.min.js"></script>
+<script src="script/jquery-ui.min.js"></script>
+<script type="text/javascript" src="script/jquery.fullPage.js"></script>
+<script src="script/jsapi.js"></script>
+
+<!--Scripts-->
+<script src="script/maPage.js"></script>
+<script src="script/imc.js"></script>
+<script src="script/dataviz1test.js"></script>
+<script src="script/dataviz2test.js"></script>
+<script>
+
+    google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data3 = google.visualization.arrayToDataTable([
+		['IMC', '% Homme ', '% Femme' ],
+        ['IMC<18,5', 2, 6.7],
+        ['18,5<IMC<25', 35.3, 45.1],
+        ['25<IMC<30', 3.3, 5.2],
+        ['IMC>30', 0.6, 1.6]
+      ]);
+
+        var options = {
+        focusTarget : 'category',
+        
+        colors:['#D66525','#64B7B4'], 
+        // hAxis:{title: 'IMC',  titleTextStyle: {color: '#757575'}},
+        
+        legend: { position: 'none', maxLines: 3, textStyle: {color: 'black', fontSize: 16 } },
+	    	 isStacked: true,
+
+		// Displays tooltip on selection.
+		// tooltip: { trigger: 'selection' }, 
+      };
+
+        var chart3 = new google.visualization.ColumnChart(document.getElementById('chartContainer'));
+        chart3.draw(data3, options);
+
+ 	  }
+      
+</script>    

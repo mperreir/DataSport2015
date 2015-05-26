@@ -1,3 +1,5 @@
 {
-  "directory": "src/bower_components/"
+  "directory": "src/bower_components/",
+  "proxy":"http://cache.ha.univ-nantes.fr:3128",
+  "https-proxy":"http://cache.ha.univ-nantes.fr:3128"
 }

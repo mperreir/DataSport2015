@@ -1,0 +1,90 @@
+
+
+.img_remerciement {
+	height: 60px;
+	padding: 0 4px;
+	margin: 15px 0;
+	opacity: 0.6;
+}
+.img_remerciement:hover {
+	opacity: 1;
+}
+#share_title {
+	
+    padding-top: 1vw;
+	text-align:center;
+	font-size: 1.4em;
+	font-weight: bold;
+	color:#4B4B4B;
+}
+#network {
+	
+	text-align: center;
+}
+#network a {
+	padding: 0 40px;
+}
+
+#groups {
+	
+	text-align: center;
+}
+
+#participants {
+
+	color:#4A4A4A;
+	font-family: "UniversLTStd",sans-serif;
+    text-align:center;
+    font-size: 1vw;
+}
+
+#participants ul  {
+	position:relative;
+	left:-2%;
+	
+        display: inline-block;
+        text-align:center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: 1vw;
+        list-style-type: none;
+        font-weight: bold;
+        vertical-align: top;
+        padding-right: 30px;
+        
+}
+
+.title1 {
+	font-family: "UniversLTStd",sans-serif;
+	color:#64B7B4;
+	font-size: 1.5vw;
+	letter-spacing: 0.04em;
+	border-bottom: 2px solid black;
+	padding-bottom: 6px;
+	margin-bottom: 10px;
+}
+@font-face {
+	/*marche avec otf seulement*/
+	
+    font-family: "UniversLTStd";
+    src: url('../font/UniversLTStd.otf') ;
+}
+
+
+
+.lets_text {
+	font-family: "UniversLTStd",sans-serif;
+	display: inline-block;
+	color:#D66525;
+	font-weight:bold;
+}
+
+.lets_text p {
+	
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.3em;
+	
+}
+
+

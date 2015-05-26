@@ -1,0 +1,30 @@
+{
+ "name": "datavi2",
+ "children":
+    [
+       {
+           "name": "Difficutés",
+           "children": [
+                 
+                       {"name": "Pas d'amis", "size": 2500},
+                       {"name": "Coût", "size": 3100},
+                       {"name": "Eloignement", "size": 3700},
+                       {"name": "Isolement", "size": 600},
+                       {"name": "Motivation", "size": 4900},
+                       {"name": "Temps", "size": 9100}
+
+                        ]
+       },
+       {
+          "name": "Motivations",
+          "children": [
+                        {"name": "Compétition", "size": 5400},
+                        {"name": "Hygiène", "size": 10600},
+                        {"name": "Esthétique", "size": 9600},
+                        {"name": "Convivialité", "size": 6600},
+                        {"name": "Autre", "size": 3200}
+   
+                       ]
+       }
+    ]
+}

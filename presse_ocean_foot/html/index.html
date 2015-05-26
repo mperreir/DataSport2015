@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hyblab 2015</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<style>
+	
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	#section0{
+		background-image: url(imgs/photo-groupe-fcnantes.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top; 
+		padding: 0% 0 0 0;
+	}
+	#section1{
+	
+		
+	}
+	#section2{
+		background-image: url(imgs/logo-FC-Nantes.png);
+		background-repeat: no-repeat;
+		
+		background-position: center; 
+		padding: 0% 0 0 0;
+	}
+	#section3{
+	}
+	#con{
+		width:100%;
+	}
+	#container{
+	height:300px;
+	}
+	#amount,#amount1,#amount2,#amount3,#amount4,#amount5,#amount6,#amount7,#amount8,#amount9{
+	width:70%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	background-color:rgba(0,88,39,1);
+		color:rgba(255,236,0,1);
+	}
+	#lab{
+	color:rgba(0,88,39,1);
+	font-family:'Eurostile';
+	}
+	#slider-vertical,#slider-vertical1,#slider-vertical2,#slider-vertical3,#slider-vertical4,#slider-vertical5,#slider-vertical6,#slider-vertical7,#slider-vertical8,#slider-vertical9{
+	left:0%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	#cadreInformation{
+	
+		
+		background-size: 100% 100%;
+		background-color:'#F0F0F0';
+		border:#005827 10px solid;
+		
+		width=100%;
+		height:100%;
+		display: block;
+		padding-top:3%;
+		padding-right:2%;
+	}
+	#cadrephoto{
+		background-image: url(imgs/cadre-photo.png);
+		
+		background-size: 100% 100%;
+		
+		width=95%;
+		height:95%;
+		display: table-cell;
+		vertical-align: middle;
+		
+	}
+	#photoJoueur,#equipeType{
+	margin:auto;
+	text-align:center;
+		width:95%;
+		height:95%;
+		display: block;
+		
+	}
+	#imgData1{
+	margin:auto;
+	text-align:center;
+		width:95%;
+		height:40%;
+		display: block;
+	}
+	#credit{
+	margin:auto;
+	text-align:center;
+		width:95%;
+		height:100%;
+		display: block;
+	}
+	#labCadreInformation{
+	width:100%;
+	margin-left: 10%;
+	margin-right: auto;
+	text-align:right;
+	color:rgba(0,88,39,1);
+	font-family:'Eurostile';
+	}
+	#labPoste,#labAge,#labTaille,#labPoids,#labTJ,#labBM,#labPD,#labCJ,#labCR{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:left;
+	color:rgba(0,88,39,1);
+	font-family:'Eurostile';
+	}
+	#sliders{
+	bottom:15px;
+		position: absolute;
+	}
+	#paragraphe{
+	font-family:'Eurostile';
+	
+	text-align:justify;
+	color:rgba(0,0,0,1);
+	line-height:normal;
+	font-size:2vw;
+	}
+	#paragrapheFinal{
+	font-family:'Eurostile';
+	
+	text-align:justify;
+	color:rgba(0,0,0,1);
+	line-height:normal;
+	font-size:1.5vw;
+	}
+	#paragrapheContainer{
+	 position: relative;
+  top: 50%;
+  transform: translateY(-25%);
+	}
+
+	#marg{
+	margin-left:30px;
+	}
+	[role="button"] {
+  color: #fff;
+  padding: .7em;
+  background-color: #005827;
+  border: solid 1px #357ebd;
+  line-height:2.2em;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+ 
+[role="button"]:hover, [role="button"].bouton:focus {
+  color: #fff;
+  background-color: #3071a9;
+  border: solid 1px #285e8e;
+  text-decoration: none;
+}
+ 
+[role="button"]:active {
+  color: #fff;
+  background-color: #3071a9;
+  border: solid 1px #12314c;
+}
+	.modalCheck{
+			display: none;
+		}
+		.modalLayer{
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#modalCheck:checked + .modalLayer, #modalContent:target{
+			display: block;
+		}
+		#popUpData1,#popUpData2,#popUpData3{
+			background-color:rgba(243,243,243,1);;
+			padding: 0% 0% 0% 0%;
+			border: 20px solid #ddd;
+			position: relative;
+			text-align:left;
+			font-size:10px;
+			margin:5% auto;
+			width: 80%;
+			box-shadow: 0px 0px 20px #000;
+			border-radius: 10px;
+		}
+		.btnClose {
+			position:absolute;
+		    right:0%;
+			margin: -40px -40px 0 0;
+			cursor: pointer;
+		}
+		.button{
+			cursor: pointer;
+			color: blue;
+			text-decoration: underline;
+		}
+		.modalCheck{
+			display: none;
+		}
+		.modalLayer3{
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#modalCheck3:checked + .modalLayer3, #modalContent:target{
+			display: block;
+		}
+		.modalLayer2{
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#modalCheck2:checked + .modalLayer2, #modalContent:target{
+			display: block;
+		}
+		#bandeau {
+      padding: 8px;
+    }
+
+    #bandeau li{
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+
+
+    #bandeau img{
+      height: 64px;
+    }
+
+    #bandeau #datasport{
+      margin: 20px 0;
+      height: 135px;
+      float: left;
+    }
+
+    #bandeau ul{
+      text-align: center;
+    }
+
+    #bandeau .institutionnel
+    {
+      height: 48px;
+    }
+	@font-face {
+    font-family: Eurostile;
+    src: url(css/EurostileLTStd-Demi.otf);
+	}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script> 
+	
+	<script src="js/script.js"></script>
+	<script src="js/scriptSlider.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/traitementData.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['1', '2', '3', '4','5','6','7','8'],
+				sectionsColor: ['#C63D0F', '#F0F0F0','#ffec00','#158A37','#F0F0F0','#F0F0F0','#F0F0F0'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['1', '2', '3', '4','5','6','7','8'],
+				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+			});
+		});
+		
+	
+		function OnMouseIn(elem){
+			
+				elem.src ="imgs/moreInformation1.png";
+			
+		}
+		function OnMouseOut(elem){
+		
+				elem.src ="imgs/moreInformation.png";
+			
+		}
+		function OnMouseIn1(elem){
+			
+				elem.src ="imgs/moreInformation.png";
+			
+		}
+		function OnMouseOut1(elem){
+			
+				elem.src ="imgs/moreInformation1.png";
+			
+		}
+	</script>
+	
+	
+
+</head>
+<body>
+
+
+
+<div id="fullpage" >
+	<div class="section " id="section0">
+		<div class="slide">
+			
+		</div>
+	</div>
+	
+	<div class="section" id="section1">
+						
+		<div class="slide">
+		
+			<div class="container" style="height:100%;">
+				
+				<div class="row" style="height:65%;">
+				
+				
+					<div id="paragrapheContainer">
+						<img src="imgs/tiretseparationjaune.png">
+						<p id="paragraphe">
+						
+												<toz id="marg">Presse</toz> Océan s’est appuyé sur les statistiques diffusées par la Ligue de football professionnel (LFP) pour analyser les performances des joueurs du FC Nantes de la 1ère à la 36e journée du championnat de Ligue 1. Les objectifs sont de définir les 3 joueurs clés de l'effectif par poste (un défenseur, un milieu, un attaquant), déterminer une équipe type, et enfin analyser les différentes parties de saison du FC Nantes. 
+
+						</p>
+						
+						<p id="paragraphe">
+												<toz id="marg">Cette</toz> analyse est le fruit de la collaboration entre des étudiants de Polytech, de l’Ecole de Design et de STAPS (Sciences et Techniques des Activités Physiques et Sportives), en collaboration avec la rédaction de Presse Océan.
+
+						</p>
+						<p id="paragraphe">
+												<toz id="marg"> En</toz> complément de cette analyse, il est proposé de retrouver le palmarès du Soulier Jaune, trophée édité par Presse Océan, ainsi que les résumés vidéo de chaque match du championnat.
+						</p>
+						<img src="imgs/tiretseparationvert.png">
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="section" id="section2">
+						
+		<div class="slide">
+			<div style="z-index:10;">
+				<input type="checkbox" id="modalCheck" style="visibility: hidden; position:absolute; bottom:1px;"/>
+				<div class="modalLayer" style="z-index:10;">
+					<div class="popup_block" id="popUpData1">
+						<label for="modalCheck"><img alt="Fermer" title="Fermer la fenêtre" class="btnClose" src="imgs/close_pop.png"></label>	
+						<img id="imgData1" alt="Lil bomb dude" src="imgs/texteData1.png">
+					</div>
+				</div>
+			</div>
+			<div class="container" id="con">
+			
+				<div class="row">
+					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+						<div class="btn-group" role="group">
+							<button type="button" role="button" class="btn btn-default" onClick="meilleur_attaquant()">Meilleur attaquant</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" role="button" class="btn btn-default" onClick="meilleur_milieu()">Meilleur milieu</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" role="button"class="btn btn-default" onClick="meilleur_defenseur()">Meilleur d&eacutefenseur</button>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:20px;">
+					<div class="col-sm-4">
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5" id="container">
+					</div>
+					<div class="col-sm-2">
+						<label class="button" for="modalCheck"><img src="imgs/moreInformation.png" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)"></label>
+					</div>
+					<div class="col-sm-5">
+						<div class="row" id="cadreInformation">
+							<div class="col-sm-8">	
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Poste        :</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labPoste"></label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Age          :</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labAge"></label>	
+									</div>
+								</div>	
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Taille       :</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labTaille"></label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Poids        :</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labPoids"></label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Temps de jeu :</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labTJ"></label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Buts marqués :</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labBM"></label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Passes décisives :</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labPD"></label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Cartons jaunes:</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labCJ"></label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-7">
+										<label id="labCadreInformation">Cartons rouges :</label>
+									</div>
+									<div class="col-sm-5">
+										<label id="labCR"></label>
+									</div>
+								</div>
+								<div class="row" style="height:10px;">
+								</div>
+							
+								
+							</div>
+							<div class="col-sm-4">
+								<div class="row" id="cadrephoto" style="height:200px;">
+								<img id="photoJoueur" src="imgs/logo-FC-Nantes.png">
+								</div>
+								<div class="row">
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row" id="sliders">
+					<div class="row">
+						<div class="col-sm-1">
+						</div>
+						<div class="col-sm-1" id="slider">
+							<label  id="lab">Temps Jeu</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Ballon joués</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Buts</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Hors jeu</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Passes décisives</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Tirs cadrés</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Cartons jaunes</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Cartons rouges</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Ballons perdus</label>
+						</div>
+						<div class="col-sm-1">
+							<label id="lab">Ballons gagnés</label>
+						</div>
+						<div class="col-sm-1">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-1">
+						</div>
+						<div class="col-sm-1" id="slider">
+							<div id="slider-vertical" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical1" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical2" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical3" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical4" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical5" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical6" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical7" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical8" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+							<div id="slider-vertical9" style="height:100px;"></div>
+						</div>
+						<div class="col-sm-1">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-1">
+						</div>
+						<div class="col-sm-1" id="slider">
+							<input type="text" id="amount" class="text" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount1" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount2" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount3" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount4" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount5" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount6" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount7" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount8" disabled>
+						</div>
+						<div class="col-sm-1">
+							<input type="text" id="amount9" disabled>
+						</div>
+						<div class="col-sm-1">
+						</div>
+					</div>
+				</div>
+		
+
+			</div>
+		</div>
+		
+	</div>
+	<div class="section" id="section3">
+		<div class="slide">
+			<div style="z-index:10;">
+					<label class="button" for="modalCheck2" style="width:5%;float:right;"><img src="imgs/moreInformation1.png" onmouseover="OnMouseIn1 (this)" onmouseout="OnMouseOut1 (this)"></label>
+					<input type="checkbox" id="modalCheck2" style="visibility: hidden;"/>
+					<div class="modalLayer2">
+						<div class="popup_block" id="popUpData2" style="z-index:10;">
+							<label for="modalCheck2"><img alt="Fermer" title="Fermer la fenêtre" class="btnClose" src="imgs/close_pop.png"></label>
+							<img id="imgData1" alt="Lil bomb dude" src="imgs/texteData2.png">
+						</div>
+					</div>
+				</div>
+			<img src="imgs/equipeType.png" id="equipeType" style="width:93%;float:left;">
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="slide">
+			<div class="container" id="con">
+				<div class="row">
+					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+						<div class="btn-group" role="group">
+							<button type="button" role="button" class="btn btn-default" onClick="resultatGeneral()">R&eacutesultats tout match confondu</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" role="button" class="btn btn-default" onClick="resultatDomicile()">R&eacutesultats &agrave domicile</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" role="button"class="btn btn-default" onClick="resultatExterieur()">R&eacutesultats &agrave l'ext&eacuterieur</button>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:50px;">
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+					</div>
+					<div class="col-sm-8" id="container2">
+					</div>
+					<div class="col-sm-2">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+	<div class="section" id="section5">
+		<div class="slide">
+			<div class="container" id="con">
+				
+				<div class="row">
+					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+						<div class="btn-group" role="group">
+							<button type="button" role="button" class="btn btn-default" onClick="butGeneral()">Buts tout match confondu</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" role="button" class="btn btn-default" onClick="butDomicile()">Buts &agrave domicile</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" role="button"class="btn btn-default" onClick="butExterieur()">Buts &agrave l'ext&eacuterieur</button>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:50px;">
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+					</div>
+					<div class="col-sm-8" id="container3">
+					</div>
+					<div class="col-sm-2">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section6">
+		<div class="slide">
+			<div class="container" id="con">
+				<div style="z-index:10;">
+					<label class="button" for="modalCheck3" style="float:right;"><img src="imgs/moreInformation.png" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)"></label>
+					<input type="checkbox" id="modalCheck3" style="visibility: hidden;"/>
+					<div class="modalLayer3">
+						<div class="popup_block" id="popUpData3" style="z-index:10;">
+							<label for="modalCheck3"><img alt="Fermer" title="Fermer la fenêtre" class="btnClose" src="imgs/close_pop.png"></label>
+							<img id="imgData1" alt="Lil bomb dude" src="imgs/texteData3.png">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+					</div>
+					<div class="col-sm-8" id="container4">
+					</div>
+					<div class="col-sm-2">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section7">
+		<div class="slide">
+			<div class="container">
+				<div class="row" style="height:20px;">
+					
+				</div>
+				<div class="row">
+					
+						<img src="imgs/tiretseparationjaune.png">
+						<p id="paragrapheFinal">
+												<toz id="marg">Nous </toz> tenons à remercier tout d’abord tous ceux qui ont permis à ce Hyblab 2015 d’avoir lieu à commencer par Ouest Médialab, l’école de Design Nantes Atlantique, l’école Polytech’ Nantes et l’UFR STAPS pour l’organisation mais aussi tous les porteurs de projets et plus particulièrement Cédric Blondeel du journal Presse Océan pour nous avoir proposé de traiter les données du FC Nantes ainsi que pour son aide active tout au long de l’évènement.
+						</p>
+						
+						<img src="imgs/tiretseparationvert.png">
+						
+					
+				</div>
+				<div class="row" style="height:50%;">
+					<div class="col-sm-2">
+					</div>
+					<div class="col-sm-8">
+				
+						<img id="credit" src="imgs/noms_credit.png">
+					</div>
+					<div class="col-sm-2">
+					</div>	
+				</div>
+				<div class="row">
+						<div id="bandeau">
+							  <!-- Logo Datasport -->
+								<a href="http://www.hyblab.fr/"><img id="datasport" src="imgs/Hyblab DataSport.jpg" alt="Hyblab DataSport"></a>
+								<!-- Les organisateurs -->
+								<ul>
+								  <li><a href="http://www.ouestmedialab.fr/"><img src="imgs/LogoOML.png" alt="Ouest Médialab"></a></li>
+								  <li><a href="http://www.lecolededesign.com/"><img src="imgs/logo-EDNA.png" alt="Ecole de Design"></a></li>
+								  <li><a href="http://www.univ-nantes.fr/"><img src="imgs/logo_univ_nantes.png" alt="Université de Nantes"></a></li>
+								  <li><a href="http://www.polytech.univ-nantes.fr/"><img src="imgs/logo_polytech.png" alt="Polytech Nantes"></a></li>
+								</ul>
+								<!-- Les autres logos -->
+								<ul>
+								  <!-- Logo de votre partenaire -->
+								  <li><a href="http://www.creps-pdl.sports.gouv.fr/"><img src="imgs/logo-CREPS.png" alt="CREPS"></a></li>
+								  <!-- Partenaires institutionnels -->
+								  <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="imgs/Region-pays-de-la-loire-300x300.jpg" alt="Pays de La Loire"></a></li>
+								  <li><a href="http://www.territoires-innovation.paysdelaloire.fr/"><img class="institutionnel" src="imgs/PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a></li>
+								  <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="imgs/Nantes-metropole.png" alt="Nantes Métropole"></a></li>
+								</ul>
+							  </div>   
+						</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+	
+<script>
+
+meilleur_attaquant();
+$( "#button1" ).click(function() {
+  console.log(indiceSuiv("#slider-vertical2"));
+});
+$("#container").mouseenter(function () {
+});
+classement();
+resultatGeneral();
+butGeneral();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+ "name": "datavi2",
+ "children":
+    [
+       {
+           
+           "name" : "pratiquent le sport à l'université.",
+           "children": [
+                 
+                       
+                       {"name": "ont commencé le sport après le lycée.", "name2": " ont commencé après le lycée." ,"size": 109,"pourcentage" : 9.2, "pourcentage2": 10.5 },
+                       {"name": "ont continué à pratiquer le sport en entrant à l'université.","name2": " faisaient déjà du sport au lycée." , "size": 929,"pourcentage" : 78.8, "pourcentage2": 89.5}
+                      
+                        ],
+            "pourcentage" : 88
+            
+       },
+       {
+          "name": "ne pratiquent pas le sport à l'université.",
+         
+          "children": [ 
+                        {"name": "ont arrêté le sport après le lycée.", "name2": " ont arrêté après le lycée." , "size": 112,"pourcentage" : 9.6, "pourcentage2": 79.4},
+                        {"name": "n'ont jamais pratiqué le sport.", "name2": " n'ont jamais pratiqué." , "size": 29,"pourcentage" : 2.4, "pourcentage2": 20.6}
+                        
+                       ],
+           "pourcentage" : 12
+       }
+    ]
+}

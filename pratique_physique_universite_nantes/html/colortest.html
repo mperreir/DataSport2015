@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  
+	<title>Enquête Suaps</title>
+	
+	<!--Css-->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+	<link rel="stylesheet" href="css/intro.css" />
+	<link rel="stylesheet" href="css/dataviz1.css" />
+	<link rel="stylesheet" href="css/dataviz2.css" />
+	<link rel="stylesheet" href="css/dataviz3.css" />
+	<link rel="stylesheet" href="css/footer.css" />
+	
+	
+  
+  
+</head>
+<body>
+
+
+<div id="fullpage">
+  
+  <!--------------------------- INTRO ----------------------------------->
+	<div class="section " id="section0">
+	  <div style="background: url('img/HNCK23042.png') ;background-size: cover;height: 85%">
+	    <div id="opacdiv"></div>
+	        <!--image d'arrière plan libre de droit : https://picjumbo.com/testdrive/?i=HNCK2304-1300x866.jpg&l=https://picjumbo.com/girl-in-pink-running-sport-shoes/#1-->
+         <h1>SPORT UNIVERSITAIRE : motivations et impacts</h1>
+         <p>Le UniDataMoov’ est un groupe de 8 étudiants composés de 4 STAPS, 2 Polytech et 2 à l’école de design. 
+         Notre porteur de projet est Serge Testevuide, professeur de faculté. Nous avons extrait les données qui 
+         concernaient principalement les activités du SUAPS et les caractéristiques des pratiquants : leurs écoles,
+         leurs sexes, leurs motivations, leurs difficultés à pratiquer une activité physique et sportive ainsi que 
+         la fréquence de leur pratique avant et pendant l’Université. Avec les données nous nous sommes dirigés sur 
+         un axe principal :  </p>
+         <p id="question">En quoi l’entrée dans la vie étudiante influence-t-elle les pratiques sportives ?</p>
+   
+   </div>
+	</div>
+  
+  
+  <!--------------------------- Datavisualisation 1 ----------------------------------->
+	<div class="section " id="section1">
+	  <div style="background-color: white; height: 85%">
+	      <p class='titreSection'>La pratique sportive à l'université</p>
+	      <!--
+	      <p id='titleparag1' class='titleparag' align="justify">soustitre data1?</p>
+	      -->
+        <p id='parag1' class='parag' align="justify">L'entrée à l'université fait-elle évoluer la pratique sportive des étudiants?</p>
+        
+		    <div  id="dataviz1" style="background-color: white; height: 80% ">
+          
+          <div id="legend"  >
+            <p> SURVOLEZ OU CLIQUEZ SUR LES ARCS POUR ZOOMER</p><p> CLIQUEZ AU CENTRE POUR DEZOOMER</p> 
+          </div>
+        
+        </div>
+   </div>
+	</div>
+	<!--------------------------- Datavisualisation 2 ----------------------------------->
+	<div class="section" id="section2">
+	    <div  style="background-color: white; height: 85%">
+        <p class='titreSection'>Variations du rythme sportif</p>
+        <p id='titleparag2' class='titleparag' align="justify">Comment s'expliquent-elles?</p>
+        <p id='parag2'class='parag' align="justify"><font size="4">Certains étudiants débutent une activité sportive en entrant à l'université, tandis que certains cessent de pratiquer. Cliquez sur les bulles pour découvrir les principales motivations et difficultés de ces étudiants.</font></p>
+        <div id="dataviz2" style=" height: 100%; width:50%; margin-left:30%; padding-top:1%">
+        </div>
+        <p class="titledataviz2" id='t2Dif' >Difficultés</p>
+        <p class="titledataviz2" id='t2Mot' >Motivations</p>
+      </div>
+  </div>
+  
+  <!--------------------------- Datavisualisation 3 ----------------------------------->
+	<div class="section" id="section3">
+		<div  style="background-color: white; height: 85%">
+		    <div>
+          <p class='titreSection'>Indice de Masse Corporelle</p>
+           <p class='parag'>paragraphe dataviz3</p>
+          <!-- Histogramme-->
+          <div id="wrapper">
+            
+              <div id="chartContainer" >
+                
+              </div>
+              <!-- Formulaire -->
+              <div id="blank" ><p></p></div>
+              <div id="imcform" >
+                  <p align="justify" class="calculTitre" >Calculez votre IMC</p>
+                  <label for="poids">Entrez votre poids : </label>
+                  <input type="text" id="poids" placeholder="Poids (kilos)">
+                  <label for="taille">Entrez votre taille : </label>
+                  <input type="text" id="taille" placeholder="Taille (cm)">
+                  <input type="button" class="button" value="Calculer" onclick="calculIMC();">
+                  <!-- Résultat align="justify"-->
+                  <div id="divResIMC" ></div>
+              </div>
+            
+          </div>
+        </div>
+        <!-- Conseils-->
+        <img src="img/maigre.png" id="maigre" class="imgHisto"  alt="maigre"/>
+        <img src="img/normal.png" id="normal" class="imgHisto"   alt="normal"/>
+        <img src="img/surpoids.png" id="surpoids" class="imgHisto"  alt="surpoids"/>
+        <img src="img/obese.png" id="obese" class="imgHisto" alt="obese"/>
+        <div id="divConseilsIMC" ></div>
+        
+    </div>
+	</div>
+	
+	<!--------------------------- Bandeau Logo ----------------------------------->
+	        <div id="section4" class="section">
+            <p id="share_title">Partagez cette data-visualisation sur les réseaux sociaux.</p>
+            <div id="network">
+				<a href="" target="_blank"><img src="img/64-facebook.png" class="img_remerciement" alt=""></a>
+				<a href="" target="_blank"><img src="img/64-twitter.png" class="img_remerciement" alt=""></a>
+				<a href="" target="_blank"><img src="img/64-googleplus.png" class="img_remerciement" alt=""></a>
+            </div>
+            <div id="participants">
+        		<ul id="Polytech" class="leftEquipe">
+        			<li class="title1">POLYTECH</li>
+        			<li>UniversLTStd Hamedi</li>
+        			<li>Paul Riveaud</li>
+        			
+        		</ul>
+        		<ul id="staps" class="leftEquipe">
+        			<li class="title1">STAPS</li>
+        			<li>David Chapet</li>
+        			<li>Celine Bernier</li>
+        			<li>Marine Bouguyon</li>
+        			<li>Léa Chauvelon</li>
+        		</ul>
+        		<ul id="design" class="leftEquipe">
+        			<li class="title1">EDNA</li>
+        			<li>Julie Fiolet </li>
+        			<li>Axel Masson</li>
+        		</ul>
+            
+          
+            
+            
+            <div id="groups">
+               
+            	<div id="firstLine">
+                
+                <a href="http://www.hyblab.fr" target="_blank"><img  class="img_remerciement" src="img/Hyblab DataSport.png" alt="Hyblab - Data Sport"></a>
+            		<a href="http://www.ouestmedialab.fr" target="_blank"><img class="img_remerciement" src="img/LogoOML.png" alt="Logo Ouest Media Lab"/></a>
+            	  <a href="http://www.lecolededesign.com/" target="_blank"><img class="img_remerciement" src="img/logo-EDNA.png" alt="Ecole de Design"></a>
+            	  <a href="http://www.univ-nantes.fr/" target="_blank"><img class="img_remerciement" src="img/logo_univ_nantes.png" alt="Université de Nantes"></a>
+            	  <a href="http://www.polytech.univ-nantes.fr/" target="_blank"><img class="img_remerciement" src="img/logo_polytech.png" alt="Polytech Nantes"></a>
+            	  
+            	</div>
+            	<div id="secondLine">
+            		
+            		
+            		<a href="http://www.creps-pdl.sports.gouv.fr/" target="_blank"><img class="img_remerciement" src="img/logo-CREPS.png" alt="CREPS"></a>
+            		<a href="http://www.paysdelaloire.fr/" target="_blank"><img class="img_remerciement" src="img/Region-pays-de-la-loire-300x300.png" alt="Pays de La Loire"></a>
+            		<a href="http://www.territoires-innovation.paysdelaloire.fr/" target="_blank"><img class="img_remerciement" src="img/PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a>
+            		<a href="http://www.nantesmetropole.fr/" target="_blank"><img  class="img_remerciement" src="img/Nantes-metropole.png" alt="Nantes Métropole"></a>
+            		
+            		
+            		
+                </div>
+                <div id="thirdLine">
+					<div class="lets_text">
+						<p>Données provenant du service universitaire des activités physiques et sportives <a href="https://www.univ-nantes.fr/34969603/0/fiche___pagelibre/&RH=1184341439414&RF=1184590345081" target="_blank"> </p>
+						
+						</div>
+				</div>
+            </div>
+        </div>
+	
+	<!--------------------------- Fin ----------------------------------->
+	</div> 	<!--fin fullpage-->
+	
+
+</body>
+
+<!--Librairies-->
+	<script src="script/jquery.min.js"></script>
+	<script src="script/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="script/jquery.fullPage.js"></script>
+	<script src="script/d3.min.js" charset="utf-8"></script>
+	<script src="script/jsapi.js"></script>
+	
+	<!--Scripts-->
+	<script src="script/maPage.js"></script>
+	<script src="script/imc.js"></script>
+
+
+
+
+<!-- A NETTOYER CI-DESSOUS !!!-->
+
+
+<script>
+//Variables texte
+var sousTitreGeneral2="Comment s'expliquent-elles?"
+var texteGeneral2="<font size='4'>Certains étudiants débutent une activité sportive en entrant à l'université, tandis que certains cessent de pratiquer. Cliquez sur les bulles pour découvrir les principales motivations et difficultés de ces étudiants.";
+var sousTitreDifficultes="<font color='#D66525'>Difficultés</font>";
+var sousTitreMotivations="<font color='#64B7B4'>Motivations</font>";
+var texteDifficultes="Voici les difficultés qui poussent les étudiants à arrêter le sport en entrant à l'université:";
+var texteMotivations="Voici les motivations qui encouragent les étudiants à débuter le sport en entrant à l'université:";
+
+var margin = 0,
+    diameter = 580;
+    
+
+var color = d3.scale.linear()
+    .domain([-1, 5])
+    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .interpolate(d3.interpolateHcl);
+
+var pack = d3.layout.pack()
+    // .padding(2)
+    .size([diameter, diameter])
+    .value(function(d) { return d.size; })
+
+var svg = d3.select("#dataviz2").append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+    
+  .append("g")
+    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+d3.json("json/dataviz2.json", function(error, root) {
+  if (error) return console.error(error);
+
+  var focus = root,
+      nodes = pack.nodes(root),
+      view;
+  
+  var col1 = '#D66525';  
+  var col2 = '#64B7B4';
+  var col3 = '#F9CBB0';
+  var col4 = '#C1E2DD';
+
+  var circle = svg.selectAll("#dataviz2 circle")
+      .data(nodes)
+    .enter().append("circle")
+      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+      
+     
+      .style("visibility",function(d) {
+         if(d.children && !d.parent)
+                      return 'hidden';
+                   
+        
+      })
+      
+      
+      .style("fill", function(d) {
+          
+          if(d.parent&&d.parent.parent&&d.parent.children.length==6) return col1;
+          else if(d.parent&&d.parent.parent&&d.parent.children.length==5) return col2;
+              else if(d.parent&&d.children&&d.children.length==6) return col3;
+                    else if(d.parent&&d.children&&d.children.length==5) return col4;
+        
+      })
+      
+     
+      .on("click", function(d) { 
+        
+        if (focus !== d) zoom(d), d3.event.stopPropagation(); 
+       
+        
+        var elem1 = document.getElementById("parag2");
+        if(d.name=="Motivations") {
+            elem1.innerHTML=texteMotivations; 
+            }
+        else if(d.name=="Difficutés") {
+            elem1.innerHTML=texteDifficultes; 
+            }
+        
+        var td2Dif = document.getElementById("t2Dif").style.visibility = "hidden";
+        var td2Mot = document.getElementById("t2Mot").style.visibility = "hidden";
+        
+        var elem2 = document.getElementById("titleparag2");
+        if(d.name=="Motivations") {
+          elem2.innerHTML=sousTitreMotivations;
+          // elem2.innerHTML.fontcolor("#D66525");
+        }
+        else if(d.name=="Difficutés") {
+          elem2.innerHTML=sousTitreDifficultes; 
+        }
+   });
+
+
+
+  var text = svg.selectAll("#dataviz2 text")
+      .data(nodes)
+    .enter().append("text")
+      .attr("class", "label")
+       .style("fill-opacity", function(d) { return d.parent === root ? 0 : 0; })
+      
+      .style("display", function(d) { 
+        
+        
+        if(d.children) return "none";
+        // return d.parent === root ? null : "none"; 
+        
+      })
+      
+       .text(function(d) { if(!d.children) return d.name; });
+      
+  
+  var node = svg.selectAll("#dataviz2 circle,text")
+  .style("font-size", function(d) { 
+     
+     var size= d.r/1.7;
+     return size;
+      
+   })
+   
+//   .style("font-family","arial,helvetica")
+   
+  ;
+  
+
+  d3.select("#dataviz2")
+    //.style("background", color(-1))
+      .on("click", function() { zoom(root); 
+       
+        var elem1 =document.getElementById("parag2");
+        elem1.innerHTML=texteGeneral2;
+        var elem2 =document.getElementById("titleparag2");
+        elem2.innerHTML=sousTitreGeneral2;
+       
+        var td2Dif = document.getElementById("t2Dif").style.visibility = "visible";
+        var td2Mot = document.getElementById("t2Mot").style.visibility = "visible";
+        
+      });
+
+  zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+  function zoom(d) {
+    var focus0 = focus; focus = d;
+
+    var transition = d3.transition()
+        .duration(d3.event.altKey ? 7500 : 750)
+        .tween("zoom", function(d) {
+          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
+          return function(t) { zoomTo(i(t)); };
+        });
+
+    transition.selectAll("#dataviz2 text")
+      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+        .style("fill", "white")
+        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+        .each("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+        .each("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+  }
+
+  function zoomTo(v) {
+    var k = diameter / v[2]; view = v;
+    node.attr("transform", function(d) { return "translate(" + (d.x- v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+    circle.attr("r", function(d) { return d.r * k; });
+  }
+});
+
+d3.select(self.frameElement).style("height", diameter + "px");
+
+</script>
+
+<!--/////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////-->
+<!--Debut script dataviz1-->
+
+<script>
+//Variables textes 
+    var sousTitreGeneral1="variable texte -> sousTitreGeneral1";
+    var textGeneral1="L'entrée à l'université fait-elle évoluer la pratique sportive des étudiants?";
+    var zoomOrange="<font color='#D66525'>Ces étudiants ne pratiquent pas le sport à l'université</font>";
+    var zoomBleu="<font color='#64B7B4'>Ces étudiants pratiquent le sport à l'université</font>";
+    
+    
+var margin1 = {top: 350, right: 480, bottom: 350, left: 480},
+    radius1 = Math.min(margin1.top, margin1.right, margin1.bottom, margin1.left) - 100;
+
+var z = 0; //boolean zoom
+
+var hue = d3.scale.category10();
+
+var luminance = d3.scale.sqrt()
+    .domain([0, 1e6])
+    .clamp(true)
+    .range([90, 20]);
+
+var svg1 = d3.select("#dataviz1").append("svg")
+    .attr("width", 600)
+    .attr("height", 600)
+    
+  .append("g")
+     .attr("transform", "translate(" + 300 + "," + 300 + ")");
+
+var partition = d3.layout.partition()
+    .sort(function(a, b) { return d3.ascending(a.name, b.name); })
+    .size([2 * Math.PI, radius1]);
+    
+
+
+
+var arc = d3.svg.arc()
+    .startAngle(function(d) { return d.x; })
+    .endAngle(function(d) {   return d.x + d.dx - .01 / (d.depth + 5); 
+      
+    })
+   
+    .innerRadius(function(d) { 
+       
+          
+       
+          return radius1 / 3 * d.depth;
+          
+    })
+    .outerRadius(function(d) { return radius1 / 3 * (d.depth + 0.5) - 1; });
+
+d3.json("json/dataviz1.json", function(error, root) {
+
+  // Compute the initial layout on the entire tree to sum sizes.
+  // Also compute the full name and fill color for each node,
+  // and stash the children so they can be restored as we descend.
+  partition
+      .value(function(d) { return d.size; })
+      .nodes(root)
+      .forEach(function(d) {
+        d._children = d.children;
+        d.sum = d.value;
+        d.key = key(d);
+        d.fill = fill(d);
+      });
+
+  // Now redefine the value function to use the previously-computed sum.
+  partition
+      .children(function(d, depth) { 
+        
+        if(depth < 2)
+        return d._children
+        else return null; 
+        
+        
+      })
+      .value(function(d) { return d.sum; })
+      
+      ;
+
+  var center = svg1.append("circle")
+      .attr("r", radius1 / 3)
+      .on("click", zoomOut)
+      
+      .style("fill","white");
+
+  // center.append("title")
+  //     .text("zoom out");
+
+  
+  
+  var path = svg1.selectAll("#dataviz1 path")
+      .data(partition.nodes(root).slice(1))
+    .enter().append("path")
+      .attr("d", arc)
+      .style("fill", function(d) { return d.fill; })
+      .each(function(d) { this._current = updateArc(d); })
+     
+      .on("mouseover",update_legend)
+	    .on("mouseout",remove_legend)
+      
+      .on("click", zoomIn)
+      
+      
+      
+
+  function zoomIn(p) {
+    
+     z = 1; //boolean zoom
+   
+     
+    var elem1 = document.getElementById("parag1");
+        if(p.name=="pratiquent le sport à l'université."||p.parent.name=="pratiquent le sport à l'université.") {
+            elem1.innerHTML=zoomBleu; 
+            }
+        else if(p.name=="ne pratiquent pas le sport à l'université."||p.parent.name=="ne pratiquent pas le sport à l'université.") {
+            elem1.innerHTML=zoomOrange; 
+            }
+     
+    
+     if (p.depth > 1) p = p.parent;
+     if (!p.children) return;
+      zoom(p, p);
+  }
+
+  function zoomOut(p) {
+    
+    z= 0; //boolean zoom
+    
+    var elem1 = document.getElementById("parag1");
+    
+         elem1.innerHTML=textGeneral1; 
+     
+    
+    
+    if (!p.parent) return;
+    zoom(p.parent, p);
+  }
+
+  // Zoom to the specified new root.
+  function zoom(root, p) {
+    
+    if (document.documentElement.__transition__) return;
+
+    // Rescale outside angles to match the new layout.
+ 
+   var enterArc,
+        exitArc,
+        outsideAngle = d3.scale.linear().domain([0, 2 * Math.PI]);
+
+    function insideArc(d) {
+      
+      if (p.key > d.key)
+      {
+        return {depth: d.depth - 1, x: 0, dx: 0}
+      }
+      else if ( p.key < d.key  )
+          
+            return {depth: d.depth - 1, x: 2 * Math.PI, dx: 0} 
+            else return {depth: 0, x: 0, dx: 2 * Math.PI};
+      
+    }
+
+    function outsideArc(d) {
+      return {depth: d.depth + 1, x: outsideAngle(d.x), dx: outsideAngle(d.x + d.dx) - outsideAngle(d.x)};
+    }
+
+    center.datum(root);
+    // When zooming in, arcs enter from the outside and exit to the inside.
+    // Entering outside arcs start from the old layout.
+     if (root === p) enterArc = outsideArc, exitArc = insideArc, outsideAngle.range([p.x, p.x + p.dx]);
+
+     path = path.data(partition.nodes(root).slice(1), function(d) { return d.key; });
+
+    // When zooming out, arcs enter from the inside and exit to the outside.
+    // Exiting outside arcs transition to the new layout.
+
+    if (root !== p) enterArc = insideArc, exitArc = outsideArc, outsideAngle.range([p.x, p.x + p.dx]);
+
+    d3.transition().duration(d3.event.altKey ? 7500 : 750).each(function() {
+      path.exit().transition()
+          .style("fill-opacity", function(d) { return d.depth === 1 + (root === p) ? 1 : 0; })
+          .attrTween("d", function(d) { return arcTween.call(this, exitArc(d)); })
+          .remove();
+
+      path.enter().append("path")
+      
+          .style("fill-opacity", function(d) { return d.depth === 2 - (root === p) ? 1 : 0; })
+          .style("fill", function(d) {  return d.fill; })
+          
+          .on("mouseover",update_legend)
+	  	    .on("mouseout",remove_legend)
+	  	    
+          .on("click",  zoomIn)
+          .each(function(d) { this._current = enterArc(d); });
+          
+
+      path.transition()
+          .style("fill-opacity", 1)
+          .attrTween("d", function(d) { return arcTween.call(this, updateArc(d)); });
+     });
+  } //fin zoom
+});
+
+function key(d) {
+  var k = [], p = d;
+  while (p.depth) k.push(p.name), p = p.parent;
+   return k.reverse().join(".");
+}
+
+function fill(d) {
+  // var p = d;
+  // while (p.depth > 1) p = p.parent;
+  // var c = d3.lab(hue(p.name));
+  // c.l = luminance(d.sum);
+  // return c;
+  if (d.children)
+    {
+      if (d.name=="ne pratiquent pas le sport à l'université.") return "#D66525";
+      else if (d.name=="pratiquent le sport à l'université.") return "#64B7B4";
+    }
+  else if (d.parent) 
+  
+    {
+      if (d.parent.name=="ne pratiquent pas le sport à l'université." && d.name=="ont arrêté le sport après le lycée.") return "#E49163"
+      else if (d.parent.name=="ne pratiquent pas le sport à l'université." && d.name=="n'ont jamais pratiqué le sport.") return "#F9CBB0"
+          else if (d.parent.name=="pratiquent le sport à l'université." && d.name=="ont continué à pratiquer le sport en entrant à l'université.") return "#8BC9C8"
+                else if (d.parent.name=="pratiquent le sport à l'université." && d.name=="ont commencé le sport après le lycée.") return "#C1E2DD";
+    }
+  
+  
+}
+
+function arcTween(b) {
+  var i = d3.interpolate(this._current, b);
+  this._current = i(0);
+  return function(t) {
+    return arc(i(t));
+  };
+}
+
+function updateArc(d) {
+  return {depth: d.depth, x: d.x, dx: d.dx};
+}
+
+var legend = d3.select("#legend")
+
+	function update_legend(d)
+    {
+      
+      if(z==0)// pas de zoom
+      
+      
+      {
+             if(d.parent.name=="pratiquent le sport à l'université."||d.name=="pratiquent le sport à l'université.")
+            	legend.html("<h1 class='bleu'> " + d.pourcentage + "% </h1><h2>  des étudiants " +d.name+" </h2>")
+             else if(d.parent.name=="ne pratiquent pas le sport à l'université."||d.name=="ne pratiquent pas le sport à l'université.")
+                  legend.html("<h1 class='orange'> " + d.pourcentage + "% </h1><h2>  des étudiants " +d.name+" </h2>")
+       }
+      else if (z==1)//avec zoom
+      {
+              if(d.parent.name=="pratiquent le sport à l'université."||d.name=="pratiquent le sport à l'université.")
+                  	legend.html("<h1 class='bleu'> Sur les pratiquants, " + d.pourcentage2 + "% </h1><h2>  " +d.name2+" </h2>")
+                   else if(d.parent.name=="ne pratiquent pas le sport à l'université."||d.name=="ne pratiquent pas le sport à l'université.")
+                        legend.html("<h1 class='orange'> Sur les non pratiquants, " + d.pourcentage2 + "% </h1><h2>  " +d.name2+" </h2>")
+      }
+      
+    legend.transition().duration(200).style("opacity","1");
+    }
+    
+    
+    function remove_legend(d)
+    {
+        //pour enlever la legende
+        // legend.transition().duration(1000).style("opacity","0");
+
+         legend.html("<p> SURVOLEZ OU CLIQUEZ SUR LES ARCS POUR ZOOMER</p><p> CLIQUEZ AU CENTRE POUR DEZOOMER</p>")
+    }
+
+
+d3.select(self.frameElement).style("height", margin1.top + margin1.bottom + "px");
+
+</script>
+
+<!--//////////////////////////////////script dataviz3-->
+<script>
+
+    google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data3 = google.visualization.arrayToDataTable([
+		['IMC', '% Homme ', '% Femme' ],
+        ['IMC<18,5', 2, 6.7],
+        ['18,5<IMC<25', 35.3, 45.1],
+        ['25<IMC<30', 3.3, 5.2],
+        ['IMC>30', 0.6, 1.6]
+      ]);
+
+        var options = {
+        focusTarget : 'category',
+        
+        colors:['#D66525','#64B7B4'], 
+        // hAxis:{title: 'IMC',  titleTextStyle: {color: '#757575'}},
+        
+        legend: { position: 'none', maxLines: 3, textStyle: {color: 'black', fontSize: 16 } },
+	    	 isStacked: true,
+
+		// Displays tooltip on selection.
+		// tooltip: { trigger: 'selection' }, 
+      };
+
+        var chart3 = new google.visualization.ColumnChart(document.getElementById('chartContainer'));
+        chart3.draw(data3, options);
+
+ 	  }
+      
+</script>    
+	
+
+
+
+
+</html>

@@ -1,0 +1,81 @@
+/*Declaration des polices*/
+
+@font-face {
+	/*marche avec otf seulement*/
+	
+    font-family: "UniversLTStd";
+    src: url('../font/UniversLTStd.otf') ;
+}
+
+
+
+/********************************/
+#dataviz1{
+    height: 100%;
+    width:50%; 
+    margin-left:23%; 
+    padding-top:4%;
+    
+}
+
+
+#legend {
+    text-align:center;
+    font-family: "UniversLTStd","Calibri",sans-serif;
+    top:46%;
+	left: 70%;
+	position : absolute;
+	width: 30%;
+	height : 20%;
+}
+
+#legend h1 {
+    
+	font-size:2.3vw;
+	font-style:"UniversLTStd","Calibri",sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.orange  {
+    color:#D66525;
+    font-style:"UniversLTStd","Calibri",sans-serif;
+    
+}
+.bleu  {
+    color:#64B7B4;
+    font-style:"UniversLTStd","Calibri",sans-serif;
+}
+
+
+#legend h2 {
+	font-style:"UniversLTStd","Calibri",sans-serif;
+    color: #404040;
+	font-size: auto;
+	font-style:inherit;
+	margin: 0;
+	padding: 0;
+	
+}
+
+#legend p {
+    color: #404040;
+    top:60%;
+	font-size:1.2vw;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-variant:small-caps;
+}
+
+#parag1
+{
+  font-family: "UniversLTStd",sans-serif;
+  /*background-color:red;*/
+  width : 20%;
+  position: absolute;
+  left: 3.5%;
+  top:30%;
+  font-size: 1.4vw;
+  Line-Height: 2;
+}

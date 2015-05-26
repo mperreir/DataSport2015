@@ -1,0 +1,113 @@
+@font-face {
+	/*marche avec otf seulement*/
+	
+    font-family: "UniversLTStd";
+    src: url('../font/UniversLTStd.otf') ;
+}
+
+
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  
+  stroke: #C2C2BF;
+  stroke-width: 2px;
+}
+
+
+.node--leaf {
+  fill: white;
+}
+
+
+
+.label {
+  font: 300% Arial, Helvetica, sans-serif ;
+  text-anchor: middle;
+  /*text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;*/
+  
+}
+
+
+.label,
+.node--root,
+.node--leaf {
+  pointer-events: none;
+}
+
+.titreSection{
+   font-family: "UniversLTStd","Calibri",sans-serif;
+   color: #404040;
+  /*width : 30%;*/
+  position: absolute;
+  left: 3.5%;
+  top:10%;
+  font-size: 2vw;
+}
+
+.parag{
+   font-family: "UniversLTStd",sans-serif;
+   color: #5C5C5C;
+  /*background-color:red;*/
+  width : 16%;
+  position: absolute;
+  left: 3.5%;
+  top:25%;
+  font-size: 2em;
+  Line-Height: 1;
+}
+
+.titleparag{
+   font-family: "UniversLTStd","Calibri",sans-serif;
+     color: #404040;
+  /*background-color:red;*/
+  text-align:left;
+  width : 20%;
+  position: absolute;
+  left: 3.5%;
+  top:20%;
+  font-size: 1.6vw;
+}
+
+.titledataviz2
+{
+  position: absolute;
+  bottom:10vw;
+  font-size: 1.6vw;
+}
+
+.titledataviz2#t2Mot
+{
+  color: #64B7B4;
+  left : 60vw;
+  font-family: "UniversLTStd",sans-serif;
+}
+.titledataviz2#t2Dif
+{
+  color: #D66525;
+  left : 37vw;
+  font-family: "UniversLTStd",sans-serif;
+}
+
+
+
+#fp-nav li .active span{
+		background: #D66525;
+	}
+	
+#parag2{
+  
+  font-family: "UniversLTStd",sans-serif;
+  
+  /*background-color:red;*/
+  width : 20%;
+  position: absolute;
+  left: 3.5%;
+  top:30%;
+  font-size: 1.4vw;
+  Line-Height: 2;
+  
+  
+}	
