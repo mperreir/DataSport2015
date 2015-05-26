@@ -1,0 +1,73 @@
+<div class="section first" ng-controller="Section1Ctrl">
+  <div class="parallax-container parallax-1" parallax-background
+    parallax-ratio="0.2"></div>
+  <script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-body"> <div class="container"> <div class="infos" ng-click="ok()"> <i class="fa fa-times-circle-o"></i> </div> <div class="header"> <h1 class="title">A propos</h1> </div> <br/> <br/> <br/> <p class="text"> Ouest France Running vous offre la possibilité de consulter vos résultats de courses à pied, une vision à la fois globale et personalisable. <br/> <br/> Le système permet de comparer ses résultats face aux autres concurrents, de se resituer par rapport à l’ensemble des arrivées. <br/> <br/> En tant que coureur, vous avez la possibilité de découvrir une nouvelle expérience de visualisation de vos résultats. <br/> <br/> D’une manière plus générale, ce service est dédié aux amateurs de course et permet de visualiser le déroulements des évènements running. </p> </div> </div>
+  </script>
+  <div class="container section1" data-scrollspy-broadcast id="section_1">
+    <div class="infos" ng-click="open()">
+      <span class="fa-stack">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-question fa-stack-1x"></i>
+      </span>
+    </div>
+    <div class="row header">
+      <div class="col-md-6">
+        <h3 class="subtitle">ça s'est passé à</h3>
+        <h1 class="title">{{dataSlide1.nomVille}}</h1>
+        <h3 class="subtitle">Le {{dataSlide1.date}}</h3>
+        <br/>
+        <h3 class="subtitle">Une course de...</h3>
+        <h2 class="no-margin-top title">
+          <ng-count-up duration="3" from="0" to="{{dataSlide1.distance}}"></ng-count-up>KM</h2>
+      </div>
+      <div class="col-md-6 dataviz">
+        <div class="dataviz" id="map"></div>
+      </div>
+    </div>
+    <div class="row bloc1">
+      <div class="col-md-6 dataviz-header text">
+        <h3 class="subtitle">Avec comme invités</h3>
+        <h2 class="no-margin-top title">
+          <ng-count-up duration="5" from="0" to="{{dataSlide1.nbCoureurs}}"></ng-count-up>
+        </h2>
+        <h3 class="subtitle">Coureurs</h3>
+        <br/>
+        <div class="coureurs">
+          <div class="coureurhomme" popover-append-to-body="true" popover-placement="bottom"
+            popover-popup-delay="200" popover-trigger="mouseenter"
+            popover="{{dataSlide1.pourcentageHomme}} % d'hommes ({{dataSlide1.nbHomme}}
+            coureurs)">
+            <img alt="" src="../assets/images/coureur homme.svg"/>
+            <div class="pourcenthomme wow slideInUp" data-wow-duration="4s"
+              style="{{heightHomme}}"></div>
+          </div>
+          <div class="coureurfemme" popover-append-to-body="true" popover-placement="bottom"
+            popover-popup-delay="200" popover-trigger="mouseenter"
+            popover="{{dataSlide1.pourcentageFemme}} % de femmes ({{dataSlide1.nbFemme}}
+            coureuses)">
+            <div class="pourcentfemme wow slideInUp" data-wow-duration="4s"
+              style="{{heightFemme}}"></div>
+            <img alt="" src="../assets/images/coureur femme.svg"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 dataviz-header text">
+        <h3 class="subtitle">Divisés en</h3>
+        <h2 class="no-margin-top title">
+          <ng-count-up duration="3" from="0" to="7"></ng-count-up>
+        </h2>
+        <h3 class="subtitle">Catégories</h3>
+        <div class="dataviz dv3">
+          <canvas height="250px" id="dv3" width="450px"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="row bloc2">
+      <h3 class="subtitle">Récapitulatif des temps :</h3>
+      <div class="dataviz">
+        <canvas height="30px" id="dv4"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

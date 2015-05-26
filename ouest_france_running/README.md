@@ -1,17 +1,28 @@
 # Descriptif du projet
+Média : Ouest France
 
-Média : notre de votre média
+Sujet : Raconter le déroulement d'un évènement running
 
-Sujet : description du sujet
+Equipe : Team Forest
 
-Equipe : nom de votre équipe
-
-Patricipants : 
-- EDNA : 
-- Polytech :
-- STAPS :
+Patricipants :
+- EDNA : Johanna Rolland, Valentin Amossé
+- Polytech : Mathieu Barré, Julien Barret
+- STAPS : Guillaume Tricot, Simon Arnout, Alexandre Gaviniaux
 
 # Installation
 
+Prérequis : npm et node.
+
+## Installation des dépendances
+
+Exécuter les commandes suivantes :
+`npm install && bower install`
+
+## Build
+
+Exécuter la tâche grunt suivante :
+
+`grunt build`
+
 # Informations complémentaires
-  
