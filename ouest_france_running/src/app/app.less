@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    FICHIER APP.LESS
+\*------------------------------------*/
+/**
+ * Fichier de style principal de l'application.
+ * On importe au début les styles de "base" de l'application, puis on ajoute les styles globaux,
+ * pour terminer avec les styles spécifiques (de haut en bas, pour respecter la priorité)
+ */
+@import '../bower_components/bootstrap/less/bootstrap.less';
+@import '../bower_components/font-awesome/less/font-awesome.less';
+@icon-font-path: '../bower_components/bootstrap/fonts/';
+@fa-font-path: '../bower_components/font-awesome/fonts';
+/**
+ * Styles globaux de l'application
+ */
+/*------------------------------------*\
+     Balises
+\*------------------------------------*/
+@navbar-height: 50px;
+body {
+  background-color: @background-color;
+}
+/*------------------------------------*\
+   Classes utilitaires
+\*------------------------------------*/
+// A ajouter au premier élément de la page pour pouvoir voir la navbar
+.first {
+  margin-top: 0px;
+}
+// A ajouter au dernier élément de la page pour pouvoir voir le footer
+.last {
+  margin-bottom: 660px;
+}
+.no-margin-top {
+  margin-top: 0;
+}
+/*------------------------------------*\
+   Couleurs
+\*------------------------------------*/
+@rouge: #e73754;
+@bleu: #5fb2e1;
+@orange: #f7a74c;
+@vert: #7eac5b;
+@noir: #1d1d1b;
+@background-color: #eee;
+/*------------------------------------*\
+   Police
+\*------------------------------------*/
+body {
+  color: @noir;
+  font-family: 'Lato', sans-serif;
+}
+.text {
+  font-family: 'Lato', sans-serif;
+}
+h3.text {
+  text-transform: uppercase;
+  font-size: 23px;
+  line-height: 0.5;
+}
+p.text {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 0.5;
+}
+.title {
+  font-size: 46px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h2.subtitle {
+  font-size: 46px;
+}
+h3.subtitle {
+  font-size: 23px;
+}
+.subtitle {
+  margin-top: 0;
+  padding-top: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+text-center {
+  text-align: center;
+}
+h1 small {
+  color: @noir;
+}
+/*------------------------------------*\
+   Formulaires
+\*------------------------------------*/
+@input-bg: #eee;
+@input-color: @noir;
+@input-border: #ddd;
+@input-border-focus: fadeout(@rouge,40%);
+@input-border-radius: 0;
+/*------------------------------------*\
+   Boutons
+\*------------------------------------*/
+@btn-default-color: @noir;
+@btn-default-bg: #eee;
+@btn-default-border: #ddd;
+/**
+ * /!\ Ne rien écrire dans le bloc du dessous, grunt injecte automatiquement tous les nouveaux fichiers Less trouvés
+ */
+// injector
+@import 'main/main.less';
+@import 'main/section1/section1.less';
+@import 'main/section2/section2.less';
+@import 'main/section3/section3.less';
+@import '../components/footer/footer.less';
+@import '../components/navbar/navbar.less';
+// endinjector

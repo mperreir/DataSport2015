@@ -1,0 +1,89 @@
+<div ng-controller="Section2Ctrl">
+  <div class="parallax-container parallax-2" parallax-background
+    parallax-ratio="0.2"></div>
+  <div class="section section2" data-scrollspy-broadcast id="section_2">
+    <div class="container">
+      <div class="header">
+        <h1 class="title">Récapitulatif des temps</h1>
+      </div>
+      <div class="selectors">
+        <span class="selector" ng-class="tabGenres['M']" ng-click="clicGenre('M')">Hommes</span>
+        <span class="selector" ng-class="tabGenres['F']" ng-click="clicGenre('F')">Femmes</span>
+        <br/>
+        <br/>
+        <span class="selector" ng-class="tabCat['JU']" ng-click="clicCat('JU')"
+          popover-append-to-body="true" popover-placement="bottom" popover-popup-delay="1000" popover-trigger="mouseenter"
+          popover="Junior - 18 à 19 ans">JU</span>
+        <span class="selector" ng-class="tabCat['ES']" ng-click="clicCat('ES')"
+          popover-append-to-body="true" popover-placement="bottom" popover-popup-delay="1000" popover-trigger="mouseenter"
+          popover="Espoir - 20 à 22 ans">ES</span>
+        <span class="selector" ng-class="tabCat['SE']" ng-click="clicCat('SE')"
+          popover-append-to-body="true" popover-placement="bottom" popover-popup-delay="1000" popover-trigger="mouseenter"
+          popover="Senior - 23 à 39 ans">SE</span>
+        <span class="selector" ng-class="tabCat['V1']" ng-click="clicCat('V1')"
+          popover-append-to-body="true" popover-placement="bottom" popover-popup-delay="1000" popover-trigger="mouseenter"
+          popover="Vétéran 1 - 40 à 49 ans">V1</span>
+        <span class="selector" ng-class="tabCat['V2']" ng-click="clicCat('V2')"
+          popover-append-to-body="true" popover-placement="bottom" popover-popup-delay="1000" popover-trigger="mouseenter"
+          popover="Vétéran 2 - 50 à 59 ans">V2</span>
+        <span class="selector" ng-class="tabCat['V3']" ng-click="clicCat('V3')"
+          popover-append-to-body="true" popover-placement="bottom" popover-popup-delay="1000" popover-trigger="mouseenter"
+          popover="Vétéran 3 - 60 à 69 ans">V3</span>
+        <span class="selector" ng-class="tabCat['V4']" ng-click="clicCat('V4')"
+          popover-append-to-body="true" popover-placement="bottom" popover-popup-delay="1000" popover-trigger="mouseenter"
+          popover="Vétéran 4 - 70 ans et +">V4</span>
+      </div>
+      <div class="dv-header">
+        <div class="section2-title">
+          <h1 class="title">
+            <ng-count-up duration="4" from="0" to="{{nbCoureursSlide2}}"></ng-count-up>
+            <small class="subtitle">coureurs</small>
+          </h1>
+        </div>
+        <div class="podium second" popover-append-to-body="true" popover-placement="bottom"
+          popover-popup-delay="200" popover-title="{{first.prenom}} {{first.nom}}" popover-trigger="mouseenter"
+          popover="{{tempsFirst}}">
+          2
+        </div>
+        <div class="podium first" popover-append-to-body="true" popover-placement="bottom"
+          popover-popup-delay="200" popover-title="{{second.prenom}} {{second.nom}}" popover-trigger="mouseenter"
+          popover="{{tempsSecond}}">
+          1
+        </div>
+        <div class="podium third" popover-append-to-body="true" popover-placement="bottom"
+          popover-popup-delay="200" popover-title="{{third.prenom}} {{third.nom}}" popover-trigger="mouseenter"
+          popover="{{tempsThird}}">
+          3
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 dataviz bloc-dv5">
+          <canvas height="25px" id="dv5-1"></canvas>
+          <canvas height="25px" id="dv5-2"></canvas>
+          <canvas height="25px" id="dv5-3"></canvas>
+          <div ng-show="connected">
+            <canvas height="25px" id="dv5-4"></canvas>
+          </div>
+          <div ng-if="!connected">
+            <div class="text">
+              <h3>Vous y étiez ? Envie de comparer votre temps à celui des autres ?</h3>
+            </div>
+            <form class="form-inline" ng-submit="search(dossard)">
+              <input class="form-control" ng-model="dossard"
+                placeholder="Votre numéro de dossard" required type="text"/>
+              <button class="btn btn-default" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+              <div ng-if="erreurRecherche">
+                <br/>
+                <div class="alert alert-danger" role="alert">
+                  <p>Impossible de vous trouver... :'( Pourquoi ne pas réessayer ?</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

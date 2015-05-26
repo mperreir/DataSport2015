@@ -35,7 +35,7 @@
    * - <section>.template.html  -> le template de la section
    * - <section>.less           -> la feuille de style de la section
    */
-  angular.module('hyblab.creps', ['ui.router', 'ngFitText', 'angular-chartist', 'countTo', 'chart.js'])
+  angular.module('hyblab.creps', ['ui.router', 'countTo', 'chart.js'])
 
   /**
    * Configuration générale de l'application.
@@ -52,12 +52,12 @@
 
     $stateProvider.state('running', {
       template: 
-        '<div creps-introduction id="introduction"></div>'
-        + '<div creps-description id="description"></div>'
-        + '<div creps-region id="region"></div>'
-        + '<div creps-departements id="departements"></div>'
-        + '<div creps-hommefemme id="hommefemme"></div>'
-        + '<div creps-credits id="credits"></div>'
-    })
+        '<div creps-introduction id="introduction"></div>' +
+        '<div creps-description id="description"></div>' +
+        '<div creps-region id="region"></div>' +
+        '<div creps-departements id="departements"></div>' +
+        '<div creps-hommefemme id="hommefemme"></div>' +
+        '<div creps-credits id="credits"></div>'
+    });
   }]);
 })();

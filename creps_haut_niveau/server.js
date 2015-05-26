@@ -1,3 +1,5 @@
+/*jshint node: true */
+
 var express = require('express');
 var path = require('path');
 var app = express();
@@ -45,13 +47,13 @@ app.get('/api/region/', function(req, res, next){
 
     if(isHautNiveau(category)){
       toSend.hautNiveau.total++;
-      if(age < 18) toSend.hautNiveau.underage++;
+      if(age < 18) { toSend.hautNiveau.underage++; }
     }
     else if(category === 'Espoirs'){
       toSend.espoirs.total++;
-      if(age < 18) toSend.espoirs.underage++;
+      if(age < 18) { toSend.espoirs.underage++; }
     }
-    else if(category === 'Partenaire d entrainement' || category === 'Reconversion') toSend.partenaires++;
+    else if(category === 'Partenaire d entrainement' || category === 'Reconversion') { toSend.partenaires++; }
   });
 
   res.json(toSend);
@@ -106,7 +108,7 @@ app.get('/api/departements/', function(req, res, next){
 
   donnees.forEach(function(person){
     var category = person['Catégorie'];
-    if(!isHautNiveau(category) && category !== 'Espoirs') return;
+    if(!isHautNiveau(category) && category !== 'Espoirs') { return; }
 
     var dpt = person['Code département'];
     var federation = person['Fédération'];
@@ -163,29 +165,29 @@ app.get('/api/departements/', function(req, res, next){
   var sportsArr72 = [];
   var sportsArr85 = [];
 
-  for(index in sportsObj44){
-    sportsArr44.push(sportsObj44[index]);
+  for(var index44 in sportsObj44){
+    sportsArr44.push(sportsObj44[index44]);
   }
 
-  for(index in sportsObj49){
-    sportsArr49.push(sportsObj49[index]);
+  for(var index49 in sportsObj49){
+    sportsArr49.push(sportsObj49[index49]);
   }
 
-  for(index in sportsObj53){
-    sportsArr53.push(sportsObj53[index]);
+  for(var index53 in sportsObj53){
+    sportsArr53.push(sportsObj53[index53]);
   }
 
-  for(index in sportsObj72){
-    sportsArr72.push(sportsObj72[index]);
+  for(var index72 in sportsObj72){
+    sportsArr72.push(sportsObj72[index72]);
   }
 
-  for(index in sportsObj85){
-    sportsArr85.push(sportsObj85[index]);
+  for(var index85 in sportsObj85){
+    sportsArr85.push(sportsObj85[index85]);
   }
 
   function sortArray(a, b){
-    if(a.total < b.total) return 1;
-    else return -1;
+    if(a.total < b.total) { return 1; }
+    else { return -1; }
   }
 
   sportsArr44.sort(sortArray);
@@ -223,7 +225,7 @@ app.get('/api/status/', function(req, res, next){
   donnees.forEach(function(person){
     var category = person['Catégorie'];
     var federation = person['Fédération'];
-    var gender = (person['Sexe'] === 'M') ? 'males' : 'females';
+    var gender = (person.Sexe === 'M') ? 'males' : 'females';
     var icon = federation.replace(/\s+/g, '-').toLowerCase();
 
     sportsObj[federation] = sportsObj[federation] || {
@@ -249,25 +251,6 @@ app.get('/api/status/', function(req, res, next){
     }
   });
 
-  // Object.keys(sportsObj).forEach(function(index){
-  //   sportsArr.push(sportsObj[index]);
-  // });
-
-  // var sorted = sportsArr.sort(function(a, b){
-  //   var totalA = a.espoirs.males
-  //     + a.espoirs.females
-  //     + a.hautNiveau.males
-  //     + a.hautNiveau.females;
-
-  //   var totalB = b.espoirs.males
-  //     + b.espoirs.females
-  //     + b.hautNiveau.males
-  //     + b.hautNiveau.females;
-
-  //   if(totalA > totalB) return -1;
-  //   else return 1;
-  // });
-  // 
   sportsArr.push(sportsObj['Fédération Française de Natation']);
   sportsArr.push(sportsObj['Fédération Française de Judo-Jujitsu Kendo et Disciplines Associées']);
   sportsArr.push(sportsObj['Fédération Française de Gymnastique']);

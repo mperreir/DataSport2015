@@ -1,4 +1,4 @@
-(function(){
+(function($){
   'use strict';
 
   angular.module('hyblab.creps')
@@ -56,7 +56,7 @@
         labels: {
           regions: {
             render: function(code){
-              if($window.innerWidth <= 768) return code;
+              if($window.innerWidth <= 768) {  return code; }
               var name = '';
 
               switch(code){
@@ -84,4 +84,4 @@
       });
     };
   }]);
-})();
+})(jQuery);
