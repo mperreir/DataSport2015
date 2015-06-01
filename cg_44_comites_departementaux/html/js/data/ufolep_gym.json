@@ -1,0 +1,127 @@
+{
+    "name": "fscf",
+    "children": [
+        {
+            "name": "Gymnastique d'entretien (827 licenciés)",
+            "children": [
+                {
+                    "name": "26%",
+                    "children": [
+                        {
+                            "name": "UMP"
+                        },
+                        {
+                            "name": "LA NANTAISE"
+                        },
+                        {
+                            "name": "LA CHANTENAYSIENNE"
+                        },
+                        {
+                            "name": "SNOS"
+                        },
+                        {
+                            "name": "CAMBRONNAISE"
+                        },
+                        {
+                            "name": "VOLTI'GYM CHATEAUBRIAND"
+                        },
+                        {
+                            "name": "AG DE LA MONTAGNE"
+                        },
+                        {
+                            "name": "USJA CARQUEFOU"
+                        },
+                        {
+                            "name": "AC CHAPELAIN"
+                        },
+                        {
+                            "name": "ATLANTIC GYM ST HERBLAIN"
+                        },
+                        {
+                            "name": "LEO LAGRANGE"
+                        },
+                        {
+                            "name": "REZE GRS"
+                        },
+                        {
+                            "name": "GR CLISSONNAISE"
+                        },
+                        {
+                            "name": "GYM PASSION"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Gymnastique de competition (2321 licenciés)",
+            "children": [
+                {
+                    "name": "74%",
+                    "children": [
+                        {
+                            "name": "UMP"
+                        },
+                        {
+                            "name": "LA NANTAISE"
+                        },
+                        {
+                            "name": "LA CHANTENAYSIENNE"
+                        },
+                        {
+                            "name": "SNOS"
+                        },
+                        {
+                            "name": "CAMBRONNAISE"
+                        },
+                        {
+                            "name": "VOLTI'GYM CHATEAUBRIAND"
+                        },
+                        {
+                            "name": "ASCBG"
+                        },
+                        {
+                            "name": "AG DE LA MONTAGNE"
+                        },
+                        {
+                            "name": "USJA CARQUEFOU"
+                        },
+                        {
+                            "name": "AC CHAPELAIN"
+                        },
+                        {
+                            "name": "ATLANTIC GYM ST HERBLAIN"
+                        },
+                        {
+                            "name": "LEO LAGRANGE"
+                        },
+                        {
+                            "name": "CS MONTOIR"
+                        },
+                        {
+                            "name": "REZE GRS"
+                        },
+                        {
+                            "name": "GR CLISSONNAISE"
+                        },
+                        {
+                            "name": "TRELLIERES GR"
+                        },
+                        {
+                            "name": "ST NAZAIRE GR"
+                        },
+                        {
+                            "name": "LA STEPHANOISE DE MONTOIR"
+                        },
+                        {
+                            "name": "GYM PASSION"
+                        },
+                        {
+                            "name": "CERCLE SAINT PAUL GYMNASTIQUE"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

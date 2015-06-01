@@ -1,0 +1,537 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cours Forrest!</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+	<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+	<link href='css/default.css' resetel='stylesheet' type='text/css'>
+	<link href='css/reset.css' rel='stylesheet' type='text/css'>
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='css/placement_regions.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<section class="page0">
+				<div class="page_container">
+					<div class="acceuil">
+						<img class="max_taille" src='img/acceuil/intro_bloc_text-29.svg'/>
+					</div>
+					<div class="bouton_acceuil">
+						<img id="bouton_acceuil" class="max_taille" src='img/acceuil/intro_bouton_rectangle-29.svg' onclick="$.fn.moveTo(2)"/>
+					</div>
+				</div>
+			</section>
+			<section class="page1">
+				<div class="page_container">
+					<div class="titre">
+						<img class="max_taille" src='img/texte/choisissez_votre_region.svg'/>
+					</div>
+					<div class="ombre_bas_page">
+						<img class="max_taille" src='img/Ombres/ombre_objets-01.svg'/>
+					</div>
+					<div class="bouton_bas_page">
+						<img class="max_taille" src='img/Boutons/changer_ecran_bas.svg' onclick="$.fn.moveTo(3)" style="width:12%;"/>
+					</div>
+					<div class="bouton_haut_page">
+						<img class="max_taille" src='img/Boutons/changer_ecran_haut.svg' onclick="$.fn.moveTo(1)" style="width:12%;"/>
+					</div>
+					<div class="nous_sommes_ici">
+						<img class="max_taille" src='img/Boutons/nous_sommes-02.svg'/>
+					</div>
+					<div class="facebook">
+						<a href="https://www.facebook.com/marathondenantes"><img class="max_taille" src='img/Boutons/facebook-02.svg'/></a>
+					</div>
+					<div class="twitter">
+						<a href="https://twitter.com/marathonnantes"><img class="max_taille" src='img/Boutons/twitter-02.svg'/></a>
+					</div>
+					<div class="page1-region_alsace">
+						<img src='img/RegionVides/regions_alsace.svg' onmouseover="afficheImage('alsacePlein'); afficheImage('alsaceImage');" 
+						onmouseout="cacheImage('alsacePlein');cacheImage('alsaceImage');" onclick="init_page('alsace','2008')"/>
+					</div>
+					<div class="page1-region_aquitaine">
+						<img  src='img/RegionVides/regions_aquitaine.svg' onmouseover="afficheImage('aquitainePlein'); afficheImage('aquitaineImage');" 
+						onmouseout="cacheImage('aquitainePlein');cacheImage('aquitaineImage');" onclick="init_page('aquitaine','2008')"/>
+					</div>
+					<div class="page1-region_auvergne" >
+						<img  src='img/RegionVides/regions_auvergne.svg' onmouseover="afficheImage('auvergnePlein'); afficheImage('auvergneImage');" 
+						onmouseout="cacheImage('auvergnePlein');cacheImage('auvergneImage');" onclick="init_page('auvergne','2008')"/>
+					</div>
+					<div class="page1-region_bnormandie">
+						<img  src='img/RegionVides/regions_basse-normandie.svg' onmouseover="afficheImage('bnormandiePlein'); afficheImage('bnormandieImage');" 
+						onmouseout="cacheImage('bnormandiePlein');cacheImage('bnormandieImage');" onclick="init_page('bnormandie','2008')"/>
+					</div>
+					<div class="page1-region_bourgogne">
+						<img  src='img/RegionVides/regions_bourgogne.svg' onmouseover="afficheImage('bourgognePlein'); afficheImage('bourgogneImage');" 
+						onmouseout="cacheImage('bourgognePlein');cacheImage('bourgogneImage');" onclick="init_page('bourgogne','2008')"/>
+					</div>
+					<div class="page1-region_bretagne">
+						<img  src='img/RegionVides/regions_bretagne.svg' onmouseover="afficheImage('bretagnePlein'); afficheImage('bretagneImage');" 
+						onmouseout="cacheImage('bretagnePlein');cacheImage('bretagneImage');" onclick="init_page('bretagne','2008')"/>
+					</div>					
+					<div class="page1-region_cvaldefrance">
+						<img  src='img/RegionVides/regions_centre-Val-de-Loire.svg' onmouseover="afficheImage('cvaldefrancePlein'); afficheImage('cvaldefranceImage');" 
+						onmouseout="cacheImage('cvaldefrancePlein');cacheImage('cvaldefranceImage');" onclick="init_page('cvaldefrance','2008')"/>
+					</div>
+					<div class="page1-region_champagne">
+						<img  src='img/RegionVides/regions_champagne-Ardenne.svg' onmouseover="afficheImage('champagnePlein'); afficheImage('champagneImage');" 
+						onmouseout="cacheImage('champagnePlein');cacheImage('champagneImage');" onclick="init_page('champagne','2008')"/>
+					</div>
+					<div class="page1-region_franchecompte">
+						<img  src='img/RegionVides/regions_franche-Compte.svg' onmouseover="afficheImage('franchecomptePlein'); afficheImage('franchecompteImage');" 
+						onmouseout="cacheImage('franchecomptePlein');cacheImage('franchecompteImage');" onclick="init_page('franchecompte','2008')"/>
+					</div>
+					<div class="page1-region_hautenormandie">
+						<img  src='img/RegionVides/regions_haute-Normandie.svg' onmouseover="afficheImage('hnormandiePlein'); afficheImage('hnormandieImage');" 
+						onmouseout="cacheImage('hnormandiePlein');cacheImage('hnormandieImage');" onclick="init_page('bnormandie','2008')"/>
+					</div>
+					<div class="page1-region_iledefrance">
+						<img  src='img/RegionVides/regions_ile_de_france.svg' onmouseover="afficheImage('iledefrancePlein'); afficheImage('iledefranceImage');" 
+						onmouseout="cacheImage('iledefrancePlein');cacheImage('iledefranceImage');" onclick="init_page('ile_de_france','2008')"/>
+					</div>
+					<div class="page1-region_languedoc">
+						<img  src='img/RegionVides/regions_languedoc-Roussillon.svg' onmouseover="afficheImage('languedocPlein'); afficheImage('languedocImage');" 
+						onmouseout="cacheImage('languedocPlein');cacheImage('languedocImage');" onclick="init_page('languedoc','2008'))"/>
+					</div>
+					<div class="page1-region_limousin">
+						<img  src='img/RegionVides/regions_limousin.svg' onmouseover="afficheImage('limousinPlein'); afficheImage('limousinImage');" 
+						onmouseout="cacheImage('limousinPlein');cacheImage('limousinImage');" onclick="init_page('limousin','2008')"/>
+					</div>
+					<div class="page1-region_midi">
+						<img  src='img/RegionVides/regions_midi-Pyrénées.svg' onmouseover="afficheImage('midiPlein'); afficheImage('midiImage');" 
+						onmouseout="cacheImage('midiPlein');cacheImage('midiImage');" onclick="init_page('midi','2008')"/>
+					</div>
+					<div class="page1-region_nord">
+						<img  src='img/RegionVides/regions_nord-pas-de-Calais.svg' onmouseover="afficheImage('nordPlein'); afficheImage('nordImage');" 
+						onmouseout="cacheImage('nordPlein');cacheImage('nordImage');" onclick="init_page('nord','2008')"/>
+					</div>
+					<div class="page1-region_paysloire">
+						<img  src='img/RegionVides/regions_pays_de_la_Loire.svg' onmouseover="afficheImage('PaysLoirePlein'); afficheImage('PaysLoireImage');" 
+						onmouseout="cacheImage('PaysLoirePlein');cacheImage('PaysLoireImage');"  onclick="init_page('pays_de_la_loire')"/>
+					</div>
+					<div class="page1-region_picardie">
+						<img  src='img/RegionVides/regions_picardie.svg' onmouseover="afficheImage('picardiePlein'); afficheImage('picardieImage');" 
+						onmouseout="cacheImage('picardiePlein');cacheImage('picardieImage');" onclick="init_page('picardie','2008')"/>
+					</div>
+					<div class="page1-region_poitou">
+						<img  src='img/RegionVides/regions_poitou-Charentes.svg' onmouseover="afficheImage('poitouPlein'); afficheImage('poitouImage');" 
+						onmouseout="cacheImage('poitouPlein');cacheImage('poitouImage');" onclick="init_page('poitou','2008')"/>
+					</div>
+					<div class="page1-region_paca">
+						<img  src='img/RegionVides/regions_provence-Alpes-Côte-d’Azure.svg' onmouseover="afficheImage('pacaPlein'); afficheImage('pacaImage');" 
+						onmouseout="cacheImage('pacaPlein');cacheImage('pacaImage');" onclick="init_page('paca','2008')"/>
+					</div>
+					<div class="page1-region_rhone">
+						<img  src='img/RegionVides/regions_rhône-Alpes.svg' onmouseover="afficheImage('rhonePlein'); afficheImage('rhoneImage');" 
+						onmouseout="cacheImage('rhonePlein');cacheImage('rhoneImage');" onclick="init_page('rhone','2008')"/>
+					</div>
+
+					<div class="page1-region_alsace_plein">
+						<img id="alsacePlein" src='img/RegionRemplies/regions__alsace_plein.svg' alt="alsacePlein"/>
+					</div>
+					<div class="page1-region_alsace_image">
+						<img id="alsaceImage" src='img/batiments/alsace.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_aquitaine_plein">
+						<img id="aquitainePlein" src='img/RegionRemplies/regions__aquitaine_plein.svg' alt="aquitainePlein"/>
+					</div>
+					<div class="page1-region_aquitaine_image">
+						<img id="aquitaineImage" src='img/batiments/aquitaine.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_auvergne_plein">
+						<img id="auvergnePlein" src='img/RegionRemplies/regions__auvergne_plein.svg' alt="auvergnePlein"/>
+					</div>
+					<div class="page1-region_auvergne_image">
+						<img id="auvergneImage" src='img/batiments/auvergne.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_bnormandie_plein">
+						<img id="bnormandiePlein" src='img/RegionRemplies/regions__basse-normandie_plein.svg' alt="bnormandiePlein"/>
+					</div>
+					<div class="page1-region_bnormandie_image">
+						<img id="bnormandieImage" src='img/batiments/bnormandie.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_bourgogne_plein">
+						<img id="bourgognePlein" src='img/RegionRemplies/regions_Bourgogne_plein.svg' alt="bourgognePlein"/>
+					</div>
+					<div class="page1-region_bourgogne_image">
+						<img id="bourgogneImage" src='img/batiments/bourgogne.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_bretagne_plein">
+						<img id="bretagnePlein" src='img/RegionRemplies/regions_Bretagne_plein.svg' alt="bretagnePlein"/>
+					</div>
+					<div class="page1-region_bretagne_image">
+						<img id="bretagneImage" src='img/batiments/bretagne.svg' alt="illustration" style="width:7%;"/>
+					</div>				
+					<div class="page1-region_cvaldefrance_plein">
+						<img id="cvaldefrancePlein" src='img/RegionRemplies/regions__Centre-Val-de-Loire_plein.svg' alt="cvaldefrancePlein"/>
+					</div>
+					<div class="page1-region_cvaldefrance_image">
+						<img id="cvaldefranceImage" src='img/batiments/cvaldefrance.svg' alt="illustration" style="width:7%;"/>
+					</div>	
+					<div class="page1-region_champagne_plein">
+						<img id="champagnePlein" src='img/RegionRemplies/regions_Champagne-Ardenne_plein.svg' alt="champagnePlein"/>
+					</div>
+					<div class="page1-region_champagne_image">
+						<img id="champagneImage" src='img/batiments/champagne.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_franchecompte_plein">
+						<img id="franchecomptePlein" src='img/RegionRemplies/regions_Franche-Compté_plein.svg' alt="franchecomptePlein"/>
+					</div>
+					<div class="page1-region_franchecompte_image">
+						<img id="franchecompteImage" src='img/batiments/franchecompte.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_hnormandie_plein">
+						<img id="hnormandiePlein" src='img/RegionRemplies/regions_Haute-Normandie_plein.svg' alt="hnormandiePlein"/>
+					</div>
+					<div class="page1-region_hnormandie_image">
+						<img id="hnormandieImage" src='img/batiments/hnormandie.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_iledefrance_plein">
+						<img id="iledefrancePlein" src='img/RegionRemplies/regions__ile_de_france_plein.svg' alt="iledefrancePlein"/>
+					</div>
+					<div class="page1-region_iledefrance_image">
+						<img id="iledefranceImage" src='img/batiments/ile_de_france.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_languedoc_plein">
+						<img id="languedocPlein" src='img/RegionRemplies/regions_Languedoc-Roussillon_plein.svg' alt="languedocPlein"/>
+					</div>
+					<div class="page1-region_languedoc_image">
+						<img id="languedocImage" src='img/batiments/languedoc_roussillon.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_limousin_plein">
+						<img id="limousinPlein" src='img/RegionRemplies/regions_Limousin_plein.svg' alt="limousinPlein"/>
+					</div>
+					<div class="page1-region_limousin_image">
+						<img id="limousinImage" src='img/batiments/limousin.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_midi_plein">
+						<img id="midiPlein" src='img/RegionRemplies/regions_Midi-Pyrénées_plein.svg' alt="midiPlein"/>
+					</div>
+					<div class="page1-region_midi_image">
+						<img id="midiImage" src='img/batiments/midi.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_nord_plein">
+						<img id="nordPlein" src='img/RegionRemplies/regions_Nord-pas-de-Calais_plein.svg' alt="nordPlein"/>
+					</div>
+					<div class="page1-region_nord_image">
+						<img id="nordImage" src='img/batiments/nord.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_paysloire_plein">
+						<img id="PaysLoirePlein" src='img/RegionRemplies/regions_Pays_de_la_Loire_plein.svg' alt="PaysLoirePlein"/>
+					</div>
+					<div class="page1-region_paysloire_image">
+						<img id="PaysLoireImage" src='img/batiments/pays_de_la_loire.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_picardie_plein">
+						<img id="picardiePlein" src='img/RegionRemplies/regions_Picardie_plein.svg' alt="picardiePlein"/>
+					</div>
+					<div class="page1-region_picardie_image">
+						<img id="picardieImage" src='img/batiments/picardie.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_poitou_plein">
+						<img id="poitouPlein" src='img/RegionRemplies/regions__Poitou-Charentes_plein.svg' alt="poitouPlein"/>
+					</div>
+					<div class="page1-region_poitou_image">
+						<img id="poitouImage" src='img/batiments/poitou.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_paca_plein">
+						<img id="pacaPlein" src='img/RegionRemplies/regions__Provence-Alpes-Côte-d’Azure_plein.svg' alt="pacaPlein"/>
+					</div>
+					<div class="page1-region_paca_image">
+						<img id="pacaImage" src='img/batiments/paca.svg' alt="illustration" style="width:7%;"/>
+					</div>
+					<div class="page1-region_rhone_plein">
+						<img id="rhonePlein" src='img/RegionRemplies/regions__Rhône-Alpes_plein.svg' alt="rhonePlein"/>
+					</div>
+					<div class="page1-region_rhone_image">
+						<img id="rhoneImage" src='img/batiments/rhone_alpes.svg' alt="illustration" style="width:7%;"/>
+					</div>	
+
+					<div id="test" class="page1_2">
+						<div class="titre">
+							<img class="max_taille" id="titre_partie_deux" src="">
+						</div>
+						<div class="image_centre">
+							<img id="image_centre" class="max_taille" src=""/>
+						</div>
+						<div class="bouton_retour">
+							<img id="bouton_retour" src="img/Boutons/changer_ecran_bas.svg" onclick="retourpage()"/>
+						</div>
+						<div class="texte_gauche">
+							<img id="texte_gauche" class="max_taille" src=""/>
+						</div>
+						<div class="map_france">
+							<img id="map_france" class="max_taille" src=""/>
+						</div>
+						<div class="texte_milieu">
+							<img id="texte_milieu" class="max_taille" src=""/>
+						</div>
+						<div class="ombre">
+							<img class="max_taille" src='img/Ombres/ombre_objets-01.svg'/>
+						</div>
+						<div class="facebook">
+							<a href="https://www.facebook.com/marathondenantes"><img class="max_taille" src='img/Boutons/facebook-02.svg'/></a>
+						</div>
+						<div class="twitter">
+							<a href="https://www.twitter.com/marathonnantes"><img class="max_taille" src='img/Boutons/twitter-02.svg'/></a>
+						</div>
+						<div class="nous_sommes_ici">
+							<img class="max_taille" src='img/Boutons/nous_sommes-02.svg'/>
+						</div>
+						<div class="boutonAnnee2008pregion">
+							<img id="boutonAnnee2008pregion" src='img/Boutons/rond_plein-01.svg'/>
+						</div>
+						<div class="boutonAnnee2008vregion">
+							<img id="boutonAnnee2008vregion" src='img/Boutons/rond_vide-01.svg' onclick="changeAnnee2008region('femmmestexte2008region','boutonAnnee2008pregion','boutonAnnee2011pregion','boutonAnnee2015pregion','femmmestexte2011region','femmmestexte2015region')"/>
+						</div>
+						<div class="boutonAnnee2011pregion">
+							<img id="boutonAnnee2011pregion" src='img/Boutons/rond_plein-01.svg'/>
+						</div>
+						<div class="boutonAnnee2011vregion">
+							<img id="boutonAnnee2011vregion" src='img/Boutons/rond_vide-01.svg' onclick="changeAnnee2011region('femmmestexte2011region','boutonAnnee2011pregion','boutonAnnee2008pregion','boutonAnnee2015pregion','femmmestexte2008region','femmmestexte2015region')" style="z-index:20;	"/>
+						</div>
+						<div class="boutonAnnee2015pregion">
+							<img id="boutonAnnee2015pregion" src='img/Boutons/rond_plein-01.svg'/>
+						</div>
+						<div class="boutonAnnee2015vregion">
+							<img id="boutonAnnee2015vregion" src='img/Boutons/rond_vide-01.svg' onclick="changeAnnee2015region('femmmestexte2015region','boutonAnnee2015pregion','boutonAnnee2008pregion','boutonAnnee2011pregion','femmmestexte2008region','femmmestexte2011region')"/>
+						</div>
+						<div id="texteAnneeregion" class="texteAnnee2008region">
+							<img id="femmmestexte2008region" class="max_taille" src='img/femmes/2008.svg'/>
+						</div>
+						<div id="texteAnneeregion" class="texteAnnee2011region">
+							<img id="femmmestexte2011region" class="max_taille" src='img/femmes/2011.svg'/>
+						</div>
+						<div id="texteAnneeregion" class="texteAnnee2015region">
+							<img id="femmmestexte2015region" class="max_taille" src='img/femmes/2015.svg'/>
+						</div>						
+					</div>
+				</div>
+			</section>
+
+			<section class="page2">
+				    
+					<div class="titre">
+						<img class="max_taille" src='img/texte/categ-texte.svg' />
+					</div>
+
+					<div class="dessin" id="diagram"></div>
+					<div class="get">
+						<div class="arc">
+							<span class="text" style="display:none;">Junior</span>
+							<input type="hidden" class="percent" value="+10.7" />
+							<input type="hidden" class="color" value="#FFFFFF" />
+						</div>
+						<div class="arc">
+
+							<span class="text" style="display:none;">Espoir</span>
+							<input type="hidden" class="percent" value="+20.2" />
+							<input type="hidden" class="color" value="#FFFFFF" />
+						</div>
+						
+						<div class="arc">
+							<span class="text" style="display:none;">Veteran2</span>
+							<input type="hidden" class="percent" value="+30" />
+							<input type="hidden" class="color" value="#FFFFFF" />
+						</div>
+						<div class="arc">
+							<span class="text" style="display:none;">Senior</span>
+							<input type="hidden" class="percent" value="+40.2" />
+							<input type="hidden" class="color" value="#FFFFFF" />
+						</div>
+						<div class="arc">
+							<span class="text" style="display:none;">Veteran1</span>
+							<input type="hidden" class="percent" value="+54.2"  />
+							<input type="hidden" class="color" value="#FFFFFF" />
+						</div>
+					</div>	
+					<div class="bouton_bas_page">
+						<img class="max_taille" src='img/Boutons/changer_ecran_bas.svg' onclick="$.fn.moveTo(4)" style="width:12%;"/>
+					</div>
+					<div class="bouton_haut_page">
+						<img  class="max_taille" src='img/Boutons/changer_ecran_haut.svg' onclick="$.fn.moveTo(2)" style="width:12%;"/>
+					</div>
+					<div class="nous_sommes_ici">
+							<img class="max_taille" src='img/Boutons/nous_sommes-02.svg'/>
+						</div>
+						<div class="facebook">
+							<a href="https://www.facebook.com/marathondenantes"><img class="max_taille" src='img/Boutons/facebook-02.svg'/></a>
+						</div>
+						<div class="twitter">
+							<a href="https://www.twitter.com/marathonnantes"><img class="max_taille" src='img/Boutons/twitter-02.svg'/></a>
+						</div>
+
+					<div class="ombre1">
+							<img class="max_taille" src='img/Ombres/ombre_objets-01.svg'/>
+						</div>
+					
+
+					<div class="categorie_veteran">
+						<img  id="Jun" class="max_taille" src='img/categ/junior-13.svg'/>
+					</div>
+					<div class="categorie_veteran">
+						<img id="Esp" class="max_taille" src='img/categ/espoir-13.svg'/>
+					</div>
+					<div class="categorie_veteran">
+						<img id="Sen" class="max_taille" src='img/categ/veteran-2-13.svg'/>
+					</div>
+					<div class="categorie_veteran">
+						<img id="Vet" class="max_taille" src='img/categ/veteran-3-13.svg'/>
+					</div>
+
+					<div class="categorie_veteran">
+						<img id="Vet2" class="max_taille" src='img/categ/veteran5.svg'/>
+					</div>
+
+					<div class="texte_veteran">
+						<img  id="Jun1" class="max_taille" src='img/categ/text_junior-28.svg'/>
+					</div>
+					<div class="texte_veteran">
+						<img id="Esp1" class="max_taille" src='img/categ/text_espoir-28.svg'/>
+					</div>
+					<div class="texte_veteran">
+						<img id="Sen1" class="max_taille" src='img/categ/text_senior-28.svg'/>
+					</div>
+					<div class="texte_veteran">
+						<img id="Vet1" class="max_taille" src='img/categ/text_veteran-28.svg'/>
+					</div>
+
+					<div class="texte_veteran">
+						<img id="Vet3" class="max_taille" src='img/categ/veteran_3_4-24.svg'/>
+					</div>
+				
+				
+
+			</section>
+
+
+			<section class="page3">
+				<div class="page_container">
+					<div class="titre">
+						<img class="max_taille" src='img/femmes/titre_femmes.svg'/>
+					</div>
+					<div class="bouton_bas_page">
+						<img class="max_taille" src='img/Boutons/changer_ecran_bas.svg' onclick="$.fn.moveTo(5)" style="width:12%;"/>
+					</div>
+					<div class="bouton_haut_page">
+						<img class="max_taille" src='img/Boutons/changer_ecran_haut.svg' onclick="$.fn.moveTo(3)" style="width:12%;"/>
+					</div>
+					<div class="nous_sommes_ici">
+						<img class="max_taille" src='img/Boutons/nous_sommes-02.svg'/>
+					</div>
+					<div class="facebook">
+						<a href="https://www.facebook.com/marathondenantes"><img class="max_taille" src='img/Boutons/facebook-02.svg'/></a>
+					</div>
+					<div class="twitter">
+						<a href="https://www.twitter.com/marathonnantes"><img class="max_taille" src='img/Boutons/twitter-02.svg'/></a>
+					</div>
+					<div class="datavizFemmes">
+						<img id="femmesdata2008" class="max_taille" src='img/femmes/femmes_2008.svg'/>
+					</div>
+					<div class="boutonAnnee2008p">
+						<img id="boutonAnnee2008p" src='img/Boutons/rond_plein-01.svg'/>
+					</div>
+					<div class="boutonAnnee2008v">
+						<img id="boutonAnnee2008v" src='img/Boutons/rond_vide-01.svg' onclick="changeAnnee2008('femmmestexte2008','boutonAnnee2008p','boutonAnnee2011p','boutonAnnee2015p','femmmestexte2011','femmmestexte2015')"/>
+					</div>
+					<div class="boutonAnnee2011p">
+						<img id="boutonAnnee2011p" src='img/Boutons/rond_plein-01.svg'/>
+					</div>
+					<div class="boutonAnnee2011v">
+						<img id="boutonAnnee2011v" src='img/Boutons/rond_vide-01.svg' onclick="changeAnnee2011('femmmestexte2011','boutonAnnee2011p','boutonAnnee2008p','boutonAnnee2015p','femmmestexte2008','femmmestexte2015')"/>
+					</div>
+					<div class="boutonAnnee2015p">
+						<img id="boutonAnnee2015p" src='img/Boutons/rond_plein-01.svg'/>
+					</div>
+					<div class="boutonAnnee2015v">
+						<img id="boutonAnnee2015v" src='img/Boutons/rond_vide-01.svg' onclick="changeAnnee2015('femmmestexte2015','boutonAnnee2015p','boutonAnnee2008p','boutonAnnee2011p','femmmestexte2008','femmmestexte2011')"/>
+					</div>
+					<div id="texteAnnee" class="texteAnnee2008">
+						<img id="femmmestexte2008" class="max_taille" src='img/femmes/2008.svg'/>
+					</div>
+					<div id="texteAnnee" class="texteAnnee2011">
+						<img id="femmmestexte2011" class="max_taille" src='img/femmes/2011.svg'/>
+					</div>
+					<div id="texteAnnee" class="texteAnnee2015">
+						<img id="femmmestexte2015" class="max_taille" src='img/femmes/2015.svg'/>
+					</div>
+					<div class="texteExpliFemmes">
+						<img id="texteexpli" class="max_taille" src='img/femmes/texte_info.svg'/>
+					</div>
+					<div class="boutonExpliFemmes">
+						<img id="boutonplusexpli" src='img/Boutons/bouton+.svg' onclick="affichetexte('texteexpli')" style="width:30%;"/>
+					</div>
+				</section>
+
+
+				<section class="page4">
+					<div class="page_container">
+						<div class="titre">
+							<img class="max_taille" src='img/podium/titre_prenom.svg'/>
+						</div>
+						<div class="texteExpliFemmes">
+							<img id="texteexpliprenoms" class="max_taille" src='img/podium/texte_prenom-27.svg'/>
+						</div>
+						<div class="boutonExpliFemmes">
+							<img id="boutonplusexpliprenoms" src='img/Boutons/bouton+.svg' onclick="affichetexteprenom('texteexpliprenoms')" style="width:30%;"/>
+						</div>
+
+
+						<div class="podiumprenoms">
+							<img class="max_taille" src='img/podium/prenoms_data-23.svg'/>
+						</div>
+
+						<div class="bouton_bas_page">
+							<img class="max_taille" src='img/Boutons/changer_ecran_bas.svg' onclick="$.fn.moveTo(6)" style="width:12%;"/>
+						</div>
+						<div class="bouton_haut_page">
+							<img  class="max_taille" src='img/Boutons/changer_ecran_haut.svg' onclick="$.fn.moveTo(4)" style="width:12%;"/>
+						</div>
+						<div class="nous_sommes_ici">
+							<img class="max_taille" src='img/Boutons/nous_sommes-02.svg'/>
+						</div>
+						<div class="facebook">
+							<a href="https://www.facebook.com/marathondenantes"><img class="max_taille" src='img/Boutons/facebook-02.svg'/></a>
+						</div>
+						<div class="twitter">
+							<a href="https://www.twitter.com/marathonnantes"><img class="max_taille" src='img/Boutons/twitter-02.svg'/></a>
+						</div>
+					</div>
+				</section>
+				<section class="page5">
+					<div class="page_container">
+						<div class="pagefin">
+							<img class="max_taille" src='img/ecran_fin-20.svg'/>
+						</div>
+						<div class="bouton_haut_page">
+						<img class="max_taille" src='img/Boutons/changer_ecran_haut.svg' onclick="$.fn.moveTo(5)" style="width:12%;"/>
+					</div>
+					</div>
+				</section>
+
+			</div>
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+			<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+			<script type="text/javascript" src="js/scripts.js"></script>
+			<script type="text/javascript" src="js/init.js"></script>
+			<script type="text/javascript" src="js/raphael.js"></script>
+
+			<script>
+			$(document).ready(function(){
+				$(".main").onepage_scroll({
+					sectionContainer: "section",
+					responsiveFallback: 600,
+					loop: true
+				});
+			});		
+			</script>
+			<script>
+			$(function(){ o.init(); }); 
+
+			</script>
+		</body>
+		</html>

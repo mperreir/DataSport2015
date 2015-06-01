@@ -1,0 +1,242 @@
+{
+    "3": {
+        "clubs": 1,
+        "commune": "ANCENIS",
+        "code": 44003
+    },
+    "12": {
+        "clubs": 1,
+        "commune": "LA BERNERIE-EN-RETZ",
+        "code": 44012
+    },
+    "21": {
+        "clubs": 1,
+        "commune": "BOURGNEUF-EN-RETZ",
+        "code": 44021
+    },
+    "23": {
+        "clubs": 1,
+        "commune": "BOUVRON",
+        "code": 44023
+    },
+    "24": {
+        "clubs": 1,
+        "commune": "BRAINS",
+        "code": 44024
+    },
+    "25": {
+        "clubs": 1,
+        "commune": "CAMPBON",
+        "code": 44025
+    },
+    "26": {
+        "clubs": 1,
+        "commune": "CARQUEFOU",
+        "code": 44026
+    },
+    "29": {
+        "clubs": 1,
+        "commune": "LA CHAPELLE-BASSE-MER",
+        "code": 44029
+    },
+    "47": {
+        "clubs": 3,
+        "commune": "COUERON",
+        "code": 44047
+    },
+    "49": {
+        "clubs": 1,
+        "commune": "LE CROISIC",
+        "code": 44049
+    },
+    "52": {
+        "clubs": 1,
+        "commune": "DONGES",
+        "code": 44052
+    },
+    "55": {
+        "clubs": 1,
+        "commune": "LA BAULE-ESCOUBLAC",
+        "code": 44055
+    },
+    "57": {
+        "clubs": 1,
+        "commune": "FEGREAC",
+        "code": 44057
+    },
+    "61": {
+        "clubs": 1,
+        "commune": "FROSSAY",
+        "code": 44061
+    },
+    "63": {
+        "clubs": 1,
+        "commune": "GETIGNE",
+        "code": 44063
+    },
+    "69": {
+        "clubs": 2,
+        "commune": "GUERANDE",
+        "code": 44069
+    },
+    "72": {
+        "clubs": 2,
+        "commune": "HERBIGNAC",
+        "code": 44072
+    },
+    "73": {
+        "clubs": 1,
+        "commune": "HERIC",
+        "code": 44073
+    },
+    "81": {
+        "clubs": 2,
+        "commune": "LEGE",
+        "code": 44081
+    },
+    "84": {
+        "clubs": 1,
+        "commune": "LE LOROUX BOTTEREAU",
+        "code": 44084
+    },
+    "87": {
+        "clubs": 1,
+        "commune": "MACHECOUL",
+        "code": 44087
+    },
+    "101": {
+        "clubs": 1,
+        "commune": "LA MONTAGNE",
+        "code": 44101
+    },
+    "103": {
+        "clubs": 1,
+        "commune": "MONTOIR-DE-BRETAGNE",
+        "code": 44103
+    },
+    "108": {
+        "clubs": 1,
+        "commune": "MOUZILLON",
+        "code": 44108
+    },
+    "109": {
+        "clubs": 12,
+        "commune": "NANTES",
+        "code": 44109
+    },
+    "110": {
+        "clubs": 2,
+        "commune": "NORT-SUR-ERDRE",
+        "code": 44110
+    },
+    "113": {
+        "clubs": 1,
+        "commune": "NOZAY",
+        "code": 44113
+    },
+    "119": {
+        "clubs": 1,
+        "commune": "PAULX",
+        "code": 44119
+    },
+    "129": {
+        "clubs": 1,
+        "commune": "PONTCHATEAU",
+        "code": 44129
+    },
+    "132": {
+        "clubs": 1,
+        "commune": "PORNICHET",
+        "code": 44132
+    },
+    "143": {
+        "clubs": 1,
+        "commune": "REZE",
+        "code": 44143
+    },
+    "158": {
+        "clubs": 1,
+        "commune": "SAINT-ETIENNE-DE-MONTLUC",
+        "code": 44158
+    },
+    "162": {
+        "clubs": 1,
+        "commune": "SAINT-HERBLAIN",
+        "code": 44162
+    },
+    "166": {
+        "clubs": 1,
+        "commune": "SAINT-JEAN-DE-BOISEAU",
+        "code": 44166
+    },
+    "169": {
+        "clubs": 1,
+        "commune": "SAINT-JULIEN-DE-CONCELLES",
+        "code": 44169
+    },
+    "176": {
+        "clubs": 1,
+        "commune": "SAINT-MALO-DE-GUERSAC",
+        "code": 44176
+    },
+    "179": {
+        "clubs": 1,
+        "commune": "SAINT-MARS-DU-DESERT",
+        "code": 44179
+    },
+    "184": {
+        "clubs": 2,
+        "commune": "SAINT-NAZAIRE",
+        "code": 44184
+    },
+    "186": {
+        "clubs": 1,
+        "commune": "SAINTE-PAZANNE",
+        "code": 44186
+    },
+    "190": {
+        "clubs": 1,
+        "commune": "SAINT-SEBASTIEN-SUR-LOIRE",
+        "code": 44190
+    },
+    "193": {
+        "clubs": 1,
+        "commune": "SAINT-VINCENT-DES-LANDES",
+        "code": 44193
+    },
+    "194": {
+        "clubs": 3,
+        "commune": "SAUTRON",
+        "code": 44194
+    },
+    "195": {
+        "clubs": 2,
+        "commune": "SAVENAY",
+        "code": 44195
+    },
+    "198": {
+        "clubs": 1,
+        "commune": "LES SORINIERES",
+        "code": 44198
+    },
+    "199": {
+        "clubs": 1,
+        "commune": "SOUDAN",
+        "code": 44199
+    },
+    "210": {
+        "clubs": 1,
+        "commune": "TRIGNAC",
+        "code": 44210
+    },
+    "213": {
+        "clubs": 1,
+        "commune": "VARADES",
+        "code": 44213
+    },
+    "215": {
+        "clubs": 1,
+        "commune": "VERTOU",
+        "code": 44215
+    }
+}

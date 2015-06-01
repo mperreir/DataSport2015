@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Gotham-bold";
+    src: url('fonts/gotham/copyfonts.com_gotham_bold.ttf');
+}
+@font-face {
+    font-family: "Gotham-book";
+    src: url('fonts/gotham/copyfonts.com_gotham_book.ttf');
+}
+@font-face {
+    font-family: "Gotham-medium";
+    src: url('fonts/gotham/copyfonts.com_gotham_medium.ttf');
+}
+@font-face {
+    font-family: "Gotham-ultra";
+    src: url('fonts/gotham/copyfonts.com_gotham_ultra.ttf');
+}
+@font-face {
+    font-family: "Gotham-light";
+    src: url('fonts/gotham/copyfonts.com_gotham_light.ttf');
+}
+@font-face {
+    font-family: "Gotham-thin";
+    src: url('fonts/gotham/copyfonts.com_gotham_thin.ttf');
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.title{
+    font-family: "Gotham-medium","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    color: white;
+}
+h1{
+    padding:0px;
+}
+body{
+    background-color: rgb(25, 25, 25);
+}
+header{
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+bold{
+    font-family: "Gotham-light","Gotham-thin","Gotham-medium","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    font-weight: bold;
+}
+.main{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: normal;
+}
+.title-span{
+    font-weight: 100;
+    font-family: "Gotham-light","Gotham-thin","Gotham-medium","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+}
+#span1{
+    color: rgb(135, 172, 25);
+}
+p.lead{
+      font-size: 15px;
+      font-family: "Gotham-thin","Gotham-light","Gotham-medium","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+}
+.section-title{
+    font-size: 30px;
+    font-family: "Gotham-light","Gotham-thin","Gotham-medium","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    margin-top: 10px;
+}
+.title-row,.section-title{
+    margin-bottom: 15px;
+}
+.partition img{
+    width: 100%;
+    height:80%;
+}
+/*for national trends */
+#trends{
+    margin-top: -10%;
+    top: -5%;
+}
+text.dimple-legend-text{
+    fill: #fff;
+}
+/*for */
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 15px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+/*for map*/
+#map { 
+    height: 550px; 
+    margin-left:20px;
+}
+.leaflet-popup-content{
+    color: black;
+}

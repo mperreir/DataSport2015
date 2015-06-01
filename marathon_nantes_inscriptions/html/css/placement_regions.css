@@ -1,0 +1,614 @@
+
+.page1-region_alsace
+{
+  position:absolute;
+  left:49.8%;
+  background-size:100% 100%;
+  top:21.7%;
+  height:1.8%;
+  width:1.8%;
+  z-index: 10;
+}
+
+.page1-region_aquitaine
+{
+  position:absolute;
+  left:52.3%;
+  background-size:100% 100%;
+  top:22.8%;
+  height:3%;
+  width:3%;
+    z-index: 10;
+}
+.page1-region_aquitaine_plein{
+   position:absolute;
+  left:52.3%;
+  background-size:100% 100%;
+  top:22.8%;
+  height:3%;
+  width:3%;
+  z-index: 9;
+  visibility: hidden;
+}
+.page1-region_auvergne
+{
+
+  position:absolute;
+  left:56.1%;
+  background-size:100% 100%;
+  top:25.1%;
+  height:2.7%;
+  width:2.7%;
+  z-index: 10;
+
+}
+.page1-region_auvergne_plein{
+    position:absolute;
+  left:56.1%;
+  background-size:100% 100%;
+  top:25.1%;
+  height:2.7%;
+  width:2.7%;
+    z-index: 9;
+  visibility: hidden;
+}
+.page1-region_bourgogne
+{
+
+  position:absolute;
+  left:59.2%;
+  background-size:100% 100%;
+  top:30.6%;
+  height:2.7%;
+  width:2.7%;
+  z-index: 10;
+}
+.page1-region_bourgogne_plein{
+   position:absolute;
+  left:59.2%;
+  background-size:100% 100%;
+  top:30.6%;
+  height:2.7%;
+  width:2.7%;
+    z-index: 9;
+      visibility: hidden;  
+
+}
+
+.page1-region_bnormandie
+{
+
+  position:absolute;
+  left:60.59%;
+  background-size:100% 100%;
+  top:38.5%;
+  height:4%;
+  width:4%;
+  z-index: 10;
+}
+.page1-region_bnormandie_plein{
+  position:absolute;
+  left:60.59%;
+  background-size:100% 100%;
+  top:38.5%;
+  height:4%;
+  width:4%;
+  z-index: 9;
+  visibility: hidden;  
+}
+.page1-region_bretagne
+{
+
+  position:absolute;
+  left:60%;
+  background-size:100% 100%;
+  top:47.3%;
+  height:4.3%;
+  width:4.3%;
+  z-index: 10;
+
+}
+.page1-region_bretagne_plein{
+    position:absolute;
+  left:60%;
+  background-size:100% 100%;
+  top:47.3%;
+  height:4.3%;
+  width:4.3%;
+  z-index: 9;
+    visibility: hidden;  
+
+}
+.page1-region_cvaldefrance
+{
+
+  position:absolute;
+  left:61.6%;
+  background-size:100% 100%;
+  top:54.1%;
+  height:2.7%;
+  width:2.7%;
+  z-index: 10;
+}
+.page1-region_cvaldefrance_plein
+{
+
+  position:absolute;
+  left:61.6%;
+  background-size:100% 100%;
+  top:54.1%;
+  height:2.7%;
+  width:2.7%;
+  z-index: 9;
+  visibility: hidden;  
+}
+.page1-region_champagne
+{
+  position:absolute;
+  left:60%;
+  background-size:100% 100%;
+  top:61.8%;
+  height:2.3%;
+  width:2.3%; 
+  z-index: 10;
+}
+.page1-region_champagne_plein
+{
+  position:absolute;
+  left:60%;
+  background-size:100% 100%;
+  top:61.8%;
+  height:2.3%;
+  width:2.3%; 
+  z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_franchecompte{
+  position:absolute;
+  left:55.8%;
+  background-size:100% 100%;
+  top:68.7%;
+  height:4.3%;
+  width:4.3%; 
+  z-index: 10;
+}
+.page1-region_franchecompte_plein{
+  position:absolute;
+  left:55.7%;
+  background-size:100% 100%;
+  top:68.7%;
+  height:4.3%;
+  width:4.3%; 
+  z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_hautenormandie{
+  position:absolute;
+  left:52.7%;
+  background-size:100% 100%;
+  top:71.8%;
+  height:2.7%;
+  width:2.7%; 
+  z-index: 10;
+}
+.page1-region_hnormandie_plein{
+  position:absolute;
+  left:52.7%;
+  background-size:100% 100%;
+  top:71.8%;
+  height:2.7%;
+  width:2.7%; 
+  z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_iledefrance{ 
+  position:absolute;
+  left:48.1%;
+  background-size:100% 100%;
+  top:74.3%;
+  height:3%;
+  width:3%; 
+  z-index: 10;
+}
+.page1-region_iledefrance_plein{ 
+  position:absolute;
+  left:48.1%;
+  background-size:100% 100%;
+  top:74.3%;
+  height:3%;
+  width:3%; 
+  z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_languedoc{
+  position:absolute;
+  left:44%;
+  background-size:100% 100%;
+  top:70.8%;
+  height:3%;
+  width:3%; 
+  z-index: 10;
+}
+.page1-region_languedoc_plein{
+  position:absolute;
+  left:44%;
+  background-size:100% 100%;
+  top:70.8%;
+  height:3%;
+  width:3%; 
+  z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_limousin{
+  position:absolute;
+  left:40.1%;
+  background-size:100% 100%;
+  top:68.3%;
+  height:3%;
+  width:3%; 
+  z-index: 10;
+}
+.page1-region_limousin_plein{
+  position:absolute;
+  left:40.1%;
+  background-size:100% 100%;
+  top:68.3%;
+  height:3%;
+  width:3%; 
+  z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_midi{
+  position:absolute;
+  left:37.27%;
+  background-size:100% 100%;
+  top:62.8%;
+  height:3.7%;
+  width:3.7%;  
+  z-index: 10; 
+}
+.page1-region_midi_plein{
+  position:absolute;
+  left:37.27%;
+  background-size:100% 100%;
+  top:62.8%;
+  height:3.7%;
+  width:3.7%;  
+    z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_nord{
+  position:absolute;
+  left:36%;
+  background-size:100% 100%;
+  top:55.3%;
+  height:4.2%;
+  width:4.2%;
+  z-index: 10;
+}
+.page1-region_nord_plein{
+  position:absolute;
+  left:36%;
+  background-size:100% 100%;
+  top:55.3%;
+  height:4.2%;
+  width:4.2%;
+    z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_paysloire{
+  position:absolute;
+  left:34.6%;
+  background-size:100% 100%;
+  top:45.3%;
+  height:3.5%;
+  width:3.5%;
+  z-index: 10;
+}
+.page1-region_picardie{
+  position:absolute;
+  left:35.7%;
+  background-size:100% 100%;
+  top:37.5%;
+  height:4.2%;
+  width:4.2%; 
+  z-index: 10;
+}
+.page1-region_picardie_plein{
+  position:absolute;
+  left:35.7%;
+  background-size:100% 100%;
+  top:37.5%;
+  height:4.2%;
+  width:4.2%; 
+    z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_poitou{
+  position:absolute;
+  left:38%;
+  background-size:100% 100%;
+  top:29.5%;
+  height:2.8%;
+  width:2.8%;  
+  z-index: 10;
+}
+.page1-region_poitou_plein{
+  position:absolute;
+  left:38%;
+  background-size:100% 100%;
+  top:29.5%;
+  height:2.8%;
+  width:2.8%;  
+    z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_paca{
+  position:absolute;
+  left:41%;
+  background-size:100% 100%;
+  top:24%;
+  height:4%;
+  width:4%;     
+  z-index: 10;
+}
+.page1-region_paca_plein{
+  position:absolute;
+  left:41%;
+  background-size:100% 100%;
+  top:24%;
+  height:4%;
+  width:4%;     
+  z-index: 9;
+  visibility: hidden;  
+}
+.page1-region_rhone{
+  position:absolute;
+  left:45.6%;
+  background-size:100% 100%;
+  top:22%;
+  height:3.7%;
+  width:3.7%;    
+  z-index: 10;
+}
+.page1-region_rhone_plein{
+  position:absolute;
+  left:45.6%;
+  background-size:100% 100%;
+  top:22%;
+  height:3.7%;
+  width:3.7%;    
+    z-index: 9;
+    visibility: hidden;  
+}
+.page1-region_alsace_plein
+{
+  position:absolute;
+  left:49.8%;
+  background-size:100% 100%;
+  top:21.7%;
+  height:1.8%;
+  width:1.8%;
+  z-index: 9;
+  visibility:hidden;
+}
+.page1-region_paysloire_plein{
+  position:absolute;
+  left:34.6%;
+  background-size:100% 100%;
+  top:45.3%;
+  height:3.5%;
+  width:3.5%;
+  z-index: 9;
+  visibility:hidden;  
+}
+.page1-region_alsace_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:36.7%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_bourgogne_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:31.4%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_iledefrance_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:29.4%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_languedoc_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:37.4%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_paca_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:33.4%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_rhone_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:33.4%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_nord_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:35.4%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_paysloire_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:31.6%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_bnormandie_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:31.6%;
+  height:250%;
+  width:250%;
+  z-index: 1;
+  visibility:hidden;
+}
+.page1-region_bretagne_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:31.6%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_aquitaine_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:46.6%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_languedoc_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:45.6%;
+  height:220%;
+  width:220%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_limousin_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:33.6%;
+  height:220%;
+  width:220%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_auvergne_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:31.6%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_cvaldefrance_image{
+  position:absolute;
+  left:42.5%;
+  background-size:100% 100%;
+  top:40.6%;
+  height:250%;
+  width:250%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_franchecompte_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:41.6%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_hnormandie_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:42.6%;
+  height:220%;
+  width:220%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_poitou_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:42.6%;
+  height:220%;
+  width:220%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_picardie_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:45.6%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_midi_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:35.6%;
+  height:200%;
+  width:200%;
+  z-index: 1;
+  visibility:hidden;  
+}
+.page1-region_champagne_image{
+  position:absolute;
+  left:43%;
+  background-size:100% 100%;
+  top:35.6%;
+  height:230%;
+  width:230%;
+  z-index: 1;
+  visibility:hidden;  
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>FMM</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen backgrounds." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" href="css/boot.css">
+
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	.section{
+		background-size: cover;
+	}
+	.slide{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section0{
+		background-image: url(imgs/1.png);
+		width:100%;
+		padding: 30% 0 0 0;
+	}
+	#section2{
+		background-image: url(imgs/6.png);
+		padding: 3% 0 0 0;
+		 
+	}
+	
+ 	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background-image: url(imgs/2.png);
+		padding: 2% 1% 0 1%;
+	}
+	#slide2{
+		background-image: url(imgs/3.png);
+padding: 5% 1% 0 1%;	}
+	
+	#slide3{
+		background-image: url(imgs/4.png);
+padding: 5% 1% 0 1%;	}
+	
+	#slide4{
+		background-image: url(imgs/5.png);
+padding: 5% 1% 0 1%;	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	
+	
+	#bandeau {
+      padding: 8px;
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    #bandeau li{
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+
+
+    #bandeau img{
+      height: 64px;
+    }
+
+    #bandeau #datasport{
+      margin: 20px 0;
+      height: 135px;
+      float: left;
+    }
+
+    #bandeau ul{
+      text-align: center;
+    }
+
+    #bandeau .institutionnel
+    {
+      height: 48px;
+    }
+	</style>
+<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	
+	<script type="text/javascript" src="js/highcharts-car.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>
+	
+	
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				verticalCentered: false
+
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+
+
+
+<div id="fullpage">
+	<div class="section " id="section0">
+	</div>
+	
+	
+	
+	<div class="section" id="section1">
+		
+	    <div class="slide" id="slide1">
+	    
+	    <div class="col-xs-8" id="pl">
+	    <div class="col-xs-3">
+	    	<ul class="list-group" style="color:white;">
+
+			<li ><img alt="" src="imgs/lic.png" style="width: 25%;">Répartition licenciés</li>
+	    	<li><a href="javascript:evolution()"><img alt="" src="imgs/evol.png" style="width: 50%;"></a></li>
+			  <li><a href="javascript:lic2011()"><img alt="" src="imgs/a11.png" style="width: 50%;"></a></li>
+			  <li><a href="javascript:lic2015()"><img alt="" src="imgs/15.png" style="width: 50%;"></a></li>
+			  <li style="color:white;"><img alt="" src="imgs/comp.png" style="width: 25%;">Compétiteurs</li>
+			  <li ><a href="javascript:comLoi11()"><img alt="" src="imgs/a11.png" style="width: 50%;"></a></li>
+			  <li ><a href="javascript:comLoi15()"><img alt="" src="imgs/15.png" style="width: 50%;"></a></li>
+			</ul>
+	    </div>
+	    	<div class="col-xs-9" id="camm11" style="padding:110px 0 0 0;"><img src="imgs/pl.png"  style="width: 70%;"/></div>	    	
+	    </div>
+	    
+	    <div class="col-xs-4" style="padding:120px 0 0 0;">
+	    <p style="text-align:justify; font-size: 96%; color:#D8E8F6; border-top: 3px solid #D8E8F6; border-bottom: 3px solid #D8E8F6;padding:15px 0 15px 0; font-family:Trebuchet MS, Helvetica, sans-serif;">
+	    Après avoir analysé les différentes données fournies par le comité régional de la FFME,
+	     il a été décidé d'étudier la répartition des pratiquants loisirs et compétitions par département,
+	      présentant de fortes divergences. On constate rapidement que la Loire Atlantique contient le plus de 
+	      licenciés avec 38% de la totalité de la région. Malgré cette forte présence sur le territoire de la Loire-Atlantique,
+	       il y a seulement 71% de compétiteurs. Ce qui est, au contraire, un chiffre relativement faible comparé au nombre
+	        des compétiteurs présents en Vendée et en Mayenne (87% et 93%).
+	        
+	        Quelque soit le département, la plupart des licenciés pratique l’escalade en compétition : 
+	        la compétition occupe une place importante au sein de la FFME. Celle-ci nécessitant obligatoirement 
+	        des structures artificielles et des entraîneurs, la question qui peut se poser est donc la suivante :
+	         <strong>Parmi les compétiteurs, quel est le quotient entre ceux qui participent aux compétitions officielles et ceux 
+	         qui pratiquent les compétitions amicales ?  Les SAE (structures artificielles d'escalade) et les moniteurs diplômés 
+	         sont-ils correctement répartis dans la région ?</strong>
+	     
+
+
+
+	    </p>
+	
+	    </div>
+	    
+	    </div>
+	    
+	    
+	    <div class="slide" id="slide2">
+	    
+	    
+	    <div class="col-xs-8" id="pl">
+	    		        	
+	    </div>
+	    
+	    <div class="col-xs-4">
+	    <p style="text-align:justify; font-size: 95%; color:#CFEAF5; border-top: 4px solid #CFEAF5; border-bottom: 4px solid #CFEAF5;padding:12px 0 12px 0; font-family:Trebuchet MS, Helvetica, sans-serif;">
+	    Il est intéressant de s'interroger sur la pratique compétitive de l’escalade afin de savoir si les licenciés se lançaient dans des compétitions amicales ou des compétitions officielles, car c’est un élément caractéristique des sports de nature. Après analyse des données, il s’est avéré que les licenciés participants aux compétitions amicales sont largement majoritaires (80% si l’on prend la région). La compétition officielle ne concerne donc qu’une petite partie des licenciés compétiteurs.
+	    </p>
+	
+	    </div>
+	    
+	    
+	    
+	    
+	    </div>
+	    
+	    <div class="slide" id="slide3">
+	    
+	    <div class="col-xs-8" id="pl">
+	    	
+	        	
+	    </div>
+
+		 <div class="col-xs-4">
+	    <p style="text-align:justify; font-size: 95%; color:#FFFFFF; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF;padding:12px 0 12px 0; font-family:Trebuchet MS, Helvetica, sans-serif;">
+	   La comparaison entre la répartition des pratiquants compétiteurs par département avec la répartition des Structures Artificielles d’Escalade fut à l'origine d'un second constat. Au départ, de nettes inégalités pour trois départements se sont détachées : le Maine-et-Loire, la Sarthe et la Mayenne. Mais après avoir pris en compte le niveau de la structure (départemental, régional ou national) à l’aide de pondérations (1 ; 1,5 et 2), il n'y a finalement aucune disparité entre les départements. Prendre ce facteur en compte est essentiel car une structure de niveau départemental aura un espace de grimpe réellement moins important qu’un niveau national.
+Pour conclure, la répartition des structures par département est en accord avec la répartition des adhérents pratiquant la compétition.
+	   
+	    </p>
+	
+	    </div>
+	    
+	    
+
+		</div>
+	    
+	    <div class="slide" id="slide4">
+	    
+	    <div class="col-xs-8" id="pl">
+	    	
+	        	
+	    </div>
+			  <div class="col-xs-4">
+	    <p style="text-align:justify; font-size: 95%; color:#CFEAF5; border-top: 4px solid #CFEAF5; border-bottom: 4px solid #CFEAF5;padding:12px 0 12px 0; font-family:Trebuchet MS, Helvetica, sans-serif;">
+Selon chaque département, la répartition des initiateurs a été comparé à la répartition des compétiteurs. Des disparités ont été constatées, essentiellement dans les départements de la Mayenne et de la Sarthe. En effet, la Mayenne concentre plus de 22% des compétiteurs mais seulement 10% d’initiateurs. Le département souffre donc d’un manque d’encadrement de ces compétiteurs. À l’inverse, la Sarthe contient quasiment 20% d’initiateurs mais uniquement 7% de compétiteurs, il y a donc une forte concentration d’encadrants par rapport au nombre de compétiteurs.
+
+L'hypothèse émise est alors la suivante : la Loire Atlantique ayant connu une forte augmentation de ses licenciés ces dernières années, contrairement aux autres départements, le comité régional FFME a concentré la majorité de son travail vers ce département, délaissant peut-être les autres.
+
+	    </p>
+	
+	    </div>
+	    
+		</div>
+	    
+	    
+	</div>
+	
+	<div class="section " id="section2">
+	<div class="col-xs-4" id="pl">  	
+	    </div>
+	    <div class="col-xs-4" id="pl">
+	    <a href="http://www.ffme.fr"><img alt="" src="imgs/ffme.png" style="width: 35%;"></a>
+	    </div>
+	    <div class="col-xs-4" id="pl">  	
+	    </div>
+	 <div id="bandeau" style="padding: 30% 0 0 0;">
+  <!-- Logo Datasport -->
+    <a href="http://www.hyblab.fr/"><img id="datasport" src="imgs/Hyblab DataSport.png" alt="Hyblab DataSport"></a>
+    <!-- Les organisateurs -->
+    <ul>
+      <li><a href="http://www.ouestmedialab.fr/"><img src="imgs/LogoOML.png" alt="Ouest Médialab"></a></li>
+      <li><a href="http://www.lecolededesign.com/"><img src="imgs/logo-EDNA.png" alt="Ecole de Design"></a></li>
+      <li><a href="http://www.univ-nantes.fr/"><img src="imgs/logo_univ_nantes.png" alt="Université de Nantes"></a></li>
+      <li><a href="http://www.polytech.univ-nantes.fr/"><img src="imgs/logo_polytech.png" alt="Polytech Nantes"></a></li>
+    </ul>
+    <!-- Les autres logos -->
+    <ul>
+      <!-- Logo de votre partenaire -->
+      <li><a href="http://www.creps-pdl.sports.gouv.fr/"><img src="imgs/logo-CREPS.png" alt="CREPS"></a></li>
+      <!-- Partenaires institutionnels -->
+      <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="imgs/Region-pays-de-la-loire-300x300.png" alt="Pays de La Loire"></a></li>
+      <li><a href="http://www.territoires-innovation.paysdelaloire.fr/"><img class="institutionnel" src="imgs/PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a></li>
+      <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="imgs/Nantes-metropole.png" alt="Nantes Métropole"></a></li>
+    </ul>
+  </div>  
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/script.js"></script>
+	
+</body>
+</html>

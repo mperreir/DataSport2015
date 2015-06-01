@@ -1,0 +1,127 @@
+<!Doctype>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="lib/scroll/jquery.onepage-scroll.css">
+        <link rel="stylesheet" href="lib/leaflet/style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="lib/scroll/jquery.onepage-scroll.js"></script>
+        <script src="lib/leaflet/script.js"></script>
+        <script src="js/d3.min.js"></script>
+        <script type="text/javascript" src="js/d3j.org.topojson.js"></script>
+        <script src="js/dimple.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid main">
+            <!-- general informations+ -->
+            <section>
+                <!-- header row-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <header>
+                            <h1>
+                                <span  class="title title-span">COMPRENDRE</span>
+                                <span id="span1" class="title">LA GYMNASTIQUE</span>
+                            </h1>
+                            <h1>
+                                <span  class="title title-span">EN</span>
+                                <span id="span2" class="title">LOIRE-ATLANTIQUE</span>
+                            </h1>
+                            <img src=""/>  <!--underlined image -->
+                        </header>
+                    </div>
+                </div>
+                <!--general informations -->
+                <div class="row">
+                    <!-- description of gym organization -->
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <p class="lead">
+                            La <bold>Loire Atlantique (44)</bold> est un département ayant une organisation particulière en ce qui concerne la gymnastique.En France, la pratique sportive est divisée et organisée sous l’impulsion de trois fédérations :
+                        </p>
+                        <p class="lead">
+                            - La <bold>FFG</bold> (Fédération France de Gymnastique) est une fédération délégataire, elle est la seule à pouvoir organiser la pratique en compétition sur l’ensemble du territoire (Département, Région, Commune) et à pouvoir décerner les titres de champions.
+                        </p>
+                        <p class="lead">
+                            - La <bold>FSCF</bold> (Fédération Sportive et Culturelle de France) et l’<bold>UFOLEP</bold> (Union Française des Oeuvres Laïques d’Education Physique) sont des fédérations affinitaires, n’ayant pas un objectif compétitif mais plutôt éducatif.
+                        </p>
+                        <p class="lead">
+                            L’affiliation des clubs aux fédérations est donc déterminée par leur culture d’association et leur finalité. Cependant, il est possible pour les clubs de s’affilier aux deux fédérations afin d’obtenir les avantages compétitifs de la FFG et la culture éducative de la FSCF.
+                        </p>
+                    </div>
+                    <!-- global averages -->
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="trends">
+                        <div class="row title-row">
+                            <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                Répartition des 3 fédérations à l’échelle<br> nationale et départementale
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="nationalTrends" >
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- my map-->
+            <section>
+                <!-- header -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row title-row section-title">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                Les clubs de gymnastique en Loire-Atlantique
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                <div class="btn-group-vertical" role="group">
+                                    <button type="button" class="btn btn-default" onclick="default_clubs()">Tous les clubs</button>
+                                    <button type="button" class="btn btn-default" onclick="fscf_club()">FSCF</button>  
+                                    <button type="button" class="btn btn-default" onclick="ffgym_club()">FFGYM</button>
+                                    <button type="button" class="btn btn-default" onclick="ufolep_club()">UFOLEP</button>
+                                </div>
+                            </div>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                <div id="map">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- club repartition by federation -->
+            <section>
+                <!-- header -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                        <div class="row title-row section-title">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                La répartion des clubs / pratique et / fédération
+                            </div>
+                        </div>
+                        <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default" onclick="fscf_partition()">FSCF</button>  
+                                <button type="button" class="btn btn-default" onclick="ffgym_partition()">FFGYM</button>
+                                <button type="button" class="btn btn-default" onclick="ufolep_partition()">UFOLEP</button>
+                            </div>
+                        </div>
+                        <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div id="partition">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="js/national.js"></script>
+        <script src="js/partition.js"></script>
+        <script src="js/map.js"></script>
+    </body>
+</html>
